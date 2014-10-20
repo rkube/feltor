@@ -101,35 +101,35 @@ struct DZ
             dg::integrateRK4( field, coords, coordsP,  g_.hz(), eps);
             dg::integrateRK4( field, coords, coordsM,  -g_.hz(), eps);
 
-            //if (    !(coordsP[0] >= g_.x0() && coordsP[0] <= g_.x1())
-            //     || !(coordsP[1] >= g_.y0() && coordsP[1] <= g_.y1())) 
-            //{
-            //    //std::cout << "P: "<<coords[0] << " "<<coords[1]<<"\n";
-            //    //std::cout << "P: "<<coordsP[0] << " "<<coordsP[1]<<"\n";
-            //    BoxIntegrator<Field> boxy( field, g2d, eps);
-            //    boxy.set_coords( coords);
-            //    double dPhiMin = 0, dPhiMax = g_.hz();
-            //    //std::cout << "B: "<<g_.x0() << " "<<g_.x1()<< " "<<g_.y0()<< " "<<g_.y1()<<std::endl;
-            //    //std::cout << "B: "<<boxy( 0) << " "<<boxy(dPhiMax)<<std::endl;
-            //    dg::bisection1d( boxy, dPhiMin, dPhiMax, eps);
-            //    //std::cout << dPhiMin << std::endl;
-            //    dg::integrateRK4( field, coords, coordsP, dPhiMin, eps);
-            //    //std::cout << "P: "<<coordsP[0] << " "<<coordsP[1]<<"\n";
-            //    //std::cout << std::endl;
-            //}
-            //if (    !(coordsM[0] >= g_.x0() && coordsM[0] <= g_.x1())
-            //     || !(coordsM[1] >= g_.y0() && coordsM[1] <= g_.y1())) 
-            //{
-            //    //std::cout << "M: "<<coords[0] << " "<<coords[1]<<"\n";
-            //    //std::cout << "M: "<<coordsM[0] << " "<<coordsM[1]<<"\n";
-            //    BoxIntegrator<Field> boxy( field, g2d, eps);
-            //    boxy.set_coords( coords);
-            //    double dPhiMin = -g_.hz(), dPhiMax = 0;
-            //    dg::bisection1d( boxy, dPhiMin, dPhiMax, eps);
-            //    dg::integrateRK4( field, coords, coordsM, dPhiMax, eps);
-            //    //std::cout << "M: "<<coordsM[0] << " "<<coordsM[1]<<"\n";
-            //    //std::cout << std::endl;
-            //}
+            if (    !(coordsP[0] >= g_.x0() && coordsP[0] <= g_.x1())
+                 || !(coordsP[1] >= g_.y0() && coordsP[1] <= g_.y1())) 
+            {
+                //std::cout << "P: "<<coords[0] << " "<<coords[1]<<"\n";
+                //std::cout << "P: "<<coordsP[0] << " "<<coordsP[1]<<"\n";
+                BoxIntegrator<Field> boxy( field, g2d, eps);
+                boxy.set_coords( coords);
+                double dPhiMin = 0, dPhiMax = g_.hz();
+                //std::cout << "B: "<<g_.x0() << " "<<g_.x1()<< " "<<g_.y0()<< " "<<g_.y1()<<std::endl;
+                //std::cout << "B: "<<boxy( 0) << " "<<boxy(dPhiMax)<<std::endl;
+                dg::bisection1d( boxy, dPhiMin, dPhiMax, eps);
+                //std::cout << dPhiMin << std::endl;
+                dg::integrateRK4( field, coords, coordsP, dPhiMin, eps);
+                //std::cout << "P: "<<coordsP[0] << " "<<coordsP[1]<<"\n";
+                //std::cout << std::endl;
+            }
+            if (    !(coordsM[0] >= g_.x0() && coordsM[0] <= g_.x1())
+                 || !(coordsM[1] >= g_.y0() && coordsM[1] <= g_.y1())) 
+            {
+                //std::cout << "M: "<<coords[0] << " "<<coords[1]<<"\n";
+                //std::cout << "M: "<<coordsM[0] << " "<<coordsM[1]<<"\n";
+                BoxIntegrator<Field> boxy( field, g2d, eps);
+                boxy.set_coords( coords);
+                double dPhiMin = -g_.hz(), dPhiMax = 0;
+                dg::bisection1d( boxy, dPhiMin, dPhiMax, eps);
+                dg::integrateRK4( field, coords, coordsM, dPhiMax, eps);
+                //std::cout << "M: "<<coordsM[0] << " "<<coordsM[1]<<"\n";
+                //std::cout << std::endl;
+            }
             yp[0][i] = coordsP[0], yp[1][i] = coordsP[1], yp[2][i] = coordsP[2];
             ym[0][i] = coordsM[0], ym[1][i] = coordsM[1], ym[2][i] = coordsM[2];
         }
