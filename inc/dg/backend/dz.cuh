@@ -5,7 +5,6 @@
 #include "typedefs.cuh"
 #include "functions.h"
 #include "../functors.h"
-#include "../nullstelle.h"
 #include "../runge_kutta.h"
 
 namespace dg{
@@ -25,33 +24,6 @@ struct NoLimiter
     {
         return 0.;
     }
-};
-
-template < class Field>
-struct BoxIntegrator
-{
-    BoxIntegrator( Field field, const Grid2d<double>& g, double eps): field_(field), g_(g), coords_(3), coordsp_(3), eps_(eps) {}
-    void set_coords( const thrust::host_vector<double>& coords){ coords_ = coords;}
-    double operator()( double deltaPhi)
-    {
-        try{
-            dg::integrateRK4( field_, coords_, coordsp_,  deltaPhi, eps_);
-        }catch( dg::NotANumber& exception) { return -1;}
-        if (!(coordsp_[0] >= g_.x0() && coordsp_[0] <= g_.x1())) {
-            return -1;
-        }
-        if (!(coordsp_[1] >= g_.y0() && coordsp_[1] <= g_.y1())) {
-            return -1;
-        }
-        return +1;
-
-    }
-    private:
-    Field field_;
-    Grid2d<double> g_;
-    thrust::host_vector<double> coords_, coordsp_;
-    double eps_;
-
 };
 
 /**
@@ -81,16 +53,18 @@ struct DZ
         g_(grid), bcz_(grid.bcz())
     {
         dg::Grid2d<double> g2d( g_.x0(), g_.x1(), g_.y0(), g_.y1(), g_.n(), g_.Nx(), g_.Ny());
-        unsigned size = g2d.size();
         limiter = dg::evaluate( limit, g2d);
         left_ = dg::evaluate( zero, g2d);
         right_ = left_;
-        //Resize vectors to 2D grid size
-        hz.resize( size);     hp.resize( size);     hm.resize( size);
-        ghostM.resize( size); ghostP.resize( size);
-        tempM.resize( size);  temp0.resize( size);  tempP.resize( size);
+        hz.resize( g2d.size());
+        hp.resize( g2d.size());
+        hm.resize( g2d.size());
+        ghostM.resize( g2d.size());
+        ghostP.resize( g2d.size());
+        tempM.resize( g2d.size());
+        temp0.resize( g2d.size());
+        tempP.resize( g2d.size());
         std::vector<dg::HVec> y( 3, dg::evaluate( dg::coo1, g2d)), yp(y), ym(y); 
-        //Set starting points
         y[1] = dg::evaluate( dg::coo2, g2d);
         y[2] = dg::evaluate( dg::zero, g2d);
         thrust::host_vector<double> coords(3), coordsP(3), coordsM(3);
@@ -135,6 +109,7 @@ struct DZ
         }
         //dg::integrateRK4( field, y, ym, -g_.hz(), eps);
         cut( y, yp, g2d);
+        dg::integrateRK4( field, y, ym, -g_.hz(), eps);
         cut( y, ym, g2d);
         plus  = dg::create::interpolation( yp[0], yp[1], g2d);
         minus = dg::create::interpolation( ym[0], ym[1], g2d);
@@ -401,13 +376,11 @@ void DZ<M,V>::cut( const std::vector<dg::HVec>& y, std::vector<dg::HVec>& yp, dg
     //implements "Neumann" boundaries for lines that cross the wall
     for( unsigned i=0; i<g.size(); i++)
     {            
-
         if      (yp[0][i] < g.x0())  { yp[0][i] = y[0][i]; yp[1][i] = y[1][i]; }
         else if (yp[0][i] > g.x1())  { yp[0][i] = y[0][i]; yp[1][i] = y[1][i]; }
         else if (yp[1][i] < g.y0())  { yp[0][i] = y[0][i]; yp[1][i] = y[1][i]; }
         else if (yp[1][i] > g.y1())  { yp[0][i] = y[0][i]; yp[1][i] = y[1][i]; }
         else                         { }
-
             
     }
 
