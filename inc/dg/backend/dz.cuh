@@ -91,6 +91,7 @@ struct DZ
     thrust::host_vector<double> coords(3), coordsP(3), coordsM(3),coordsPt(3),coordsMt(3);
     for( unsigned i=0; i<size; i++)
     {
+   
         //assumes that perp boundary condition is constant on the entire 3d box surface
         coords[0] = y[0][i], coords[1] = y[1][i], coords[2] = y[2][i];
         dg::integrateRK4( field, coords, coordsP, g_.hz(), eps); //+ integration
@@ -98,41 +99,52 @@ struct DZ
           if ( !(coordsP[0] >= g_.x0() && coordsP[0] <= g_.x1())
           || !(coordsP[1] >= g_.y0() && coordsP[1] <= g_.y1()))
           {
-
-          BoxIntegrator<Field> boxy( field, g2d, eps);
-          boxy.set_coords( coords); //nimm alte koordinaten
-          double dPhiMin = 0, dPhiMax = g_.hz();
-          dg::bisection1d( boxy, dPhiMin, dPhiMax, eps); //suche 0 stelle
-          std::cout << dPhiMin << std::endl;
-          dg::integrateRK4( field, coords, coordsP, dPhiMin, eps); //integriere bis 0 stelle
-//           dPhiMin/=dPhiMin/coordsPt[2];
-//                     dg::integrateRK4( field, coordsPt, coordsP, dPhiMin, eps); //integriere bis 0 stelle
-//           coordsP[2]*=dPhiMin;
-
+            double tempvaluex;double tempvaluey;
+            unsigned mem=0;
+            if (coordsP[0] <= g_.x0()) { tempvaluex=g_.x0();mem=0;}
+            if (coordsP[0] >= g_.x1()) { tempvaluex=g_.x1();mem=0;}
+            if (coordsP[1] <= g_.y0()) { tempvaluey=g_.y0();mem=1;}
+            if (coordsP[1] >= g_.y1()) { tempvaluey=g_.y1();mem=1;}
+            BoxIntegrator<Field> boxy( field, g2d, eps);
+            boxy.set_coords( coords); //nimm alte koordinaten
+            double dPhiMin = 0, dPhiMax = g_.hz();
+            dg::bisection1d( boxy, dPhiMin, dPhiMax,eps); //suche 0 stelle
+            dg::integrateRK4( field, coords, coordsP, dPhiMin, eps); //integriere bis 0 stelle     
+            if (mem==0) { coordsP[0]=tempvaluex; }
+            if (mem==1) {coordsP[1]=tempvaluey;  }     
+//             std::cout << dPhiMin << std::endl;
           }
           if ( !(coordsM[0] >= g_.x0() && coordsM[0] <= g_.x1())
           || !(coordsM[1] >= g_.y0() && coordsM[1] <= g_.y1()))
           {
-
-          BoxIntegrator<Field> boxy( field, g2d, eps);
-          boxy.set_coords( coords);
-          double dPhiMin = -g_.hz(), dPhiMax = 0;
-          dg::bisection1d( boxy, dPhiMin, dPhiMax, eps);
-          std::cout << dPhiMin << std::endl;
-          dg::integrateRK4( field, coords, coordsM, dPhiMax, eps);
-//             dPhiMax/=dPhiMax/coordsMt[2]; 
-//             dg::integrateRK4( field, coordsMt, coordsM, dPhiMax, eps);
-
+            double tempvaluex;double tempvaluey;
+            unsigned mem=0;
+            if (coordsM[0] <= g_.x0()) { tempvaluex=g_.x0(); mem=0;}
+            if (coordsM[0] >= g_.x1()) { tempvaluex=g_.x1(); mem=0;}
+            if (coordsM[1] <= g_.y0()) { tempvaluey=g_.y0(); mem=1;}
+            if (coordsM[1] >= g_.y1()) { tempvaluey=g_.y1(); mem=1;}
+            BoxIntegrator<Field> boxy( field, g2d, eps);
+            boxy.set_coords( coords);
+            double dPhiMin = -g_.hz(), dPhiMax = 0;
+            dg::bisection1d( boxy, dPhiMin, dPhiMax,eps);
+            dg::integrateRK4( field, coords, coordsM, dPhiMax, eps);
+            if (mem==0) { coordsM[0]=tempvaluex;   }
+            if (mem==1) { coordsM[1]=tempvaluey;   }  
+//            std::cout << dPhiMax << std::endl;
          }
 
         yp[0][i] = coordsP[0], yp[1][i] = coordsP[1], yp[2][i] = coordsP[2];
-      ym[0][i] = coordsM[0], ym[1][i] = coordsM[1], ym[2][i] = coordsM[2];
+        ym[0][i] = coordsM[0], ym[1][i] = coordsM[1], ym[2][i] = coordsM[2];
     }
     //dg::integrateRK4( field, y, ym, -g_.hz(), eps);
-    cut( y, yp, g2d);
-    cut( y, ym, g2d);
+//     cut( y, yp, g2d);
+//     cut( y, ym, g2d);
+    std::cout << "interp1" << std::endl;
     plus = dg::create::interpolation( yp[0], yp[1], g2d);
+    std::cout << "interp2" << std::endl;
     minus = dg::create::interpolation( ym[0], ym[1], g2d);
+    std::cout << "behind interp" << std::endl;
+
     dg::blas1::axpby( 1., (container)yp[2], 0, hp);
     dg::blas1::axpby( -1., (container)ym[2], 0, hm);
     dg::blas1::axpby( 1., hp, +1., hm, hz);
