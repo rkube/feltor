@@ -93,7 +93,7 @@ struct Feltor
     template<class Grid3d>
     Feltor( const Grid3d& g, eule::Parameters p,solovev::GeomParameters gp);
 
-//     dg::DZ<Matrix, container> dz(){return dzDIR_;}
+    dg::DZ<Matrix, container> dz(){return dzDIR_;}
 
     /**
      * @brief Returns phi and psi that belong to the last y in operator()
@@ -135,7 +135,7 @@ struct Feltor
     std::vector<container> dzy, curvy; 
 
     //matrices and solvers
-//     dg::DZ<Matrix, container> dzDIR_;
+    dg::DZ<Matrix, container> dzDIR_;
     Matrix dphi;
 //     dg::DZ<Matrix, container> dzNEU_;
     dg::Poisson< Matrix, container> poisson; 
@@ -174,7 +174,7 @@ Feltor<Matrix, container, P>::Feltor( const Grid& g, eule::Parameters p, solovev
     w3d( dg::create::weights(g)), v3d( dg::create::inv_weights(g)), 
     phi( 2, chi), curvphi( phi), expy(phi), npe(phi), logn(phi),ush(phi),
     dzy( 4, chi),curvy(dzy), 
-//     dzDIR_(solovev::Field(gp), g, gp.rk4eps,solovev::PsiLimiter(gp), dg::DIR),
+    dzDIR_(solovev::Field(gp), g, gp.rk4eps,solovev::PsiLimiter(gp), dg::DIR),
 //     dzNEU_(solovev::Field(gp), g, gp.rk4eps,solovev::PsiLimiter(gp), dg::NEU),
 //     poisson(g, dg::NEU, dg::NEU, dg::DIR, dg::DIR), //is centered
     poisson(g, dg::DIR, dg::DIR, dg::DIR, dg::DIR), //is centered
