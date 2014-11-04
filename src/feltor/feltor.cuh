@@ -93,7 +93,7 @@ struct Feltor
     template<class Grid3d>
     Feltor( const Grid3d& g, eule::Parameters p,solovev::GeomParameters gp);
 
-    dg::DZ<Matrix, container> dz(){return dzDIR_;}
+//     dg::DZ<Matrix, container> dz(){return dzDIR_;}
 
     /**
      * @brief Returns phi and psi that belong to the last y in operator()
@@ -135,8 +135,8 @@ struct Feltor
     std::vector<container> dzy, curvy; 
 
     //matrices and solvers
-    dg::DZ<Matrix, container> dzDIR_;
-    Matrix dphi;
+//     dg::DZ<Matrix, container> dzDIR_;
+//     Matrix dphi;
 //     dg::DZ<Matrix, container> dzNEU_;
     dg::Poisson< Matrix, container> poisson; 
     //dg::Polarisation2dX< thrust::host_vector<value_type> > pol; //note the host vector
@@ -167,14 +167,14 @@ Feltor<Matrix, container, P>::Feltor( const Grid& g, eule::Parameters p, solovev
     bhatR(dg::evaluate(solovev::BHatR(gp),g)),
     bhatZ(dg::evaluate(solovev::BHatZ(gp),g)),
     bhatP(dg::evaluate(solovev::BHatP(gp),g)),
-    dphi(dg::create::dz( g, g.bcz(),dg::centered)),
+//     dphi(dg::create::dz( g, g.bcz(),dg::centered)),
     source( dg::evaluate(solovev::TanhSource(p, gp), g)),
     damping( dg::evaluate( solovev::GaussianDamping(gp ), g)), 
     one( dg::evaluate( dg::one, g)),    
     w3d( dg::create::weights(g)), v3d( dg::create::inv_weights(g)), 
     phi( 2, chi), curvphi( phi), expy(phi), npe(phi), logn(phi),ush(phi),
     dzy( 4, chi),curvy(dzy), 
-    dzDIR_(solovev::Field(gp), g, gp.rk4eps,solovev::PsiLimiter(gp), dg::DIR),
+//     dzDIR_(solovev::Field(gp), g, gp.rk4eps,solovev::PsiLimiter(gp), dg::DIR),
 //     dzNEU_(solovev::Field(gp), g, gp.rk4eps,solovev::PsiLimiter(gp), dg::NEU),
 //     poisson(g, dg::NEU, dg::NEU, dg::DIR, dg::DIR), //is centered
     poisson(g, dg::DIR, dg::DIR, dg::DIR, dg::DIR), //is centered
@@ -422,12 +422,12 @@ void Feltor<Matrix, container, P>::nablaparNEU( container& src, container& targe
     container temp1(src),temp2(src);
     dg::blas2::gemv( poisson.dxlhs(), src, target); //d_R src
     dg::blas2::gemv( poisson.dylhs(), src, temp1);  //d_Z src
-    dg::blas2::gemv( dphi, src, temp2);  //d_phi src
+//     dg::blas2::gemv( dphi, src, temp2);  //d_phi src
     dg::blas1::pointwiseDot( bhatR, target, target); // b^R d_R src
     dg::blas1::pointwiseDot( bhatZ, temp1, temp1); // b^Z d_Z src
-    dg::blas1::pointwiseDot( bhatP, temp2, temp2); // b^phi d_phi src
+//     dg::blas1::pointwiseDot( bhatP, temp2, temp2); // b^phi d_phi src
     dg::blas1::axpby( 1., temp1, 1., target ); // b^R d_R src +  b^Z d_Z src
-    dg::blas1::axpby( 1., temp2, 1., target ); // b^R d_R src +  b^Z d_Z src + b^phi d_phi src
+//     dg::blas1::axpby( 1., temp2, 1., target ); // b^R d_R src +  b^Z d_Z src + b^phi d_phi src
 }
 //Computes curvature operator
 template<class Matrix, class container, class P>
@@ -436,12 +436,12 @@ void Feltor<Matrix, container, P>::nablaparDIR( container& src, container& targe
     container temp1(src),temp2(src);
     dg::blas2::gemv( poisson.dxrhs(), src, target); //d_R src
     dg::blas2::gemv( poisson.dyrhs(), src, temp1);  //d_Z src
-    dg::blas2::gemv( dphi, src, temp2);  //d_phi src
+//     dg::blas2::gemv( dphi, src, temp2);  //d_phi src
     dg::blas1::pointwiseDot( bhatR, target, target); // b^R d_R src
     dg::blas1::pointwiseDot( bhatZ, temp1, temp1); // b^Z d_Z src
-    dg::blas1::pointwiseDot( bhatP, temp2, temp2); // b^phi d_phi src
+//     dg::blas1::pointwiseDot( bhatP, temp2, temp2); // b^phi d_phi src
     dg::blas1::axpby( 1., temp1, 1., target ); // b^R d_R src +  b^Z d_Z src
-    dg::blas1::axpby( 1., temp2, 1., target ); // b^R d_R src +  b^Z d_Z src + b^phi d_phi src
+//     dg::blas1::axpby( 1., temp2, 1., target ); // b^R d_R src +  b^Z d_Z src + b^phi d_phi src
 }
 
 //Computes curvature operator
