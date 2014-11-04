@@ -17,7 +17,6 @@
 11) c10                      =  -2.85650294349998520711660154347
 12) c11                      = -0.706024300488225648764912247713
 13) c12                      = 0.0801296101152246351600534987187
-
 ----------------------geometric coefficients----------------------
 14) R0 (in units of rhos)    =  129.989 
 15) inv aspect ratio (a/R0)  =  0.166667
@@ -25,9 +24,9 @@
 17) triangularity            =  0.47
 ----------------------Miscellaneous----------------------
 18) alpha (Damping thickness)=  0.02
-19) RK4 epsilon              =  1e-3
+19) RK4 epsilon              =  1e-1
 20) psip_min                 = -6.
-21) psip_max                 =  0.0 (> -7.4)
+21) psip_max                 =  -0.0 (> -7.4)
 22) psip_max_cut             =  1e10
 23) psip_max_lim             =  1e10
 

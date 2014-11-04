@@ -1,8 +1,8 @@
-system=home
+system=home # Use as Makefile parameter!
 device=gpu
 
-INCLUDE = -I../../inc # other project libraries
-INCLUDE+= -I../ # other project libraries
+INCLUDE = -I../../inc  # other project libraries
+INCLUDE+= -I../ # geometry library
 
 ifeq ($(strip $(device)),gpu)
 CC = nvcc
@@ -46,30 +46,46 @@ endif
 
 ifeq ($(strip $(system)),vsc)
 INCLUDE += -I$(HOME)/include
-INCLUDE += -I/opt/sw/hdf5/1.8.11/include
 INCLUDE += -I/opt/intel/impi/4.1.0/include64 
-INCLUDE += -I/opt/sw/netcdf/4.0.1/intel-hdf5/include
+INCLUDE += -I/opt/sw/netcdf/4.3/include
+INCLUDE += -I/opt/sw/hdf5/1.8.10-p1/include
 CFLAGS  += -DMPICH_IGNORE_CXX_SEEK
 
-LIBS 	 = -L/opt/sw/hdf5/1.8.11/lib -lhdf5 -lhdf5_hl -lz
+LIBS 	 = -L/opt/sw/hdf5/1.8.10-p1/lib -lhdf5 -lhdf5_hl
 LIBS    += -L/opt/intel/composerxe/lib/intel64 -lirc -lsvml
 LIBS    += -L/opt/intel/impi/4.1.0/lib64 -lmpi
-LIBS    += -L/opt/sw/netcdf/4.0.1/intel-hdf5/lib -lnetcdf
+LIBS    += -L/opt/sw/netcdf/4.3/lib -lnetcdf -lcurl
 GLFLAGS  = -lm
 endif
 
-all: dz_geom_t geometry_t
+all: feltor feltor_hpc
 
-dz_geom_t: dz_geom_t.cu geometry.h 
-	$(CC) -O2 $(CFLAGS) $< -o $@ $(GLFLAGS) $(INCLUDE) $(LIBS)  
+feltor: feltor.cu feltor.cuh 
+	$(CC) $(OPT) $(CFLAGS) $< -o $@ $(INCLUDE) $(GLFLAGS) -DDG_BENCHMARK 
 	echo "Attention: No compiler warnings are issued!" 
+
 	
-geometry_t: geometry_t.cu geometry.h 
-	$(CC) -O2 $(CFLAGS) $< -o $@ $(GLFLAGS) $(INCLUDE) 
+ifeq ($(strip $(device)),mpi)
+feltor_hpc: feltor_hpc.cpp feltor.cuh 
+	$(CC) $(OPT) $(CFLAGS) $< -o $@ $(INCLUDE) $(LIBS) -DDG_BENCHMARK
+else
+feltor_hpc: feltor_hpc.cu feltor.cuh 
+	$(CC) $(OPT) $(CFLAGS) $< -o $@ $(INCLUDE) $(LIBS) -DDG_BENCHMARK
 	echo "Attention: No compiler warnings are issued!" 
+endif
 	
+generator: generator.cpp 
+	g++ generator.cpp -o generator -std=c++0x -Wall
+
 .PHONY: clean doc
 
+dz_geom_t: dz_geom_t.cu 
+	$(CC) $(OPT) $(CFLAGS) $< -o $@ $(INCLUDE) $(GLFLAGS) -lnetcdf -DDG_BENCHMARK 
+	echo "Attention: No compiler warnings are issued!" 
+	
+geometry_t: geometry_t.cu 
+	$(CC) $(OPT) $(CFLAGS) $< -o $@ $(INCLUDE) $(GLFLAGS) -lnetcdf -DDG_BENCHMARK 
+	echo "Attention: No compiler warnings are issued!" 
 doc: 
 	doxygen Doxyfile
 	

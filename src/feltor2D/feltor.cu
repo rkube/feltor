@@ -13,7 +13,7 @@
 #include "solovev/geometry.h"
 
 #include "feltor.cuh"
-#include "parameters.h"
+#include "feltor/parameters.h"
 
 /*
    - reads parameters from input.txt or any other given file, 
@@ -57,8 +57,8 @@ int main( int argc, char* argv[])
     const solovev::GeomParameters gp(v3);
     gp.display( std::cout);
     v2 = file::read_input( "window_params.txt");
-    GLFWwindow* w = draw::glfwInitAndCreateWindow( (p.Nz+1)/v2[2]*v2[3], v2[1]*v2[4], "");
-    draw::RenderHostData render(v2[1], (p.Nz+1)/v2[2]);
+    GLFWwindow* w = draw::glfwInitAndCreateWindow( (p.Nz)/v2[2]*v2[3], v2[1]*v2[4], "");
+    draw::RenderHostData render(v2[1], (p.Nz)/v2[2]);
 
 
 
@@ -80,9 +80,8 @@ int main( int argc, char* argv[])
     //initial perturbation
 //     dg::Gaussian3d init0(gp.R_0+p.posX*gp.a, p.posY*gp.a, M_PI, p.sigma, p.sigma, p.sigma, p.amp);
 //     dg::Gaussian init0( gp.R_0+p.posX*gp.a, p.posY*gp.a, p.sigma, p.sigma, p.amp);
-
-    dg::BathRZ init0(16,16,p.Nz,Rmin,Zmin, 30.,5.,p.amp);
-//     solovev::ZonalFlow init0(p, gp);
+//     dg::BathRZ init0(16,16,p.Nz,Rmin,Zmin, 30.,5.,p.amp);
+    solovev::ZonalFlow init0(p, gp);
 //     dg::CONSTANT init0( 0.);
 
     
@@ -90,14 +89,8 @@ int main( int argc, char* argv[])
     solovev::Nprofile prof(p, gp); //initial background profile
     std::vector<dg::DVec> y0(4, dg::evaluate( prof, grid)), y1(y0); 
     
-    //field aligning
-//     dg::CONSTANT gaussianZ( 1.);
-    dg::GaussianZ gaussianZ( M_PI, p.sigma_z*M_PI, 1);
-    y1[1] = feltor.dz().evaluate( init0, gaussianZ, (unsigned)p.Nz/2, 3); //rounds =2 ->2*2-1
-    y1[2] = dg::evaluate( gaussianZ, grid);
-    dg::blas1::pointwiseDot( y1[1], y1[2], y1[1]);
     //no field aligning
-//     y1[1] = dg::evaluate( init0, grid);
+    y1[1] = dg::evaluate( init0, grid);
     
     dg::blas1::axpby( 1., y1[1], 1., y0[1]); //initialize ni
     dg::blas1::transform(y0[1], y0[1], dg::PLUS<>(-1)); //initialize ni-1
@@ -113,11 +106,10 @@ int main( int argc, char* argv[])
     std::cout << "intiialize karniadakis" << std::endl;
     karniadakis.init( feltor, rolkar, y0, p.dt);
     std::cout << "Done!\n";
-    //std::cout << "first karniadakis" << std::endl;
+    std::cout << "first karniadakis" << std::endl;
 
-    //karniadakis( feltor, rolkar, y0);     
-    //std::cout << "Done!\n";
-    feltor.energies( y0);//now energies and potential are at time 0
+    karniadakis( feltor, rolkar, y0); //now energies and potential are at time 0
+    std::cout << "Done!\n";
 
     dg::DVec dvisual( grid.size(), 0.);
     dg::HVec hvisual( grid.size(), 0.), visual(hvisual),avisual(hvisual);
@@ -152,11 +144,9 @@ int main( int argc, char* argv[])
         {
             unsigned size=grid.n()*grid.n()*grid.Nx()*grid.Ny();
             dg::HVec part( visual.begin() + k*v2[2]*size, visual.begin()+(k*v2[2]+1)*size);
-            dg::blas1::axpby(1.0,part,1.0,avisual);
             render.renderQuad( part, grid.n()*grid.Nx(), grid.n()*grid.Ny(), colors);
         }
-        dg::blas1::scal(avisual,1./p.Nz);
-        render.renderQuad( avisual, grid.n()*grid.Nx(), grid.n()*grid.Ny(), colors);
+
         //draw ions
         //thrust::transform( y1[1].begin(), y1[1].end(), dvisual.begin(), dg::PLUS<double>(-0.));//ne-1
         hvisual = karniadakis.last()[1];
@@ -174,11 +164,9 @@ int main( int argc, char* argv[])
         {
             unsigned size=grid.n()*grid.n()*grid.Nx()*grid.Ny();
             dg::HVec part( visual.begin() + k*v2[2]*size, visual.begin()+(k*v2[2]+1)*size);
-            dg::blas1::axpby(1.0,part,1.0,avisual);
             render.renderQuad( part, grid.n()*grid.Nx(), grid.n()*grid.Ny(), colors);
         }
-        dg::blas1::scal(avisual,1./p.Nz);
-        render.renderQuad( avisual, grid.n()*grid.Nx(), grid.n()*grid.Ny(), colors);
+
         
         //draw potential
         //transform to Vor
@@ -197,11 +185,9 @@ int main( int argc, char* argv[])
         {
             unsigned size=grid.n()*grid.n()*grid.Nx()*grid.Ny();
             dg::HVec part( visual.begin() + k*v2[2]*size, visual.begin()+(k*v2[2]+1)*size);
-            dg::blas1::axpby(1.0,part,1.0,avisual);
             render.renderQuad( part, grid.n()*grid.Nx(), grid.n()*grid.Ny(), colors);
         }
-        dg::blas1::scal(avisual,1./p.Nz);
-        render.renderQuad( avisual, grid.n()*grid.Nx(), grid.n()*grid.Ny(), colors);
+
 
         //draw U_e
         hvisual = karniadakis.last()[2];
@@ -216,11 +202,9 @@ int main( int argc, char* argv[])
         {
             unsigned size=grid.n()*grid.n()*grid.Nx()*grid.Ny();
             dg::HVec part( visual.begin() + k*v2[2]*size, visual.begin()+(k*v2[2]+1)*size);
-            dg::blas1::axpby(1.0,part,1.0,avisual);
             render.renderQuad( part, grid.n()*grid.Nx(), grid.n()*grid.Ny(), colors);
         }
-        dg::blas1::scal(avisual,1./p.Nz);
-        render.renderQuad( avisual, grid.n()*grid.Nx(), grid.n()*grid.Ny(), colors);
+
         //draw U_i
         hvisual = karniadakis.last()[3];
         dg::blas2::gemv( equi, hvisual, visual);
@@ -234,11 +218,9 @@ int main( int argc, char* argv[])
         {
             unsigned size=grid.n()*grid.n()*grid.Nx()*grid.Ny();
             dg::HVec part( visual.begin() + k*v2[2]*size, visual.begin()+(k*v2[2]+1)*size);
-            dg::blas1::axpby(1.0,part,1.0,avisual);
             render.renderQuad( part, grid.n()*grid.Nx(), grid.n()*grid.Ny(), colors);
         }
-        dg::blas1::scal(avisual,1./p.Nz);
-        render.renderQuad( avisual, grid.n()*grid.Nx(), grid.n()*grid.Ny(), colors);
+
         
         title << std::fixed; 
         title << " &&   time = "<<time;
@@ -254,7 +236,6 @@ int main( int argc, char* argv[])
         for( unsigned i=0; i<p.itstp; i++)
         {
             step++;
-            feltor.energies( y0); //update energetics
             std::cout << "(m_tot-m_0)/m_0: "<< (feltor.mass()-mass0)/mass_blob0<<"\t";
             E1 = feltor.energy();
             diff = (E1 - E0)/p.dt; //
