@@ -130,7 +130,7 @@ struct Feltor
 
 
     const container binv, curvR, curvZ, gradlnB;
-    const container bhatR,bhatZ,bhatP;
+    const container bhatR,bhatZ,bhatP,psip;
     const container source, damping, one;
     const Preconditioner w3d, v3d;
 
@@ -141,7 +141,7 @@ struct Feltor
     //matrices and solvers
     dg::DZ<Matrix, container> dzNU_;
     dg::DZ<Matrix, container> dzDIR_;
-    Matrix dphi;
+    Matrix dR,dZ,dphi;
 
     dg::Poisson< Matrix, container> poisson; 
     //dg::Polarisation2dX< thrust::host_vector<value_type> > pol; //note the host vector
@@ -171,6 +171,9 @@ Feltor<Matrix, container, P>::Feltor( const Grid& g, eule::Parameters p, solovev
     bhatR(dg::evaluate(solovev::BHatR(gp),g)),
     bhatZ(dg::evaluate(solovev::BHatZ(gp),g)),
     bhatP(dg::evaluate(solovev::BHatP(gp),g)),
+    psip(dg::evaluate(solovev::Psip(gp),g)),
+    dR(dg::create::dx( g, g.bcx(),dg::normed,dg::centered)),
+    dZ(dg::create::dy( g, g.bcy(),dg::normed,dg::centered)),
     dphi(dg::create::dz( g, g.bcz(),dg::centered)),
     source( dg::evaluate(solovev::TanhSource(p, gp), g)),
     damping( dg::evaluate( solovev::GaussianDamping(gp ), g)), 
@@ -462,9 +465,13 @@ void Feltor<Matrix, container, P>::operator()( std::vector<container>& y, std::v
 template<class Matrix, class container, class P>
 void Feltor<Matrix, container, P>::nablaparNU( container& src, container& target)
 {
+
     container temp1(src),temp2(src);
-    dg::blas2::gemv( poisson.dxlhs(), src, target); //d_R src
-    dg::blas2::gemv( poisson.dylhs(), src, temp1);  //d_Z src
+
+//     dg::blas2::gemv( poisson.dxlhs(), src, target); //d_R src
+//     dg::blas2::gemv( poisson.dylhs(), src, temp1);  //d_Z src
+    dg::blas2::gemv( dR, src, target); //d_R src
+    dg::blas2::gemv( dZ, src, temp1);  //d_Z src
     dg::blas2::gemv( dphi, src, temp2);  //d_phi src
     dg::blas1::pointwiseDot( bhatR, target, target); // b^R d_R src
     dg::blas1::pointwiseDot( bhatZ, temp1, temp1); // b^Z d_Z src
@@ -477,8 +484,11 @@ template<class Matrix, class container, class P>
 void Feltor<Matrix, container, P>::nablaparDIR( container& src, container& target)
 {
     container temp1(src),temp2(src);
-    dg::blas2::gemv( poisson.dxrhs(), src, target); //d_R src
-    dg::blas2::gemv( poisson.dyrhs(), src, temp1);  //d_Z src
+
+//     dg::blas2::gemv( poisson.dxrhs(), src, target); //d_R src
+//     dg::blas2::gemv( poisson.dyrhs(), src, temp1);  //d_Z src
+    dg::blas2::gemv( dR, src, target); //d_R src
+    dg::blas2::gemv( dZ, src, temp1);  //d_Z src
     dg::blas2::gemv( dphi, src, temp2);  //d_phi src
     dg::blas1::pointwiseDot( bhatR, target, target); // b^R d_R src
     dg::blas1::pointwiseDot( bhatZ, temp1, temp1); // b^Z d_Z src
