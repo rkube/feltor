@@ -1,0 +1,65 @@
+\form#0:\[ [f,g] := \partial_x f\partial_x g - \partial_y f\partial_y g \]
+\form#1:\[ (\nabla\phi)^2 \]
+\form#2:\[ [f,g] := \partial_x f\partial_x g + \partial_y f\partial_y g \]
+\form#3:\[ x^T y = \sum_{i=0}^{N-1} x_i y_i \]
+\form#4:\[ y = \alpha x + \beta y \]
+\form#5:\[ z = \alpha x + \beta y \]
+\form#6:\[ y_i = f(x_i) \]
+\form#7:\[ x \leftarrow \alpha x \]
+\form#8:\[ y_i = x_{1i}x_{2i}\]
+\form#9:\[ y_i = x_{1i}/x_{2i}\]
+\form#10:\[ x^T M y = \sum_{i,j=0}^{N-1} x_i M_{ij} y_j \]
+\form#11:\[ My\]
+\form#12:\[ x^T M x = \sum_{i,j=0}^{N-1} x_i M_{ij} x_j \]
+\form#13:\[ y = \alpha P x + \beta y \]
+\form#14:\[ P\]
+\form#15:\[ y = M x \]
+\form#16:\[ M\]
+\form#17:\[ \hat O \phi = W \cdot \rho \]
+\form#18:$\hat O$
+\form#19:$W$
+\form#20:$ \hat O = W\cdot O$
+\form#21:$ ||Ax|| < \epsilon( ||b|| + C) $
+\form#22:$C$
+\form#23:\[ \hat O \phi = W\rho \]
+\form#24:\[ -\nabla \cdot ( \chi \nabla_\perp ) \]
+\form#25:$ \nabla_\perp $
+\form#26:\[ -\partial_x(\chi\partial_x) - \partial_y(\chi\partial_y)\]
+\form#27:\[ - \frac{1}{R}\partial_R( R\chi\partial_R) - \partial_Z(\chi\partial_Z)\]
+\form#28:$ \chi=1$
+\form#29:\[ f(x,y) = Ae^{-\left(\frac{(x-x_0)^2}{2\sigma_x^2} + \frac{(y-y_0)^2}{2\sigma_y^2}\right)} \]
+\form#30:\[ f(x,y) = Ae^{-\left(\frac{(x-x_0)^2}{2\sigma_x^2} + \frac{(y-y_0)^2}{2\sigma_y^2} + \frac{(z-z_0)^2}{2\sigma_z^2}\right)} \]
+\form#31:\[ f(x,y) = Ae^{-(\frac{(x-x_0)^2}{2\sigma_x^2}) } \]
+\form#32:\[ f(x,y) = Ae^{-\frac{(y-y_0)^2}{2\sigma_y^2}} \]
+\form#33:\[ f(x,y) = Ae^{-\frac{(z-z_0)^2}{2\sigma_z^2}} \]
+\form#34:\[ f(x,y) = a*x+b \]
+\form#35:\[ f(x,y) = a*y+b) \]
+\form#36:$ J_1(x)$
+\form#37:$ I_1(x)$
+\form#38:$ K_1(x)$
+\form#39:\[ f(x,y) = Ae^{-(\frac{(x-x_0)^2}{2\sigma_x^2} + \frac{(y-y_0)^2}{2\sigma_y^2})} \]
+\form#40:\[ f(x,y,z) = A\cos(kz)e^{-(\frac{(x-x_0)^2}{2\sigma_x^2} + \frac{(y-y_0)^2}{2\sigma_y^2})} \]
+\form#41:\[ f(x,y) = Ae^{-(\frac{(x-x_0)^2}{2\sigma_x^2} + \frac{(y-y_0)^2}{2\sigma_y^2}+\frac{(z-z_0)^2}{2\sigma_z^2})} \]
+\form#42:\[ f(x,y) = Ae^{-(\frac{(x-x_0)^2}{2\sigma_x^2})} \]
+\form#43:\[ f(x,y,z) = Ae^{-\frac{(z-z_0)^2}{2\sigma_z^2}} \]
+\form#44:\[E_k=(k/(k+_k0)^2)^\gamma\]
+\form#45:\[k_0=2*\pi*eddysize/XYm \]
+\form#46:\[norm= (2/(Rm* Zm))^{1/2}\]
+\form#47:\[k=(k_R^2+k_Z^2)^{1/2}\]
+\form#48:\[ E_k^{1/2}\]
+\form#49:\[normalamp= (normal1^2+normal2^2)^{1/2}\]
+\form#50:\[normalphase= arctan(normal2/normal1)\]
+\form#51:\[ (\chi+\alpha\Delta) \]
+\form#52:$ \chi$
+\form#53:$\alpha$
+\form#54:$\chi$
+\form#55:\[ y = W( 1 + \alpha\Delta) x \]
+\form#56:\[ u_{n+1} = u_n + dt\sum_{j=0}^k b_j f(u_{n-j}) \]
+\form#57:\[ {\bar v}^n = \frac{1}{\gamma_0}\left(\sum_{q=0}^2 \alpha_q v^{n-q} + \Delta t\sum_{q=0}^2\beta_q N( v^{n-q})\right) \]
+\form#58:\[ \left( 1 - \frac{\Delta t}{\gamma_0} \hat L\right) v^{n+1} = {\bar v}^n \]
+\form#59:\[ [f,g] := \partial_x f\partial_y g - \partial_y f\partial_x g \]
+\form#60:\[ y = Bhk = (B-D)hk + Dhk = (B-D)B^{-1}y + Dhk = ( 1- DB^{-1})y + Dhk = \alpha y + \beta h k\]
+\form#61:\[ B\]
+\form#62:\[ D\]
+\form#63:\[ \nabla ( \chi \nabla ) \]
+\form#64:\[ \nabla(\chi\nabla)x = b \]

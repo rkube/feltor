@@ -1,0 +1,9 @@
+\form#0:\[ j(x,y) := \{l(x,y), r(x,y)\} = \partial_x l \partial_y r - \partial_y l \partial_x r \]
+\form#1:\[ left_{ij} = l(x_j, y_i) \]
+\form#2:\[ right_{ij} = r(x_j, y_i) \]
+\form#3:\[ x_j = x_0 + hj \]
+\form#4:\[ y_i = z_0 + hi \]
+\form#5:\[ f(x,y) = Ae^{-(\frac{(x-x_0)^2}{2\sigma_x^2} + \frac{(y-y_0)^2}{2\sigma_y^2}} \]
+\form#6:$ x,y = 0...1 $
+\form#7:\[ f(x,y) = Ae^{-(\frac{(x-x_0)^2}{2\sigma_x^2} } \]
+\form#8:\[ f(k_x, k_y) = z(k_x, k_y)\frac{A}{\sqrt{1+3.125(k_x^2 + k_y^2)^4}} \]

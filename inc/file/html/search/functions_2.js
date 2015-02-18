@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['define_5fdimension',['define_dimension',['../namespacefile.html#a846a2bb3ad75738bad0fe50c891b0bd7',1,'file::define_dimension(int ncid, const char *name, int *dimID, const double *points, int size)'],['../namespacefile.html#afd9f1ad6f13f19c99869def05583fb09',1,'file::define_dimension(int ncid, const char *name, int *dimID, const dg::Grid1d&lt; double &gt; &amp;g)']]],
+  ['define_5fdimensions',['define_dimensions',['../namespacefile.html#a452009c263aa1fb8b8c6cfab310fff84',1,'file::define_dimensions(int ncid, int *dimsIDs, int *tvarID, const dg::Grid1d&lt; double &gt; &amp;g)'],['../namespacefile.html#a775499582ff288f9675263e69736fbcd',1,'file::define_dimensions(int ncid, int *dimsIDs, const dg::Grid2d&lt; double &gt; &amp;g)'],['../namespacefile.html#a437d502f8dbb9343ab38c568446ae3aa',1,'file::define_dimensions(int ncid, int *dimsIDs, int *tvarID, const dg::Grid2d&lt; double &gt; &amp;g)'],['../namespacefile.html#ac45d16d851bfa0df93305e5e1a836e46',1,'file::define_dimensions(int ncid, int *dimsIDs, const dg::Grid3d&lt; double &gt; &amp;g)'],['../namespacefile.html#ae1535f34423979479a0e0c43e377287e',1,'file::define_dimensions(int ncid, int *dimsIDs, int *tvarID, const dg::Grid3d&lt; double &gt; &amp;g)']]],
+  ['define_5ftime',['define_time',['../namespacefile.html#a6359fc68f28994afced36013b94fdc07',1,'file']]]
+];
