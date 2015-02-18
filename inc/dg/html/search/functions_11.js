@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['transform',['transform',['../group__blas1.html#gace34b2c8e27a5173cb25db0542089c2c',1,'dg::blas1']]],
-  ['transpose',['transpose',['../classdg_1_1_operator.html#ac7f3aa813f8894b2f5a44f08da781dfd',1,'dg::Operator']]]
+  ['variation',['variation',['../structdg_1_1_arakawa_x.html#a94b98d5a2711eea2d690aa2cac907b32',1,'dg::ArakawaX']]],
+  ['variationrhs',['variationRHS',['../structdg_1_1_poisson.html#adf321b9c9e29d3a110d95ef382b771bd',1,'dg::Poisson']]],
+  ['vortex',['Vortex',['../structdg_1_1_vortex.html#a3cb30fdf2c8da900f2b6f3366dbaf237',1,'dg::Vortex']]]
 ];

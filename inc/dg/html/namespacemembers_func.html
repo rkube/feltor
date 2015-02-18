@@ -4,10 +4,17 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Input and Output utilities: Namespace Members</title>
+<title>Discontinuous Galerkin Library: Namespace Members</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
@@ -22,9 +29,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Input and Output utilities
-   &#160;<span id="projectnumber">1.2</span>
+   <div id="projectname">Discontinuous Galerkin Library
+   &#160;<span id="projectnumber">2.0</span>
    </div>
+   <div id="projectbrief">Discontinuous Galerkin numerical methods and container free numerical algorithms</div>
   </td>
  </tr>
  </tbody>
@@ -74,29 +82,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="namespacemembers_eval.html"><span>Enumerator</span></a></li>
     </ul>
   </div>
-  <div id="navrow4" class="tabs3">
-    <ul class="tablist">
-      <li><a href="#index_a"><span>a</span></a></li>
-      <li><a href="#index_b"><span>b</span></a></li>
-      <li><a href="#index_c"><span>c</span></a></li>
-      <li><a href="#index_d"><span>d</span></a></li>
-      <li><a href="#index_e"><span>e</span></a></li>
-      <li><a href="#index_g"><span>g</span></a></li>
-      <li><a href="#index_i"><span>i</span></a></li>
-      <li><a href="#index_o"><span>o</span></a></li>
-      <li><a href="#index_p"><span>p</span></a></li>
-      <li><a href="#index_s"><span>s</span></a></li>
-      <li><a href="#index_t"><span>t</span></a></li>
-      <li class="current"><a href="#index_z"><span>z</span></a></li>
-    </ul>
-  </div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('namespacemembers_func.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Groups</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Groups</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -106,16 +112,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 
 <div class="contents">
-&#160;
-
-<h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
+&#160;<ul>
 <li>axpby()
 : <a class="el" href="group__blas1.html#ga6ee5b940147ba6b71e1fe1fc538e9459">dg::blas1</a>
 </li>
-</ul>
-
-
-<h3><a class="anchor" id="index_b"></a>- b -</h3><ul>
 <li>bessi1()
 : <a class="el" href="group__functions.html#ga8f29ee46cf5603af9cabd93163cf98cc">dg</a>
 </li>
@@ -128,99 +128,44 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>bisection1d()
 : <a class="el" href="group___nullstellensuchroutinen.html#gaa269808db678039605044e14fc849675">dg</a>
 </li>
-</ul>
-
-
-<h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
 <li>cg()
 : <a class="el" href="group__algorithms.html#ga61caca7351ed278357a3923adb6ab655">dg</a>
 </li>
-<li>coo1()
-: <a class="el" href="group__functions.html#ga59b5a3c6ae442e096d03c937e43cb30a">dg</a>
-</li>
-<li>coo2()
-: <a class="el" href="group__functions.html#ga66ec91cd05d75e09896a0198737d05c1">dg</a>
-</li>
-<li>coo3()
-: <a class="el" href="group__functions.html#gac71c7be4a51ce1589f13fe8a803af81f">dg</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_d"></a>- d -</h3><ul>
 <li>dot()
 : <a class="el" href="group__blas1.html#gade540580ce83e615dcb8e2210689bb32">dg::blas1</a>
-, <a class="el" href="group__blas2.html#gaeb8a93cac85646f2173160afd2a79d53">dg::blas2</a>
+, <a class="el" href="group__blas2.html#gac72ec781ca79b3b983099ea172f896ab">dg::blas2</a>
 </li>
-</ul>
-
-
-<h3><a class="anchor" id="index_e"></a>- e -</h3><ul>
-<li>evaluate()
-: <a class="el" href="group__evaluation.html#ga6c4f63b5200dcc8c92f441cadadbbd54">dg</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
 <li>gemv()
 : <a class="el" href="group__blas2.html#gadda8a3d0278c095d51becf208760d49b">dg::blas2</a>
 </li>
-</ul>
-
-
-<h3><a class="anchor" id="index_i"></a>- i -</h3><ul>
 <li>integrateRK4()
 : <a class="el" href="group__algorithms.html#ga098434b3580fe8186441a1fd178214ef">dg</a>
 </li>
-</ul>
-
-
-<h3><a class="anchor" id="index_o"></a>- o -</h3><ul>
-<li>one()
-: <a class="el" href="group__functions.html#ga5797166cdb9d26408ea629f742534fa7">dg</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
 <li>pointwiseDivide()
 : <a class="el" href="group__blas1.html#ga451523cc2d3740676888ce0b14cb8509">dg::blas1</a>
 </li>
 <li>pointwiseDot()
 : <a class="el" href="group__blas1.html#ga2939c008737a653c8ea3aa972cac136b">dg::blas1</a>
 </li>
-</ul>
-
-
-<h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
 <li>scal()
 : <a class="el" href="group__blas1.html#ga9287f21c8d97b7d4d77b0353cf5b56b2">dg::blas1</a>
 </li>
 <li>symv()
-: <a class="el" href="group__blas2.html#ga7f66ae102c9c093cdc0877a989fd82b3">dg::blas2</a>
+: <a class="el" href="group__blas2.html#ga268c50e488c18db3dc5be1d1934eb7b2">dg::blas2</a>
 </li>
-</ul>
-
-
-<h3><a class="anchor" id="index_t"></a>- t -</h3><ul>
 <li>transform()
 : <a class="el" href="group__blas1.html#gace34b2c8e27a5173cb25db0542089c2c">dg::blas1</a>
 </li>
 </ul>
-
-
-<h3><a class="anchor" id="index_z"></a>- z -</h3><ul>
-<li>zero()
-: <a class="el" href="group__functions.html#ga4c5536b3b96ccc28668a59d142293b6d">dg</a>
-</li>
-</ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 18:00:00 for Input and Output utilities by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated on Wed Feb 18 2015 23:45:35 for Discontinuous Galerkin Library by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
 </body>
 </html>

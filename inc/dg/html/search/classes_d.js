@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['ooops',['Ooops',['../structdg_1_1_ooops.html',1,'dg']]],
-  ['operator',['Operator',['../classdg_1_1_operator.html',1,'dg']]]
+  ['plus',['PLUS',['../structdg_1_1_p_l_u_s.html',1,'dg']]],
+  ['poisson',['Poisson',['../structdg_1_1_poisson.html',1,'dg']]]
 ];

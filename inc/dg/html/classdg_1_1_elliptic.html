@@ -4,10 +4,17 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Input and Output utilities: dg::Elliptic&lt; Matrix, Vector, Preconditioner &gt; Class Template Reference</title>
+<title>Discontinuous Galerkin Library: dg::Elliptic&lt; Matrix, Vector, Preconditioner &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
@@ -22,9 +29,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Input and Output utilities
-   &#160;<span id="projectnumber">1.2</span>
+   <div id="projectname">Discontinuous Galerkin Library
+   &#160;<span id="projectnumber">2.0</span>
    </div>
+   <div id="projectbrief">Discontinuous Galerkin numerical methods and container free numerical algorithms</div>
   </td>
  </tr>
  </tbody>
@@ -68,12 +76,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classdg_1_1_elliptic.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Groups</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Groups</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -82,11 +105,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespacedg.html">dg</a></li><li class="navelem"><a class="el" href="classdg_1_1_elliptic.html">Elliptic</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -96,7 +114,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classdg_1_1_operator.html" title="Helper class mainly for the assembly of Matrices. ">Operator</a> that acts as a 2d negative elliptic differential operator.  
+<p>Operator that acts as a 2d negative elliptic differential operator.  
  <a href="classdg_1_1_elliptic.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="elliptic_8h_source.html">elliptic.h</a>&gt;</code></p>
@@ -128,7 +146,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><h3>template&lt;class Matrix, class Vector, class Preconditioner&gt;<br/>
 class dg::Elliptic&lt; Matrix, Vector, Preconditioner &gt;</h3>
 
-<p><a class="el" href="classdg_1_1_operator.html" title="Helper class mainly for the assembly of Matrices. ">Operator</a> that acts as a 2d negative elliptic differential operator. </p>
+<p>Operator that acts as a 2d negative elliptic differential operator. </p>
 <p>The term discretized is </p>
 <p class="formulaDsp">
 <img class="formulaDsp" alt="\[ -\nabla \cdot ( \chi \nabla_\perp ) \]" src="form_24.png"/>
@@ -146,7 +164,7 @@ class dg::Elliptic&lt; Matrix, Vector, Preconditioner &gt;</h3>
   <table class="tparams">
     <tr><td class="paramname">Matrix</td><td>The Matrix class to use </td></tr>
     <tr><td class="paramname">Vector</td><td>The Vector class to use </td></tr>
-    <tr><td class="paramname">Preconditioner</td><td>The Preconditioner class to use This class has the <a class="el" href="structdg_1_1_self_made_matrix_tag.html">SelfMadeMatrixTag</a> so it can be used in <a class="el" href="group__blas2.html#ga7f66ae102c9c093cdc0877a989fd82b3" title="Symmetric Matrix Vector product. ">blas2::symv</a> functions and thus in a conjugate gradient solver. </td></tr>
+    <tr><td class="paramname">Preconditioner</td><td>The Preconditioner class to use This class has the SelfMadeMatrixTag so it can be used in <a class="el" href="group__blas2.html#ga7f66ae102c9c093cdc0877a989fd82b3" title="Symmetric Matrix Vector product. ">blas2::symv</a> functions and thus in a conjugate gradient solver. </td></tr>
   </table>
   </dd>
 </dl>
@@ -157,7 +175,7 @@ class dg::Elliptic&lt; Matrix, Vector, Preconditioner &gt;</h3>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Matrix , class Vector , class Preconditioner &gt; </div>
+template&lt;class Matrix, class Vector, class Preconditioner&gt; </div>
 <div class="memtemplate">
 template&lt;class Grid &gt; </div>
 <table class="mlabels">
@@ -217,7 +235,7 @@ template&lt;class Grid &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Matrix , class Vector , class Preconditioner &gt; </div>
+template&lt;class Matrix, class Vector, class Preconditioner&gt; </div>
 <div class="memtemplate">
 template&lt;class Grid &gt; </div>
 <table class="mlabels">
@@ -292,7 +310,7 @@ template&lt;class Grid &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Matrix , class Vector , class Preconditioner &gt; </div>
+template&lt;class Matrix, class Vector, class Preconditioner&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -321,7 +339,7 @@ template&lt;class Matrix , class Vector , class Preconditioner &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Matrix , class Vector , class Preconditioner &gt; </div>
+template&lt;class Matrix, class Vector, class Preconditioner&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -355,7 +373,7 @@ template&lt;class Matrix , class Vector , class Preconditioner &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Matrix , class Vector , class Preconditioner &gt; </div>
+template&lt;class Matrix, class Vector, class Preconditioner&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -400,7 +418,7 @@ template&lt;class Matrix , class Vector , class Preconditioner &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Matrix , class Vector , class Preconditioner &gt; </div>
+template&lt;class Matrix, class Vector, class Preconditioner&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -428,11 +446,15 @@ template&lt;class Matrix , class Vector , class Preconditioner &gt; </div>
 <li>/home/matthias/feltor/inc/dg/<a class="el" href="elliptic_8h_source.html">elliptic.h</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 17:59:59 for Input and Output utilities by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacedg.html">dg</a></li><li class="navelem"><a class="el" href="classdg_1_1_elliptic.html">Elliptic</a></li>
+    <li class="footer">Generated on Wed Feb 18 2015 23:45:15 for Discontinuous Galerkin Library by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -4,10 +4,17 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Input and Output utilities: /home/matthias/feltor/inc/dg/poisson.h Source File</title>
+<title>Discontinuous Galerkin Library: /home/matthias/feltor/inc/dg/poisson.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
@@ -22,9 +29,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Input and Output utilities
-   &#160;<span id="projectnumber">1.2</span>
+   <div id="projectname">Discontinuous Galerkin Library
+   &#160;<span id="projectnumber">2.0</span>
    </div>
+   <div id="projectbrief">Discontinuous Galerkin numerical methods and container free numerical algorithms</div>
   </td>
  </tr>
  </tbody>
@@ -65,12 +73,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="files.html"><span>File&#160;List</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('poisson_8h_source.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Groups</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Groups</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -79,11 +102,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="dir_cba352cc187f01702d3926d435723909.html">dg</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">poisson.h</div>  </div>
@@ -98,7 +116,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;backend/derivatives.cuh&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifdef MPI_VERSION</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &quot;backend/mpi_derivatives.h&quot;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="mpi__evaluation_8h.html">backend/mpi_evaluation.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;backend/mpi_evaluation.h&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span>dg</div>
@@ -152,7 +170,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">class</span> Matrix, <span class="keyword">class</span> container&gt;</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">class</span> Gr<span class="keywordtype">id</span>&gt;</div>
 <div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="structdg_1_1_poisson.html#a9d05425969806b3e32ced184efb07209">  148</a></span>&#160;<a class="code" href="structdg_1_1_poisson.html#a9d05425969806b3e32ced184efb07209">Poisson&lt;Matrix, container&gt;::Poisson</a>( <span class="keyword">const</span> Grid&amp; g ): </div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    dxlhslhs_( dg::<a class="code" href="group__evaluation.html#ga6c4f63b5200dcc8c92f441cadadbbd54">evaluate</a>( <a class="code" href="group__functions.html#ga5797166cdb9d26408ea629f742534fa7">one</a>, g) ), dxrhsrhs_(dxlhslhs_), dylhslhs_(dxlhslhs_), dyrhsrhs_( dxlhslhs_), helper_( dxlhslhs_),</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    dxlhslhs_( dg::evaluate( one, g) ), dxrhsrhs_(dxlhslhs_), dylhslhs_(dxlhslhs_), dyrhsrhs_( dxlhslhs_), helper_( dxlhslhs_),</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    dxlhs_(dg::create::dx( g, g.bcx(),dg::<a class="code" href="group__creation.html#gga9945b71a335bc97f78dc7425911c7287a3f222a3e51d054ebe21228c62569e123">normed</a>,dg::<a class="code" href="group__creation.html#ggabf9ea3df33484cbb5886e257c3899e48a6281b4fc609cb723a615662b5adac9df">centered</a>)),</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    dylhs_(dg::create::dy( g, g.bcy(),dg::<a class="code" href="group__creation.html#gga9945b71a335bc97f78dc7425911c7287a3f222a3e51d054ebe21228c62569e123">normed</a>,dg::<a class="code" href="group__creation.html#ggabf9ea3df33484cbb5886e257c3899e48a6281b4fc609cb723a615662b5adac9df">centered</a>)),</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    dxrhs_(dg::create::dx( g, g.bcx(),dg::<a class="code" href="group__creation.html#gga9945b71a335bc97f78dc7425911c7287a3f222a3e51d054ebe21228c62569e123">normed</a>,dg::<a class="code" href="group__creation.html#ggabf9ea3df33484cbb5886e257c3899e48a6281b4fc609cb723a615662b5adac9df">centered</a>)),</div>
@@ -161,7 +179,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">class</span> Matrix, <span class="keyword">class</span> container&gt;</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">class</span> Gr<span class="keywordtype">id</span>&gt;</div>
 <div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="structdg_1_1_poisson.html#abad7fc6e4aa73ad7004e6895821395f8">  157</a></span>&#160;<a class="code" href="structdg_1_1_poisson.html#a9d05425969806b3e32ced184efb07209">Poisson&lt;Matrix, container&gt;::Poisson</a>( <span class="keyword">const</span> Grid&amp; g, <a class="code" href="group__creation.html#ga59440bdf436f2874b49aa52b670ed364">bc</a> bcx, <a class="code" href="group__creation.html#ga59440bdf436f2874b49aa52b670ed364">bc</a> bcy): </div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    dxlhslhs_( dg::<a class="code" href="group__evaluation.html#ga6c4f63b5200dcc8c92f441cadadbbd54">evaluate</a>( <a class="code" href="group__functions.html#ga5797166cdb9d26408ea629f742534fa7">one</a>, g) ), dxrhsrhs_(dxlhslhs_), dylhslhs_(dxlhslhs_), dyrhsrhs_( dxlhslhs_), helper_( dxlhslhs_),</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    dxlhslhs_( dg::evaluate( one, g) ), dxrhsrhs_(dxlhslhs_), dylhslhs_(dxlhslhs_), dyrhsrhs_( dxlhslhs_), helper_( dxlhslhs_),</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    dxlhs_(dg::create::dx( g, bcx,dg::<a class="code" href="group__creation.html#gga9945b71a335bc97f78dc7425911c7287a3f222a3e51d054ebe21228c62569e123">normed</a>,dg::<a class="code" href="group__creation.html#ggabf9ea3df33484cbb5886e257c3899e48a6281b4fc609cb723a615662b5adac9df">centered</a>)),</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    dylhs_(dg::create::dy( g, bcy,dg::<a class="code" href="group__creation.html#gga9945b71a335bc97f78dc7425911c7287a3f222a3e51d054ebe21228c62569e123">normed</a>,dg::<a class="code" href="group__creation.html#ggabf9ea3df33484cbb5886e257c3899e48a6281b4fc609cb723a615662b5adac9df">centered</a>)),</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    dxrhs_(dg::create::dx( g, bcx,dg::<a class="code" href="group__creation.html#gga9945b71a335bc97f78dc7425911c7287a3f222a3e51d054ebe21228c62569e123">normed</a>,dg::<a class="code" href="group__creation.html#ggabf9ea3df33484cbb5886e257c3899e48a6281b4fc609cb723a615662b5adac9df">centered</a>)),</div>
@@ -171,7 +189,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">class</span> Matrix, <span class="keyword">class</span> container&gt;</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">class</span> Gr<span class="keywordtype">id</span>&gt;</div>
 <div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="structdg_1_1_poisson.html#a5a06c1b0627b5691634667f3913ec04f">  167</a></span>&#160;<a class="code" href="structdg_1_1_poisson.html#a9d05425969806b3e32ced184efb07209">Poisson&lt;Matrix, container&gt;::Poisson</a>(  <span class="keyword">const</span> Grid&amp; g, <a class="code" href="group__creation.html#ga59440bdf436f2874b49aa52b670ed364">bc</a> bcxlhs, <a class="code" href="group__creation.html#ga59440bdf436f2874b49aa52b670ed364">bc</a> bcylhs, <a class="code" href="group__creation.html#ga59440bdf436f2874b49aa52b670ed364">bc</a> bcxrhs, <a class="code" href="group__creation.html#ga59440bdf436f2874b49aa52b670ed364">bc</a> bcyrhs): </div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    dxlhslhs_( dg::<a class="code" href="group__evaluation.html#ga6c4f63b5200dcc8c92f441cadadbbd54">evaluate</a>( <a class="code" href="group__functions.html#ga5797166cdb9d26408ea629f742534fa7">one</a>, g) ), dxrhsrhs_(dxlhslhs_), dylhslhs_(dxlhslhs_), dyrhsrhs_( dxlhslhs_), helper_( dxlhslhs_),</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    dxlhslhs_( dg::evaluate( one, g) ), dxrhsrhs_(dxlhslhs_), dylhslhs_(dxlhslhs_), dyrhsrhs_( dxlhslhs_), helper_( dxlhslhs_),</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    dxlhs_(dg::create::dx( g, bcxlhs,dg::<a class="code" href="group__creation.html#gga9945b71a335bc97f78dc7425911c7287a3f222a3e51d054ebe21228c62569e123">normed</a>,dg::<a class="code" href="group__creation.html#ggabf9ea3df33484cbb5886e257c3899e48a6281b4fc609cb723a615662b5adac9df">centered</a>)),</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    dylhs_(dg::create::dy( g, bcylhs,dg::<a class="code" href="group__creation.html#gga9945b71a335bc97f78dc7425911c7287a3f222a3e51d054ebe21228c62569e123">normed</a>,dg::<a class="code" href="group__creation.html#ggabf9ea3df33484cbb5886e257c3899e48a6281b4fc609cb723a615662b5adac9df">centered</a>)),</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    dxrhs_(dg::create::dx( g, bcxrhs,dg::<a class="code" href="group__creation.html#gga9945b71a335bc97f78dc7425911c7287a3f222a3e51d054ebe21228c62569e123">normed</a>,dg::<a class="code" href="group__creation.html#ggabf9ea3df33484cbb5886e257c3899e48a6281b4fc609cb723a615662b5adac9df">centered</a>)),</div>
@@ -196,9 +214,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="preprocessor">#endif //_DG_POISSON_CUH</span></div>
 <div class="ttc" id="structdg_1_1_poisson_html_a82faeacbd8a78bec7d51542481c0e994"><div class="ttname"><a href="structdg_1_1_poisson.html#a82faeacbd8a78bec7d51542481c0e994">dg::Poisson::dxlhs</a></div><div class="ttdeci">const Matrix &amp; dxlhs()</div><div class="ttdoc">Return internally used 2d - x - derivative. </div><div class="ttdef"><b>Definition:</b> poisson.h:77</div></div>
-<div class="ttc" id="group__functions_html_ga5797166cdb9d26408ea629f742534fa7"><div class="ttname"><a href="group__functions.html#ga5797166cdb9d26408ea629f742534fa7">dg::one</a></div><div class="ttdeci">double one(double x)</div><div class="ttdoc">The constant. </div><div class="ttdef"><b>Definition:</b> functions.h:143</div></div>
 <div class="ttc" id="blas_8h_html"><div class="ttname"><a href="blas_8h.html">blas.h</a></div></div>
-<div class="ttc" id="group__evaluation_html_ga6c4f63b5200dcc8c92f441cadadbbd54"><div class="ttname"><a href="group__evaluation.html#ga6c4f63b5200dcc8c92f441cadadbbd54">dg::evaluate</a></div><div class="ttdeci">MPI_Vector evaluate(BinaryOp f, const MPI_Grid2d &amp;g)</div><div class="ttdoc">Evaluate a function on gaussian abscissas. </div><div class="ttdef"><b>Definition:</b> mpi_evaluation.h:31</div></div>
 <div class="ttc" id="structdg_1_1_poisson_html_a80fee7f21e899ac8893837a750a274b0"><div class="ttname"><a href="structdg_1_1_poisson.html#a80fee7f21e899ac8893837a750a274b0">dg::Poisson::bracketS</a></div><div class="ttdeci">void bracketS(container &amp;lhs, container &amp;rhs, container &amp;result)</div><div class="ttdoc">Compute the &quot;symmetric bracket&quot;. </div><div class="ttdef"><b>Definition:</b> poisson.h:126</div></div>
 <div class="ttc" id="structdg_1_1_poisson_html_a9d05425969806b3e32ced184efb07209"><div class="ttname"><a href="structdg_1_1_poisson.html#a9d05425969806b3e32ced184efb07209">dg::Poisson::Poisson</a></div><div class="ttdeci">Poisson(const Grid &amp;g)</div><div class="ttdoc">Create Poisson on a grid. </div><div class="ttdef"><b>Definition:</b> poisson.h:148</div></div>
 <div class="ttc" id="structdg_1_1_poisson_html_af712507150681dd8a78eb91676be705b"><div class="ttname"><a href="structdg_1_1_poisson.html#af712507150681dd8a78eb91676be705b">dg::Poisson::dyrhs</a></div><div class="ttdeci">const Matrix &amp; dyrhs()</div><div class="ttdoc">Return internally used 2d - y - derivative in ell format in XSPACE. </div><div class="ttdef"><b>Definition:</b> poisson.h:98</div></div>
@@ -206,7 +222,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="group__creation_html_ggabf9ea3df33484cbb5886e257c3899e48a6281b4fc609cb723a615662b5adac9df"><div class="ttname"><a href="group__creation.html#ggabf9ea3df33484cbb5886e257c3899e48a6281b4fc609cb723a615662b5adac9df">dg::centered</a></div><div class="ttdoc">centered derivative </div><div class="ttdef"><b>Definition:</b> enums.h:34</div></div>
 <div class="ttc" id="structdg_1_1_poisson_html_a92cfd99de07a6b82956e7ee7d0c685b5"><div class="ttname"><a href="structdg_1_1_poisson.html#a92cfd99de07a6b82956e7ee7d0c685b5">dg::Poisson::dxrhs</a></div><div class="ttdeci">const Matrix &amp; dxrhs()</div><div class="ttdoc">Return internally used 2d - x - derivative. </div><div class="ttdef"><b>Definition:</b> poisson.h:91</div></div>
 <div class="ttc" id="group__blas2_html_ga7f66ae102c9c093cdc0877a989fd82b3"><div class="ttname"><a href="group__blas2.html#ga7f66ae102c9c093cdc0877a989fd82b3">dg::blas2::symv</a></div><div class="ttdeci">void symv(typename MatrixTraits&lt; Precon &gt;::value_type alpha, const Precon &amp;P, const Vector &amp;x, typename MatrixTraits&lt; Precon &gt;::value_type beta, Vector &amp;y)</div><div class="ttdoc">Symmetric Matrix Vector product. </div><div class="ttdef"><b>Definition:</b> blas2.h:83</div></div>
-<div class="ttc" id="mpi__evaluation_8h_html"><div class="ttname"><a href="mpi__evaluation_8h.html">mpi_evaluation.h</a></div></div>
 <div class="ttc" id="group__creation_html_ga59440bdf436f2874b49aa52b670ed364"><div class="ttname"><a href="group__creation.html#ga59440bdf436f2874b49aa52b670ed364">dg::bc</a></div><div class="ttdeci">bc</div><div class="ttdoc">Switch between boundary conditions. </div><div class="ttdef"><b>Definition:</b> enums.h:10</div></div>
 <div class="ttc" id="structdg_1_1_poisson_html_a436cea4bbf782e872e31db7fd922ff3d"><div class="ttname"><a href="structdg_1_1_poisson.html#a436cea4bbf782e872e31db7fd922ff3d">dg::Poisson::operator()</a></div><div class="ttdeci">void operator()(container &amp;lhs, container &amp;rhs, container &amp;result)</div><div class="ttdoc">Compute poisson&#39;s bracket. </div><div class="ttdef"><b>Definition:</b> poisson.h:176</div></div>
 <div class="ttc" id="structdg_1_1_poisson_html_a58b4e644b217e1fac0c1d6411ca02312"><div class="ttname"><a href="structdg_1_1_poisson.html#a58b4e644b217e1fac0c1d6411ca02312">dg::Poisson::dylhs</a></div><div class="ttdeci">const Matrix &amp; dylhs()</div><div class="ttdoc">Return internally used 2d - y - derivative in ell format in XSPACE. </div><div class="ttdef"><b>Definition:</b> poisson.h:84</div></div>
@@ -215,11 +230,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="group__blas1_html_ga2939c008737a653c8ea3aa972cac136b"><div class="ttname"><a href="group__blas1.html#ga2939c008737a653c8ea3aa972cac136b">dg::blas1::pointwiseDot</a></div><div class="ttdeci">void pointwiseDot(const Vector &amp;x1, const Vector &amp;x2, Vector &amp;y)</div><div class="ttdoc">A &#39;new&#39; BLAS 1 routine. </div><div class="ttdef"><b>Definition:</b> blas1.h:132</div></div>
 <div class="ttc" id="group__blas1_html_ga6ee5b940147ba6b71e1fe1fc538e9459"><div class="ttname"><a href="group__blas1.html#ga6ee5b940147ba6b71e1fe1fc538e9459">dg::blas1::axpby</a></div><div class="ttdeci">void axpby(typename VectorTraits&lt; Vector &gt;::value_type alpha, const Vector &amp;x, typename VectorTraits&lt; Vector &gt;::value_type beta, Vector &amp;y)</div><div class="ttdoc">Modified BLAS 1 routine axpy. </div><div class="ttdef"><b>Definition:</b> blas1.h:69</div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 17:59:59 for Input and Output utilities by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="dir_cba352cc187f01702d3926d435723909.html">dg</a></li><li class="navelem"><a class="el" href="poisson_8h.html">poisson.h</a></li>
+    <li class="footer">Generated on Wed Feb 18 2015 23:45:15 for Discontinuous Galerkin Library by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
 </body>
 </html>

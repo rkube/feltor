@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['rhalf',['RHalf',['../structdg_1_1_r_half.html',1,'dg']]],
-  ['rk',['RK',['../structdg_1_1_r_k.html',1,'dg']]],
-  ['rk_5fcoeff',['rk_coeff',['../structdg_1_1rk__coeff.html',1,'dg']]]
+  ['sinprofx',['SinProfX',['../structdg_1_1_sin_prof_x.html',1,'dg']]],
+  ['sirk',['SIRK',['../structdg_1_1_s_i_r_k.html',1,'dg']]],
+  ['sqrt',['SQRT',['../structdg_1_1_s_q_r_t.html',1,'dg']]]
 ];

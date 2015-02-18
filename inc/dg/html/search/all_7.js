@@ -6,9 +6,6 @@ var searchData=
   ['helmholtz_2eh',['helmholtz.h',['../helmholtz_8h.html',1,'']]],
   ['histogram',['Histogram',['../structdg_1_1_histogram.html',1,'dg']]],
   ['histogram',['Histogram',['../structdg_1_1_histogram.html#ac5111e3519dc62ea32ff68e1de7eaebf',1,'dg::Histogram']]],
-  ['histogram2d',['Histogram2D',['../structdg_1_1_histogram2_d.html#ad80ad774890b779e339151e6c79574e2',1,'dg::Histogram2D']]],
   ['histogram2d',['Histogram2D',['../structdg_1_1_histogram2_d.html',1,'dg']]],
-  ['hx',['hx',['../structdg_1_1_m_p_i___grid3d.html#a0101d904d01c5b76b3e709eb4d67e86f',1,'dg::MPI_Grid3d']]],
-  ['hy',['hy',['../structdg_1_1_m_p_i___grid3d.html#a4faf508bff4e5753b35f5a820853e634',1,'dg::MPI_Grid3d']]],
-  ['hz',['hz',['../structdg_1_1_m_p_i___grid3d.html#aa6b8ca65d12737bf1c771c9dce353b1f',1,'dg::MPI_Grid3d']]]
+  ['histogram2d',['Histogram2D',['../structdg_1_1_histogram2_d.html#ad80ad774890b779e339151e6c79574e2',1,'dg::Histogram2D']]]
 ];

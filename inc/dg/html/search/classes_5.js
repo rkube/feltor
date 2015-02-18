@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['fail',['Fail',['../structdg_1_1_fail.html',1,'dg']]],
-  ['floor',['FLOOR',['../structdg_1_1_f_l_o_o_r.html',1,'dg']]]
+  ['gaussian',['Gaussian',['../structdg_1_1_gaussian.html',1,'dg']]],
+  ['gaussian3d',['Gaussian3d',['../structdg_1_1_gaussian3d.html',1,'dg']]],
+  ['gaussianx',['GaussianX',['../structdg_1_1_gaussian_x.html',1,'dg']]],
+  ['gaussiany',['GaussianY',['../structdg_1_1_gaussian_y.html',1,'dg']]],
+  ['gaussianz',['GaussianZ',['../structdg_1_1_gaussian_z.html',1,'dg']]]
 ];

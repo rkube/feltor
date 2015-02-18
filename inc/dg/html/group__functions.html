@@ -4,10 +4,17 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Input and Output utilities: Functions and Functors</title>
+<title>Discontinuous Galerkin Library: Functions and Functors</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
@@ -22,9 +29,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Input and Output utilities
-   &#160;<span id="projectnumber">1.2</span>
+   <div id="projectname">Discontinuous Galerkin Library
+   &#160;<span id="projectnumber">2.0</span>
    </div>
+   <div id="projectbrief">Discontinuous Galerkin numerical methods and container free numerical algorithms</div>
   </td>
  </tr>
  </tbody>
@@ -61,12 +69,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     </ul>
   </div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('group__functions.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Groups</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Groups</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -193,45 +215,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga43e254f13fa144c646b2e509bcd5d1d1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__functions.html#ga43e254f13fa144c646b2e509bcd5d1d1">dg::bessk1</a> (double x)</td></tr>
 <tr class="memdesc:ga43e254f13fa144c646b2e509bcd5d1d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the modified Bessel function <img class="formulaInl" alt="$ K_1(x)$" src="form_38.png"/> for positive real x.  <a href="#ga43e254f13fa144c646b2e509bcd5d1d1">More...</a><br/></td></tr>
 <tr class="separator:ga43e254f13fa144c646b2e509bcd5d1d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5797166cdb9d26408ea629f742534fa7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__functions.html#ga5797166cdb9d26408ea629f742534fa7">dg::one</a> (double x)</td></tr>
-<tr class="memdesc:ga5797166cdb9d26408ea629f742534fa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constant.  <a href="#ga5797166cdb9d26408ea629f742534fa7">More...</a><br/></td></tr>
-<tr class="separator:ga5797166cdb9d26408ea629f742534fa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga00fbb55c78ef8e349169a2e3556d78bc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__functions.html#ga00fbb55c78ef8e349169a2e3556d78bc">dg::one</a> (double x, double y)</td></tr>
-<tr class="memdesc:ga00fbb55c78ef8e349169a2e3556d78bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constant.  <a href="#ga00fbb55c78ef8e349169a2e3556d78bc">More...</a><br/></td></tr>
-<tr class="separator:ga00fbb55c78ef8e349169a2e3556d78bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa8487df41f74a33ef2a63065415b88b5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__functions.html#gaa8487df41f74a33ef2a63065415b88b5">dg::one</a> (double x, double y, double z)</td></tr>
-<tr class="memdesc:gaa8487df41f74a33ef2a63065415b88b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constant.  <a href="#gaa8487df41f74a33ef2a63065415b88b5">More...</a><br/></td></tr>
-<tr class="separator:gaa8487df41f74a33ef2a63065415b88b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4c5536b3b96ccc28668a59d142293b6d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__functions.html#ga4c5536b3b96ccc28668a59d142293b6d">dg::zero</a> (double x)</td></tr>
-<tr class="memdesc:ga4c5536b3b96ccc28668a59d142293b6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constant.  <a href="#ga4c5536b3b96ccc28668a59d142293b6d">More...</a><br/></td></tr>
-<tr class="separator:ga4c5536b3b96ccc28668a59d142293b6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8be4db51a073762c73c61dc2cfac4aaa"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__functions.html#ga8be4db51a073762c73c61dc2cfac4aaa">dg::zero</a> (double x, double y)</td></tr>
-<tr class="memdesc:ga8be4db51a073762c73c61dc2cfac4aaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constant.  <a href="#ga8be4db51a073762c73c61dc2cfac4aaa">More...</a><br/></td></tr>
-<tr class="separator:ga8be4db51a073762c73c61dc2cfac4aaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafe8af9f57dfc455b23e054f107acd28d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__functions.html#gafe8af9f57dfc455b23e054f107acd28d">dg::zero</a> (double x, double y, double z)</td></tr>
-<tr class="memdesc:gafe8af9f57dfc455b23e054f107acd28d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constant.  <a href="#gafe8af9f57dfc455b23e054f107acd28d">More...</a><br/></td></tr>
-<tr class="separator:gafe8af9f57dfc455b23e054f107acd28d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga59b5a3c6ae442e096d03c937e43cb30a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__functions.html#ga59b5a3c6ae442e096d03c937e43cb30a">dg::coo1</a> (double x)</td></tr>
-<tr class="memdesc:ga59b5a3c6ae442e096d03c937e43cb30a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return x.  <a href="#ga59b5a3c6ae442e096d03c937e43cb30a">More...</a><br/></td></tr>
-<tr class="separator:ga59b5a3c6ae442e096d03c937e43cb30a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab2a696c36a0e02b0b2ddc7d24e47e5c9"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__functions.html#gab2a696c36a0e02b0b2ddc7d24e47e5c9">dg::coo1</a> (double x, double y)</td></tr>
-<tr class="memdesc:gab2a696c36a0e02b0b2ddc7d24e47e5c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return x.  <a href="#gab2a696c36a0e02b0b2ddc7d24e47e5c9">More...</a><br/></td></tr>
-<tr class="separator:gab2a696c36a0e02b0b2ddc7d24e47e5c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab9b55ef9761fe4771b708e7b4f543e24"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__functions.html#gab9b55ef9761fe4771b708e7b4f543e24">dg::coo1</a> (double x, double y, double z)</td></tr>
-<tr class="memdesc:gab9b55ef9761fe4771b708e7b4f543e24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return x.  <a href="#gab9b55ef9761fe4771b708e7b4f543e24">More...</a><br/></td></tr>
-<tr class="separator:gab9b55ef9761fe4771b708e7b4f543e24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga66ec91cd05d75e09896a0198737d05c1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__functions.html#ga66ec91cd05d75e09896a0198737d05c1">dg::coo2</a> (double x, double y)</td></tr>
-<tr class="memdesc:ga66ec91cd05d75e09896a0198737d05c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return y.  <a href="#ga66ec91cd05d75e09896a0198737d05c1">More...</a><br/></td></tr>
-<tr class="separator:ga66ec91cd05d75e09896a0198737d05c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2761f13261f98b9080c3d41330f91e74"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__functions.html#ga2761f13261f98b9080c3d41330f91e74">dg::coo2</a> (double x, double y, double z)</td></tr>
-<tr class="memdesc:ga2761f13261f98b9080c3d41330f91e74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return y.  <a href="#ga2761f13261f98b9080c3d41330f91e74">More...</a><br/></td></tr>
-<tr class="separator:ga2761f13261f98b9080c3d41330f91e74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac71c7be4a51ce1589f13fe8a803af81f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__functions.html#gac71c7be4a51ce1589f13fe8a803af81f">dg::coo3</a> (double x, double y, double z)</td></tr>
-<tr class="memdesc:gac71c7be4a51ce1589f13fe8a803af81f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return z.  <a href="#gac71c7be4a51ce1589f13fe8a803af81f">More...</a><br/></td></tr>
-<tr class="separator:gac71c7be4a51ce1589f13fe8a803af81f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>The functions are useful mainly in the constructor of <a class="el" href="classdg_1_1_operator.html" title="Helper class mainly for the assembly of Matrices. ">Operator</a> objects. The functors are useful for either vector transformations or as init functions in the evaluate routines. </p>
+<p>The functions are useful mainly in the constructor of Operator objects. The functors are useful for either vector transformations or as init functions in the evaluate routines. </p>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="ga8f29ee46cf5603af9cabd93163cf98cc"></a>
 <div class="memitem">
@@ -308,500 +294,15 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ga59b5a3c6ae442e096d03c937e43cb30a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double dg::coo1 </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>x</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Return x. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">x</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gab2a696c36a0e02b0b2ddc7d24e47e5c9"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double dg::coo1 </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Return x. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">x</td><td></td></tr>
-    <tr><td class="paramname">y</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gab9b55ef9761fe4771b708e7b4f543e24"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double dg::coo1 </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>z</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Return x. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">x</td><td></td></tr>
-    <tr><td class="paramname">y</td><td></td></tr>
-    <tr><td class="paramname">z</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga66ec91cd05d75e09896a0198737d05c1"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double dg::coo2 </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Return y. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">x</td><td></td></tr>
-    <tr><td class="paramname">y</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga2761f13261f98b9080c3d41330f91e74"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double dg::coo2 </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>z</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Return y. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">x</td><td></td></tr>
-    <tr><td class="paramname">y</td><td></td></tr>
-    <tr><td class="paramname">z</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gac71c7be4a51ce1589f13fe8a803af81f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double dg::coo3 </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>z</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Return z. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">x</td><td></td></tr>
-    <tr><td class="paramname">y</td><td></td></tr>
-    <tr><td class="paramname">z</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga5797166cdb9d26408ea629f742534fa7"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double dg::one </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>x</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>The constant. </p>
-<p>Useful for integration. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">x</td><td>x-value</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>1 </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga00fbb55c78ef8e349169a2e3556d78bc"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double dg::one </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>The constant. </p>
-<p>Useful for integration. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">x</td><td>x-value </td></tr>
-    <tr><td class="paramname">y</td><td>y-value</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>1 </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gaa8487df41f74a33ef2a63065415b88b5"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double dg::one </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>z</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>The constant. </p>
-<p>Useful for integration. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">x</td><td>x-value </td></tr>
-    <tr><td class="paramname">y</td><td>x-value </td></tr>
-    <tr><td class="paramname">z</td><td>x-value</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>1 </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga4c5536b3b96ccc28668a59d142293b6d"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double dg::zero </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>x</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>The constant. </p>
-<p>Useful for integration. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">x</td><td>x-value</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>1 </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga8be4db51a073762c73c61dc2cfac4aaa"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double dg::zero </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>The constant. </p>
-<p>Useful for integration. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">x</td><td>x-value </td></tr>
-    <tr><td class="paramname">y</td><td>y-value</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>1 </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gafe8af9f57dfc455b23e054f107acd28d"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double dg::zero </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>z</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>The constant. </p>
-<p>Useful for integration. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">x</td><td>x-value </td></tr>
-    <tr><td class="paramname">y</td><td>x-value </td></tr>
-    <tr><td class="paramname">z</td><td>x-value</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>1 </dd></dl>
-
-</div>
-</div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 17:59:59 for Input and Output utilities by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated on Wed Feb 18 2015 23:45:15 for Discontinuous Galerkin Library by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
 </body>
 </html>

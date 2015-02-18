@@ -4,10 +4,17 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Input and Output utilities: toefl::Matrix&lt; T, P &gt; Class Template Reference</title>
+<title>TOEFL: toefl::Matrix&lt; T, P &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
@@ -22,9 +29,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Input and Output utilities
-   &#160;<span id="projectnumber">1.2</span>
+   <div id="projectname">TOEFL
+   &#160;<span id="projectnumber">2.0</span>
    </div>
+   <div id="projectbrief">Tokamak edge fluid; library for building spectral code</div>
   </td>
  </tr>
  </tbody>
@@ -69,6 +77,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classtoefl_1_1_matrix.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -83,11 +106,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespacetoefl.html">toefl</a></li><li class="navelem"><a class="el" href="classtoefl_1_1_matrix.html">Matrix</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -151,8 +169,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae4b7b5be8a42549d0e2e9400f63b7022"><td class="memItemLeft" align="right" valign="top">T const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtoefl_1_1_matrix.html#ae4b7b5be8a42549d0e2e9400f63b7022">getPtr</a> () const </td></tr>
 <tr class="memdesc:ae4b7b5be8a42549d0e2e9400f63b7022"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the address of the first element for const reference.  <a href="#ae4b7b5be8a42549d0e2e9400f63b7022">More...</a><br/></td></tr>
 <tr class="separator:ae4b7b5be8a42549d0e2e9400f63b7022"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9de80b0a0ce91964416b39c51ac46b67"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9de80b0a0ce91964416b39c51ac46b67"></a>
-std::vector&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>copy</b> () const </td></tr>
+<tr class="memitem:a9de80b0a0ce91964416b39c51ac46b67"><td class="memItemLeft" align="right" valign="top">std::vector&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtoefl_1_1_matrix.html#a9de80b0a0ce91964416b39c51ac46b67">copy</a> () const </td></tr>
+<tr class="memdesc:a9de80b0a0ce91964416b39c51ac46b67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy the data linearly and without padding to a std vector.  <a href="#a9de80b0a0ce91964416b39c51ac46b67">More...</a><br/></td></tr>
 <tr class="separator:a9de80b0a0ce91964416b39c51ac46b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f1050ba85376409c09b96a7d5b3ceba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtoefl_1_1_matrix.html#a5f1050ba85376409c09b96a7d5b3ceba">zero</a> ()</td></tr>
 <tr class="memdesc:a5f1050ba85376409c09b96a7d5b3ceba"><td class="mdescLeft">&#160;</td><td class="mdescRight">uses operator= to set memory to 0  <a href="#a5f1050ba85376409c09b96a7d5b3ceba">More...</a><br/></td></tr>
@@ -423,6 +441,34 @@ template&lt;class T, enum Padding P&gt; </div>
 <p>number of columns </p>
 <p>Return the number of columns the object manages (the one you specified in the constructor), even if no memory is allocated. This number doesn't change as long as memory is allocated for that object. </p>
 <dl class="section return"><dt>Returns</dt><dd>number of columns </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9de80b0a0ce91964416b39c51ac46b67"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, enum Padding P&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;T&gt; <a class="el" href="classtoefl_1_1_matrix.html">toefl::Matrix</a>&lt; T, P &gt;::copy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copy the data linearly and without padding to a std vector. </p>
+<dl class="section return"><dt>Returns</dt><dd>newly instantiated vector holding a copy of the matrix data </dd></dl>
 
 </div>
 </div>
@@ -994,11 +1040,15 @@ template&lt;class T1 , enum Padding P1, class T2 , enum Padding P2&gt; </div>
 <li>/home/matthias/feltor/inc/toefl/<a class="el" href="matrix_8h_source.html">matrix.h</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 18:00:01 for Input and Output utilities by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacetoefl.html">toefl</a></li><li class="navelem"><a class="el" href="classtoefl_1_1_matrix.html">Matrix</a></li>
+    <li class="footer">Generated on Wed Feb 18 2015 23:45:37 for TOEFL by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
 </body>
 </html>

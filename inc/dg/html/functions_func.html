@@ -4,10 +4,17 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Input and Output utilities: Class Members - Functions</title>
+<title>Discontinuous Galerkin Library: Class Members - Functions</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
@@ -22,9 +29,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Input and Output utilities
-   &#160;<span id="projectnumber">1.2</span>
+   <div id="projectname">Discontinuous Galerkin Library
+   &#160;<span id="projectnumber">2.0</span>
    </div>
+   <div id="projectbrief">Discontinuous Galerkin numerical methods and container free numerical algorithms</div>
   </td>
  </tr>
  </tbody>
@@ -74,7 +82,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li class="current"><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
       <li><a href="functions_type.html"><span>Typedefs</span></a></li>
-      <li><a href="functions_rela.html"><span>Related&#160;Functions</span></a></li>
     </ul>
   </div>
   <div id="navrow4" class="tabs3">
@@ -90,27 +97,36 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="#index_i"><span>i</span></a></li>
       <li><a href="#index_k"><span>k</span></a></li>
       <li><a href="#index_l"><span>l</span></a></li>
-      <li><a href="#index_m"><span>m</span></a></li>
       <li><a href="#index_n"><span>n</span></a></li>
       <li><a href="#index_o"><span>o</span></a></li>
       <li><a href="#index_p"><span>p</span></a></li>
       <li><a href="#index_r"><span>r</span></a></li>
       <li><a href="#index_s"><span>s</span></a></li>
-      <li><a href="#index_t"><span>t</span></a></li>
       <li><a href="#index_v"><span>v</span></a></li>
-      <li><a href="#index_w"><span>w</span></a></li>
-      <li><a href="#index_x"><span>x</span></a></li>
-      <li><a href="#index_y"><span>y</span></a></li>
-      <li class="current"><a href="#index_z"><span>z</span></a></li>
+      <li class="current"><a href="#index_w"><span>w</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('functions_func.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Groups</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Groups</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -126,9 +142,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>AB()
 : <a class="el" href="structdg_1_1_a_b.html#a7334cb5aa3f4b596ecb54148264f2569">dg::AB&lt; k, Vector &gt;</a>
 </li>
-<li>abscissas()
-: <a class="el" href="classdg_1_1_d_l_t.html#a4828cac01d378d2e9ebb7cc90d54546d">dg::DLT&lt; T &gt;</a>
-</li>
 <li>adaptive_step()
 : <a class="el" href="structdg_1_1_s_i_r_k.html#a01757c756e22e533e871286f91672a5a">dg::SIRK&lt; Vector &gt;</a>
 </li>
@@ -139,29 +152,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classdg_1_1_keine_n_s_t__1_d.html#ab9089e775ecb1a2a2d13aab1e5e47b20">dg::KeineNST_1D</a>
 </li>
 <li>ArakawaX()
-: <a class="el" href="structdg_1_1_arakawa_x.html#ac00da03bc63b7d9ea863fc9af928f66d">dg::ArakawaX&lt; Matrix, container &gt;</a>
+: <a class="el" href="structdg_1_1_arakawa_x.html#ac33d39046b6c27ffaad030e18b3910e2">dg::ArakawaX&lt; Matrix, container &gt;</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_b"></a>- b -</h3><ul>
-<li>backward()
-: <a class="el" href="classdg_1_1_d_l_t.html#a0ea2a6dafbba862fc0b5238d81432f2c">dg::DLT&lt; T &gt;</a>
-</li>
-<li>backwardEQ()
-: <a class="el" href="classdg_1_1_d_l_t.html#a82aae3c20a040800f96686caf467da22">dg::DLT&lt; T &gt;</a>
-</li>
 <li>BathRZ()
 : <a class="el" href="structdg_1_1_bath_r_z.html#ad3957e162dc4759b89df68e9696cb81d">dg::BathRZ</a>
-</li>
-<li>bcx()
-: <a class="el" href="structdg_1_1_m_p_i___grid3d.html#afaa0772fd2698d8d9340d82aaf605bf2">dg::MPI_Grid3d</a>
-</li>
-<li>bcy()
-: <a class="el" href="structdg_1_1_m_p_i___grid3d.html#a309df1ff0ad76f45b027eca3937bb30d">dg::MPI_Grid3d</a>
-</li>
-<li>bcz()
-: <a class="el" href="structdg_1_1_m_p_i___grid3d.html#a6cfa2224db952b6c73e58f15caf9ec5e">dg::MPI_Grid3d</a>
 </li>
 <li>bracketS()
 : <a class="el" href="structdg_1_1_arakawa_x.html#a4bca8c8355aa0d33f5913edf77fe96db">dg::ArakawaX&lt; Matrix, container &gt;</a>
@@ -177,31 +175,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>chi()
 : <a class="el" href="group__operators.html#gaf8330683e97b34392b998695d33f13ba">dg::Helmholtz&lt; Matrix, Vector, Preconditioner &gt;</a>
 </li>
-<li>Collective()
-: <a class="el" href="structdg_1_1_collective.html#a1b1691824a28c96d7a98c92fbd24c325">dg::Collective</a>
-</li>
-<li>communicator()
-: <a class="el" href="structdg_1_1_m_p_i___grid3d.html#aef173dce8176f09b926eb14dd934bad5">dg::MPI_Grid3d</a>
-</li>
-<li>copy_into_interior()
-: <a class="el" href="structdg_1_1_m_p_i___vector.html#a8b806350832800b743c88ba011b46acd">dg::MPI_Vector</a>
-</li>
-<li>cut_overlap()
-: <a class="el" href="structdg_1_1_m_p_i___vector.html#a2ff1c2526a963ae868e20194dd8e212f">dg::MPI_Vector</a>
-</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_d"></a>- d -</h3><ul>
-<li>display()
-: <a class="el" href="structdg_1_1_grid2d.html#a8a06934408aa60a8f1f039697c6f04ac">dg::Grid2d&lt; T &gt;</a>
-, <a class="el" href="structdg_1_1_grid3d.html#a677be1af279858496af03e2d091ff982">dg::Grid3d&lt; T &gt;</a>
-, <a class="el" href="structdg_1_1_m_p_i___grid2d.html#a5930e9bb3b4d30a5be7395840026ac17">dg::MPI_Grid2d</a>
-, <a class="el" href="structdg_1_1_m_p_i___grid3d.html#a35443a835eacd07761c352d243f56d66">dg::MPI_Grid3d</a>
-</li>
-<li>DLT()
-: <a class="el" href="classdg_1_1_d_l_t.html#a639dd4af4e77f8be5fe1e18c2b7df797">dg::DLT&lt; T &gt;</a>
-</li>
 <li>dx()
 : <a class="el" href="structdg_1_1_arakawa_x.html#a1ac5172551370a5283513d65f353b653">dg::ArakawaX&lt; Matrix, container &gt;</a>
 </li>
@@ -220,12 +197,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>dyrhs()
 : <a class="el" href="structdg_1_1_poisson.html#af712507150681dd8a78eb91676be705b">dg::Poisson&lt; Matrix, container &gt;</a>
 </li>
-<li>DZ()
-: <a class="el" href="structdg_1_1_d_z_3_01_m_p_i___matrix_00_01_m_p_i___vector_01_4.html#a45b218e3417023f6b68b355a9978ee77">dg::DZ&lt; MPI_Matrix, MPI_Vector &gt;</a>
-</li>
-<li>dzz()
-: <a class="el" href="structdg_1_1_d_z_3_01_m_p_i___matrix_00_01_m_p_i___vector_01_4.html#ae9ff62b22301e98a57a98e8c0bff511e">dg::DZ&lt; MPI_Matrix, MPI_Vector &gt;</a>
-</li>
 </ul>
 
 
@@ -242,9 +213,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>epsilon()
 : <a class="el" href="structdg_1_1_fail.html#a526158d66c83dbee6a33f72d5b780486">dg::Fail</a>
 </li>
-<li>evaluate()
-: <a class="el" href="structdg_1_1_d_z_3_01_m_p_i___matrix_00_01_m_p_i___vector_01_4.html#ab3c3b5b30873920330bc652e46682bd7">dg::DZ&lt; MPI_Matrix, MPI_Vector &gt;</a>
-</li>
 <li>EXP()
 : <a class="el" href="structdg_1_1_e_x_p.html#af085981be864a6ab4c5f1a75ea8757b7">dg::EXP&lt; T &gt;</a>
 </li>
@@ -258,16 +226,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>Fail()
 : <a class="el" href="structdg_1_1_fail.html#acbccb1ec26460accff6fe8ae47fb9cef">dg::Fail</a>
 </li>
-<li>forward()
-: <a class="el" href="classdg_1_1_d_l_t.html#afc3b01c52b7be79060e5481e83287263">dg::DLT&lt; T &gt;</a>
-</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
-<li>gather()
-: <a class="el" href="structdg_1_1_collective.html#ab5ad629787e880284ff7f68cf4d775c9">dg::Collective</a>
-</li>
 <li>Gaussian()
 : <a class="el" href="structdg_1_1_gaussian.html#aba2df3bbc671faf0a429ab001db27055">dg::Gaussian</a>
 </li>
@@ -287,21 +249,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classdg_1_1_c_g.html#a6c6ddea9c0e7b7f2149722ef25cc9dd8">dg::CG&lt; Vector &gt;</a>
 , <a class="el" href="structdg_1_1_invert.html#a9bf8b8325e4b96dc859103b09a3112a7">dg::Invert&lt; container &gt;</a>
 </li>
-<li>ghostless()
-: <a class="el" href="structdg_1_1_m_p_i___grid3d.html#a3e27c7b6443ffe9ee6cd76cb5b88fef8">dg::MPI_Grid3d</a>
-</li>
-<li>global()
-: <a class="el" href="structdg_1_1_m_p_i___grid3d.html#ac3fa3409e7e8adcd8bdedd99c572c334">dg::MPI_Grid3d</a>
-</li>
-<li>Grid1d()
-: <a class="el" href="structdg_1_1_grid1d.html#a9506a5da19e42515e17fb3545289ea07">dg::Grid1d&lt; T &gt;</a>
-</li>
-<li>Grid2d()
-: <a class="el" href="structdg_1_1_grid2d.html#afc7ddf5140c0eb12f3c56e58d4aa2dfc">dg::Grid2d&lt; T &gt;</a>
-</li>
-<li>Grid3d()
-: <a class="el" href="structdg_1_1_grid3d.html#a10f8747165a20e84ca9c27e22bf5ab42">dg::Grid3d&lt; T &gt;</a>
-</li>
 </ul>
 
 
@@ -317,15 +264,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>Histogram2D()
 : <a class="el" href="structdg_1_1_histogram2_d.html#ad80ad774890b779e339151e6c79574e2">dg::Histogram2D&lt; container &gt;</a>
-</li>
-<li>hx()
-: <a class="el" href="structdg_1_1_m_p_i___grid3d.html#a0101d904d01c5b76b3e709eb4d67e86f">dg::MPI_Grid3d</a>
-</li>
-<li>hy()
-: <a class="el" href="structdg_1_1_m_p_i___grid3d.html#a4faf508bff4e5753b35f5a820853e634">dg::MPI_Grid3d</a>
-</li>
-<li>hz()
-: <a class="el" href="structdg_1_1_m_p_i___grid3d.html#aa6b8ca65d12737bf1c771c9dce353b1f">dg::MPI_Grid3d</a>
 </li>
 </ul>
 
@@ -364,45 +302,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>LinearY()
 : <a class="el" href="structdg_1_1_linear_y.html#a141df376a562eb957ae6c05ce76c78d8">dg::LinearY</a>
 </li>
-<li>local()
-: <a class="el" href="structdg_1_1_m_p_i___grid3d.html#a84647e9557a34cffe5e2ed9c551f5cea">dg::MPI_Grid3d</a>
-</li>
-<li>lx()
-: <a class="el" href="structdg_1_1_m_p_i___grid3d.html#a290793ce447757091535485e8f05f80a">dg::MPI_Grid3d</a>
-</li>
-<li>ly()
-: <a class="el" href="structdg_1_1_m_p_i___grid3d.html#a4b83164a9657890ccf955316d03b2814">dg::MPI_Grid3d</a>
-</li>
-<li>lz()
-: <a class="el" href="structdg_1_1_m_p_i___grid3d.html#a3f09dfcb18a41a24daafa735beb0480b">dg::MPI_Grid3d</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
-<li>MPI_Vector()
-: <a class="el" href="structdg_1_1_m_p_i___vector.html#a42ec283b04ed38415b6d5422a98e85d2">dg::MPI_Vector</a>
-</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
-<li>n()
-: <a class="el" href="structdg_1_1_m_p_i___grid3d.html#a8c972e7b531f53c860d6a3cbc76ed4fb">dg::MPI_Grid3d</a>
-</li>
 <li>NotANumber()
 : <a class="el" href="structdg_1_1_not_a_number.html#a7d030a378e263935212063aed1bfec1a">dg::NotANumber</a>
-</li>
-<li>Nx()
-: <a class="el" href="structdg_1_1_m_p_i___grid2d.html#a47967125570cec08cc583ae1580afb9c">dg::MPI_Grid2d</a>
-, <a class="el" href="structdg_1_1_m_p_i___grid3d.html#a655dc44ce8d9d23e336e16fd8d5a94b3">dg::MPI_Grid3d</a>
-</li>
-<li>Ny()
-: <a class="el" href="structdg_1_1_m_p_i___grid2d.html#a94e71a0818a5966b6c13dce05702598e">dg::MPI_Grid2d</a>
-, <a class="el" href="structdg_1_1_m_p_i___grid3d.html#a632ed4c64257c0390320a096d23e0e2a">dg::MPI_Grid3d</a>
-</li>
-<li>Nz()
-: <a class="el" href="structdg_1_1_m_p_i___grid3d.html#a9b38793942147d0d2b42a6a0d470b644">dg::MPI_Grid3d</a>
 </li>
 </ul>
 
@@ -411,25 +316,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>Ooops()
 : <a class="el" href="structdg_1_1_ooops.html#a4fba660ab313026fb5dbb826385874dc">dg::Ooops</a>
 </li>
-<li>Operator()
-: <a class="el" href="classdg_1_1_operator.html#af341daeacc03a69bacaaf2335cd6f228">dg::Operator&lt; T &gt;</a>
-</li>
 <li>operator()()
 : <a class="el" href="structdg_1_1_a_b.html#a7cb49f139538a4620df7f689815a485d">dg::AB&lt; k, Vector &gt;</a>
 , <a class="el" href="structdg_1_1_a_b_s.html#ae877fcbbc5d06b6ca15c21bbeb74040c">dg::ABS&lt; T &gt;</a>
 , <a class="el" href="structdg_1_1_abs_max.html#aa714656703ea5cb3d7714faabe9d7629">dg::AbsMax&lt; T &gt;</a>
 , <a class="el" href="structdg_1_1_abs_min.html#a916191cf7cf149afc3bdb36c9fd24435">dg::AbsMin&lt; T &gt;</a>
 , <a class="el" href="structdg_1_1_arakawa_x.html#aff193379f05d069f0ab355a77d655054">dg::ArakawaX&lt; Matrix, container &gt;</a>
-, <a class="el" href="structdg_1_1_bath_r_z.html#a48cdc5fb70d63a515f4c1d0d19c095e9">dg::BathRZ</a>
+, <a class="el" href="structdg_1_1_bath_r_z.html#af2ccb27b317a8e3b4a76f3db9bcb8a7b">dg::BathRZ</a>
 , <a class="el" href="classdg_1_1_c_g.html#a8dc452436c95a758207bc35cec53909f">dg::CG&lt; Vector &gt;</a>
-, <a class="el" href="structdg_1_1_d_z_3_01_m_p_i___matrix_00_01_m_p_i___vector_01_4.html#a113881bd4b125c02425e68f6fd53a514">dg::DZ&lt; MPI_Matrix, MPI_Vector &gt;</a>
 , <a class="el" href="structdg_1_1_e_x_p.html#a5a8ae6a0f36fa060e7fe97a632c2f978">dg::EXP&lt; T &gt;</a>
 , <a class="el" href="structdg_1_1_exp_prof_x.html#a219e9af5a1e50c076b401fded938e731">dg::ExpProfX</a>
 , <a class="el" href="structdg_1_1_gaussian3d.html#a043038f3e18a1d88f149ae63bc2c2f4c">dg::Gaussian3d</a>
 , <a class="el" href="structdg_1_1_gaussian.html#a1fb4fe2bf3ba2ca34bc583d1ae458442">dg::Gaussian</a>
 , <a class="el" href="structdg_1_1_gaussian_x.html#a427dfa07582fd4df296d6d881818d6f8">dg::GaussianX</a>
 , <a class="el" href="structdg_1_1_gaussian_y.html#a621c68858e91c3acc2f4d51b76071d9d">dg::GaussianY</a>
-, <a class="el" href="structdg_1_1_gaussian_z.html#a5b7a771e993ddef418aead8300f3aa21">dg::GaussianZ</a>
+, <a class="el" href="structdg_1_1_gaussian_z.html#af22c467eda3bf17e49b09ff8b720a581">dg::GaussianZ</a>
 , <a class="el" href="structdg_1_1_invert.html#aba7447f25ad0b970efe0df955c1da484">dg::Invert&lt; container &gt;</a>
 , <a class="el" href="structdg_1_1_karniadakis.html#a84f10f1572bc1319b97315a3d710ab0b">dg::Karniadakis&lt; Vector &gt;</a>
 , <a class="el" href="structdg_1_1_lamb.html#a32e2eea9f78ae4e647eaadd7a1adc267">dg::Lamb</a>
@@ -437,7 +338,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="structdg_1_1_linear_y.html#af249cdd8fb6ae1b7dd8fabfc0e854827">dg::LinearY</a>
 , <a class="el" href="structdg_1_1_l_n.html#aaa9d64f99df571d4f164eefada35797b">dg::LN&lt; T &gt;</a>
 , <a class="el" href="structdg_1_1_min_mod.html#a88d5901b10cea0b447e7758de1807b20">dg::MinMod&lt; T &gt;</a>
-, <a class="el" href="classdg_1_1_operator.html#ada4d2d751a0fee7360c156aeb5cd9da8">dg::Operator&lt; T &gt;</a>
 , <a class="el" href="structdg_1_1_p_l_u_s.html#adce602b7c450f6b06c9954283e828dee">dg::PLUS&lt; T &gt;</a>
 , <a class="el" href="structdg_1_1_poisson.html#a436cea4bbf782e872e31db7fd922ff3d">dg::Poisson&lt; Matrix, container &gt;</a>
 , <a class="el" href="structdg_1_1_r_k.html#a1e4a116d7fb767a76e725a6dfe4b98c1">dg::RK&lt; k, Vector &gt;</a>
@@ -449,14 +349,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
-<li>pidOf()
-: <a class="el" href="group__grid.html#ga9a1618fd94e01503d23aa520ccb57640">dg::MPI_Grid3d</a>
-</li>
 <li>PLUS()
 : <a class="el" href="structdg_1_1_p_l_u_s.html#a6046659f109429be9e83c4a344c14064">dg::PLUS&lt; T &gt;</a>
 </li>
 <li>Poisson()
-: <a class="el" href="structdg_1_1_poisson.html#a5a06c1b0627b5691634667f3913ec04f">dg::Poisson&lt; Matrix, container &gt;</a>
+: <a class="el" href="structdg_1_1_poisson.html#a9d05425969806b3e32ced184efb07209">dg::Poisson&lt; Matrix, container &gt;</a>
 </li>
 <li>precond()
 : <a class="el" href="classdg_1_1_elliptic.html#aeec5ccc24b417b0af51f153dee76238d">dg::Elliptic&lt; Matrix, Vector, Preconditioner &gt;</a>
@@ -476,12 +373,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
-<li>scatter()
-: <a class="el" href="structdg_1_1_collective.html#a5db77c94f654de5e7cfc5611c3b0b1a0">dg::Collective</a>
-</li>
-<li>set_boundaries()
-: <a class="el" href="structdg_1_1_d_z_3_01_m_p_i___matrix_00_01_m_p_i___vector_01_4.html#a24a6bdb1b476ca03ae28cfb90282f13b">dg::DZ&lt; MPI_Matrix, MPI_Vector &gt;</a>
-</li>
 <li>set_chi()
 : <a class="el" href="classdg_1_1_elliptic.html#abfd10f349d672d814cd9f564f48b7b83">dg::Elliptic&lt; Matrix, Vector, Preconditioner &gt;</a>
 , <a class="el" href="group__operators.html#gac95fce512bf66491a2235d589148a64a">dg::Helmholtz&lt; Matrix, Vector, Preconditioner &gt;</a>
@@ -496,28 +387,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>SIRK()
 : <a class="el" href="structdg_1_1_s_i_r_k.html#a49a92efeaf2cd379a821e0642d73db9b">dg::SIRK&lt; Vector &gt;</a>
 </li>
-<li>size()
-: <a class="el" href="structdg_1_1_grid1d.html#a35d9e3b6599efa6cf6dbc22eb6cb5dc6">dg::Grid1d&lt; T &gt;</a>
-, <a class="el" href="structdg_1_1_grid2d.html#a3cacac7ed3a9f56f33d6e711a4fa26dd">dg::Grid2d&lt; T &gt;</a>
-, <a class="el" href="structdg_1_1_grid3d.html#a03f150ccbd6fd03b3d104f03cbff4090">dg::Grid3d&lt; T &gt;</a>
-, <a class="el" href="structdg_1_1_m_p_i___grid2d.html#a46e9b455f105f9c77cac0053edfef570">dg::MPI_Grid2d</a>
-, <a class="el" href="structdg_1_1_m_p_i___grid3d.html#a5d29467e83e0bb72fd9d49de20dbcc03">dg::MPI_Grid3d</a>
-, <a class="el" href="structdg_1_1_m_p_i___vector.html#aa03d630013ff94771f2d8f9f3e7d6c98">dg::MPI_Vector</a>
-</li>
 <li>symv()
 : <a class="el" href="classdg_1_1_elliptic.html#aaa875850f691e28b53de7560367bc950">dg::Elliptic&lt; Matrix, Vector, Preconditioner &gt;</a>
 , <a class="el" href="group__operators.html#ga3f5c52b98883ecc88056b3f82030f548">dg::Helmholtz&lt; Matrix, Vector, Preconditioner &gt;</a>
-</li>
-<li>system()
-: <a class="el" href="structdg_1_1_grid2d.html#a15f8056a1dfa1a806f60c22e71b0f802">dg::Grid2d&lt; T &gt;</a>
-, <a class="el" href="structdg_1_1_m_p_i___grid3d.html#a41f5d2f0117003022993c61a1e05105c">dg::MPI_Grid3d</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_t"></a>- t -</h3><ul>
-<li>transpose()
-: <a class="el" href="classdg_1_1_operator.html#ac7f3aa813f8894b2f5a44f08da781dfd">dg::Operator&lt; T &gt;</a>
 </li>
 </ul>
 
@@ -537,8 +409,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <h3><a class="anchor" id="index_w"></a>- w -</h3><ul>
 <li>weights()
-: <a class="el" href="classdg_1_1_d_l_t.html#a3029c6f214ed85f400ed1d70035a198d">dg::DLT&lt; T &gt;</a>
-, <a class="el" href="classdg_1_1_elliptic.html#a93d09db13361df006183edf7e1f8584e">dg::Elliptic&lt; Matrix, Vector, Preconditioner &gt;</a>
+: <a class="el" href="classdg_1_1_elliptic.html#a93d09db13361df006183edf7e1f8584e">dg::Elliptic&lt; Matrix, Vector, Preconditioner &gt;</a>
 , <a class="el" href="group__operators.html#gaa999c6af019581113bde43dd67cacc44">dg::Helmholtz&lt; Matrix, Vector, Preconditioner &gt;</a>
 </li>
 <li>what()
@@ -547,48 +418,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="structdg_1_1_ooops.html#a64c09cc1f58ed6407c98122dcb3dd567">dg::Ooops</a>
 </li>
 </ul>
-
-
-<h3><a class="anchor" id="index_x"></a>- x -</h3><ul>
-<li>x0()
-: <a class="el" href="structdg_1_1_m_p_i___grid3d.html#a11a432c2a322b77f4c2a251307475953">dg::MPI_Grid3d</a>
-</li>
-<li>x1()
-: <a class="el" href="structdg_1_1_m_p_i___grid3d.html#ac5ce37896bd00b3a66645493e9e823e8">dg::MPI_Grid3d</a>
-</li>
-<li>x_col()
-: <a class="el" href="structdg_1_1_m_p_i___vector.html#a4ac3664399de988e7d18319a166bd0d7">dg::MPI_Vector</a>
-</li>
-<li>x_row()
-: <a class="el" href="structdg_1_1_m_p_i___vector.html#a92b5c926214bc0ad37b8b4cfa4060d41">dg::MPI_Vector</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_y"></a>- y -</h3><ul>
-<li>y0()
-: <a class="el" href="structdg_1_1_m_p_i___grid3d.html#a738984fc9bfd3e4248b45c696c326e46">dg::MPI_Grid3d</a>
-</li>
-<li>y1()
-: <a class="el" href="structdg_1_1_m_p_i___grid3d.html#abe60607416a4bc9bac516244e3a40b45">dg::MPI_Grid3d</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_z"></a>- z -</h3><ul>
-<li>z0()
-: <a class="el" href="structdg_1_1_m_p_i___grid3d.html#a9bcbfe34691a774fcfc71d82d6c355ef">dg::MPI_Grid3d</a>
-</li>
-<li>z1()
-: <a class="el" href="structdg_1_1_m_p_i___grid3d.html#a24ad74d1ad28b21d8e459980faf48dd5">dg::MPI_Grid3d</a>
-</li>
-</ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 18:00:00 for Input and Output utilities by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated on Wed Feb 18 2015 23:45:36 for Discontinuous Galerkin Library by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
 </body>
 </html>

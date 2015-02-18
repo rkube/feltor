@@ -4,10 +4,17 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Input and Output utilities: /home/matthias/feltor/inc/toefl/dft_drt.h Source File</title>
+<title>TOEFL: /home/matthias/feltor/inc/toefl/dft_drt.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
@@ -22,9 +29,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Input and Output utilities
-   &#160;<span id="projectnumber">1.2</span>
+   <div id="projectname">TOEFL
+   &#160;<span id="projectnumber">2.0</span>
    </div>
+   <div id="projectbrief">Tokamak edge fluid; library for building spectral code</div>
   </td>
  </tr>
  </tbody>
@@ -67,6 +75,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('dft__drt_8h_source.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -81,11 +104,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="dir_bab826ae084583e2fc8f2a1d4f46d11d.html">toefl</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">dft_drt.h</div>  </div>
@@ -195,10 +213,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="group__fftw_html_ga0b987de90d25ec636234952be30de6ec"><div class="ttname"><a href="group__fftw.html#ga0b987de90d25ec636234952be30de6ec">toefl::plan_transpose</a></div><div class="ttdeci">fftw_plan plan_transpose(const size_t rows, const size_t cols, double *in, double *out, const unsigned flags)</div><div class="ttdoc">plan for real Matrix transposition </div></div>
 <div class="ttc" id="classtoefl_1_1_d_f_t___d_r_t_html_a3e4e26116f0f3dcf9cf22e08cd3703f0"><div class="ttname"><a href="classtoefl_1_1_d_f_t___d_r_t.html#a3e4e26116f0f3dcf9cf22e08cd3703f0">toefl::DFT_DRT::c2r</a></div><div class="ttdeci">void c2r(Matrix&lt; complex, TL_NONE &gt; &amp;inout_T, Matrix&lt; double, TL_DFT &gt; &amp;swap)</div><div class="ttdoc">Perform a c2r transformation. </div><div class="ttdef"><b>Definition:</b> dft_drt.h:120</div></div>
 <div class="ttc" id="classtoefl_1_1_matrix_html_a1a2bcfc1183ab0d558f54c46531fb1a3"><div class="ttname"><a href="classtoefl_1_1_matrix.html#a1a2bcfc1183ab0d558f54c46531fb1a3">toefl::Matrix::getPtr</a></div><div class="ttdeci">T * getPtr()</div><div class="ttdoc">get the address of the first element </div><div class="ttdef"><b>Definition:</b> matrix.h:182</div></div>
-<div class="ttc" id="namespacetoefl_html_a4cf5c3a2c097084c21e9fda488b95e6a"><div class="ttname"><a href="namespacetoefl.html#a4cf5c3a2c097084c21e9fda488b95e6a">toefl::swap_fields</a></div><div class="ttdeci">void swap_fields(Matrix&lt; T1, P1 &gt; &amp;lhs, Matrix&lt; T2, P2 &gt; &amp;rhs)</div><div class="ttdef"><b>Definition:</b> matrix.h:292</div></div>
+<div class="ttc" id="namespacetoefl_html_a4cf5c3a2c097084c21e9fda488b95e6a"><div class="ttname"><a href="namespacetoefl.html#a4cf5c3a2c097084c21e9fda488b95e6a">toefl::swap_fields</a></div><div class="ttdeci">void swap_fields(Matrix&lt; T1, P1 &gt; &amp;lhs, Matrix&lt; T2, P2 &gt; &amp;rhs)</div><div class="ttdef"><b>Definition:</b> matrix.h:295</div></div>
 <div class="ttc" id="classtoefl_1_1_d_f_t___d_r_t_html_a5f746985369610ff0962cd5511feb9b6"><div class="ttname"><a href="classtoefl_1_1_d_f_t___d_r_t.html#a5f746985369610ff0962cd5511feb9b6">toefl::DFT_DRT::DFT_DRT</a></div><div class="ttdeci">DFT_DRT(const size_t rows, const size_t cols, const fftw_r2r_kind kind, const unsigned=FFTW_MEASURE)</div><div class="ttdoc">prepare the fftw_plans </div><div class="ttdef"><b>Definition:</b> dft_drt.h:57</div></div>
 <div class="ttc" id="classtoefl_1_1_matrix_html_aa52708d41add23f7cc585e8c2ba0485e"><div class="ttname"><a href="classtoefl_1_1_matrix.html#aa52708d41add23f7cc585e8c2ba0485e">toefl::Matrix::rows</a></div><div class="ttdeci">const size_t rows() const </div><div class="ttdoc">number of rows </div><div class="ttdef"><b>Definition:</b> matrix.h:166</div></div>
-<div class="ttc" id="classtoefl_1_1_matrix_html_ab6697ba4f337254d25cf73e29c886195"><div class="ttname"><a href="classtoefl_1_1_matrix.html#ab6697ba4f337254d25cf73e29c886195">toefl::Matrix::isVoid</a></div><div class="ttdeci">bool isVoid() const </div><div class="ttdoc">checks whether matrix is empty i.e. no memory is allocated </div><div class="ttdef"><b>Definition:</b> matrix.h:212</div></div>
+<div class="ttc" id="classtoefl_1_1_matrix_html_ab6697ba4f337254d25cf73e29c886195"><div class="ttname"><a href="classtoefl_1_1_matrix.html#ab6697ba4f337254d25cf73e29c886195">toefl::Matrix::isVoid</a></div><div class="ttdeci">bool isVoid() const </div><div class="ttdoc">checks whether matrix is empty i.e. no memory is allocated </div><div class="ttdef"><b>Definition:</b> matrix.h:215</div></div>
 <div class="ttc" id="group__fftw_html_gaa2189b45074e1d35b640dcc98767ef8a"><div class="ttname"><a href="group__fftw.html#gaa2189b45074e1d35b640dcc98767ef8a">toefl::plan_dft_1d_c2r</a></div><div class="ttdeci">fftw_plan plan_dft_1d_c2r(const size_t real_rows, const size_t real_cols, fftw_complex *in, double *out, const unsigned flags)</div><div class="ttdoc">plan many linewise inplace c2r transformations </div></div>
 <div class="ttc" id="classtoefl_1_1_d_f_t___d_r_t_html_aefd679a98998b744a97599145e51c0e7"><div class="ttname"><a href="classtoefl_1_1_d_f_t___d_r_t.html#aefd679a98998b744a97599145e51c0e7">toefl::DFT_DRT::r2c</a></div><div class="ttdeci">void r2c(Matrix&lt; double, TL_DFT &gt; &amp;inout, Matrix&lt; complex, TL_NONE &gt; &amp;swap_T)</div><div class="ttdoc">Perform a r2c transformation. </div><div class="ttdef"><b>Definition:</b> dft_drt.h:97</div></div>
 <div class="ttc" id="message_8h_html_a6e389c07f185af0e74ef30554f181593"><div class="ttname"><a href="message_8h.html#a6e389c07f185af0e74ef30554f181593">_ping_</a></div><div class="ttdeci">#define _ping_</div><div class="ttdef"><b>Definition:</b> message.h:11</div></div>
@@ -211,11 +229,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="group__fftw_html_ga6cffae397935b18058b704d8e59a459e"><div class="ttname"><a href="group__fftw.html#ga6cffae397935b18058b704d8e59a459e">toefl::plan_drt_1d</a></div><div class="ttdeci">fftw_plan plan_drt_1d(const size_t rows, const size_t cols, double *in, double *out, const fftw_r2r_kind kind, const unsigned flags)</div><div class="ttdoc">plan many linewise real transformations </div></div>
 <div class="ttc" id="group__fftw_html_gac14e1291ac986588c3ecd23de2a58406"><div class="ttname"><a href="group__fftw.html#gac14e1291ac986588c3ecd23de2a58406">toefl::plan_dft_1d_r2c</a></div><div class="ttdeci">fftw_plan plan_dft_1d_r2c(const size_t real_rows, const size_t real_cols, double *in, fftw_complex *out, const unsigned flags)</div><div class="ttdoc">plan many linewise inplace r2c transformations </div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 18:00:01 for Input and Output utilities by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="dir_bab826ae084583e2fc8f2a1d4f46d11d.html">toefl</a></li><li class="navelem"><b>dft_drt.h</b></li>
+    <li class="footer">Generated on Wed Feb 18 2015 23:45:36 for TOEFL by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
 </body>
 </html>

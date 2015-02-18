@@ -4,10 +4,17 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Input and Output utilities: Utility functions for C-style bindings of polarization solver</title>
+<title>Discontinuous Galerkin Library: Utility functions for C-style bindings of polarization solver</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
@@ -22,9 +29,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Input and Output utilities
-   &#160;<span id="projectnumber">1.2</span>
+   <div id="projectname">Discontinuous Galerkin Library
+   &#160;<span id="projectnumber">2.0</span>
    </div>
+   <div id="projectbrief">Discontinuous Galerkin numerical methods and container free numerical algorithms</div>
   </td>
  </tr>
  </tbody>
@@ -61,12 +69,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     </ul>
   </div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('group__polarization.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Groups</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Groups</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -76,251 +98,42 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#typedef-members">Typedefs</a> &#124;
-<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Utility functions for C-style bindings of polarization solver<div class="ingroups"><a class="el" href="group__utilities.html">Utilities</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:ga58ef9f829920c8f6e9b6c8d2d3246b26"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga58ef9f829920c8f6e9b6c8d2d3246b26"></a>
-typedef <a class="el" href="group__polarization.html#ga58ef9f829920c8f6e9b6c8d2d3246b26">dg_workspace</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__polarization.html#ga58ef9f829920c8f6e9b6c8d2d3246b26">dg_workspace</a></td></tr>
-<tr class="memdesc:ga58ef9f829920c8f6e9b6c8d2d3246b26"><td class="mdescLeft">&#160;</td><td class="mdescRight">opaque workspace type <br/></td></tr>
-<tr class="separator:ga58ef9f829920c8f6e9b6c8d2d3246b26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:ga31417abd26924965e02a1e6f02f1e781"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__polarization.html#ga58ef9f829920c8f6e9b6c8d2d3246b26">dg_workspace</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__polarization.html#ga31417abd26924965e02a1e6f02f1e781">dg_create_workspace</a> (unsigned Nx, unsigned Ny, double hx, double hy, <a class="el" href="group__creation.html#ga59440bdf436f2874b49aa52b670ed364">dg::bc</a> bcx, <a class="el" href="group__creation.html#ga59440bdf436f2874b49aa52b670ed364">dg::bc</a> bcy)</td></tr>
-<tr class="memdesc:ga31417abd26924965e02a1e6f02f1e781"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create workspace for polarization and conjugate gradient.  <a href="#ga31417abd26924965e02a1e6f02f1e781">More...</a><br/></td></tr>
-<tr class="separator:ga31417abd26924965e02a1e6f02f1e781"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa9deeb8b08db3833da4b2d8113d725ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__polarization.html#gaa9deeb8b08db3833da4b2d8113d725ed">dg_update_polarizability</a> (<a class="el" href="group__polarization.html#ga58ef9f829920c8f6e9b6c8d2d3246b26">dg_workspace</a> *w, const double *chi)</td></tr>
-<tr class="memdesc:gaa9deeb8b08db3833da4b2d8113d725ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assemble first order polarization matrix.  <a href="#gaa9deeb8b08db3833da4b2d8113d725ed">More...</a><br/></td></tr>
-<tr class="separator:gaa9deeb8b08db3833da4b2d8113d725ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga305846e47956043f0fa29f5b289497cb"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__polarization.html#ga305846e47956043f0fa29f5b289497cb">dg_solve</a> (<a class="el" href="group__polarization.html#ga58ef9f829920c8f6e9b6c8d2d3246b26">dg_workspace</a> *w, double *x, const double *b, double eps)</td></tr>
-<tr class="memdesc:ga305846e47956043f0fa29f5b289497cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve the matrix equation.  <a href="#ga305846e47956043f0fa29f5b289497cb">More...</a><br/></td></tr>
-<tr class="separator:ga305846e47956043f0fa29f5b289497cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga45da317765fd9f7deb6f10af289fe5b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__polarization.html#ga45da317765fd9f7deb6f10af289fe5b6">dg_free_workspace</a> (<a class="el" href="group__polarization.html#ga58ef9f829920c8f6e9b6c8d2d3246b26">dg_workspace</a> *w)</td></tr>
-<tr class="memdesc:ga45da317765fd9f7deb6f10af289fe5b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should be called to release resources.  <a href="#ga45da317765fd9f7deb6f10af289fe5b6">More...</a><br/></td></tr>
-<tr class="separator:ga45da317765fd9f7deb6f10af289fe5b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>To use these funcions use code like: </p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;dg.h&quot;</span></div>
 <div class="line"></div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">//allocate a workspace</span></div>
-<div class="line">    <a class="code" href="group__polarization.html#ga58ef9f829920c8f6e9b6c8d2d3246b26">dg_workspace</a>* w = <a class="code" href="group__polarization.html#ga31417abd26924965e02a1e6f02f1e781">dg_create_workspace</a>( Nx, Ny, hx, hy, <a class="code" href="group__creation.html#gga59440bdf436f2874b49aa52b670ed364adece0b7644d85f490823799a3b97f7e6">dg::DIR</a>, <a class="code" href="group__creation.html#gga59440bdf436f2874b49aa52b670ed364a948704f60491461974ce4fe6339778b3">dg::PER</a>);</div>
+<div class="line">    dg_workspace* w = dg_create_workspace( Nx, Ny, hx, hy, <a class="code" href="group__creation.html#gga59440bdf436f2874b49aa52b670ed364adece0b7644d85f490823799a3b97f7e6">dg::DIR</a>, <a class="code" href="group__creation.html#gga59440bdf436f2874b49aa52b670ed364a948704f60491461974ce4fe6339778b3">dg::PER</a>);</div>
 <div class="line">    <span class="comment">//allocate chi, x and b</span></div>
 <div class="line">    <span class="keywordtype">double</span>* chi = <span class="keyword">new</span> <span class="keywordtype">double</span>[Nx*Ny];</div>
 <div class="line">    <span class="keywordtype">double</span>* x = <span class="keyword">new</span> <span class="keywordtype">double</span>[Nx*Ny];</div>
 <div class="line">    <span class="keywordtype">double</span>* b = <span class="keyword">new</span> <span class="keywordtype">double</span>[Nx*Ny];</div>
 <div class="line">    ...<span class="comment">//compute useful values for chi</span></div>
 <div class="line">    <span class="comment">//assemble polarization matrix</span></div>
-<div class="line">    <a class="code" href="group__polarization.html#gaa9deeb8b08db3833da4b2d8113d725ed">dg_update_polarizability</a>( w, chi);</div>
+<div class="line">    dg_update_polarizability( w, chi);</div>
 <div class="line">    ...<span class="comment">//compute useful values for b and an initial guess for x</span></div>
 <div class="line">    <span class="comment">//solve A(chi)*x = b to a precision of 1e-4</span></div>
-<div class="line">    <a class="code" href="group__polarization.html#ga305846e47956043f0fa29f5b289497cb">dg_solve</a>( w, x, b, 1e-4);</div>
+<div class="line">    dg_solve( w, x, b, 1e-4);</div>
 <div class="line">    <span class="comment">//release resources</span></div>
-<div class="line">    <a class="code" href="group__polarization.html#ga45da317765fd9f7deb6f10af289fe5b6">dg_free_workspace</a>( w);</div>
+<div class="line">    dg_free_workspace( w);</div>
 <div class="line">    ...</div>
 <div class="line">    </div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-</div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga31417abd26924965e02a1e6f02f1e781"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group__polarization.html#ga58ef9f829920c8f6e9b6c8d2d3246b26">dg_workspace</a>* dg_create_workspace </td>
-          <td>(</td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>Nx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>Ny</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>hx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>hy</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="group__creation.html#ga59440bdf436f2874b49aa52b670ed364">dg::bc</a>&#160;</td>
-          <td class="paramname"><em>bcx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="group__creation.html#ga59440bdf436f2874b49aa52b670ed364">dg::bc</a>&#160;</td>
-          <td class="paramname"><em>bcy</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Create workspace for polarization and conjugate gradient. </p>
-<dl class="section note"><dt>Note</dt><dd>the x - direction is assumed to be the one that lies contiguously in memory!! </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">Nx</td><td># of points in x direction </td></tr>
-    <tr><td class="paramname">Ny</td><td># of points in y direction </td></tr>
-    <tr><td class="paramname">hx</td><td>grid constant in x </td></tr>
-    <tr><td class="paramname">hy</td><td>grid constant in y </td></tr>
-    <tr><td class="paramname">bcx</td><td>one of <a class="el" href="group__creation.html#gga59440bdf436f2874b49aa52b670ed364a948704f60491461974ce4fe6339778b3" title="periodic boundaries ">dg::PER</a>, <a class="el" href="group__creation.html#gga59440bdf436f2874b49aa52b670ed364ae1ff2b85fda37868973c8059e3ca3a79" title="Dirichlet on left, Neumann on right boundary. ">dg::DIR_NEU</a>, <a class="el" href="group__creation.html#gga59440bdf436f2874b49aa52b670ed364a5832830f6fb508b8932dbafad3d1b57c" title="Neumann on left, Dirichlet on right boundary. ">dg::NEU_DIR</a> and <a class="el" href="group__creation.html#gga59440bdf436f2874b49aa52b670ed364ad8a2f69a62e7fdafe1665ae7162e8e10" title="Neumann on both boundaries. ">dg::NEU</a> </td></tr>
-    <tr><td class="paramname">bcy</td><td>one of <a class="el" href="group__creation.html#gga59440bdf436f2874b49aa52b670ed364a948704f60491461974ce4fe6339778b3" title="periodic boundaries ">dg::PER</a>, <a class="el" href="group__creation.html#gga59440bdf436f2874b49aa52b670ed364ae1ff2b85fda37868973c8059e3ca3a79" title="Dirichlet on left, Neumann on right boundary. ">dg::DIR_NEU</a>, <a class="el" href="group__creation.html#gga59440bdf436f2874b49aa52b670ed364a5832830f6fb508b8932dbafad3d1b57c" title="Neumann on left, Dirichlet on right boundary. ">dg::NEU_DIR</a> and <a class="el" href="group__creation.html#gga59440bdf436f2874b49aa52b670ed364ad8a2f69a62e7fdafe1665ae7162e8e10" title="Neumann on both boundaries. ">dg::NEU</a></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>a pointer to a newly allocated workspace </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga45da317765fd9f7deb6f10af289fe5b6"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void dg_free_workspace </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="group__polarization.html#ga58ef9f829920c8f6e9b6c8d2d3246b26">dg_workspace</a> *&#160;</td>
-          <td class="paramname"><em>w</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Should be called to release resources. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">w</td><td>The workspace to delete </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga305846e47956043f0fa29f5b289497cb"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned dg_solve </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="group__polarization.html#ga58ef9f829920c8f6e9b6c8d2d3246b26">dg_workspace</a> *&#160;</td>
-          <td class="paramname"><em>w</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double *&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const double *&#160;</td>
-          <td class="paramname"><em>b</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>eps</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Solve the matrix equation. </p>
-<p>What is solved is the equation </p>
-<p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \nabla(\chi\nabla)x = b \]" src="form_64.png"/>
-</p>
-<p> to first order, where the polarizability from the last call of <a class="el" href="group__polarization.html#gaa9deeb8b08db3833da4b2d8113d725ed" title="Assemble first order polarization matrix. ">dg_update_polarizability()</a> is used. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">w</td><td>A previously allocated workspace </td></tr>
-    <tr><td class="paramname">x</td><td>contains the initial guess at the beginning, and the solution on exit </td></tr>
-    <tr><td class="paramname">b</td><td>the right hand side </td></tr>
-    <tr><td class="paramname">eps</td><td>the accuracy</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The number of iterations used to achieve the desired accuracy </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gaa9deeb8b08db3833da4b2d8113d725ed"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void dg_update_polarizability </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="group__polarization.html#ga58ef9f829920c8f6e9b6c8d2d3246b26">dg_workspace</a> *&#160;</td>
-          <td class="paramname"><em>w</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const double *&#160;</td>
-          <td class="paramname"><em>chi</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Assemble first order polarization matrix. </p>
-<p>The term discretized is </p>
-<p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \nabla ( \chi \nabla ) \]" src="form_63.png"/>
-</p>
-<p> using a first order discretization </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">w</td><td>A previously allocated workspace </td></tr>
-    <tr><td class="paramname">chi</td><td>Polarizability </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-</div><!-- contents -->
+</div><!-- fragment --> </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 17:59:59 for Input and Output utilities by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated on Wed Feb 18 2015 23:45:15 for Discontinuous Galerkin Library by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
 </body>
 </html>

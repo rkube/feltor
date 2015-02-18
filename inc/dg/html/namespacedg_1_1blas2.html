@@ -4,10 +4,17 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Input and Output utilities: dg::blas2 Namespace Reference</title>
+<title>Discontinuous Galerkin Library: dg::blas2 Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
@@ -22,9 +29,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Input and Output utilities
-   &#160;<span id="projectnumber">1.2</span>
+   <div id="projectname">Discontinuous Galerkin Library
+   &#160;<span id="projectnumber">2.0</span>
    </div>
+   <div id="projectbrief">Discontinuous Galerkin numerical methods and container free numerical algorithms</div>
   </td>
  </tr>
  </tbody>
@@ -66,12 +74,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="namespacemembers.html"><span>Namespace&#160;Members</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('namespacedg_1_1blas2.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Groups</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Groups</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -80,11 +103,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespacedg.html">dg</a></li><li class="navelem"><a class="el" href="namespacedg_1_1blas2.html">blas2</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
@@ -99,15 +117,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:gaeb8a93cac85646f2173160afd2a79d53"><td class="memTemplParams" colspan="2">template&lt;class Matrix , class Vector &gt; </td></tr>
-<tr class="memitem:gaeb8a93cac85646f2173160afd2a79d53"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdg_1_1_matrix_traits.html">MatrixTraits</a>&lt; Matrix &gt;::value_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__blas2.html#gaeb8a93cac85646f2173160afd2a79d53">dot</a> (const Vector &amp;x, const Matrix &amp;m, const Vector &amp;y)</td></tr>
+<tr class="memitem:gaeb8a93cac85646f2173160afd2a79d53"><td class="memTemplItemLeft" align="right" valign="top">MatrixTraits&lt; Matrix &gt;::value_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__blas2.html#gaeb8a93cac85646f2173160afd2a79d53">dot</a> (const Vector &amp;x, const Matrix &amp;m, const Vector &amp;y)</td></tr>
 <tr class="memdesc:gaeb8a93cac85646f2173160afd2a79d53"><td class="mdescLeft">&#160;</td><td class="mdescRight">General dot produt.  <a href="group__blas2.html#gaeb8a93cac85646f2173160afd2a79d53">More...</a><br/></td></tr>
 <tr class="separator:gaeb8a93cac85646f2173160afd2a79d53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac72ec781ca79b3b983099ea172f896ab"><td class="memTemplParams" colspan="2">template&lt;class Matrix , class Vector &gt; </td></tr>
-<tr class="memitem:gac72ec781ca79b3b983099ea172f896ab"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdg_1_1_matrix_traits.html">MatrixTraits</a>&lt; Matrix &gt;::value_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__blas2.html#gac72ec781ca79b3b983099ea172f896ab">dot</a> (const Matrix &amp;m, const Vector &amp;x)</td></tr>
+<tr class="memitem:gac72ec781ca79b3b983099ea172f896ab"><td class="memTemplItemLeft" align="right" valign="top">MatrixTraits&lt; Matrix &gt;::value_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__blas2.html#gac72ec781ca79b3b983099ea172f896ab">dot</a> (const Matrix &amp;m, const Vector &amp;x)</td></tr>
 <tr class="memdesc:gac72ec781ca79b3b983099ea172f896ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">General dot produt.  <a href="group__blas2.html#gac72ec781ca79b3b983099ea172f896ab">More...</a><br/></td></tr>
 <tr class="separator:gac72ec781ca79b3b983099ea172f896ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7f66ae102c9c093cdc0877a989fd82b3"><td class="memTemplParams" colspan="2">template&lt;class Precon , class Vector &gt; </td></tr>
-<tr class="memitem:ga7f66ae102c9c093cdc0877a989fd82b3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__blas2.html#ga7f66ae102c9c093cdc0877a989fd82b3">symv</a> (typename <a class="el" href="structdg_1_1_matrix_traits.html">MatrixTraits</a>&lt; Precon &gt;::value_type alpha, const Precon &amp;P, const Vector &amp;x, typename <a class="el" href="structdg_1_1_matrix_traits.html">MatrixTraits</a>&lt; Precon &gt;::value_type beta, Vector &amp;y)</td></tr>
+<tr class="memitem:ga7f66ae102c9c093cdc0877a989fd82b3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__blas2.html#ga7f66ae102c9c093cdc0877a989fd82b3">symv</a> (typename MatrixTraits&lt; Precon &gt;::value_type alpha, const Precon &amp;P, const Vector &amp;x, typename MatrixTraits&lt; Precon &gt;::value_type beta, Vector &amp;y)</td></tr>
 <tr class="memdesc:ga7f66ae102c9c093cdc0877a989fd82b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Symmetric Matrix Vector product.  <a href="group__blas2.html#ga7f66ae102c9c093cdc0877a989fd82b3">More...</a><br/></td></tr>
 <tr class="separator:ga7f66ae102c9c093cdc0877a989fd82b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga268c50e488c18db3dc5be1d1934eb7b2"><td class="memTemplParams" colspan="2">template&lt;class Matrix , class Vector1 , class Vector2 &gt; </td></tr>
@@ -123,11 +141,15 @@ Functions</h2></td></tr>
 <div class="textblock"><p>BLAS Level 2 routines. </p>
 <p>In an implementation Vector and Matrix should be typedefed. Only those routines that are actually called need to be implemented. </p>
 </div></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 18 2015 18:00:00 for Input and Output utilities by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacedg.html">dg</a></li><li class="navelem"><a class="el" href="namespacedg_1_1blas2.html">blas2</a></li>
+    <li class="footer">Generated on Wed Feb 18 2015 23:45:15 for Discontinuous Galerkin Library by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
 </body>
 </html>

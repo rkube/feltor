@@ -61,5 +61,3 @@
 \form#60:\[ y = Bhk = (B-D)hk + Dhk = (B-D)B^{-1}y + Dhk = ( 1- DB^{-1})y + Dhk = \alpha y + \beta h k\]
 \form#61:\[ B\]
 \form#62:\[ D\]
-\form#63:\[ \nabla ( \chi \nabla ) \]
-\form#64:\[ \nabla(\chi\nabla)x = b \]

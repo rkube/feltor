@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['notanumber',['NotANumber',['../structdg_1_1_not_a_number.html',1,'dg']]]
+  ['ooops',['Ooops',['../structdg_1_1_ooops.html',1,'dg']]]
 ];

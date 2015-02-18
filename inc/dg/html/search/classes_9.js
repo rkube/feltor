@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['karniadakis',['Karniadakis',['../structdg_1_1_karniadakis.html',1,'dg']]],
-  ['keinenst_5f1d',['KeineNST_1D',['../classdg_1_1_keine_n_s_t__1_d.html',1,'dg']]]
+  ['lamb',['Lamb',['../structdg_1_1_lamb.html',1,'dg']]],
+  ['lhalf',['LHalf',['../structdg_1_1_l_half.html',1,'dg']]],
+  ['linearx',['LinearX',['../structdg_1_1_linear_x.html',1,'dg']]],
+  ['lineary',['LinearY',['../structdg_1_1_linear_y.html',1,'dg']]],
+  ['ln',['LN',['../structdg_1_1_l_n.html',1,'dg']]]
 ];
