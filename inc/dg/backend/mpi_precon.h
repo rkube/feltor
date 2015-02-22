@@ -9,8 +9,9 @@ namespace dg
 struct MPI_Precon
 {
     double norm;
-    std::vector<double> data;
+    thrust::host_vector<double> data;
     thrust::host_vector<double> vec;
+    unsigned n, Nx, Ny, Nz;
 };
 
 typedef MPI_Precon MPrecon;
@@ -42,6 +43,7 @@ MPI_Precon weights( const MPI_Grid2d& g)
     MPI_Precon p;
     p.data = g.dlt().weights();
     p.norm = g.hx()*g.hy()/4.;
+    p.n = g.n(), p.Nx = g.Nx(), p.Ny = g.Ny(), p.Nz = 1;
     return p;
 }
 /**
@@ -76,6 +78,7 @@ MPI_Precon weights( const MPI_Grid3d& g)
         Grid1d<double> gR( g.x0(), g.x1(), g.n(), g.Nx());
         p.vec = abscissas( gR); 
     }
+    p.n = g.n(), p.Nx = g.Nx(), p.Ny = g.Ny(), p.Nz = g.Nz();
     return p;
 }
 /**

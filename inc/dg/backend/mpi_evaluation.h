@@ -30,8 +30,9 @@ namespace dg
 template< class BinaryOp>
 MPI_Vector evaluate( BinaryOp f, const MPI_Grid2d& g)
 {
-    MPI_Vector v( g.n(), g.Nx(), g.Ny(), g.communicator());
+    MPI_Vector v;
     v.data() = evaluate(f,g.local());
+    v.communicator() = g.communicator();
     return v;
 };
 ///@cond
@@ -56,8 +57,9 @@ MPI_Vector evaluate( double(f)(double, double), const MPI_Grid2d& g)
 template< class TernaryOp>
 MPI_Vector evaluate( TernaryOp f, const MPI_Grid3d& g)
 {
-    MPI_Vector v( g.n(), g.Nx(), g.Ny(), g.Nz(), g.communicator());
+    MPI_Vector v;
     v.data() = evaluate(f, g.local());
+    v.communicator() = g.communicator();
     return v;
 };
 ///@cond

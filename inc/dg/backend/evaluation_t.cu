@@ -71,5 +71,18 @@ int main()
     double solution3 = solution2*solution;
     cout << "Correct square norm is      "<<solution3<<endl;
     cout << "Relative 3d error is        "<<(norm3X-solution3)/solution3<<"\n";
+    int keys[10] = {0,0,0,1,1,2,0,0,0,0};
+    int vals[10] = {1,1,1,1,1,1,1,1,1,1};
+    thrust::exclusive_scan_by_key( keys, keys+10, vals, vals);
+    for(unsigned i=0; i<10; i++)
+        std::cout << vals[i]<<" ";
+    std::cout << std::endl;
+    int gatherIdx[10] = {0,1,0,1,0,1,2,3,2,3};
+    double input[4] = {0,1,2,3};
+    double output[10];
+    thrust::gather( gatherIdx, gatherIdx+10, input, output);
+    for(unsigned i=0; i<10; i++)
+        std::cout << output[i]<<" ";
+    std::cout << std::endl;
     return 0;
 } 

@@ -15,6 +15,7 @@ MPI_Precon pure_weights( const MPI_Grid3d& g)
     MPI_Precon p;
     p.data = g.dlt().weights();
     p.norm = g.hz()*g.hx()*g.hy()/4.;
+    p.n = g.n(), p.Nx = g.Nx(), p.Ny = g.Ny(), p.Nz = g.Nz();
     return p;
 }
 MPI_Precon pure_weights( const MPI_Grid2d& g)
@@ -22,6 +23,7 @@ MPI_Precon pure_weights( const MPI_Grid2d& g)
     MPI_Precon p;
     p.data = g.dlt().weights();
     p.norm = g.hx()*g.hy()/4.;
+    p.n = g.n(), p.Nx = g.Nx(), p.Ny = g.Ny(), p.Nz = 1;
     return p;
 }
 //create a normed 2d X-derivative

@@ -43,8 +43,8 @@ int main(int argc, char** argv)
     MPI_Comm_rank( MPI_COMM_WORLD, &rank);
 
     //test evaluation and expand functions
-    dg::MVec func2d = dg::evaluate( function, g2d);
-    dg::MVec func3d = dg::evaluate( function, g3d);
+    dg::XVec func2d = dg::evaluate( function, g2d);
+    dg::XVec func3d = dg::evaluate( function, g3d);
     //test preconditioners
     dg::blas2::symv( 1., dg::create::weights(g2d), func2d, 0., func2d);
     dg::blas2::symv( 1., dg::create::weights(g3d), func3d, 0., func3d);

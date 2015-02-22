@@ -13,29 +13,29 @@ inline typename MatrixTraits<Precon>::value_type doDot( const Vector& x, const P
 {
 #ifdef DG_DEBUG
     assert( x.data().size() == y.data().size() );
-    assert( x.n() == P.data.size() );
+    assert( x.data().size()%P.n == 0 );
 #endif //DG_DEBUG
     typename MatrixTraits<Precon>::value_type temp=0, sum=0;
-    const unsigned n = x.n();
-    for( unsigned m=0; m<x.Nz(); m++)
-        for( unsigned i=1; i<(x.Ny()-1); i++)
+    const unsigned n = P.n;
+    for( unsigned m=0; m<P.Nz; m++)
+        for( unsigned i=0; i<(P.Ny); i++)
         for( unsigned k=0; k<n; k++)
         {
             if( P.vec.empty() )
-                for( unsigned j=1; j<(x.Nx()-1); j++)
+                for( unsigned j=0; j<(P.Nx); j++)
                 for( unsigned l=0; l<n; l++)
                 {
                     temp+=P.norm*P.data[k]*P.data[l]*
-                      x.data()[(((m*x.Ny() + i)*n + k)*x.Nx() + j)*n +l ]*
-                      y.data()[(((m*x.Ny() + i)*n + k)*x.Nx() + j)*n +l ];
+                      x.data()[(((m*P.Ny + i)*n + k)*P.Nx + j)*n +l ]*
+                      y.data()[(((m*P.Ny + i)*n + k)*P.Nx + j)*n +l ];
                 }
             else
-                for( unsigned j=1; j<(x.Nx()-1); j++)
+                for( unsigned j=0; j<(P.Nx); j++)
                 for( unsigned l=0; l<n; l++)
                 {
                     temp+=P.norm*P.data[k]*P.data[l]*P.vec[j*n+l]*
-                      x.data()[(((m*x.Ny() + i)*n + k)*x.Nx() + j)*n +l ]*
-                      y.data()[(((m*x.Ny() + i)*n + k)*x.Nx() + j)*n +l ];
+                      x.data()[(((m*P.Ny + i)*n + k)*P.Nx + j)*n +l ]*
+                      y.data()[(((m*P.Ny + i)*n + k)*P.Nx + j)*n +l ];
                 }
         }
     MPI_Allreduce( &temp, &sum, 1, MPI_DOUBLE, MPI_SUM, MPI_COMM_WORLD);
@@ -71,39 +71,38 @@ inline void doSymv(
     }
     const unsigned& size = x.data().size();
 #ifdef DG_DEBUG
-    assert( x.n() >= 1);
+    assert( P.n >= 1);
     assert( x.data().size() == y.data().size() );
-    assert( size%x.n() ==0);
-    assert( x.n() == P.data.size());
+    assert( size%P.n ==0);
 #endif //DG_DEBUG
-    const unsigned n = x.n();
-    for( unsigned m=0; m<x.Nz(); m++)
-        for( unsigned i=1; i<(x.Ny()-1); i++)
+    const unsigned n = P.n;
+    for( unsigned m=0; m<P.Nz; m++)
+        for( unsigned i=0; i<(P.Ny); i++)
         for( unsigned k=0; k<n; k++)
             if( P.vec.empty())
             {
-                for( unsigned j=1; j<(x.Nx()-1); j++)
+                for( unsigned j=0; j<(P.Nx); j++)
                 for( unsigned l=0; l<n; l++)
                 {
-                      y.data()[(((m*x.Ny() + i)*n + k)*x.Nx() + j)*n +l ] = 
+                      y.data()[(((m*P.Ny + i)*n + k)*P.Nx + j)*n +l ] = 
                           alpha*
                           P.norm*P.data[k]*P.data[l]*
-                          x.data()[(((m*x.Ny() + i)*n + k)*x.Nx() + j)*n +l ] + 
+                          x.data()[(((m*P.Ny + i)*n + k)*P.Nx + j)*n +l ] + 
                           beta*
-                          y.data()[(((m*x.Ny() + i)*n + k)*x.Nx() + j)*n +l ];
+                          y.data()[(((m*P.Ny + i)*n + k)*P.Nx + j)*n +l ];
                 }
             }
             else
             {
-                for( unsigned j=1; j<(x.Nx()-1); j++)
+                for( unsigned j=0; j<(P.Nx); j++)
                 for( unsigned l=0; l<n; l++)
                 {
-                      y.data()[(((m*x.Ny() + i)*n + k)*x.Nx() + j)*n +l ] = 
+                      y.data()[(((m*P.Ny + i)*n + k)*P.Nx + j)*n +l ] = 
                           alpha*
                           P.norm*P.data[k]*P.data[l]*P.vec[j*n+l]*
-                          x.data()[(((m*x.Ny() + i)*n + k)*x.Nx() + j)*n +l ] + 
+                          x.data()[(((m*P.Ny + i)*n + k)*P.Nx + j)*n +l ] + 
                           beta*
-                          y.data()[(((m*x.Ny() + i)*n + k)*x.Nx() + j)*n +l ];
+                          y.data()[(((m*P.Ny + i)*n + k)*P.Nx + j)*n +l ];
                 }
             }
 }

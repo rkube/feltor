@@ -15,6 +15,10 @@ namespace dg{
 
 /**
  * @brief Stores the sendTo and the recvFrom maps
+ *
+ * Think of a given vector, where all elements to send to a given 
+ * process lie contiguously in memory together with a map telling
+ * howmany to send to a given process.
  */
 struct Pattern
 {
@@ -90,6 +94,7 @@ struct Pattern
     thrust::host_vector<int> recvFrom_, accR_;
     MPI_Comm comm_;
 };
+
 thrust::host_vector<double> Pattern::scatter( const thrust::host_vector<double>& values)
 {
     thrust::host_vector<double> received(thrust::reduce( recvFrom_.begin(), recvFrom_.end() ));
@@ -184,13 +189,14 @@ struct Collective
      *
      * This method is the inverse of scatter 
      * @param gatherFrom other processes collect data from this vector (has to be of size given by recv_size())
-     * @param values contains values from other processes sent back to the origin (must have the size of the map given in the constructor)
+     * @param values (write only)  contains values from other processes sent back to the origin (is resized to the size of the map given in the constructor)
      * @note a scatter followed by a gather of the received values restores the original array
      */
     void gather( const thrust::host_vector<double>& gatherFrom, thrust::host_vector<double>& values)
     {
         thrust::host_vector<double> values_;
         p_.gather( gatherFrom, values_);
+        values.resize( values_.size());
         thrust::scatter( values_.begin(), values_.end(), idx_.begin(), values.begin());
     }
 
@@ -211,5 +217,16 @@ struct Collective
     Pattern p_;
 };
 
+/**
+ * @brief Given a map of pids and local indices, gather values from other processes
+ *
+ * This is in principle a non-invertible process since one element 
+ * might have to be sent to several processes, 
+ * but once these values are copied the Collective class can again be used
+ */
+struct CollectiveGather
+{
+    //copy double values and use Collective class, also determine local indices of gathered values, look if mpi standard garantuees a certain ordering 
+};
 
 }//namespace dg
