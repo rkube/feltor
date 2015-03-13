@@ -220,7 +220,7 @@ struct GeneralElliptic
         rightx( dg::create::dx( g, g.bcx(), normed, dir)),
         righty( dg::create::dy( g, g.bcy(), normed, dir)),
         rightz( dg::create::dz( g, g.bcz(), normed, dir)),
-        jump  ( dg::create::jump2d( g, g.bcx(), g.bcy(), no )),
+        jump  ( dg::create::jump3d( g, g.bcx(), g.bcy(), g.bcz(), no )),//use 3d jumps
         weights_(dg::create::weights(g)), precond_(dg::create::inv_weights(g)), 
         xchi( dg::evaluate( one, g) ), ychi( xchi), zchi( xchi), 
         xx(xchi), yy(xx), zz(xx), temp0( xx), temp1(temp0), R(xchi),

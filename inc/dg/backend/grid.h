@@ -323,7 +323,7 @@ struct Grid3d
      * @note in the cylindrical coordinate system x, y and z are used to denote R, Z and the angle phi
      * @attention # of polynomial coefficients in z direction is always 1
      */
-    Grid3d( T x0, T x1, T y0, T y1, T z0, T z1, unsigned n, unsigned Nx, unsigned Ny, unsigned Nz, bc bcx = PER, bc bcy = PER, bc bcz = PER, system sys = cartesian):
+    Grid3d( T x0, T x1, T y0, T y1, T z0, T z1, unsigned n, unsigned Nx, unsigned Ny, unsigned Nz, bc bcx = PER, bc bcy = PER, bc bcz = PER, system sys = cartesian, bool mixed = true):
         x0_(x0), x1_(x1), y0_(y0), y1_(y1), z0_(z0), z1_(z1),
         n_(n), Nx_(Nx), Ny_(Ny), Nz_(Nz), bcx_(bcx), bcy_( bcy), bcz_( bcz), dlt_(n), sys_(sys)
     {
@@ -331,6 +331,11 @@ struct Grid3d
         assert( x1 > x0 && y1 > y0 ); assert( z1 > z0 );         
         assert( Nx > 0  && Ny > 0); assert( Nz > 0);
 
+        mixed_ = mixed;
+        if( mixed)
+            nz_ = 1;
+        else
+            nz_ = n;
         lx_ = (x1-x0), ly_ = (y1-y0), lz_ = (z1-z0);
         hx_ = lx_/(double)Nx_, hy_ = ly_/(double)Ny_, hz_ = lz_/(double)Nz_;
     }
@@ -345,11 +350,16 @@ struct Grid3d
         x0_(gx.x0()), x1_(gx.x1()),  
         y0_(gy.x0()), y1_(gy.x1()),
         z0_(gz.x0()), z1_(gz.x1()),
-        n_(gx.n()), Nx_(gx.N()), Ny_(gy.N()), Nz_(gz.N()),
+        n_(gx.n()), nz_(gz.n()), Nx_(gx.N()), Ny_(gy.N()), Nz_(gz.N()),
         bcx_(gx.bcx()), bcy_( gy.bcx()), bcz_(gz.bcx()), 
         dlt_(gx.n()), sys_(cartesian)
     {
         assert( gx.n() == gy.n() );
+        assert( gz.n() == 1 || gz.n() == gy.n() );
+        if( gz.n()== 1)
+            mixed_ = true;
+        else
+            mixed_ = false;
         lx_ = (x1_-x0_), ly_ = (y1_-y0_), lz_ = (z1_-z0_);
         hx_ = lx_/(double)Nx_, hy_ = ly_/(double)Ny_, hz_ = lz_/(double)Nz_;
     }
@@ -436,6 +446,18 @@ struct Grid3d
      */
     unsigned n() const {return n_;}
     /**
+     * @brief true if mixed polynomial coeff
+     *
+     * @return 
+     */
+    bool mixed() const {return mixed_;}
+    /**
+     * @brief # of polynomial coefficients in z
+     *
+     * @return 
+     */
+    unsigned nz() const {return nz_;}
+    /**
      * @brief # of points in x
      *
      * @return 
@@ -488,7 +510,7 @@ struct Grid3d
      *
      * @return n*n*Nx*Ny*Nz
      */
-    unsigned size() const { return n_*n_*Nx_*Ny_*Nz_;}
+    unsigned size() const { return n_*n_*nz_*Nx_*Ny_*Nz_;}
     /**
      * @brief Display 
      *
@@ -532,7 +554,8 @@ struct Grid3d
   private:
     T x0_, x1_, y0_, y1_, z0_, z1_;
     T lx_, ly_, lz_;
-    unsigned n_, Nx_, Ny_, Nz_;
+    unsigned n_, nz_, Nx_, Ny_, Nz_;
+    bool mixed_;
     T hx_, hy_, hz_;
     bc bcx_, bcy_, bcz_;
     DLT<T> dlt_;

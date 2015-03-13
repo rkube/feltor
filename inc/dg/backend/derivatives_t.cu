@@ -24,10 +24,11 @@ int main()
     std::cout << "Note the supraconvergence!\n";
     std::cout << "Type in n, Nx and Ny and Nz!\n";
     std::cin >> n >> Nx >> Ny >> Nz;
-    dg::Grid3d<double> g( 0, lx, 0, lx, 0., lx, n, Nx, Ny, Nz, bcx, dg::PER, dg::PER);
+    dg::Grid3d<double> g( 0, lx, 0, lx, 0., lx, n, Nx, Ny, Nz, bcx, dg::PER, dg::DIR, dg::cartesian, false);
     //dg::Grid2d<double> g( 0, lx, 0, lx, n, Nx, Ny, bcx, dg::PER);
     dg::DMatrix dx = dg::create::dx<double>( g, bcx, dg::normed, dg::centered);
-    dg::DMatrix lzM = dg::create::laplacianM_perp<double>( g, bcx, dg::PER, dg::normed, dg::forward);
+    dg::DMatrix dx_not_normed = dg::create::dx<double>( g, bcx, dg::not_normed, dg::centered);
+    //dg::DMatrix lzM = dg::create::laplacianM_perp<double>( g, bcx, dg::PER, dg::normed, dg::forward);
     //dg::DMatrix lzM = dg::create::laplacianM<double>( g, bcx, dg::PER, dg::normed, dg::forward);
     dg::Elliptic<dg::DMatrix, dg::DVec, dg::DVec> lap( g, bcx, dg::PER, dg::normed);
     dg::DVec v = dg::evaluate( function, g);
@@ -35,12 +36,18 @@ int main()
     const dg::DVec u = dg::evaluate( derivative, g);
 
     const dg::DVec w3d = dg::create::weights( g);
+    const dg::DVec v3d = dg::create::inv_weights( g);
     dg::blas2::symv( dx, v, w);
     dg::blas1::axpby( 1., u, -1., w);
     std::cout << "DX: Distance to true solution: "<<sqrt(dg::blas2::dot(w, w3d, w))<<"\n";
-    dg::blas2::symv( lzM, v, w);
-    dg::blas1::axpby( 1., v, -1., w);
-    std::cout << "DXX(1): Distance to true solution: "<<sqrt(dg::blas2::dot(w, w3d, w))<<" (Note the supraconvergence!)\n";
+    v = dg::evaluate( function, g);
+    dg::blas2::symv( dx_not_normed, v, w);
+    dg::blas1::pointwiseDot( v3d, w, w);
+    dg::blas1::axpby( 1., u, -1., w);
+    std::cout << "DX: Distance to true solution: "<<sqrt(dg::blas2::dot(w, w3d, w))<<"\n";
+    //dg::blas2::symv( lzM, v, w);
+    //dg::blas1::axpby( 1., v, -1., w);
+    //std::cout << "DXX(1): Distance to true solution: "<<sqrt(dg::blas2::dot(w, w3d, w))<<" (Note the supraconvergence!)\n";
     dg::blas2::symv( lap, v, w);
     dg::blas1::axpby( 1., v, -1., w);
     std::cout << "DXX(2): Distance to true solution: "<<sqrt(dg::blas2::dot(w, w3d, w))<<" (Note the supraconvergence!)\n";
@@ -63,7 +70,6 @@ int main()
     std::cout << "DZ(1):           Distance to true solution: "<<sqrt(dg::blas2::dot(temp, w3d, temp))<<"\n";
     dg::DMatrix dz_not_normed = dg::create::dz( g, dg::PER, dg::not_normed, dg::centered); 
     dg::blas2::gemv( dz_not_normed, func, temp);
-    const dg::DVec v3d = dg::create::inv_weights( g);
     dg::blas1::pointwiseDot( v3d, temp, temp);
     dg::blas1::axpby( 1., deri, -1., temp);
     std::cout << "DZ_NotNormed(1): Distance to true solution: "<<sqrt(dg::blas2::dot(temp, w3d, temp))<<"\n";

@@ -83,6 +83,7 @@ int get_i( unsigned n, int idx) { return idx%(n*n)/n;}
 int get_j( unsigned n, int idx) { return idx%(n*n)%n;}
 int get_i( unsigned n, unsigned Nx, int idx) { return (idx/(n*Nx))%n;}
 int get_j( unsigned n, unsigned Nx, int idx) { return idx%n;}
+int get_k( unsigned n, unsigned Nxy, int idx) { return (idx/(n*n*Nxy))%n;}
 }//namespace detail
 ///@endcond
 
@@ -136,11 +137,18 @@ template <class T>
 thrust::host_vector<T> weights( const Grid3d<T>& g)
 {
     thrust::host_vector<T> v( g.size());
-    for( unsigned i=0; i<g.size(); i++)
-        //v[i] = g.hz()*g.hx()*g.hy()/4.*g.dlt().weights()[detail::get_i(g.n(), i)]*g.dlt().weights()[detail::get_j(g.n(), i)];
-        v[i] = g.hz()*g.hx()*g.hy()/4.*
-               g.dlt().weights()[detail::get_i(g.n(), g.Nx(), i)]*
-               g.dlt().weights()[detail::get_j(g.n(), g.Nx(), i)];
+    if( g.mixed())
+        for( unsigned i=0; i<g.size(); i++)
+            v[i] = g.hz()*g.hx()*g.hy()/4.*
+                   g.dlt().weights()[detail::get_i(g.n(), g.Nx(), i)]*
+                   g.dlt().weights()[detail::get_j(g.n(), g.Nx(), i)];
+    else
+        for( unsigned i=0; i<g.size(); i++)
+            v[i] = g.hz()*g.hx()*g.hy()/8.*
+                   g.dlt().weights()[detail::get_i(g.n(), g.Nx(), i)]*
+                   g.dlt().weights()[detail::get_j(g.n(), g.Nx(), i)]*
+                   g.dlt().weights()[detail::get_k(g.n(), g.Nx()*g.Ny(), i)];
+
     if( g.system() == cylindrical)
     {
         Grid1d<T> gR( g.x0(), g.x1(), g.n(), g.Nx());

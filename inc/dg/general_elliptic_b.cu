@@ -10,22 +10,46 @@
 #include "backend/derivatives.cuh"
 #include "backend/typedefs.cuh"
 #include "backend/cusp_thrust_backend.h"
+#include "functors.h"
 
 #include "cg.h"
 #include "elliptic.h"
 
 
-const double R_0 = 10;
-const double lx = 2.*M_PI;
-const double ly = 2.*M_PI;
-const double lz = 2.*M_PI;
-double fct(double x, double y, double z){ return sin(x-R_0)*sin(z);}
-double derivative( double x, double y, double z){return cos(x-R_0)*sin(z);}
-double laplace_fct( double x, double y, double z) { 
-    return -1./x*cos(x-R_0)*sin(z) + 2.*sin(x-R_0)*sin(z) 
-           -1./x*sin(x-R_0)*cos(z) - 2.*cos(x-R_0)*cos(z);}
-dg::bc bcx = dg::DIR;
+//const double R_0 = 10;
+//const double lx = M_PI;
+//const double ly = M_PI;
+//const double lz = M_PI;
+//double fct(double x, double y, double z){ return sin(x-R_0)*sin(z);}
+//double derivative( double x, double y, double z){return cos(x-R_0)*sin(z);}
+//double laplace_fct( double x, double y, double z) { 
+//    return -1./x*cos(x-R_0)*sin(z) + 2.*sin(x-R_0)*sin(z) 
+//           -1./x*sin(x-R_0)*cos(z) - 2.*cos(x-R_0)*cos(z);}
+//dg::bc bcx = dg::DIR;
 double initial( double x, double y, double z) {return sin(0);}
+
+const double lx = M_PI;
+const double ly = M_PI;
+const double lz = M_PI;
+double amp = 1;
+double pol( double x, double y, double z) {return 1. + amp*sin(x)*sin(z); } //must be strictly positive
+double laplace_fct( double x, double y, double z) { 
+    return        2.*sin(x)*sin(z)*pol(x,y, z)
+       -2*pol(x,y,z)*cos(x)*cos(z)
+         -amp*sin(x)*sin(x)*cos(z)*cos(z)
+         -amp*cos(x)*cos(x)*sin(z)*sin(z) 
+       -2*amp*sin(x)*cos(x)*cos(z)*sin(z);}
+double fct(double x, double y, double z)  {      return sin(x)*sin(z);}
+double derivative( double x, double y, double z){return cos(x)*sin(z);}
+//double pol( double x, double y, double z) {return 1. + amp*sin(x); } //must be strictly positive
+//double laplace_fct( double x, double y, double z) { 
+//    return sin(x)*pol(x,y, z)
+//        -amp*cos(x)*cos(x);
+//}
+//double fct(double x, double y, double z)  { 
+//    return sin( x);}
+//double derivative( double x, double y, double z){
+//    return cos(x);}
 
 int main()
 {
@@ -36,19 +60,25 @@ int main()
     double eps;
     std::cout << "Type epsilon! \n";
     std::cin >> eps;
-    dg::Grid3d<double> grid( R_0, R_0+lx, 0, ly, 0,lz, n, Nx, Ny,Nz, bcx, dg::PER, dg::PER, dg::cylindrical);
+    dg::Grid3d<double> grid( 0, lx, 0, ly, 0,lz, n, Nx, Ny,Nz, dg::DIR, dg::PER, dg::DIR, dg::cartesian, false);
     dg::DVec w3d = dg::create::weights( grid);
     dg::DVec v3d = dg::create::inv_weights( grid);
     dg::DVec x = dg::evaluate( initial, grid);
+    dg::DVec field  =dg::evaluate( pol, grid);
+    //function gets squared inside elliptic
+    dg::blas1::transform( field, field, dg::SQRT<double>());
 
     std::cout << "Create Laplacian\n";
     t.tic();
     dg::GeneralElliptic<dg::DMatrix, dg::DVec, dg::DVec> laplace(grid, dg::not_normed, dg::centered);
+    laplace.set_x( field);
+    laplace.set_y( field);
+    laplace.set_z( field);
     dg::DMatrix DX = dg::create::dx( grid);
     t.toc();
     std::cout<< "Creation took "<<t.diff()<<"s\n";
 
-    dg::CG< dg::DVec > pcg( x, n*n*Nx*Ny);
+    dg::CG< dg::DVec > pcg( x, grid.size());
 
     std::cout<<"Expand right hand side\n";
     const dg::DVec solution = dg::evaluate ( fct, grid);

@@ -36,6 +36,19 @@ cusp::coo_matrix<int, T, cusp::host_memory> weights( const Grid2d<T>& g)
     return dg::dgtensor(g.n(), Wy, Wx);
 }
 template< class T>
+cusp::coo_matrix<int, T, cusp::host_memory> weights( const Grid3d<T>& g)
+{
+    typedef cusp::coo_matrix<int, T, cusp::host_memory> Matrix;
+    Matrix Wx = dg::tensor( g.Nx(), dg::create::weights( g.n())); 
+    cusp::blas::scal( Wx.values, g.hx()/2.);
+    Matrix Wy = dg::tensor( g.Ny(), dg::create::weights( g.n())); 
+    cusp::blas::scal( Wy.values, g.hy()/2.);
+    Matrix Wz = dg::tensor( g.Nz(), dg::create::weights( g.nz())); 
+    cusp::blas::scal( Wz.values, g.hz()/2.);
+    Matrix temp = dg::dgtensor<T>( 1, Wy, Wx);
+    return dg::dgtensor<T>(1, Wz, temp);
+}
+template< class T>
 cusp::coo_matrix<int, T, cusp::host_memory> precond( const Grid2d<T>& g)
 {
     typedef cusp::coo_matrix<int, T, cusp::host_memory> Matrix;
@@ -52,6 +65,16 @@ cusp::coo_matrix<int, T, cusp::host_memory> renorm( const cusp::coo_matrix<int, 
     Matrix W2D = detail::weights( g);
     Matrix renormed;
     cusp::multiply( W2D, matrix, renormed);
+    return renormed;
+}
+
+template< class T>
+cusp::coo_matrix<int, T, cusp::host_memory> renorm( const cusp::coo_matrix<int, T, cusp::host_memory>& matrix, const Grid3d<T>& g)
+{
+    typedef cusp::coo_matrix<int, T, cusp::host_memory> Matrix;
+    Matrix W3D = detail::weights( g);
+    Matrix renormed;
+    cusp::multiply( W3D, matrix, renormed);
     return renormed;
 }
 
@@ -267,11 +290,11 @@ cusp::coo_matrix<int, T, cusp::host_memory> jump2d( const Grid3d<T>& g, bc bcx, 
 {
     typedef cusp::coo_matrix<int, T, cusp::host_memory> Matrix;
     Grid2d<T> g2d( g.x0(), g.x1(), g.y0(), g.y1(), g.n(), g.Nx(), g.Ny());
-    Matrix jump_ = create::jump2d( g2d, bcx, bcy, no);
-    if( no == normed)
-        return dgtensor<T>( 1, tensor<T>( g.Nz(), delta(1) ), jump_);
-    else 
-        return dgtensor<T>( 1, tensor<T>( g.Nz(), g.hz()*delta(1)), jump_); //w*hz/2 = hz
+    Matrix jump_ = create::jump2d( g2d, bcx, bcy, normed);
+    Matrix jump__ = dgtensor<T>( g.nz(), tensor<T>( g.Nz(), delta(g.nz()) ), jump_);
+    if( no == not_normed)
+        return detail::renorm( jump__, g);
+    return jump__;
 }
 
 /**
@@ -306,12 +329,11 @@ cusp::coo_matrix<int, T, cusp::host_memory> dx( const Grid3d<T>& g, bc bcx, norm
 {
     typedef cusp::coo_matrix<int, T, cusp::host_memory> Matrix;
     Grid2d<T> g2d( g.x0(), g.x1(), g.y0(), g.y1(), g.n(), g.Nx(), g.Ny());
-    Matrix dx = create::dx( g2d, bcx, no, dir);
-
-    if( no == normed)
-        return dgtensor<T>( 1, tensor<T>( g.Nz(), delta(1) ), dx );
-    else 
-        return dgtensor<T>( 1, tensor<T>( g.Nz(), g.hz()*delta(1)) , dx); //w*hz/2 = hz
+    Matrix dx = create::dx( g2d, bcx, normed, dir);
+    Matrix dx_ = dgtensor<T>( 1, tensor<T>( g.Nz(), delta(g.nz()) ), dx);
+    if( no == not_normed)
+        return detail::renorm( dx_, g);
+    return dx_;
 }
 
 /**
@@ -345,12 +367,11 @@ cusp::coo_matrix<int, T, cusp::host_memory> dy( const Grid3d<T>& g, bc bcy, norm
 {
     typedef cusp::coo_matrix<int, T, cusp::host_memory> Matrix;
     Grid2d<T> g2d( g.x0(), g.x1(), g.y0(), g.y1(), g.n(), g.Nx(), g.Ny());
-    Matrix dy = create::dy( g2d, bcy, no, dir);
-
-    if( no == normed)
-        return dgtensor<T>( 1, tensor<T>( g.Nz(), delta(1) ), dy );
-    else 
-        return dgtensor<T>( 1, tensor<T>( g.Nz(), g.hz()*delta(1)) , dy); //w*hz/2 = hz
+    Matrix dy = create::dy( g2d, bcy, normed, dir);
+    Matrix dy_ = dgtensor<T>( 1, tensor<T>( g.Nz(), delta(g.nz()) ), dy);
+    if( no == not_normed)
+        return detail::renorm( dy_, g);
+    return dy_;
 }
 
 /**
@@ -384,30 +405,18 @@ cusp::coo_matrix<int, T, cusp::host_memory> dz( const Grid3d<T>& g, bc bcz, norm
 {
     //dasselbe wie dy in 2D: 
     typedef cusp::coo_matrix<int, T, cusp::host_memory> Matrix;
-    Matrix deltaXY = dg::tensor<T>( g.Nx()*g.Ny(), dg::create::delta( g.n()*g.n() )); 
     Matrix dz; 
-    if( no == normed)
-    {
-        if( dir == forward) 
-            dz = create::dx_plus_normed<T>(1, g.Nz(), g.hz(), bcz);
-        else if( dir == backward) 
-            dz = create::dx_minus_normed<T>(1, g.Nz(), g.hz(), bcz);
-        else
-            dz = create::dx_symm_normed<T>(1, g.Nz(), g.hz(), bcz);
-        return dgtensor<T>( 1, dz, deltaXY); 
-    }
+    if( dir == forward) 
+        dz = create::dx_plus_normed<T>(g.nz(), g.Nz(), g.hz(), bcz);
+    else if( dir == backward) 
+        dz = create::dx_minus_normed<T>(g.nz(), g.Nz(), g.hz(), bcz);
     else
-    {
-        if( dir == forward) 
-            dz = create::dx_plus_normed<T>(1, g.Nz(), 1., bcz);
-        else if( dir == backward) 
-            dz = create::dx_minus_normed<T>(1, g.Nz(), 1., bcz);
-        else
-            dz = create::dx_symm_normed<T>(1, g.Nz(), 1., bcz);
-        Grid2d<T> g2d( g.x0(), g.x1(), g.y0(), g.y1(), g.n(), g.Nx(), g.Ny());
-        Matrix renormed = detail::renorm( deltaXY, g2d);
-        return dgtensor<T>( 1, dz, renormed); 
-    }
+        dz = create::dx_symm_normed<T>(g.nz(), g.Nz(), g.hz(), bcz);
+    Matrix deltaXY = dg::tensor<T>( g.Nx()*g.Ny(), dg::create::delta( g.n()*g.n() )); 
+    Matrix temp =  dgtensor<T>( 1, dz, deltaXY); 
+    if( no == not_normed)
+        return  detail::renorm( temp, g);
+    return temp;
 
 }
 
@@ -424,6 +433,48 @@ cusp::coo_matrix<int, T, cusp::host_memory> dz( const Grid3d<T>& g, bc bcz, norm
  */
 template< class T>
 cusp::coo_matrix<int, T, cusp::host_memory> dz( const Grid3d<T>& g, norm no = normed, direction dir = centered){ return dz( g, g.bcz(), no, dir);}
+/**
+ * @brief Matrix that contains 2d jump terms
+ *
+ * @tparam T value type
+ * @param g grid
+ * @param bcx boundary condition in x
+ * @param bcy boundary condition in y
+ * @param no the norm
+ *
+ * @return A host matrix in coordinate format
+ */
+template< class T>
+cusp::coo_matrix<int, T, cusp::host_memory> jump3d( const Grid3d<T>& g, bc bcx, bc bcy, bc bcz, norm no)
+{
+    //without jump cg is unstable
+    typedef cusp::coo_matrix<int, T, cusp::host_memory> Matrix;
+    Matrix jump2 = create::jump2d( g, bcx, bcy, normed);
+    Matrix jump_z = create::jump_normed<T>( g.nz(), g.Nz(), g.hz(), bcz); 
+    Matrix deltaXY = dg::tensor<T>( g.Nx()*g.Ny(), dg::create::delta( g.n()*g.n() )); 
+    Matrix zz =  dgtensor<T>( 1, jump_z, deltaXY); 
+    Matrix jump; 
+    cusp::add( jump2, zz, jump);
+    jump.sort_by_row_and_column();
+    if( no == not_normed)
+        return detail::renorm( jump, g);
+    return jump;
+}
+
+/**
+ * @brief Matrix that contains 2d jump terms taking boundary conditions from the grid
+ *
+ * @tparam T value type
+ * @param g grid
+ * @param no the norm
+ *
+ * @return A host matrix in coordinate format
+ */
+template< class T>
+cusp::coo_matrix<int, T, cusp::host_memory> jump3d( const Grid3d<T>& g, norm no)
+{
+    return jump3d( g, g.bcx(), g.bcy(), g.bcz(), no);
+}
 
 /**
  * @brief Create 3d negative laplacian_perp

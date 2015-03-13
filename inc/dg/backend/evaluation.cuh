@@ -102,22 +102,24 @@ template< class TernaryOp>
 thrust::host_vector<double> evaluate( TernaryOp f, const Grid3d<double>& g)
 {
     unsigned n= g.n();
+    unsigned nz= g.nz();
     //TODO: opens dlt.dat three times...!!
-    Grid1d<double> gx( g.x0(), g.x1(), n, g.Nx()); 
-    Grid1d<double> gy( g.y0(), g.y1(), n, g.Ny());
-    Grid1d<double> gz( g.z0(), g.z1(), 1, g.Nz());
+    Grid1d<double> gx( g.x0(), g.x1(), g.n(), g.Nx()); 
+    Grid1d<double> gy( g.y0(), g.y1(), g.n(), g.Ny());
+    Grid1d<double> gz( g.z0(), g.z1(), g.nz(), g.Nz());
     thrust::host_vector<double> absx = create::abscissas( gx);
     thrust::host_vector<double> absy = create::abscissas( gy);
     thrust::host_vector<double> absz = create::abscissas( gz);
 
     thrust::host_vector<double> v( g.size());
     for( unsigned s=0; s<gz.N(); s++)
+    for( unsigned sn=0; sn<nz; sn++)
         for( unsigned i=0; i<gy.N(); i++)
             for( unsigned k=0; k<n; k++)
                 for( unsigned j=0; j<gx.N(); j++)
                     for( unsigned l=0; l<n; l++)
                         //v[ s*g.Nx()*g.Ny()*n*n + i*g.Nx()*n*n + j*n*n + k*n + l] = f( absx[j*n+l], absy[i*n+k], absz[s]);
-                        v[ (((s*gy.N()+i)*n+k)*g.Nx() + j)*n + l] = f( absx[j*n+l], absy[i*n+k], absz[s]);
+                        v[ ((((s*nz + sn)*gy.N()+i)*n+k)*g.Nx() + j)*n + l] = f( absx[j*n+l], absy[i*n+k], absz[s*nz+sn]);
     return v;
 };
 ///@cond

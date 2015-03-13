@@ -16,7 +16,7 @@ int main()
     std::cout << "Type n, Nx, Ny, Nz\n";
     unsigned n, Nx, Ny, Nz;
     std::cin >> n>> Nx>>Ny>>Nz;
-    dg::Grid3d<double> grid3d( R_0 , R_0+ 2.*M_PI, 0.,2.*M_PI, 0., 2.*M_PI,  n, Nx, Ny, Nz,dg::DIR, dg::DIR, dg::PER,dg::cylindrical);
+    dg::Grid3d<double> grid3d( R_0 , R_0+ 2.*M_PI, 0.,2.*M_PI, 0., 2.*M_PI,  n, Nx, Ny, Nz,dg::DIR, dg::DIR, dg::PER,dg::cylindrical, false);
 
     dg::DVec b = dg::evaluate( sine, grid3d);
     dg::DVec w3d = dg::create::weights( grid3d);
