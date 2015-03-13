@@ -79,14 +79,14 @@ int main( int argc, char* argv[])
     dg::DVec v3d_ = dg::create::inv_weights( grid);
     dg::DVec x = dg::evaluate( dg::zero, grid);
     //set up the parallel diffusion
-     dg::GeneralElliptic<dg::DMatrix, dg::DVec, dg::DVec> elliptic( grid, dg::not_normed, dg::backward);
+     dg::GeneralElliptic<dg::DMatrix, dg::DVec, dg::DVec> elliptic( grid, dg::not_normed, dg::centered);
      dg::DVec bfield = dg::evaluate( solovev::bR( gp.R_0, gp.I_0),grid);
      elliptic.set_x( bfield);
      bfield = dg::evaluate( solovev::bZ( gp.R_0, gp.I_0),grid);
      elliptic.set_y( bfield);
      bfield = dg::evaluate( solovev::bPhi( gp.R_0, gp.I_0),grid);
      elliptic.set_z( bfield);
-     double eps =1e-7;   
+     double eps =1e-14;   
      dg::Invert< dg::DVec> invert( x, w3d_.size(), eps );  
      std::cout << "MAX # iterations = " << w3d_.size() << std::endl;
      const dg::DVec rhs = dg::evaluate( solovev::DeriNeuT2( gp.R_0, gp.I_0), grid);
