@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -110,7 +116,7 @@ $(document).ready(function(){initNavTree('structdg_1_1_poisson.html','');});
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="structdg_1_1_poisson-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">dg::Poisson&lt; Matrix, container &gt; Struct Template Reference</div>  </div>
+<div class="title">dg::Poisson&lt; Matrix, container &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group__arakawa.html">Arakawas scheme</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -127,11 +133,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9d05425969806b3e32ced184efb07209"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abad7fc6e4aa73ad7004e6895821395f8"><td class="memTemplParams" colspan="2">template&lt;class Grid &gt; </td></tr>
 <tr class="memitem:abad7fc6e4aa73ad7004e6895821395f8"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdg_1_1_poisson.html#abad7fc6e4aa73ad7004e6895821395f8">Poisson</a> (const Grid &amp;g, <a class="el" href="group__creation.html#ga59440bdf436f2874b49aa52b670ed364">bc</a> bcx, <a class="el" href="group__creation.html#ga59440bdf436f2874b49aa52b670ed364">bc</a> bcy)</td></tr>
-<tr class="memdesc:abad7fc6e4aa73ad7004e6895821395f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create Arakawa on a grid using different boundary conditions.  <a href="#abad7fc6e4aa73ad7004e6895821395f8">More...</a><br/></td></tr>
+<tr class="memdesc:abad7fc6e4aa73ad7004e6895821395f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create <a class="el" href="structdg_1_1_poisson.html" title="Poisson bracket scheme. ">Poisson</a> on a grid using different boundary conditions.  <a href="#abad7fc6e4aa73ad7004e6895821395f8">More...</a><br/></td></tr>
 <tr class="separator:abad7fc6e4aa73ad7004e6895821395f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a06c1b0627b5691634667f3913ec04f"><td class="memTemplParams" colspan="2">template&lt;class Grid &gt; </td></tr>
 <tr class="memitem:a5a06c1b0627b5691634667f3913ec04f"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdg_1_1_poisson.html#a5a06c1b0627b5691634667f3913ec04f">Poisson</a> (const Grid &amp;g, <a class="el" href="group__creation.html#ga59440bdf436f2874b49aa52b670ed364">bc</a> bcxlhs, <a class="el" href="group__creation.html#ga59440bdf436f2874b49aa52b670ed364">bc</a> bcylhs, <a class="el" href="group__creation.html#ga59440bdf436f2874b49aa52b670ed364">bc</a> bcxrhs, <a class="el" href="group__creation.html#ga59440bdf436f2874b49aa52b670ed364">bc</a> bcyrhs)</td></tr>
-<tr class="memdesc:a5a06c1b0627b5691634667f3913ec04f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create Arakawa on a grid using different boundary conditions.  <a href="#a5a06c1b0627b5691634667f3913ec04f">More...</a><br/></td></tr>
+<tr class="memdesc:a5a06c1b0627b5691634667f3913ec04f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create <a class="el" href="structdg_1_1_poisson.html" title="Poisson bracket scheme. ">Poisson</a> on a grid using different boundary conditions.  <a href="#a5a06c1b0627b5691634667f3913ec04f">More...</a><br/></td></tr>
 <tr class="separator:a5a06c1b0627b5691634667f3913ec04f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a436cea4bbf782e872e31db7fd922ff3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_poisson.html#a436cea4bbf782e872e31db7fd922ff3d">operator()</a> (container &amp;lhs, container &amp;rhs, container &amp;result)</td></tr>
 <tr class="memdesc:a436cea4bbf782e872e31db7fd922ff3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute poisson's bracket.  <a href="#a436cea4bbf782e872e31db7fd922ff3d">More...</a><br/></td></tr>
@@ -160,6 +166,7 @@ Public Member Functions</h2></td></tr>
 struct dg::Poisson&lt; Matrix, container &gt;</h3>
 
 <p><a class="el" href="structdg_1_1_poisson.html" title="Poisson bracket scheme. ">Poisson</a> bracket scheme. </p>
+<p>Equal to the Arakawa class except for the possitility to use mixed boundary conditions</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">Matrix</td><td>The Matrix class to use </td></tr>
@@ -236,7 +243,7 @@ template&lt;class Grid &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Create Arakawa on a grid using different boundary conditions. </p>
+<p>Create <a class="el" href="structdg_1_1_poisson.html" title="Poisson bracket scheme. ">Poisson</a> on a grid using different boundary conditions. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">Grid</td><td>The Grid class. The functions dg::create::dx( g, bcx) and dg::create::dy( g, bcy) must be callable and return an instance of the Matrix class. Furthermore dg::evaluate( one, g) must return an instance of the container class. </td></tr>
@@ -300,7 +307,7 @@ template&lt;class Grid &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Create Arakawa on a grid using different boundary conditions. </p>
+<p>Create <a class="el" href="structdg_1_1_poisson.html" title="Poisson bracket scheme. ">Poisson</a> on a grid using different boundary conditions. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">Grid</td><td>The Grid class. The functions dg::create::dx( g, bcx) and dg::create::dy( g, bcy) must be callable and return an instance of the Matrix class. Furthermore dg::evaluate( one, g) must return an instance of the container class. </td></tr>
@@ -310,8 +317,10 @@ template&lt;class Grid &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">g</td><td>The grid </td></tr>
-    <tr><td class="paramname">bcx</td><td>The boundary condition in x </td></tr>
-    <tr><td class="paramname">bcy</td><td>The boundary condition in y </td></tr>
+    <tr><td class="paramname">bcxlhs</td><td>The lhs boundary condition in x </td></tr>
+    <tr><td class="paramname">bcxrhs</td><td>The rhs boundary condition in x </td></tr>
+    <tr><td class="paramname">bcylhs</td><td>The lhs boundary condition in y </td></tr>
+    <tr><td class="paramname">bcyrhs</td><td>The rhs boundary condition in y </td></tr>
   </table>
   </dd>
 </dl>
@@ -362,7 +371,7 @@ template&lt;class Matrix , class container &gt; </div>
 <p>Compute the "symmetric bracket". </p>
 <p>Computes </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ [f,g] := \partial_x f\partial_x g + \partial_y f\partial_y g \]" src="form_2.png"/>
+\[ [f,g] := \partial_x f\partial_x g + \partial_y f\partial_y g \]
 </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -526,7 +535,7 @@ template&lt;class Matrix , class container &gt; </div>
 <p>Compute poisson's bracket. </p>
 <p>Computes </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ [f,g] := \partial_x f\partial_y g - \partial_y f\partial_x g \]" src="form_59.png"/>
+\[ [f,g] := \partial_x f\partial_y g - \partial_y f\partial_x g \]
 </p>
  <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -576,7 +585,7 @@ template&lt;class Matrix , class container &gt; </div>
 <p>Compute the total variation integrand in 2D, uses bc of rhs of poisson bracket. </p>
 <p>Computes </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ (\nabla\phi)^2 \]" src="form_1.png"/>
+\[ (\nabla\phi)^2 \]
 </p>
  <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -590,7 +599,7 @@ template&lt;class Matrix , class container &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/matthias/feltor/inc/dg/<a class="el" href="poisson_8h_source.html">poisson.h</a></li>
+<li>/home/matthias/Projekte/feltor/inc/dg/<a class="el" href="poisson_8h_source.html">poisson.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -598,7 +607,7 @@ template&lt;class Matrix , class container &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacedg.html">dg</a></li><li class="navelem"><a class="el" href="structdg_1_1_poisson.html">Poisson</a></li>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:15 for Discontinuous Galerkin Library by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Discontinuous Galerkin Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

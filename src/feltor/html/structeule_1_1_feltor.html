@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -106,26 +112,21 @@ $(document).ready(function(){initNavTree('structeule_1_1_feltor.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="structeule_1_1_feltor-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">eule::Feltor&lt; Matrix, container, Preconditioner &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group__solver.html">The solver</a></div></div>  </div>
+<div class="title">eule::Feltor&lt; Matrix, container, Preconditioner &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group__solver.html">Solver</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>compute explicit terms  
+ <a href="structeule_1_1_feltor.html#details">More...</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a055efab2c5f0a31fcfde36bf893b97e8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a055efab2c5f0a31fcfde36bf893b97e8"></a>
-typedef dg::VectorTraits<br class="typebreak"/>
-&lt; container &gt;::value_type&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b></td></tr>
-<tr class="separator:a055efab2c5f0a31fcfde36bf893b97e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad4474f82ff673be0436e65c34c6286e4"><td class="memTemplParams" colspan="2"><a class="anchor" id="ad4474f82ff673be0436e65c34c6286e4"></a>
 template&lt;class Grid3d &gt; </td></tr>
-<tr class="memitem:ad4474f82ff673be0436e65c34c6286e4"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Feltor</b> (const Grid3d &amp;g, <a class="el" href="structeule_1_1_parameters.html">eule::Parameters</a> p, <a class="elRef" doxygen="/home/matthias/feltor/doc/src/solovev.tag:../../../src/solovev/html/" href="../../../src/solovev/html/structsolovev_1_1_geom_parameters.html">solovev::GeomParameters</a> gp)</td></tr>
+<tr class="memitem:ad4474f82ff673be0436e65c34c6286e4"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Feltor</b> (const Grid3d &amp;g, <a class="el" href="structeule_1_1_parameters.html">eule::Parameters</a> p, <a class="elRef" doxygen="/home/matthias/Projekte/feltor/doc/src/solovev.tag:../../../src/solovev/html/" href="../../../src/solovev/html/structsolovev_1_1_geom_parameters.html">solovev::GeomParameters</a> gp)</td></tr>
 <tr class="separator:ad4474f82ff673be0436e65c34c6286e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f1386ec4c70db065cb476ee4d9a0fd3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0f1386ec4c70db065cb476ee4d9a0fd3"></a>
 dg::DZ&lt; Matrix, container &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>dz</b> ()</td></tr>
@@ -151,24 +152,31 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>energy</b> ()</td><
 <tr class="memitem:a34bc403dad067310a2b3fd04d18ac2da"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a34bc403dad067310a2b3fd04d18ac2da"></a>
 std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>energy_vector</b> ()</td></tr>
 <tr class="separator:a34bc403dad067310a2b3fd04d18ac2da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af93c7e5138156ddbff8454c2572cb479"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af93c7e5138156ddbff8454c2572cb479"></a>
-std::vector&lt; container &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>probe_vector</b> ()</td></tr>
-<tr class="separator:af93c7e5138156ddbff8454c2572cb479"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58b769d2e35e1508c4824d2da63b3da6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a58b769d2e35e1508c4824d2da63b3da6"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>energy_diffusion</b> ()</td></tr>
 <tr class="separator:a58b769d2e35e1508c4824d2da63b3da6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf00d7a08665311d6e7e6443caa82960c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaf00d7a08665311d6e7e6443caa82960c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>energies</b> (std::vector&lt; container &gt; &amp;y)</td></tr>
 <tr class="separator:gaf00d7a08665311d6e7e6443caa82960c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad3fa24b8b93ecae899aad8e761606c21"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gad3fa24b8b93ecae899aad8e761606c21"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>add_parallel_dynamics</b> (std::vector&lt; container &gt; &amp;y, std::vector&lt; container &gt; &amp;yp)</td></tr>
-<tr class="separator:gad3fa24b8b93ecae899aad8e761606c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga142ab922591a358688b872be6754be3f"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga142ab922591a358688b872be6754be3f"></a>
 template&lt;class Grid &gt; </td></tr>
-<tr class="memitem:ga142ab922591a358688b872be6754be3f"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Feltor</b> (const Grid &amp;g, <a class="el" href="structeule_1_1_parameters.html">eule::Parameters</a> p, <a class="elRef" doxygen="/home/matthias/feltor/doc/src/solovev.tag:../../../src/solovev/html/" href="../../../src/solovev/html/structsolovev_1_1_geom_parameters.html">solovev::GeomParameters</a> gp)</td></tr>
+<tr class="memitem:ga142ab922591a358688b872be6754be3f"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Feltor</b> (const Grid &amp;g, <a class="el" href="structeule_1_1_parameters.html">eule::Parameters</a> p, <a class="elRef" doxygen="/home/matthias/Projekte/feltor/doc/src/solovev.tag:../../../src/solovev/html/" href="../../../src/solovev/html/structsolovev_1_1_geom_parameters.html">solovev::GeomParameters</a> gp)</td></tr>
 <tr class="separator:ga142ab922591a358688b872be6754be3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;class Matrix, class container = thrust::device_vector&lt;double&gt;, class Preconditioner = thrust::device_vector&lt;double&gt;&gt;<br/>
+struct eule::Feltor&lt; Matrix, container, Preconditioner &gt;</h3>
+
+<p>compute explicit terms </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Matrix</td><td>matrix class to use </td></tr>
+    <tr><td class="paramname">container</td><td>main container to hold the vectors </td></tr>
+    <tr><td class="paramname">Preconditioner</td><td>class of the weights </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a830fcd8eb8b066f00a43c980928e930a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -199,7 +207,7 @@ template&lt;class Matrix , class container  = thrust::device_vector&lt;double&gt
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/matthias/feltor/src/feltor/<a class="el" href="feltor_8cuh.html">feltor.cuh</a></li>
+<li>/home/matthias/Projekte/feltor/src/feltor/<a class="el" href="feltor_8cuh.html">feltor.cuh</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -207,7 +215,7 @@ template&lt;class Matrix , class container  = thrust::device_vector&lt;double&gt
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeule.html">eule</a></li><li class="navelem"><a class="el" href="structeule_1_1_feltor.html">Feltor</a></li>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:57 for FELTOR by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for FELTOR by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

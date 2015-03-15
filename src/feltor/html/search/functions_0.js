@@ -4,7 +4,7 @@ var searchData=
   ['adaptive_5fstep',['adaptive_step',['../../../../inc/dg/html/structdg_1_1_s_i_r_k.html#a01757c756e22e533e871286f91672a5a',1,'dg::SIRK']]],
   ['allocate',['allocate',['../../../../inc/toefl/html/classtoefl_1_1_matrix.html#a171550ab096ef57acfbd755c7bfe930f',1,'toefl::GhostMatrix']]],
   ['allocationerror',['AllocationError',['../../../../inc/toefl/html/classtoefl_1_1_allocation_error.html#a424affcd290790c0aa982d03d5a5918e',1,'toefl::AllocationError']]],
-  ['alpha',['alpha',['../../../../inc/dg/html/group__operators.html#ga7fceb7f2dbaf51df5941643f33f1f8a6',1,'dg::Helmholtz::alpha()'],['../../../../inc/dg/html/group__operators.html#ga59320b5e0dd00f8e5a7c49c880912d60',1,'dg::Helmholtz::alpha() const '],['../../../../inc/dg/html/group__operators.html#ga7fceb7f2dbaf51df5941643f33f1f8a6',1,'alpha()(Global Namespace)']]],
+  ['alpha',['alpha',['../../../../inc/dg/html/group__matrixoperators.html#ga7fceb7f2dbaf51df5941643f33f1f8a6',1,'dg::Helmholtz::alpha()'],['../../../../inc/dg/html/group__matrixoperators.html#ga59320b5e0dd00f8e5a7c49c880912d60',1,'dg::Helmholtz::alpha() const '],['../../../../inc/dg/html/group__matrixoperators.html#ga7fceb7f2dbaf51df5941643f33f1f8a6',1,'alpha()(Global Namespace)']]],
   ['anzeigen',['anzeigen',['../../../../inc/dg/html/classdg_1_1_keine_n_s_t__1_d.html#ab9089e775ecb1a2a2d13aab1e5e47b20',1,'dg::KeineNST_1D']]],
   ['append',['append',['../../../../inc/file/html/structfile_1_1_t5trunc.html#a04bc063ba2a831126bbfd8bfdc190d13',1,'file::T5trunc']]],
   ['arakawa',['Arakawa',['../../../../inc/toefl/html/classtoefl_1_1_arakawa.html#ac7d18718d661f4c8b9edf50dbc1075e2',1,'toefl::Arakawa']]],

@@ -33,6 +33,8 @@ var structeule_1_1_parameters =
     [ "Ny_out", "structeule_1_1_parameters.html#a142b8488152b48d5b3d67b582a23865c", null ],
     [ "Nz", "structeule_1_1_parameters.html#a7b3f3d70c269bdbe5d04a289f76aea6b", null ],
     [ "Nz_out", "structeule_1_1_parameters.html#aabdf2985bbba6617b509b7da82b74042", null ],
+    [ "pardiss", "structeule_1_1_parameters.html#ad9b62bab8495bd5586004319a2151c33", null ],
+    [ "pollim", "structeule_1_1_parameters.html#a1ec7e6a8c0b2bcd182433b9a0a4459e8", null ],
     [ "posX", "structeule_1_1_parameters.html#a2436f92afc22f7ad76e3914422e12ddf", null ],
     [ "posY", "structeule_1_1_parameters.html#acfa0ec6cdc12ea14b0f1894768bfb501", null ],
     [ "sigma", "structeule_1_1_parameters.html#af9ca9dde679634abd20a1f2b409bf805", null ],

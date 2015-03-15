@@ -1,6 +1,6 @@
 var NAVTREE =
 [
-  [ "FELTOR", "index.html", [
+  [ "FELTOR2D", "index.html", [
     [ "Namespaces", null, [
       [ "Namespace List", "namespaces.html", "namespaces" ]
     ] ],

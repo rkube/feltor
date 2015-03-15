@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -95,7 +101,7 @@ $(document).ready(function(){initNavTree('annotated.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Groups</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Groups</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -114,69 +120,69 @@ $(document).ready(function(){initNavTree('annotated.html','');});
 <tr id="row_0_" class="even"><td class="entry"><img id="arr_0_" src="ftv2mlastnode.png" alt="\" width="16" height="22" onclick="toggleFolder('0_')"/><img src="ftv2ns.png" alt="N" width="24" height="22" /><a class="el" href="namespacesolovev.html" target="_self">solovev</a></td><td class="desc">This is the namespace for all functions and objects for the geometry </td></tr>
 <tr id="row_0_0_"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structsolovev_1_1_geom_parameters.html" target="_self">GeomParameters</a></td><td class="desc">Constructs and display geometric parameters </td></tr>
 <tr id="row_0_1_" class="even"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structsolovev_1_1_psip.html" target="_self">Psip</a></td><td class="desc"><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \hat{\psi}_p \]" src="form_0.png"/>
+\[ \hat{\psi}_p \]
 </p>
  </td></tr>
 <tr id="row_0_2_"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structsolovev_1_1_psip_r.html" target="_self">PsipR</a></td><td class="desc"><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \frac{\partial \hat{\psi}_p }{ \partial \hat{R}} \]" src="form_1.png"/>
+\[ \frac{\partial \hat{\psi}_p }{ \partial \hat{R}} \]
 </p>
  </td></tr>
 <tr id="row_0_3_" class="even"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structsolovev_1_1_psip_r_r.html" target="_self">PsipRR</a></td><td class="desc"><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \frac{\partial^2 \hat{\psi}_p }{ \partial \hat{R}^2}\]" src="form_2.png"/>
+\[ \frac{\partial^2 \hat{\psi}_p }{ \partial \hat{R}^2}\]
 </p>
  </td></tr>
 <tr id="row_0_4_"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structsolovev_1_1_psip_z.html" target="_self">PsipZ</a></td><td class="desc"><p class="formulaDsp">
-<img class="formulaDsp" alt="\[\frac{\partial \hat{\psi}_p }{ \partial \hat{Z}}\]" src="form_3.png"/>
+\[\frac{\partial \hat{\psi}_p }{ \partial \hat{Z}}\]
 </p>
  </td></tr>
 <tr id="row_0_5_" class="even"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structsolovev_1_1_psip_z_z.html" target="_self">PsipZZ</a></td><td class="desc"><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \frac{\partial^2 \hat{\psi}_p }{ \partial \hat{Z}^2}\]" src="form_4.png"/>
+\[ \frac{\partial^2 \hat{\psi}_p }{ \partial \hat{Z}^2}\]
 </p>
  </td></tr>
 <tr id="row_0_6_"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structsolovev_1_1_psip_r_z.html" target="_self">PsipRZ</a></td><td class="desc"><p class="formulaDsp">
-<img class="formulaDsp" alt="\[\frac{\partial^2 \hat{\psi}_p }{ \partial \hat{R} \partial\hat{Z}}\]" src="form_5.png"/>
+\[\frac{\partial^2 \hat{\psi}_p }{ \partial \hat{R} \partial\hat{Z}}\]
 </p>
  </td></tr>
 <tr id="row_0_7_" class="even"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structsolovev_1_1_ipol.html" target="_self">Ipol</a></td><td class="desc"><p class="formulaDsp">
-<img class="formulaDsp" alt="\[\hat{I}\]" src="form_6.png"/>
+\[\hat{I}\]
 </p>
  </td></tr>
 <tr id="row_0_8_"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structsolovev_1_1_inv_b.html" target="_self">InvB</a></td><td class="desc"><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \frac{1}{\hat{B}} \]" src="form_7.png"/>
+\[ \frac{1}{\hat{B}} \]
 </p>
  </td></tr>
 <tr id="row_0_9_" class="even"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structsolovev_1_1_ln_b.html" target="_self">LnB</a></td><td class="desc"><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \ln{( \hat{B})} \]" src="form_8.png"/>
+\[ \ln{( \hat{B})} \]
 </p>
  </td></tr>
 <tr id="row_0_10_"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structsolovev_1_1_b_r.html" target="_self">BR</a></td><td class="desc"><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \frac{\partial \hat{B} }{ \partial \hat{R}} \]" src="form_9.png"/>
+\[ \frac{\partial \hat{B} }{ \partial \hat{R}} \]
 </p>
  </td></tr>
 <tr id="row_0_11_" class="even"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structsolovev_1_1_b_z.html" target="_self">BZ</a></td><td class="desc"><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \frac{\partial \hat{B} }{ \partial \hat{Z}} \]" src="form_10.png"/>
+\[ \frac{\partial \hat{B} }{ \partial \hat{Z}} \]
 </p>
  </td></tr>
 <tr id="row_0_12_"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structsolovev_1_1_curvature_r.html" target="_self">CurvatureR</a></td><td class="desc"><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \mathcal{\hat{K}}^{\hat{R}} \]" src="form_11.png"/>
+\[ \mathcal{\hat{K}}^{\hat{R}} \]
 </p>
  </td></tr>
 <tr id="row_0_13_" class="even"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structsolovev_1_1_curvature_z.html" target="_self">CurvatureZ</a></td><td class="desc"><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \mathcal{\hat{K}}^{\hat{Z}} \]" src="form_12.png"/>
+\[ \mathcal{\hat{K}}^{\hat{Z}} \]
 </p>
  </td></tr>
 <tr id="row_0_14_"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structsolovev_1_1_grad_ln_b.html" target="_self">GradLnB</a></td><td class="desc"><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \hat{\nabla}_\parallel \ln{(\hat{B})} \]" src="form_13.png"/>
+\[ \hat{\nabla}_\parallel \ln{(\hat{B})} \]
 </p>
  </td></tr>
 <tr id="row_0_15_" class="even"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structsolovev_1_1_field.html" target="_self">Field</a></td><td class="desc">Integrates the equations for a field line and 1/B </td></tr>
-<tr id="row_0_16_"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structsolovev_1_1_field_p.html" target="_self">FieldP</a></td><td class="desc">Phi component of magnetic field <img class="formulaInl" alt="$ B_\Phi$" src="form_14.png"/> </td></tr>
-<tr id="row_0_17_" class="even"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structsolovev_1_1_field_r.html" target="_self">FieldR</a></td><td class="desc">R component of magnetic field <img class="formulaInl" alt="$ B_R$" src="form_15.png"/> </td></tr>
-<tr id="row_0_18_"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structsolovev_1_1_field_z.html" target="_self">FieldZ</a></td><td class="desc">Z component of magnetic field <img class="formulaInl" alt="$ B_Z$" src="form_16.png"/> </td></tr>
-<tr id="row_0_19_" class="even"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structsolovev_1_1_b_hat_r.html" target="_self">BHatR</a></td><td class="desc">R component of magnetic field <img class="formulaInl" alt="$ b_R$" src="form_17.png"/> </td></tr>
-<tr id="row_0_20_"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structsolovev_1_1_b_hat_z.html" target="_self">BHatZ</a></td><td class="desc">Z component of magnetic field <img class="formulaInl" alt="$ b_Z$" src="form_18.png"/> </td></tr>
-<tr id="row_0_21_" class="even"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structsolovev_1_1_b_hat_p.html" target="_self">BHatP</a></td><td class="desc">Phi component of magnetic field <img class="formulaInl" alt="$ b_\Phi$" src="form_19.png"/> </td></tr>
-<tr id="row_0_22_"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structsolovev_1_1_delta_function.html" target="_self">DeltaFunction</a></td><td class="desc">Delta function for poloidal flux <img class="formulaInl" alt="$ B_Z$" src="form_16.png"/> </td></tr>
+<tr id="row_0_16_"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structsolovev_1_1_field_p.html" target="_self">FieldP</a></td><td class="desc">Phi component of magnetic field \( B_\Phi\) </td></tr>
+<tr id="row_0_17_" class="even"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structsolovev_1_1_field_r.html" target="_self">FieldR</a></td><td class="desc">R component of magnetic field \( B_R\) </td></tr>
+<tr id="row_0_18_"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structsolovev_1_1_field_z.html" target="_self">FieldZ</a></td><td class="desc">Z component of magnetic field \( B_Z\) </td></tr>
+<tr id="row_0_19_" class="even"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structsolovev_1_1_b_hat_r.html" target="_self">BHatR</a></td><td class="desc">R component of magnetic field \( b_R\) </td></tr>
+<tr id="row_0_20_"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structsolovev_1_1_b_hat_z.html" target="_self">BHatZ</a></td><td class="desc">Z component of magnetic field \( b_Z\) </td></tr>
+<tr id="row_0_21_" class="even"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structsolovev_1_1_b_hat_p.html" target="_self">BHatP</a></td><td class="desc">Phi component of magnetic field \( b_\Phi\) </td></tr>
+<tr id="row_0_22_"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structsolovev_1_1_delta_function.html" target="_self">DeltaFunction</a></td><td class="desc">Delta function for poloidal flux \( B_Z\) </td></tr>
 <tr id="row_0_23_" class="even"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structsolovev_1_1_flux_surface_average.html" target="_self">FluxSurfaceAverage</a></td><td class="desc">Flux surface average over quantity </td></tr>
 <tr id="row_0_24_"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structsolovev_1_1_safety_factor.html" target="_self">SafetyFactor</a></td><td class="desc">Class for the evaluation of the safety factor q </td></tr>
 <tr id="row_0_25_" class="even"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structsolovev_1_1_alpha.html" target="_self">Alpha</a></td><td class="desc">Global safety factor </td></tr>
@@ -191,7 +197,7 @@ $(document).ready(function(){initNavTree('annotated.html','');});
 <tr id="row_0_34_"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structsolovev_1_1_test_function.html" target="_self">TestFunction</a></td><td class="desc">Returns density profile with variable peak amplitude and background amplitude </td></tr>
 <tr id="row_0_35_" class="even"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="structsolovev_1_1_deri_test_function.html" target="_self">DeriTestFunction</a></td><td class="desc">Analyitcal solution of the parallel derivative of the testfunction </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \nabla_\parallel f = \psi_p(R,Z) b^\varphi \cos{(\varphi)}\]" src="form_51.png"/>
+\[ \nabla_\parallel f = \psi_p(R,Z) b^\varphi \cos{(\varphi)}\]
 </p>
  </td></tr>
 </table>
@@ -201,7 +207,7 @@ $(document).ready(function(){initNavTree('annotated.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:56 for Solovev by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Solovev by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

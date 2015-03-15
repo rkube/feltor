@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Discontinuous Galerkin Library: /home/matthias/feltor/inc/dg/nullstelle.h File Reference</title>
+<title>Discontinuous Galerkin Library: /home/matthias/Projekte/feltor/inc/dg/nullstelle.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -112,7 +118,7 @@ $(document).ready(function(){initNavTree('nullstelle_8h.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>vereint verschiedene Methoden zur Nullstellensuche  
+<p>contains root finding method  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;exception&gt;</code><br/>
 <code>#include &lt;math.h&gt;</code><br/>
@@ -125,7 +131,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class you might want to throw in case of a non convergence.  <a href="structdg_1_1_ooops.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdg_1_1_keine_n_s_t__1_d.html">dg::KeineNST_1D</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fehlerklasse die Grenzen für 1D Nullstellensuche sichert.  <a href="classdg_1_1_keine_n_s_t__1_d.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exception class, that stores boundaries for 1D root finding.  <a href="classdg_1_1_keine_n_s_t__1_d.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -137,20 +143,21 @@ Namespaces</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:gaa269808db678039605044e14fc849675"><td class="memTemplParams" colspan="2">template&lt;typename UnaryOp &gt; </td></tr>
-<tr class="memitem:gaa269808db678039605044e14fc849675"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___nullstellensuchroutinen.html#gaa269808db678039605044e14fc849675">dg::bisection1d</a> (UnaryOp &amp;funktion, double &amp;x_min, double &amp;x_max, const double aufloesung)</td></tr>
-<tr class="memdesc:gaa269808db678039605044e14fc849675"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bestimmung der Nullstelle einer 1-D Funktion bzw. Funktors in vorgegebenen Grenzen.  <a href="group___nullstellensuchroutinen.html#gaa269808db678039605044e14fc849675">More...</a><br/></td></tr>
+<tr class="memitem:gaa269808db678039605044e14fc849675"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__utilities.html#gaa269808db678039605044e14fc849675">dg::bisection1d</a> (UnaryOp &amp;funktion, double &amp;x_min, double &amp;x_max, const double aufloesung)</td></tr>
+<tr class="memdesc:gaa269808db678039605044e14fc849675"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find a root of a 1d function in given boundaries.  <a href="group__utilities.html#gaa269808db678039605044e14fc849675">More...</a><br/></td></tr>
 <tr class="separator:gaa269808db678039605044e14fc849675"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>vereint verschiedene Methoden zur Nullstellensuche </p>
-<dl class="section author"><dt>Author</dt><dd>Matthias Wiesenberger <pre class="fragment">* Nullstellensuche 12.4.2010</pre> </dd></dl>
+<div class="textblock"><p>contains root finding method </p>
+<dl class="section author"><dt>Author</dt><dd>Matthias Wiesenberger </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>12.4.2010 </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="dir_cba352cc187f01702d3926d435723909.html">dg</a></li><li class="navelem"><a class="el" href="nullstelle_8h.html">nullstelle.h</a></li>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:15 for Discontinuous Galerkin Library by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Discontinuous Galerkin Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

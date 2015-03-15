@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -95,7 +101,7 @@ $(document).ready(function(){initNavTree('structsolovev_1_1_test_function.html',
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Groups</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Groups</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -129,16 +135,16 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (dou
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Returns density profile with variable peak amplitude and background amplitude. </p>
-<p><img class="formulaInl" alt="$ N(R,Z) = A_{bg} + A_{peak}\frac{\psi_p} {\psi_p(R_0, 0)} $" src="form_47.png"/>, for <img class="formulaInl" alt="$\psi_p < $" src="form_48.png"/>$</p>
-<p><img class="formulaInl" alt="$ N(R,Z) = A_{bg} $" src="form_49.png"/>, else */ struct Nprofile { Nprofile( eule::Parameters p, GeomParameters gp): p_(p), gp_(gp), psip_(gp) { } double operator( )(double R, double Z) { if (psip_(R,Z)&lt;gp_.psipmax) return p_.bgprofamp +(psip_(R,Z)/psip_(gp_.R_0,0.0)*p_.nprofileamp); return p_.bgprofamp; } double operator( )(double R, double Z, double phi) { return (*this)(R,Z); } private: eule::Parameters p_; <a class="el" href="structsolovev_1_1_geom_parameters.html" title="Constructs and display geometric parameters. ">GeomParameters</a> gp_; <a class="el" href="structsolovev_1_1_psip.html" title=" ">Psip</a> psip_; };</p>
-<p>/** returns zonal flow field */ struct ZonalFlow { ZonalFlow(  eule::Parameters p,GeomParameters gp): p_(p), gp_(gp), psip_(gp) { } double operator() (double R, double Z) { if (psip_(R,Z)&lt;gp_.psipmax) return (p_.amp*abs(cos(2.*M_PI*psip_(R,Z)*p_.k_psi))); return 0.;</p>
+<p>\( N(R,Z) = A_{bg} + A_{peak}\frac{\psi_p} {\psi_p(R_0, 0)} \), for \(\psi_p &lt; \)$</p>
+<p>\( N(R,Z) = A_{bg} \), else */ struct Nprofile { Nprofile( eule::Parameters p, GeomParameters gp): p_(p), gp_(gp), psip_(gp) { } double operator( )(double R, double Z) { if (psip_(R,Z)&lt;gp_.psipmax) return p_.bgprofamp +(psip_(R,Z)/psip_(gp_.R_0,0.0)*p_.nprofileamp); return p_.bgprofamp; } double operator( )(double R, double Z, double phi) { return (*this)(R,Z); } private: eule::Parameters p_; <a class="el" href="structsolovev_1_1_geom_parameters.html" title="Constructs and display geometric parameters. ">GeomParameters</a> gp_; <a class="el" href="structsolovev_1_1_psip.html" title=" ">Psip</a> psip_; };</p>
+<p>/** returns zonal flow field */ struct ZonalFlow { ZonalFlow(  eule::Parameters p,GeomParameters gp): p_(p), gp_(gp), psip_(gp) { } double operator() (double R, double Z) { if (psip_(R,Z)&lt;gp_.psipmax) return (p_.amp*fabs(cos(2.*M_PI*psip_(R,Z)*p_.k_psi))); return 0.;</p>
 <p>} double operator() (double R, double Z,double phi) { return (*this)(R,Z); } private: eule::Parameters p_; <a class="el" href="structsolovev_1_1_geom_parameters.html" title="Constructs and display geometric parameters. ">GeomParameters</a> gp_; <a class="el" href="structsolovev_1_1_psip.html" title=" ">Psip</a> psip_; };</p>
 <p>/** testfunction to test the parallel derivative </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ f = \psi_p(R,Z) \sin{(\varphi)}\]" src="form_50.png"/>
+\[ f = \psi_p(R,Z) \sin{(\varphi)}\]
 </p>
  </div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/matthias/feltor/src/solovev/<a class="el" href="init_8h_source.html">init.h</a></li>
+<li>/home/matthias/Projekte/feltor/src/solovev/<a class="el" href="init_8h_source.html">init.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -146,7 +152,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (dou
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacesolovev.html">solovev</a></li><li class="navelem"><a class="el" href="structsolovev_1_1_test_function.html">TestFunction</a></li>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:40 for Solovev by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Solovev by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

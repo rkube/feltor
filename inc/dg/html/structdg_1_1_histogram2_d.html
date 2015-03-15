@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -113,17 +119,33 @@ $(document).ready(function(){initNavTree('structdg_1_1_histogram2_d.html','');})
 <div class="title">dg::Histogram2D&lt; container &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group__functions.html">Functions and Functors</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Compute a histogram on a 2D grid.  
+ <a href="structdg_1_1_histogram2_d.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="functors_8h_source.html">functors.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad80ad774890b779e339151e6c79574e2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_histogram2_d.html#ad80ad774890b779e339151e6c79574e2">Histogram2D</a> (const dg::Grid2d&lt; double &gt; &amp;g2d, const std::vector&lt; double &gt; &amp;inx, const std::vector&lt; double &gt; &amp;iny)</td></tr>
-<tr class="memdesc:ad80ad774890b779e339151e6c79574e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from number of bins and input vector.  <a href="#ad80ad774890b779e339151e6c79574e2">More...</a><br/></td></tr>
+<tr class="memdesc:ad80ad774890b779e339151e6c79574e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a histogram from number of bins and an input vector.  <a href="#ad80ad774890b779e339151e6c79574e2">More...</a><br/></td></tr>
 <tr class="separator:ad80ad774890b779e339151e6c79574e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae442645862b8112c7cc34bd3c2bfc047"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae442645862b8112c7cc34bd3c2bfc047"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (double x, double y)</td></tr>
+<tr class="memitem:ae442645862b8112c7cc34bd3c2bfc047"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_histogram2_d.html#ae442645862b8112c7cc34bd3c2bfc047">operator()</a> (double x, double y)</td></tr>
+<tr class="memdesc:ae442645862b8112c7cc34bd3c2bfc047"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access computed histogram.  <a href="#ae442645862b8112c7cc34bd3c2bfc047">More...</a><br/></td></tr>
 <tr class="separator:ae442645862b8112c7cc34bd3c2bfc047"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;class container = thrust::host_vector&lt;double&gt;&gt;<br/>
+struct dg::Histogram2D&lt; container &gt;</h3>
+
+<p>Compute a histogram on a 2D grid. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">container</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ad80ad774890b779e339151e6c79574e2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -164,20 +186,67 @@ template&lt;class container  = thrust::host_vector&lt;double&gt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Construct from number of bins and input vector. </p>
+<p>Construct a histogram from number of bins and an input vector. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">g2d</td><td>grid of output vector </td></tr>
-    <tr><td class="paramname">inx</td><td>input vector in x direction </td></tr>
-    <tr><td class="paramname">iny</td><td>input vector in y direction </td></tr>
+    <tr><td class="paramname">g2d</td><td>grid on which to compute the histogram ( grid.h() is the binwidth) </td></tr>
+    <tr><td class="paramname">inx</td><td>input vector in x - direction (if grid.x0() &lt; in[i] &lt;grid.x1() it falls in a bin) </td></tr>
+    <tr><td class="paramname">iny</td><td>input vector in y - direction (if grid.y0() &lt; in[i] &lt;grid.y1() it falls in a bin) </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ae442645862b8112c7cc34bd3c2bfc047"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class container  = thrust::host_vector&lt;double&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="structdg_1_1_histogram2_d.html">dg::Histogram2D</a>&lt; container &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access computed histogram. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td></td></tr>
+    <tr><td class="paramname">y</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/matthias/feltor/inc/dg/<a class="el" href="functors_8h_source.html">functors.h</a></li>
+<li>/home/matthias/Projekte/feltor/inc/dg/<a class="el" href="functors_8h_source.html">functors.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -185,7 +254,7 @@ template&lt;class container  = thrust::host_vector&lt;double&gt;&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacedg.html">dg</a></li><li class="navelem"><a class="el" href="structdg_1_1_histogram2_d.html">Histogram2D</a></li>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:15 for Discontinuous Galerkin Library by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Discontinuous Galerkin Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

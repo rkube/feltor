@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['numerical_20schemes',['Numerical schemes',['../../../../inc/dg/html/group__algorithms.html',1,'']]],
-  ['nullstellensuchroutinen',['Nullstellensuchroutinen',['../../../../inc/dg/html/group___nullstellensuchroutinen.html',1,'']]]
+  ['numerical_20schemes',['Numerical schemes',['../../../../inc/dg/html/group__algorithms.html',1,'']]]
 ];

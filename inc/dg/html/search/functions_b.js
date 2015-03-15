@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['notanumber',['NotANumber',['../structdg_1_1_not_a_number.html#a7d030a378e263935212063aed1bfec1a',1,'dg::NotANumber']]]
+  ['mod',['MOD',['../structdg_1_1_m_o_d.html#a1661e093118805e4334b61089134bf6f',1,'dg::MOD']]]
 ];

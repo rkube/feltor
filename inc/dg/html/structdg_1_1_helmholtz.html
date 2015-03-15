@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -110,7 +116,7 @@ $(document).ready(function(){initNavTree('structdg_1_1_helmholtz.html','');});
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="structdg_1_1_helmholtz-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">dg::Helmholtz&lt; Matrix, Vector, Preconditioner &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group__operators.html">Classes that act as matrices in blas2 routines</a></div></div>  </div>
+<div class="title">dg::Helmholtz&lt; Matrix, Vector, Preconditioner &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group__matrixoperators.html">Classes that act as matrices in blas2 routines</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -122,37 +128,37 @@ $(document).ready(function(){initNavTree('structdg_1_1_helmholtz.html','');});
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ga76ec5eaa2cc3dd1ef9b0c90f8a85fd6c"><td class="memTemplParams" colspan="2">template&lt;class Grid &gt; </td></tr>
-<tr class="memitem:ga76ec5eaa2cc3dd1ef9b0c90f8a85fd6c"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__operators.html#ga76ec5eaa2cc3dd1ef9b0c90f8a85fd6c">Helmholtz</a> (const Grid &amp;g, double <a class="el" href="group__operators.html#ga7fceb7f2dbaf51df5941643f33f1f8a6">alpha</a>=1., <a class="el" href="group__creation.html#gabf9ea3df33484cbb5886e257c3899e48">direction</a> dir=<a class="el" href="group__creation.html#ggabf9ea3df33484cbb5886e257c3899e48a573a4a72e7f55df92b88c254a13762f2">dg::forward</a>)</td></tr>
-<tr class="memdesc:ga76ec5eaa2cc3dd1ef9b0c90f8a85fd6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct <a class="el" href="structdg_1_1_helmholtz.html" title="Matrix class that represents a Helmholtz-type operator. ">Helmholtz</a> operator.  <a href="group__operators.html#ga76ec5eaa2cc3dd1ef9b0c90f8a85fd6c">More...</a><br/></td></tr>
+<tr class="memitem:ga76ec5eaa2cc3dd1ef9b0c90f8a85fd6c"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__matrixoperators.html#ga76ec5eaa2cc3dd1ef9b0c90f8a85fd6c">Helmholtz</a> (const Grid &amp;g, double <a class="el" href="group__matrixoperators.html#ga7fceb7f2dbaf51df5941643f33f1f8a6">alpha</a>=1., <a class="el" href="group__creation.html#gabf9ea3df33484cbb5886e257c3899e48">direction</a> dir=<a class="el" href="group__creation.html#ggabf9ea3df33484cbb5886e257c3899e48a573a4a72e7f55df92b88c254a13762f2">dg::forward</a>)</td></tr>
+<tr class="memdesc:ga76ec5eaa2cc3dd1ef9b0c90f8a85fd6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct <a class="el" href="structdg_1_1_helmholtz.html" title="Matrix class that represents a Helmholtz-type operator. ">Helmholtz</a> operator.  <a href="group__matrixoperators.html#ga76ec5eaa2cc3dd1ef9b0c90f8a85fd6c">More...</a><br/></td></tr>
 <tr class="separator:ga76ec5eaa2cc3dd1ef9b0c90f8a85fd6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5a2fc2f7c83288c951b5a938d8cacd85"><td class="memTemplParams" colspan="2">template&lt;class Grid &gt; </td></tr>
-<tr class="memitem:ga5a2fc2f7c83288c951b5a938d8cacd85"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__operators.html#ga5a2fc2f7c83288c951b5a938d8cacd85">Helmholtz</a> (const Grid &amp;g, <a class="el" href="group__creation.html#ga59440bdf436f2874b49aa52b670ed364">bc</a> bcx, <a class="el" href="group__creation.html#ga59440bdf436f2874b49aa52b670ed364">bc</a> bcy, double <a class="el" href="group__operators.html#ga7fceb7f2dbaf51df5941643f33f1f8a6">alpha</a>=1., <a class="el" href="group__creation.html#gabf9ea3df33484cbb5886e257c3899e48">direction</a> dir=<a class="el" href="group__creation.html#ggabf9ea3df33484cbb5886e257c3899e48a573a4a72e7f55df92b88c254a13762f2">dg::forward</a>)</td></tr>
-<tr class="memdesc:ga5a2fc2f7c83288c951b5a938d8cacd85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct <a class="el" href="structdg_1_1_helmholtz.html" title="Matrix class that represents a Helmholtz-type operator. ">Helmholtz</a> operator.  <a href="group__operators.html#ga5a2fc2f7c83288c951b5a938d8cacd85">More...</a><br/></td></tr>
+<tr class="memitem:ga5a2fc2f7c83288c951b5a938d8cacd85"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__matrixoperators.html#ga5a2fc2f7c83288c951b5a938d8cacd85">Helmholtz</a> (const Grid &amp;g, <a class="el" href="group__creation.html#ga59440bdf436f2874b49aa52b670ed364">bc</a> bcx, <a class="el" href="group__creation.html#ga59440bdf436f2874b49aa52b670ed364">bc</a> bcy, double <a class="el" href="group__matrixoperators.html#ga7fceb7f2dbaf51df5941643f33f1f8a6">alpha</a>=1., <a class="el" href="group__creation.html#gabf9ea3df33484cbb5886e257c3899e48">direction</a> dir=<a class="el" href="group__creation.html#ggabf9ea3df33484cbb5886e257c3899e48a573a4a72e7f55df92b88c254a13762f2">dg::forward</a>)</td></tr>
+<tr class="memdesc:ga5a2fc2f7c83288c951b5a938d8cacd85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct <a class="el" href="structdg_1_1_helmholtz.html" title="Matrix class that represents a Helmholtz-type operator. ">Helmholtz</a> operator.  <a href="group__matrixoperators.html#ga5a2fc2f7c83288c951b5a938d8cacd85">More...</a><br/></td></tr>
 <tr class="separator:ga5a2fc2f7c83288c951b5a938d8cacd85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3f5c52b98883ecc88056b3f82030f548"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__operators.html#ga3f5c52b98883ecc88056b3f82030f548">symv</a> (Vector &amp;x, Vector &amp;y)</td></tr>
-<tr class="memdesc:ga3f5c52b98883ecc88056b3f82030f548"><td class="mdescLeft">&#160;</td><td class="mdescRight">apply operator  <a href="group__operators.html#ga3f5c52b98883ecc88056b3f82030f548">More...</a><br/></td></tr>
+<tr class="memitem:ga3f5c52b98883ecc88056b3f82030f548"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__matrixoperators.html#ga3f5c52b98883ecc88056b3f82030f548">symv</a> (Vector &amp;x, Vector &amp;y)</td></tr>
+<tr class="memdesc:ga3f5c52b98883ecc88056b3f82030f548"><td class="mdescLeft">&#160;</td><td class="mdescRight">apply operator  <a href="group__matrixoperators.html#ga3f5c52b98883ecc88056b3f82030f548">More...</a><br/></td></tr>
 <tr class="separator:ga3f5c52b98883ecc88056b3f82030f548"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa999c6af019581113bde43dd67cacc44"><td class="memItemLeft" align="right" valign="top">const Preconditioner &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__operators.html#gaa999c6af019581113bde43dd67cacc44">weights</a> () const </td></tr>
-<tr class="memdesc:gaa999c6af019581113bde43dd67cacc44"><td class="mdescLeft">&#160;</td><td class="mdescRight">These are the weights that made the operator symmetric.  <a href="group__operators.html#gaa999c6af019581113bde43dd67cacc44">More...</a><br/></td></tr>
+<tr class="memitem:gaa999c6af019581113bde43dd67cacc44"><td class="memItemLeft" align="right" valign="top">const Preconditioner &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__matrixoperators.html#gaa999c6af019581113bde43dd67cacc44">weights</a> () const </td></tr>
+<tr class="memdesc:gaa999c6af019581113bde43dd67cacc44"><td class="mdescLeft">&#160;</td><td class="mdescRight">These are the weights that made the operator symmetric.  <a href="group__matrixoperators.html#gaa999c6af019581113bde43dd67cacc44">More...</a><br/></td></tr>
 <tr class="separator:gaa999c6af019581113bde43dd67cacc44"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga42af8edcfc2def422a545c6fe950dbfc"><td class="memItemLeft" align="right" valign="top">const Preconditioner &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__operators.html#ga42af8edcfc2def422a545c6fe950dbfc">precond</a> () const </td></tr>
-<tr class="memdesc:ga42af8edcfc2def422a545c6fe950dbfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Preconditioner to use in conjugate gradient solvers.  <a href="group__operators.html#ga42af8edcfc2def422a545c6fe950dbfc">More...</a><br/></td></tr>
+<tr class="memitem:ga42af8edcfc2def422a545c6fe950dbfc"><td class="memItemLeft" align="right" valign="top">const Preconditioner &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__matrixoperators.html#ga42af8edcfc2def422a545c6fe950dbfc">precond</a> () const </td></tr>
+<tr class="memdesc:ga42af8edcfc2def422a545c6fe950dbfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Preconditioner to use in conjugate gradient solvers.  <a href="group__matrixoperators.html#ga42af8edcfc2def422a545c6fe950dbfc">More...</a><br/></td></tr>
 <tr class="separator:ga42af8edcfc2def422a545c6fe950dbfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7fceb7f2dbaf51df5941643f33f1f8a6"><td class="memItemLeft" align="right" valign="top">double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__operators.html#ga7fceb7f2dbaf51df5941643f33f1f8a6">alpha</a> ()</td></tr>
-<tr class="memdesc:ga7fceb7f2dbaf51df5941643f33f1f8a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change alpha.  <a href="group__operators.html#ga7fceb7f2dbaf51df5941643f33f1f8a6">More...</a><br/></td></tr>
+<tr class="memitem:ga7fceb7f2dbaf51df5941643f33f1f8a6"><td class="memItemLeft" align="right" valign="top">double &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__matrixoperators.html#ga7fceb7f2dbaf51df5941643f33f1f8a6">alpha</a> ()</td></tr>
+<tr class="memdesc:ga7fceb7f2dbaf51df5941643f33f1f8a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change alpha.  <a href="group__matrixoperators.html#ga7fceb7f2dbaf51df5941643f33f1f8a6">More...</a><br/></td></tr>
 <tr class="separator:ga7fceb7f2dbaf51df5941643f33f1f8a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga59320b5e0dd00f8e5a7c49c880912d60"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__operators.html#ga59320b5e0dd00f8e5a7c49c880912d60">alpha</a> () const </td></tr>
-<tr class="memdesc:ga59320b5e0dd00f8e5a7c49c880912d60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access alpha.  <a href="group__operators.html#ga59320b5e0dd00f8e5a7c49c880912d60">More...</a><br/></td></tr>
+<tr class="memitem:ga59320b5e0dd00f8e5a7c49c880912d60"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__matrixoperators.html#ga59320b5e0dd00f8e5a7c49c880912d60">alpha</a> () const </td></tr>
+<tr class="memdesc:ga59320b5e0dd00f8e5a7c49c880912d60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access alpha.  <a href="group__matrixoperators.html#ga59320b5e0dd00f8e5a7c49c880912d60">More...</a><br/></td></tr>
 <tr class="separator:ga59320b5e0dd00f8e5a7c49c880912d60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac95fce512bf66491a2235d589148a64a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__operators.html#gac95fce512bf66491a2235d589148a64a">set_chi</a> (const Vector &amp;<a class="el" href="group__operators.html#gaf8330683e97b34392b998695d33f13ba">chi</a>)</td></tr>
-<tr class="memdesc:gac95fce512bf66491a2235d589148a64a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Chi in the above formula.  <a href="group__operators.html#gac95fce512bf66491a2235d589148a64a">More...</a><br/></td></tr>
+<tr class="memitem:gac95fce512bf66491a2235d589148a64a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__matrixoperators.html#gac95fce512bf66491a2235d589148a64a">set_chi</a> (const Vector &amp;<a class="el" href="group__matrixoperators.html#gaf8330683e97b34392b998695d33f13ba">chi</a>)</td></tr>
+<tr class="memdesc:gac95fce512bf66491a2235d589148a64a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Chi in the above formula.  <a href="group__matrixoperators.html#gac95fce512bf66491a2235d589148a64a">More...</a><br/></td></tr>
 <tr class="separator:gac95fce512bf66491a2235d589148a64a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf76f445d7887289a03f0e48ed42c2a3d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaf76f445d7887289a03f0e48ed42c2a3d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__operators.html#gaf76f445d7887289a03f0e48ed42c2a3d">reset_chi</a> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__matrixoperators.html#gaf76f445d7887289a03f0e48ed42c2a3d">reset_chi</a> ()</td></tr>
 <tr class="memdesc:gaf76f445d7887289a03f0e48ed42c2a3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets chi back to one. <br/></td></tr>
 <tr class="separator:gaf76f445d7887289a03f0e48ed42c2a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf8330683e97b34392b998695d33f13ba"><td class="memItemLeft" align="right" valign="top">const Vector &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__operators.html#gaf8330683e97b34392b998695d33f13ba">chi</a> ()</td></tr>
-<tr class="memdesc:gaf8330683e97b34392b998695d33f13ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access chi.  <a href="group__operators.html#gaf8330683e97b34392b998695d33f13ba">More...</a><br/></td></tr>
+<tr class="memitem:gaf8330683e97b34392b998695d33f13ba"><td class="memItemLeft" align="right" valign="top">const Vector &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__matrixoperators.html#gaf8330683e97b34392b998695d33f13ba">chi</a> ()</td></tr>
+<tr class="memdesc:gaf8330683e97b34392b998695d33f13ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access chi.  <a href="group__matrixoperators.html#gaf8330683e97b34392b998695d33f13ba">More...</a><br/></td></tr>
 <tr class="separator:gaf8330683e97b34392b998695d33f13ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -162,9 +168,9 @@ struct dg::Helmholtz&lt; Matrix, Vector, Preconditioner &gt;</h3>
 <p>Matrix class that represents a Helmholtz-type operator. </p>
 <p>Unnormed discretization of </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ (\chi+\alpha\Delta) \]" src="form_51.png"/>
+\[ (\chi+\alpha\Delta) \]
 </p>
-<p> where <img class="formulaInl" alt="$ \chi$" src="form_52.png"/> is a function and <img class="formulaInl" alt="$\alpha$" src="form_53.png"/> a scalar. Can be used by the <a class="el" href="structdg_1_1_invert.html" title="Smart conjugate gradient solver. ">Invert</a> class </p>
+<p> where \( \chi\) is a function and \(\alpha\) a scalar. Can be used by the <a class="el" href="structdg_1_1_invert.html" title="Smart conjugate gradient solver. ">Invert</a> class </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">Matrix</td><td>The cusp-matrix class you want to use </td></tr>
@@ -175,7 +181,7 @@ struct dg::Helmholtz&lt; Matrix, Vector, Preconditioner &gt;</h3>
 </dl>
 <dl class="section attention"><dt>Attention</dt><dd>The Laplacian in this formula is positive as opposed to the negative sign in the <a class="el" href="classdg_1_1_elliptic.html" title="Operator that acts as a 2d negative elliptic differential operator. ">Elliptic</a> operator </dd></dl>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/matthias/feltor/inc/dg/<a class="el" href="helmholtz_8h_source.html">helmholtz.h</a></li>
+<li>/home/matthias/Projekte/feltor/inc/dg/<a class="el" href="helmholtz_8h_source.html">helmholtz.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -183,7 +189,7 @@ struct dg::Helmholtz&lt; Matrix, Vector, Preconditioner &gt;</h3>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacedg.html">dg</a></li><li class="navelem"><a class="el" href="structdg_1_1_helmholtz.html">Helmholtz</a></li>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:15 for Discontinuous Galerkin Library by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Discontinuous Galerkin Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

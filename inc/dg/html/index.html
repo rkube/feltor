@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -104,7 +110,7 @@ $(document).ready(function(){initNavTree('index.html','');});
 <div class="contents">
 <div class="textblock"><p>Welcome to the DG library.</p>
 <dl class="section user"><dt>Design principles</dt><dd></dd></dl>
-<p>The DG library is built on top of the thrust and cusp libraries. Its intention is to provide easy to use functions and objects needed for the integration of the 2D and 3D gyrofluid system with a discontinuous galerkin method. Since it is build on top of thrust and cusp, code can run on a CPU as well as a GPU by simply switching between thrust's host_vector and device_vector. The DG library uses a design pattern also employed in the cusp library and other modern C++ codes. It might be referred to as container-free numerical algorithms.</p>
+<p>The DG library is built on top of the <a href="https://thrust.github.io/">thrust</a> and <a href="http://cusplibrary.github.io/index.html">cusp</a> libraries. Its intention is to provide easy to use functions and objects needed for the integration of 2D and 3D partial differential equations discretized with a discontinuous galerkin method. Since it is built on top of <a href="https://thrust.github.io/">thrust</a> and <a href="http://cusplibrary.github.io/index.html">cusp</a>, code can run on a CPU as well as a GPU by simply switching between thrust's host_vector and device_vector. The DG library uses a design pattern also employed in the cusp library and other modern C++ codes. It might be referred to as <a href="http://dx.doi.org/10.1063/1.168674">container-free numerical algorithms</a>.</p>
 <dl class="section user"><dt>Typical usage</dt><dd></dd></dl>
 <p>The typical usage of the library is as follows: First you generate a grid object, which so far can only be a grid of equisized rectangles. It also contains information about the number of Legendre coefficients you want to use per cell per grid dimension. Then you evaluate self-written functions on that grid to get a discretization of your initial conditions. In the create namespace there are utility functions to create matrices which, when multiplied with your previously generated vector, compute derivatives, etc. Multiplication, addition, etc. can be done with blas routines. There are several explicit Runge-Kutta and Adams-Bashforth methods implemented for time-integration. Moreover there is a conjugate - gradient method for the iterative solution of symmetric matrix equations. </p>
 </div></div><!-- contents -->
@@ -112,7 +118,7 @@ $(document).ready(function(){initNavTree('index.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:35 for Discontinuous Galerkin Library by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Discontinuous Galerkin Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

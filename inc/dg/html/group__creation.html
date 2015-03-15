@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -114,7 +120,7 @@ Modules</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group__arakawa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__arakawa.html">Arakawas scheme</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:group__operators"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__operators.html">Classes that act as matrices in blas2 routines</a></td></tr>
+<tr class="memitem:group__matrixoperators"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__matrixoperators.html">Classes that act as matrices in blas2 routines</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
@@ -146,11 +152,6 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:ga75789d2c36dff2caed4b3bb80191b346"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coordinate system.  <a href="group__creation.html#ga75789d2c36dff2caed4b3bb80191b346">More...</a><br/></td></tr>
 <tr class="separator:ga75789d2c36dff2caed4b3bb80191b346"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga720a6f709941a075d5c8f60ef07c619f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__creation.html#ga720a6f709941a075d5c8f60ef07c619f">dg::space</a> { <a class="el" href="group__creation.html#gga720a6f709941a075d5c8f60ef07c619fa89a3bcd08995f33c0f8b5257bd04d4ce">dg::XSPACE</a>, 
-<a class="el" href="group__creation.html#gga720a6f709941a075d5c8f60ef07c619fa2f6bfc0ea453ce2a9c3f274cddbf5fa1">dg::LSPACE</a>
- }</td></tr>
-<tr class="memdesc:ga720a6f709941a075d5c8f60ef07c619f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Switch between x-space and l-space DEPRECATED.  <a href="group__creation.html#ga720a6f709941a075d5c8f60ef07c619f">More...</a><br/></td></tr>
-<tr class="separator:ga720a6f709941a075d5c8f60ef07c619f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
@@ -232,28 +233,6 @@ Enumerations</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ga720a6f709941a075d5c8f60ef07c619f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="group__creation.html#ga720a6f709941a075d5c8f60ef07c619f">dg::space</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Switch between x-space and l-space DEPRECATED. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="gga720a6f709941a075d5c8f60ef07c619fa89a3bcd08995f33c0f8b5257bd04d4ce"></a>XSPACE</em>&#160;</td><td class="fielddoc">
-<p>indicates, that the given matrix operates on x-space values </p>
-</td></tr>
-<tr><td class="fieldname"><em><a class="anchor" id="gga720a6f709941a075d5c8f60ef07c619fa2f6bfc0ea453ce2a9c3f274cddbf5fa1"></a>LSPACE</em>&#160;</td><td class="fielddoc">
-<p>indicates, that the given matrix operates on l-space values </p>
-</td></tr>
-</table>
-
-</div>
-</div>
 <a class="anchor" id="ga75789d2c36dff2caed4b3bb80191b346"></a>
 <div class="memitem">
 <div class="memproto">
@@ -281,7 +260,7 @@ Enumerations</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:15 for Discontinuous Galerkin Library by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Discontinuous Galerkin Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

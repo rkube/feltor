@@ -7,7 +7,7 @@ var searchData=
   ['absmin',['AbsMin',['../structdg_1_1_abs_min.html',1,'dg']]],
   ['adaptive_5fstep',['adaptive_step',['../structdg_1_1_s_i_r_k.html#a01757c756e22e533e871286f91672a5a',1,'dg::SIRK']]],
   ['algorithm_2eh',['algorithm.h',['../algorithm_8h.html',1,'']]],
-  ['alpha',['alpha',['../structdg_1_1rk__coeff.html#a23c2aa1eeb057a2cccd29d586d787afa',1,'dg::rk_coeff::alpha()'],['../group__operators.html#ga7fceb7f2dbaf51df5941643f33f1f8a6',1,'dg::Helmholtz::alpha()'],['../group__operators.html#ga59320b5e0dd00f8e5a7c49c880912d60',1,'dg::Helmholtz::alpha() const ']]],
+  ['alpha',['alpha',['../structdg_1_1rk__coeff.html#a23c2aa1eeb057a2cccd29d586d787afa',1,'dg::rk_coeff::alpha()'],['../group__matrixoperators.html#ga7fceb7f2dbaf51df5941643f33f1f8a6',1,'dg::Helmholtz::alpha()'],['../group__matrixoperators.html#ga59320b5e0dd00f8e5a7c49c880912d60',1,'dg::Helmholtz::alpha() const ']]],
   ['anzeigen',['anzeigen',['../classdg_1_1_keine_n_s_t__1_d.html#ab9089e775ecb1a2a2d13aab1e5e47b20',1,'dg::KeineNST_1D']]],
   ['arakawas_20scheme',['Arakawas scheme',['../group__arakawa.html',1,'']]],
   ['arakawa_2eh',['arakawa.h',['../arakawa_8h.html',1,'']]],

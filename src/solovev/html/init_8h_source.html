@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Solovev: /home/matthias/feltor/src/solovev/init.h Source File</title>
+<title>Solovev: /home/matthias/Projekte/feltor/src/solovev/init.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -93,7 +99,7 @@ $(document).ready(function(){initNavTree('init_8h_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Groups</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Groups</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -122,8 +128,8 @@ $(document).ready(function(){initNavTree('init_8h_source.html','');});
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        }</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">double</span> operator( )(<span class="keywordtype">double</span> R, <span class="keywordtype">double</span> Z)</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">if</span>( psip_(R,Z) &gt; gp_.psipmax) <span class="keywordflow">return</span> 0.;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">if</span>( psip_(R,Z) &lt; gp_.psipmin) <span class="keywordflow">return</span> 0.;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">if</span>( psip_(R,Z) &gt; gp_.<a class="code" href="group__geom.html#gaf37a5f3f604ddf009de36d734f854f9a">psipmax</a>) <span class="keywordflow">return</span> 0.;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">if</span>( psip_(R,Z) &lt; gp_.<a class="code" href="group__geom.html#ga89dcd3bf445d866d590d930d299379d8">psipmin</a>) <span class="keywordflow">return</span> 0.;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">return</span> 1.;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">double</span> operator( )(<span class="keywordtype">double</span> R, <span class="keywordtype">double</span> Z, <span class="keywordtype">double</span> phi)</div>
@@ -142,7 +148,7 @@ $(document).ready(function(){initNavTree('init_8h_source.html','');});
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">double</span> operator( )(<span class="keywordtype">double</span> R, <span class="keywordtype">double</span> Z)</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">if</span>( psip_(R,Z) &gt; gp_.psipmaxcut) <span class="keywordflow">return</span> 0.;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">if</span>( psip_(R,Z) &gt; gp_.<a class="code" href="group__geom.html#gacb8f51dbbad0b5dcab7c0d0469b1c175">psipmaxcut</a>) <span class="keywordflow">return</span> 0.;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">return</span> 1.;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">double</span> operator( )(<span class="keywordtype">double</span> R, <span class="keywordtype">double</span> Z, <span class="keywordtype">double</span> phi)</div>
@@ -183,7 +189,7 @@ $(document).ready(function(){initNavTree('init_8h_source.html','');});
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">double</span> operator( )(<span class="keywordtype">double</span> R, <span class="keywordtype">double</span> Z)</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">if</span>( psip_(R,Z) &gt; gp_.psipmaxlim) <span class="keywordflow">return</span> 1.;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">if</span>( psip_(R,Z) &gt; gp_.<a class="code" href="group__geom.html#ga0b3f04d5f78ead10d7c6e887dc147401">psipmaxlim</a>) <span class="keywordflow">return</span> 1.;</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">return</span> 0.;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">double</span> operator( )(<span class="keywordtype">double</span> R, <span class="keywordtype">double</span> Z, <span class="keywordtype">double</span> phi)</div>
@@ -205,9 +211,9 @@ $(document).ready(function(){initNavTree('init_8h_source.html','');});
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        }</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordtype">double</span> operator( )(<span class="keywordtype">double</span> R, <span class="keywordtype">double</span> Z)</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    {</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keywordflow">if</span>( psip_(R,Z) &gt; gp_.psipmaxcut + 4.*gp_.alpha) <span class="keywordflow">return</span> 0.;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordflow">if</span>( psip_(R,Z) &lt; (gp_.psipmaxcut)) <span class="keywordflow">return</span> 1.;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordflow">return</span> exp( -( psip_(R,Z)-gp_.psipmaxcut)*( psip_(R,Z)-gp_.psipmaxcut)/2./gp_.alpha/gp_.alpha);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keywordflow">if</span>( psip_(R,Z) &gt; gp_.<a class="code" href="group__geom.html#gacb8f51dbbad0b5dcab7c0d0469b1c175">psipmaxcut</a> + 4.*gp_.<a class="code" href="group__geom.html#gab23ad90efd782bb2411080b17984c0e2">alpha</a>) <span class="keywordflow">return</span> 0.;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordflow">if</span>( psip_(R,Z) &lt; (gp_.<a class="code" href="group__geom.html#gacb8f51dbbad0b5dcab7c0d0469b1c175">psipmaxcut</a>)) <span class="keywordflow">return</span> 1.;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordflow">return</span> exp( -( psip_(R,Z)-gp_.<a class="code" href="group__geom.html#gacb8f51dbbad0b5dcab7c0d0469b1c175">psipmaxcut</a>)*( psip_(R,Z)-gp_.<a class="code" href="group__geom.html#gacb8f51dbbad0b5dcab7c0d0469b1c175">psipmaxcut</a>)/2./gp_.<a class="code" href="group__geom.html#gab23ad90efd782bb2411080b17984c0e2">alpha</a>/gp_.<a class="code" href="group__geom.html#gab23ad90efd782bb2411080b17984c0e2">alpha</a>);</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    }</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordtype">double</span> operator( )(<span class="keywordtype">double</span> R, <span class="keywordtype">double</span> Z, <span class="keywordtype">double</span> phi)</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    {</div>
@@ -225,9 +231,9 @@ $(document).ready(function(){initNavTree('init_8h_source.html','');});
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        }</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordtype">double</span> operator( )(<span class="keywordtype">double</span> R, <span class="keywordtype">double</span> Z)</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    {</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordflow">if</span>( psip_(R,Z) &gt; gp_.psipmax ) <span class="keywordflow">return</span> 0.;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordflow">if</span>( psip_(R,Z) &lt; (gp_.psipmax-4.*gp_.alpha)) <span class="keywordflow">return</span> 1.;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">return</span> exp( -( psip_(R,Z)-(gp_.psipmax-4.*gp_.alpha))*( psip_(R,Z)-(gp_.psipmax-4.*gp_.alpha))/2./gp_.alpha/gp_.alpha);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordflow">if</span>( psip_(R,Z) &gt; gp_.<a class="code" href="group__geom.html#gaf37a5f3f604ddf009de36d734f854f9a">psipmax</a> ) <span class="keywordflow">return</span> 0.;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordflow">if</span>( psip_(R,Z) &lt; (gp_.<a class="code" href="group__geom.html#gaf37a5f3f604ddf009de36d734f854f9a">psipmax</a>-4.*gp_.<a class="code" href="group__geom.html#gab23ad90efd782bb2411080b17984c0e2">alpha</a>)) <span class="keywordflow">return</span> 1.;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">return</span> exp( -( psip_(R,Z)-(gp_.<a class="code" href="group__geom.html#gaf37a5f3f604ddf009de36d734f854f9a">psipmax</a>-4.*gp_.<a class="code" href="group__geom.html#gab23ad90efd782bb2411080b17984c0e2">alpha</a>))*( psip_(R,Z)-(gp_.<a class="code" href="group__geom.html#gaf37a5f3f604ddf009de36d734f854f9a">psipmax</a>-4.*gp_.<a class="code" href="group__geom.html#gab23ad90efd782bb2411080b17984c0e2">alpha</a>))/2./gp_.<a class="code" href="group__geom.html#gab23ad90efd782bb2411080b17984c0e2">alpha</a>/gp_.<a class="code" href="group__geom.html#gab23ad90efd782bb2411080b17984c0e2">alpha</a>);</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    }</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordtype">double</span> operator( )(<span class="keywordtype">double</span> R, <span class="keywordtype">double</span> Z, <span class="keywordtype">double</span> phi)</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    {</div>
@@ -245,9 +251,9 @@ $(document).ready(function(){initNavTree('init_8h_source.html','');});
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        }</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keywordtype">double</span> operator( )(<span class="keywordtype">double</span> R, <span class="keywordtype">double</span> Z)</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    {</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;     <span class="keywordflow">if</span>( psip_(R,Z) &gt; gp_.psipmax || Z&lt;-1.1*gp_.elongation*gp_.a) <span class="keywordflow">return</span> 0.;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="keywordflow">if</span>( psip_(R,Z) &lt; (gp_.psipmax-4.*gp_.alpha)) <span class="keywordflow">return</span> 1.;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <span class="keywordflow">return</span> exp( -( psip_(R,Z)-(gp_.psipmax-4.*gp_.alpha))*( psip_(R,Z)-(gp_.psipmax-4.*gp_.alpha))/2./gp_.alpha/gp_.alpha);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;     <span class="keywordflow">if</span>( psip_(R,Z) &gt; gp_.<a class="code" href="group__geom.html#gaf37a5f3f604ddf009de36d734f854f9a">psipmax</a> || Z&lt;-1.1*gp_.<a class="code" href="group__geom.html#ga5a155924600d91db24102214e6f8198f">elongation</a>*gp_.<a class="code" href="group__geom.html#ga937bb16d9918139c82537b0522d9d50c">a</a>) <span class="keywordflow">return</span> 0.;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="keywordflow">if</span>( psip_(R,Z) &lt; (gp_.<a class="code" href="group__geom.html#gaf37a5f3f604ddf009de36d734f854f9a">psipmax</a>-4.*gp_.<a class="code" href="group__geom.html#gab23ad90efd782bb2411080b17984c0e2">alpha</a>)) <span class="keywordflow">return</span> 1.;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <span class="keywordflow">return</span> exp( -( psip_(R,Z)-(gp_.<a class="code" href="group__geom.html#gaf37a5f3f604ddf009de36d734f854f9a">psipmax</a>-4.*gp_.<a class="code" href="group__geom.html#gab23ad90efd782bb2411080b17984c0e2">alpha</a>))*( psip_(R,Z)-(gp_.<a class="code" href="group__geom.html#gaf37a5f3f604ddf009de36d734f854f9a">psipmax</a>-4.*gp_.<a class="code" href="group__geom.html#gab23ad90efd782bb2411080b17984c0e2">alpha</a>))/2./gp_.<a class="code" href="group__geom.html#gab23ad90efd782bb2411080b17984c0e2">alpha</a>/gp_.<a class="code" href="group__geom.html#gab23ad90efd782bb2411080b17984c0e2">alpha</a>);</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    }</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordtype">double</span> operator( )(<span class="keywordtype">double</span> R, <span class="keywordtype">double</span> Z, <span class="keywordtype">double</span> phi)</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    {</div>
@@ -267,11 +273,11 @@ $(document).ready(function(){initNavTree('init_8h_source.html','');});
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        }</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keywordtype">double</span> operator( )(<span class="keywordtype">double</span> R, <span class="keywordtype">double</span> Z)</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    {</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <span class="keywordflow">return</span> p_.amp_source*0.5*(1.+tanh(-(psip_(R,Z)-gp_.psipmin + 3.*gp_.alpha)/gp_.alpha) );</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <span class="keywordflow">return</span> p_.amp_source*0.5*(1.+tanh(-(psip_(R,Z)-gp_.<a class="code" href="group__geom.html#ga89dcd3bf445d866d590d930d299379d8">psipmin</a> + 3.*gp_.<a class="code" href="group__geom.html#gab23ad90efd782bb2411080b17984c0e2">alpha</a>)/gp_.<a class="code" href="group__geom.html#gab23ad90efd782bb2411080b17984c0e2">alpha</a>) );</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    }</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordtype">double</span> operator( )(<span class="keywordtype">double</span> R, <span class="keywordtype">double</span> Z, <span class="keywordtype">double</span> phi)</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    {</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keywordflow">return</span> p_.amp_source*0.5*(1.+tanh(-(psip_(R,Z,phi)-gp_.psipmin + 3.*gp_.alpha)/gp_.alpha) );</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keywordflow">return</span> p_.amp_source*0.5*(1.+tanh(-(psip_(R,Z,phi)-gp_.<a class="code" href="group__geom.html#ga89dcd3bf445d866d590d930d299379d8">psipmin</a> + 3.*gp_.<a class="code" href="group__geom.html#gab23ad90efd782bb2411080b17984c0e2">alpha</a>)/gp_.<a class="code" href="group__geom.html#gab23ad90efd782bb2411080b17984c0e2">alpha</a>) );</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    }</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    eule::Parameters p_;</div>
@@ -334,7 +340,7 @@ $(document).ready(function(){initNavTree('init_8h_source.html','');});
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    }</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="keywordtype">double</span> operator() (<span class="keywordtype">double</span> R, <span class="keywordtype">double</span> Z)</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    {</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;      <span class="keywordflow">if</span> (psip_(R,Z)&lt;gp_.psipmax) <span class="keywordflow">return</span> (p_.amp*abs(cos(2.*M_PI*psip_(R,Z)*p_.k_psi)));</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;      <span class="keywordflow">if</span> (psip_(R,Z)&lt;gp_.psipmax) <span class="keywordflow">return</span> (p_.amp*fabs(cos(2.*M_PI*psip_(R,Z)*p_.k_psi)));</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;      <span class="keywordflow">return</span> 0.;</div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;</div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    }</div>
@@ -420,19 +426,26 @@ $(document).ready(function(){initNavTree('init_8h_source.html','');});
 <div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;}<span class="comment">//namespace solovev</span></div>
 <div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;</div>
 <div class="ttc" id="structsolovev_1_1_pupil_html"><div class="ttname"><a href="structsolovev_1_1_pupil.html">solovev::Pupil</a></div><div class="ttdoc">Returns zero outside psipmaxcut otherwise 1. </div><div class="ttdef"><b>Definition:</b> init.h:39</div></div>
+<div class="ttc" id="group__geom_html_gab23ad90efd782bb2411080b17984c0e2"><div class="ttname"><a href="group__geom.html#gab23ad90efd782bb2411080b17984c0e2">solovev::GeomParameters::alpha</a></div><div class="ttdeci">double alpha</div><div class="ttdoc">damping width </div><div class="ttdef"><b>Definition:</b> geom_parameters.h:16</div></div>
+<div class="ttc" id="group__geom_html_ga89dcd3bf445d866d590d930d299379d8"><div class="ttname"><a href="group__geom.html#ga89dcd3bf445d866d590d930d299379d8">solovev::GeomParameters::psipmin</a></div><div class="ttdeci">double psipmin</div><div class="ttdoc">for source </div><div class="ttdef"><b>Definition:</b> geom_parameters.h:16</div></div>
 <div class="ttc" id="structsolovev_1_1_psi_pupil_html"><div class="ttname"><a href="structsolovev_1_1_psi_pupil.html">solovev::PsiPupil</a></div><div class="ttdoc">Returns psi inside psipmax and psipmax outside psipmax. </div><div class="ttdef"><b>Definition:</b> init.h:61</div></div>
-<div class="ttc" id="structsolovev_1_1_b_hat_r_html"><div class="ttname"><a href="structsolovev_1_1_b_hat_r.html">solovev::BHatR</a></div><div class="ttdoc">R component of magnetic field . </div><div class="ttdef"><b>Definition:</b> geometry.h:789</div></div>
+<div class="ttc" id="structsolovev_1_1_b_hat_r_html"><div class="ttname"><a href="structsolovev_1_1_b_hat_r.html">solovev::BHatR</a></div><div class="ttdoc">R component of magnetic field . </div><div class="ttdef"><b>Definition:</b> geometry.h:817</div></div>
+<div class="ttc" id="group__geom_html_gacb8f51dbbad0b5dcab7c0d0469b1c175"><div class="ttname"><a href="group__geom.html#gacb8f51dbbad0b5dcab7c0d0469b1c175">solovev::GeomParameters::psipmaxcut</a></div><div class="ttdeci">double psipmaxcut</div><div class="ttdoc">for cutting </div><div class="ttdef"><b>Definition:</b> geom_parameters.h:16</div></div>
+<div class="ttc" id="group__geom_html_ga0b3f04d5f78ead10d7c6e887dc147401"><div class="ttname"><a href="group__geom.html#ga0b3f04d5f78ead10d7c6e887dc147401">solovev::GeomParameters::psipmaxlim</a></div><div class="ttdeci">double psipmaxlim</div><div class="ttdoc">for limiter </div><div class="ttdef"><b>Definition:</b> geom_parameters.h:16</div></div>
 <div class="ttc" id="structsolovev_1_1_gaussian_prof_damping_html"><div class="ttname"><a href="structsolovev_1_1_gaussian_prof_damping.html">solovev::GaussianProfDamping</a></div><div class="ttdoc">Damps the inner boundary in a zone from psipmax to psipmax+ 4*alpha with a normal distribution Return...</div><div class="ttdef"><b>Definition:</b> init.h:154</div></div>
 <div class="ttc" id="structsolovev_1_1_test_function_html"><div class="ttname"><a href="structsolovev_1_1_test_function.html">solovev::TestFunction</a></div><div class="ttdoc">Returns density profile with variable peak amplitude and background amplitude. </div><div class="ttdef"><b>Definition:</b> init.h:314</div></div>
-<div class="ttc" id="structsolovev_1_1_psip_html"><div class="ttname"><a href="structsolovev_1_1_psip.html">solovev::Psip</a></div><div class="ttdoc"> </div><div class="ttdef"><b>Definition:</b> geometry.h:20</div></div>
+<div class="ttc" id="group__geom_html_gaf37a5f3f604ddf009de36d734f854f9a"><div class="ttname"><a href="group__geom.html#gaf37a5f3f604ddf009de36d734f854f9a">solovev::GeomParameters::psipmax</a></div><div class="ttdeci">double psipmax</div><div class="ttdoc">for profile </div><div class="ttdef"><b>Definition:</b> geom_parameters.h:16</div></div>
+<div class="ttc" id="structsolovev_1_1_psip_html"><div class="ttname"><a href="structsolovev_1_1_psip.html">solovev::Psip</a></div><div class="ttdoc"> </div><div class="ttdef"><b>Definition:</b> geometry.h:48</div></div>
+<div class="ttc" id="group__geom_html_ga5a155924600d91db24102214e6f8198f"><div class="ttname"><a href="group__geom.html#ga5a155924600d91db24102214e6f8198f">solovev::GeomParameters::elongation</a></div><div class="ttdeci">double elongation</div><div class="ttdoc">elongation of the magnetic surfaces </div><div class="ttdef"><b>Definition:</b> geom_parameters.h:16</div></div>
 <div class="ttc" id="structsolovev_1_1_tanh_source_html"><div class="ttname"><a href="structsolovev_1_1_tanh_source.html">solovev::TanhSource</a></div><div class="ttdoc">source for quantities N ... dtlnN = ...+ source/N Returns a tanh profile shifted to psipmin-3*alpha ...</div><div class="ttdef"><b>Definition:</b> init.h:211</div></div>
 <div class="ttc" id="structsolovev_1_1_deri_test_function_html"><div class="ttname"><a href="structsolovev_1_1_deri_test_function.html">solovev::DeriTestFunction</a></div><div class="ttdoc">analyitcal solution of the parallel derivative of the testfunction  </div><div class="ttdef"><b>Definition:</b> init.h:350</div></div>
 <div class="ttc" id="structsolovev_1_1_gaussian_prof_x_damping_html"><div class="ttname"><a href="structsolovev_1_1_gaussian_prof_x_damping.html">solovev::GaussianProfXDamping</a></div><div class="ttdoc">Damps the inner boundary in a zone from psipmax to psipmax+ 4*alpha with a normal distribution Return...</div><div class="ttdef"><b>Definition:</b> init.h:186</div></div>
-<div class="ttc" id="structsolovev_1_1_b_hat_p_html"><div class="ttname"><a href="structsolovev_1_1_b_hat_p.html">solovev::BHatP</a></div><div class="ttdoc">Phi component of magnetic field . </div><div class="ttdef"><b>Definition:</b> geometry.h:826</div></div>
+<div class="ttc" id="structsolovev_1_1_b_hat_p_html"><div class="ttname"><a href="structsolovev_1_1_b_hat_p.html">solovev::BHatP</a></div><div class="ttdoc">Phi component of magnetic field . </div><div class="ttdef"><b>Definition:</b> geometry.h:854</div></div>
+<div class="ttc" id="group__geom_html_ga937bb16d9918139c82537b0522d9d50c"><div class="ttname"><a href="group__geom.html#ga937bb16d9918139c82537b0522d9d50c">solovev::GeomParameters::a</a></div><div class="ttdeci">double a</div><div class="ttdoc">little tokamak radius </div><div class="ttdef"><b>Definition:</b> geom_parameters.h:16</div></div>
 <div class="ttc" id="structsolovev_1_1_psi_limiter_html"><div class="ttname"><a href="structsolovev_1_1_psi_limiter.html">solovev::PsiLimiter</a></div><div class="ttdoc">Sets values to one outside psipmaxcut, zero else. </div><div class="ttdef"><b>Definition:</b> init.h:89</div></div>
 <div class="ttc" id="geometry_8h_html"><div class="ttname"><a href="geometry_8h.html">geometry.h</a></div></div>
 <div class="ttc" id="structsolovev_1_1_iris_html"><div class="ttname"><a href="structsolovev_1_1_iris.html">solovev::Iris</a></div><div class="ttdoc">Returns zero outside psipmax and inside psipmin, otherwise 1. </div><div class="ttdef"><b>Definition:</b> init.h:16</div></div>
-<div class="ttc" id="structsolovev_1_1_b_hat_z_html"><div class="ttname"><a href="structsolovev_1_1_b_hat_z.html">solovev::BHatZ</a></div><div class="ttdoc">Z component of magnetic field . </div><div class="ttdef"><b>Definition:</b> geometry.h:807</div></div>
+<div class="ttc" id="structsolovev_1_1_b_hat_z_html"><div class="ttname"><a href="structsolovev_1_1_b_hat_z.html">solovev::BHatZ</a></div><div class="ttdoc">Z component of magnetic field . </div><div class="ttdef"><b>Definition:</b> geometry.h:835</div></div>
 <div class="ttc" id="structsolovev_1_1_geom_parameters_html"><div class="ttname"><a href="structsolovev_1_1_geom_parameters.html">solovev::GeomParameters</a></div><div class="ttdoc">Constructs and display geometric parameters. </div><div class="ttdef"><b>Definition:</b> geom_parameters.h:14</div></div>
 <div class="ttc" id="structsolovev_1_1_gaussian_damping_html"><div class="ttname"><a href="structsolovev_1_1_gaussian_damping.html">solovev::GaussianDamping</a></div><div class="ttdoc">Damps the outer boundary in a zone from psipmaxcut to psipmaxcut+ 4*alpha with a normal distribution ...</div><div class="ttdef"><b>Definition:</b> init.h:123</div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -441,7 +454,7 @@ $(document).ready(function(){initNavTree('init_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_8f48a2c0056d49d88bfa9448067ed2ee.html">solovev</a></li><li class="navelem"><a class="el" href="init_8h.html">init.h</a></li>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:40 for Solovev by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Solovev by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

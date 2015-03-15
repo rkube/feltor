@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -114,7 +120,11 @@ $(document).ready(function(){initNavTree('structdg_1_1_linear_x.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>Functor for a linear polynomial in x-direction.  
+<p>Functor for a linear polynomial in x-direction </p>
+<p class="formulaDsp">
+\[ f(x,y) = ax+b \]
+</p>
+<p>.  
  <a href="structdg_1_1_linear_x.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="functors_8h_source.html">functors.h</a>&gt;</code></p>
@@ -129,11 +139,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afb11c904cbdcde60dba138fc133629a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Functor for a linear polynomial in x-direction. </p>
+<div class="textblock"><p>Functor for a linear polynomial in x-direction </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ f(x,y) = a*x+b \]" src="form_34.png"/>
+\[ f(x,y) = ax+b \]
 </p>
- </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<p>. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a2721b98ac435a39e4864b42657e7c07c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -223,7 +234,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/matthias/feltor/inc/dg/<a class="el" href="functors_8h_source.html">functors.h</a></li>
+<li>/home/matthias/Projekte/feltor/inc/dg/<a class="el" href="functors_8h_source.html">functors.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -231,7 +242,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacedg.html">dg</a></li><li class="navelem"><a class="el" href="structdg_1_1_linear_x.html">LinearX</a></li>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:15 for Discontinuous Galerkin Library by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Discontinuous Galerkin Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

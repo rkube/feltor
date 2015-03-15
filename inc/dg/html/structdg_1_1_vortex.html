@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -113,19 +119,26 @@ $(document).ready(function(){initNavTree('structdg_1_1_vortex.html','');});
 <div class="title">dg::Vortex Struct Reference<div class="ingroups"><a class="el" href="group__functions.html">Functions and Functors</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Return a 2d vortex function.  
+ <a href="structdg_1_1_vortex.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="functors_8h_source.html">functors.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3cb30fdf2c8da900f2b6f3366dbaf237"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_vortex.html#a3cb30fdf2c8da900f2b6f3366dbaf237">Vortex</a> (double x0, double y0, unsigned state, double R, double u_dipole, double kz=0)</td></tr>
 <tr class="separator:a3cb30fdf2c8da900f2b6f3366dbaf237"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ed882464931c6ff21123b39fb2aeedc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5ed882464931c6ff21123b39fb2aeedc"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (double x, double y)</td></tr>
+<tr class="memitem:a5ed882464931c6ff21123b39fb2aeedc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_vortex.html#a5ed882464931c6ff21123b39fb2aeedc">operator()</a> (double x, double y)</td></tr>
+<tr class="memdesc:a5ed882464931c6ff21123b39fb2aeedc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate the vortex.  <a href="#a5ed882464931c6ff21123b39fb2aeedc">More...</a><br/></td></tr>
 <tr class="separator:a5ed882464931c6ff21123b39fb2aeedc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9c5cf940de3ddc21b35d62614dda592"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab9c5cf940de3ddc21b35d62614dda592"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (double x, double y, double z)</td></tr>
+<tr class="memitem:ab9c5cf940de3ddc21b35d62614dda592"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_vortex.html#ab9c5cf940de3ddc21b35d62614dda592">operator()</a> (double x, double y, double z)</td></tr>
+<tr class="memdesc:ab9c5cf940de3ddc21b35d62614dda592"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate the vortex modulated by a sine wave in z.  <a href="#ab9c5cf940de3ddc21b35d62614dda592">More...</a><br/></td></tr>
 <tr class="separator:ab9c5cf940de3ddc21b35d62614dda592"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Return a 2d vortex function. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a3cb30fdf2c8da900f2b6f3366dbaf237"></a>
 <div class="memitem">
 <div class="memproto">
@@ -195,8 +208,112 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (dou
 
 </div>
 </div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a5ed882464931c6ff21123b39fb2aeedc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double dg::Vortex::operator() </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Evaluate the vortex. </p>
+<p class="formulaDsp">
+\[\begin{cases} \frac{1}{1.2965125} u_d( r(1+\frac{\beta_i^2}{g_i^2}) - R \frac{\beta_i^2}{g_i^2} J_1(g_i) \frac{r}{RJ_1(g_i)})\cos(\Theta) \text{ if } r/R &lt; 1 \\ \frac{1}{1.2965125} u_dR \frac{K_1(\beta_i \frac{r}{R})}{K_1(\beta)} \cos(\Theta) \text{ else } \end{cases} \]
+</p>
+<p> where i is the mode number and r and \(\Theta\) are poloidal coordinates </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>value </td></tr>
+    <tr><td class="paramname">y</td><td>value</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the above function value </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab9c5cf940de3ddc21b35d62614dda592"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double dg::Vortex::operator() </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>z</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Evaluate the vortex modulated by a sine wave in z. </p>
+<p class="formulaDsp">
+\[ \cos(k_z z)\begin{cases} \frac{1}{1.2965125} u_d( r(1+\frac{\beta_i^2}{g_i^2}) - R \frac{\beta_i^2}{g_i^2} J_1(g_i) \frac{r}{RJ_1(g_i)})\cos(\Theta) \text{ if } r/R &lt; 1 \\ \frac{1}{1.2965125} u_dR \frac{K_1(\beta_i \frac{r}{R})}{K_1(\beta)} \cos(\Theta) \text{ else } \end{cases} \]
+</p>
+<p> where i is the mode number and r and \(\Theta\) are poloidal coordinates </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>value </td></tr>
+    <tr><td class="paramname">y</td><td>value </td></tr>
+    <tr><td class="paramname">z</td><td>value</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the above function value </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/matthias/feltor/inc/dg/<a class="el" href="functors_8h_source.html">functors.h</a></li>
+<li>/home/matthias/Projekte/feltor/inc/dg/<a class="el" href="functors_8h_source.html">functors.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -204,7 +321,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (dou
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacedg.html">dg</a></li><li class="navelem"><a class="el" href="structdg_1_1_vortex.html">Vortex</a></li>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:15 for Discontinuous Galerkin Library by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Discontinuous Galerkin Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

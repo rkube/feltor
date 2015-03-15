@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -91,12 +97,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="#index_f"><span>f</span></a></li>
       <li><a href="#index_g"><span>g</span></a></li>
       <li><a href="#index_i"><span>i</span></a></li>
-      <li><a href="#index_l"><span>l</span></a></li>
       <li><a href="#index_n"><span>n</span></a></li>
       <li><a href="#index_p"><span>p</span></a></li>
       <li><a href="#index_s"><span>s</span></a></li>
-      <li><a href="#index_t"><span>t</span></a></li>
-      <li class="current"><a href="#index_x"><span>x</span></a></li>
+      <li class="current"><a href="#index_t"><span>t</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -155,7 +159,7 @@ $(document).ready(function(){initNavTree('namespacemembers.html','');});
 : <a class="el" href="group__functions.html#ga43e254f13fa144c646b2e509bcd5d1d1">dg</a>
 </li>
 <li>bisection1d()
-: <a class="el" href="group___nullstellensuchroutinen.html#gaa269808db678039605044e14fc849675">dg</a>
+: <a class="el" href="group__utilities.html#gaa269808db678039605044e14fc849675">dg</a>
 </li>
 </ul>
 
@@ -214,13 +218,6 @@ $(document).ready(function(){initNavTree('namespacemembers.html','');});
 </ul>
 
 
-<h3><a class="anchor" id="index_l"></a>- l -</h3><ul>
-<li>LSPACE
-: <a class="el" href="group__creation.html#gga720a6f709941a075d5c8f60ef07c619fa2f6bfc0ea453ce2a9c3f274cddbf5fa1">dg</a>
-</li>
-</ul>
-
-
 <h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
 <li>NEU
 : <a class="el" href="group__creation.html#gga59440bdf436f2874b49aa52b670ed364ad8a2f69a62e7fdafe1665ae7162e8e10">dg</a>
@@ -257,11 +254,8 @@ $(document).ready(function(){initNavTree('namespacemembers.html','');});
 <li>scal()
 : <a class="el" href="group__blas1.html#ga9287f21c8d97b7d4d77b0353cf5b56b2">dg::blas1</a>
 </li>
-<li>space
-: <a class="el" href="group__creation.html#ga720a6f709941a075d5c8f60ef07c619f">dg</a>
-</li>
 <li>symv()
-: <a class="el" href="group__blas2.html#ga268c50e488c18db3dc5be1d1934eb7b2">dg::blas2</a>
+: <a class="el" href="group__blas2.html#ga7f66ae102c9c093cdc0877a989fd82b3">dg::blas2</a>
 </li>
 <li>system
 : <a class="el" href="group__creation.html#ga75789d2c36dff2caed4b3bb80191b346">dg</a>
@@ -274,19 +268,12 @@ $(document).ready(function(){initNavTree('namespacemembers.html','');});
 : <a class="el" href="group__blas1.html#gace34b2c8e27a5173cb25db0542089c2c">dg::blas1</a>
 </li>
 </ul>
-
-
-<h3><a class="anchor" id="index_x"></a>- x -</h3><ul>
-<li>XSPACE
-: <a class="el" href="group__creation.html#gga720a6f709941a075d5c8f60ef07c619fa89a3bcd08995f33c0f8b5257bd04d4ce">dg</a>
-</li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:35 for Discontinuous Galerkin Library by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Discontinuous Galerkin Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -114,7 +120,11 @@ $(document).ready(function(){initNavTree('structdg_1_1_r_k.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>Struct for Runge-Kutta explicit time-integration.  
+<p>Struct for Runge-Kutta explicit time-integration </p>
+<p class="formulaDsp">
+\[ \begin{align} u^{n+1} = u^{n} + \Delta t\sum_{j=1}^s b_j k_j \\ k_j = f\left( u^n + \Delta t \sum_{l=1}^j a_{jl} k_l\right) \end{align} \]
+</p>
+<p>.  
  <a href="structdg_1_1_r_k.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="runge__kutta_8h_source.html">runge_kutta.h</a>&gt;</code></p>
@@ -133,8 +143,12 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><h3>template&lt;size_t k, class Vector&gt;<br/>
 struct dg::RK&lt; k, Vector &gt;</h3>
 
-<p>Struct for Runge-Kutta explicit time-integration. </p>
-<p>Uses only <a class="el" href="group__blas1.html#ga6ee5b940147ba6b71e1fe1fc538e9459" title="Modified BLAS 1 routine axpy. ">blas1::axpby</a> routines to integrate one step. The coefficients are chosen in a form that require a minimum of axpby function calls (check for alpha==0, beta==1) and else assumes that most of the work is done in the computation of the rhs. </p>
+<p>Struct for Runge-Kutta explicit time-integration </p>
+<p class="formulaDsp">
+\[ \begin{align} u^{n+1} = u^{n} + \Delta t\sum_{j=1}^s b_j k_j \\ k_j = f\left( u^n + \Delta t \sum_{l=1}^j a_{jl} k_l\right) \end{align} \]
+</p>
+<p>. </p>
+<p>Uses only <a class="el" href="group__blas1.html#ga6ee5b940147ba6b71e1fe1fc538e9459" title="Modified BLAS 1 routine axpy. ">dg::blas1::axpby()</a> routines to integrate one step. The coefficients are chosen in a form that require a minimum of axpby function calls (check for alpha==0, beta==1) and else assumes that most of the work is done in the computation of the rhs. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">k</td><td>Order of the method (1, 2, 3 or 4) </td></tr>
@@ -238,7 +252,7 @@ template&lt;class Functor &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/matthias/feltor/inc/dg/<a class="el" href="runge__kutta_8h_source.html">runge_kutta.h</a></li>
+<li>/home/matthias/Projekte/feltor/inc/dg/<a class="el" href="runge__kutta_8h_source.html">runge_kutta.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -246,7 +260,7 @@ template&lt;class Functor &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacedg.html">dg</a></li><li class="navelem"><a class="el" href="structdg_1_1_r_k.html">RK</a></li>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:15 for Discontinuous Galerkin Library by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Discontinuous Galerkin Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

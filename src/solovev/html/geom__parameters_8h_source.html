@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Solovev: /home/matthias/feltor/src/solovev/geom_parameters.h Source File</title>
+<title>Solovev: /home/matthias/Projekte/feltor/src/solovev/geom_parameters.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -93,7 +99,7 @@ $(document).ready(function(){initNavTree('geom__parameters_8h_source.html','');}
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Groups</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Groups</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -114,57 +120,70 @@ $(document).ready(function(){initNavTree('geom__parameters_8h_source.html','');}
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
 <div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="structsolovev_1_1_geom_parameters.html">   14</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structsolovev_1_1_geom_parameters.html">GeomParameters</a></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">double</span> A,</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;           R_0,</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;           a, </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;           elongation,</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;           triangularity,</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;           alpha, <span class="comment">//for damping width</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;           rk4eps, </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;           psipmin, <span class="comment">//for source ??</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;           psipmax, <span class="comment">//for profile</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;           psipmaxcut, <span class="comment">//for cutting</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;           psipmaxlim; <span class="comment">//for limiter</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    std::vector&lt;double&gt; c; </div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="group__geom.html#ga33f43196e4cf4e85bd9640ba62d9230a">   33</a></span>&#160;    <a class="code" href="group__geom.html#ga33f43196e4cf4e85bd9640ba62d9230a">GeomParameters</a>( <span class="keyword">const</span> std::vector&lt; double&gt;&amp; v) {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        A=v[1];</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        c.resize(13);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i=0;i&lt;12;i++) c[i]=v[i+2];</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        R_0 = v[14];</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        a=R_0*v[15];</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        elongation=v[16];</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        triangularity=v[17];</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        alpha=v[18];</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        rk4eps=v[19];</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        psipmin= v[20];</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        psipmax= v[21];</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        psipmaxcut = v[22];</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        psipmaxlim = v[23];</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="group__geom.html#gac75127cc87f46a3a5b05ef2304a85fdd">   53</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="group__geom.html#gac75127cc87f46a3a5b05ef2304a85fdd">display</a>( std::ostream&amp; os = std::cout )<span class="keyword"> const</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        os &lt;&lt; <span class="stringliteral">&quot;Geometrical parameters are: \n&quot;</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            &lt;&lt;<span class="stringliteral">&quot; A             = &quot;</span>&lt;&lt;A&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">for</span>( <span class="keywordtype">unsigned</span> i=0; i&lt;12; i++)</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            os&lt;&lt;<span class="stringliteral">&quot; c&quot;</span>&lt;&lt;i+1&lt;&lt;<span class="stringliteral">&quot;\t\t = &quot;</span>&lt;&lt;c[i]&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        os  &lt;&lt;<span class="stringliteral">&quot; R0            = &quot;</span>&lt;&lt;R_0&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            &lt;&lt;<span class="stringliteral">&quot; epsilon_a     = &quot;</span>&lt;&lt;a/R_0&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            &lt;&lt;<span class="stringliteral">&quot; elongation    = &quot;</span>&lt;&lt;elongation&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            &lt;&lt;<span class="stringliteral">&quot; triangularity = &quot;</span>&lt;&lt;triangularity&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            &lt;&lt;<span class="stringliteral">&quot; alpha         = &quot;</span>&lt;&lt;alpha&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            &lt;&lt;<span class="stringliteral">&quot; rk4 epsilon   = &quot;</span>&lt;&lt;rk4eps&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            &lt;&lt;<span class="stringliteral">&quot; psipmin       = &quot;</span>&lt;&lt;psipmin&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            &lt;&lt;<span class="stringliteral">&quot; psipmax       = &quot;</span>&lt;&lt;psipmax&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            &lt;&lt;<span class="stringliteral">&quot; psipmaxcut    = &quot;</span>&lt;&lt;psipmaxcut&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            &lt;&lt;<span class="stringliteral">&quot; psipmaxlim    = &quot;</span>&lt;&lt;psipmaxlim&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        os &lt;&lt; std::flush;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;};</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;} <span class="comment">//namespace solovev</span></div>
-<div class="ttc" id="group__geom_html_ga33f43196e4cf4e85bd9640ba62d9230a"><div class="ttname"><a href="group__geom.html#ga33f43196e4cf4e85bd9640ba62d9230a">solovev::GeomParameters::GeomParameters</a></div><div class="ttdeci">GeomParameters(const std::vector&lt; double &gt; &amp;v)</div><div class="ttdoc">constructor to make a const object </div><div class="ttdef"><b>Definition:</b> geom_parameters.h:33</div></div>
-<div class="ttc" id="group__geom_html_gac75127cc87f46a3a5b05ef2304a85fdd"><div class="ttname"><a href="group__geom.html#gac75127cc87f46a3a5b05ef2304a85fdd">solovev::GeomParameters::display</a></div><div class="ttdeci">void display(std::ostream &amp;os=std::cout) const </div><div class="ttdoc">Display parameters. </div><div class="ttdef"><b>Definition:</b> geom_parameters.h:53</div></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="group__geom.html#ga1b5afb66804a41c779f0fabb30089f67">   16</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="group__geom.html#ga97e1ff33b7ef8b50e3a4a8878a61b0e5">A</a>, </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;           <a class="code" href="group__geom.html#ga04042807c96e6c40e0ecda5fa494423b">R_0</a>, </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;           <a class="code" href="group__geom.html#ga937bb16d9918139c82537b0522d9d50c">a</a>,  </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;           <a class="code" href="group__geom.html#ga5a155924600d91db24102214e6f8198f">elongation</a>, </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;           <a class="code" href="group__geom.html#ga1b5afb66804a41c779f0fabb30089f67">triangularity</a>, </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;           <a class="code" href="group__geom.html#gab23ad90efd782bb2411080b17984c0e2">alpha</a>, </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;           <a class="code" href="group__geom.html#ga6447257304ba1dec05d84d1f27efdc41">rk4eps</a>,  </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;           <a class="code" href="group__geom.html#ga89dcd3bf445d866d590d930d299379d8">psipmin</a>, </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;           <a class="code" href="group__geom.html#gaf37a5f3f604ddf009de36d734f854f9a">psipmax</a>, </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;           <a class="code" href="group__geom.html#gacb8f51dbbad0b5dcab7c0d0469b1c175">psipmaxcut</a>, </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;           <a class="code" href="group__geom.html#ga0b3f04d5f78ead10d7c6e887dc147401">psipmaxlim</a>; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="group__geom.html#ga947ccace40431083df7cf03cfd809983">   27</a></span>&#160;    std::vector&lt;double&gt; <a class="code" href="group__geom.html#ga947ccace40431083df7cf03cfd809983">c</a>;  </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="group__geom.html#ga33f43196e4cf4e85bd9640ba62d9230a">   34</a></span>&#160;    <a class="code" href="group__geom.html#ga33f43196e4cf4e85bd9640ba62d9230a">GeomParameters</a>( <span class="keyword">const</span> std::vector&lt; double&gt;&amp; v) {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="group__geom.html#ga97e1ff33b7ef8b50e3a4a8878a61b0e5">A</a>=v[1];</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="group__geom.html#ga947ccace40431083df7cf03cfd809983">c</a>.resize(13);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i=0;i&lt;12;i++) <a class="code" href="group__geom.html#ga947ccace40431083df7cf03cfd809983">c</a>[i]=v[i+2];</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="group__geom.html#ga04042807c96e6c40e0ecda5fa494423b">R_0</a> = v[14];</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="group__geom.html#ga937bb16d9918139c82537b0522d9d50c">a</a>=<a class="code" href="group__geom.html#ga04042807c96e6c40e0ecda5fa494423b">R_0</a>*v[15];</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="group__geom.html#ga5a155924600d91db24102214e6f8198f">elongation</a>=v[16];</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="group__geom.html#ga1b5afb66804a41c779f0fabb30089f67">triangularity</a>=v[17];</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="group__geom.html#gab23ad90efd782bb2411080b17984c0e2">alpha</a>=v[18];</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="group__geom.html#ga6447257304ba1dec05d84d1f27efdc41">rk4eps</a>=v[19];</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="group__geom.html#ga89dcd3bf445d866d590d930d299379d8">psipmin</a>= v[20];</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="group__geom.html#gaf37a5f3f604ddf009de36d734f854f9a">psipmax</a>= v[21];</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="group__geom.html#gacb8f51dbbad0b5dcab7c0d0469b1c175">psipmaxcut</a> = v[22];</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="group__geom.html#ga0b3f04d5f78ead10d7c6e887dc147401">psipmaxlim</a> = v[23];</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="group__geom.html#gac75127cc87f46a3a5b05ef2304a85fdd">   54</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="group__geom.html#gac75127cc87f46a3a5b05ef2304a85fdd">display</a>( std::ostream&amp; os = std::cout )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        os &lt;&lt; <span class="stringliteral">&quot;Geometrical parameters are: \n&quot;</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            &lt;&lt;<span class="stringliteral">&quot; A             = &quot;</span>&lt;&lt;<a class="code" href="group__geom.html#ga97e1ff33b7ef8b50e3a4a8878a61b0e5">A</a>&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">for</span>( <span class="keywordtype">unsigned</span> i=0; i&lt;12; i++)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            os&lt;&lt;<span class="stringliteral">&quot; c&quot;</span>&lt;&lt;i+1&lt;&lt;<span class="stringliteral">&quot;\t\t = &quot;</span>&lt;&lt;<a class="code" href="group__geom.html#ga947ccace40431083df7cf03cfd809983">c</a>[i]&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        os  &lt;&lt;<span class="stringliteral">&quot; R0            = &quot;</span>&lt;&lt;<a class="code" href="group__geom.html#ga04042807c96e6c40e0ecda5fa494423b">R_0</a>&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            &lt;&lt;<span class="stringliteral">&quot; epsilon_a     = &quot;</span>&lt;&lt;<a class="code" href="group__geom.html#ga937bb16d9918139c82537b0522d9d50c">a</a>/<a class="code" href="group__geom.html#ga04042807c96e6c40e0ecda5fa494423b">R_0</a>&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            &lt;&lt;<span class="stringliteral">&quot; elongation    = &quot;</span>&lt;&lt;<a class="code" href="group__geom.html#ga5a155924600d91db24102214e6f8198f">elongation</a>&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            &lt;&lt;<span class="stringliteral">&quot; triangularity = &quot;</span>&lt;&lt;<a class="code" href="group__geom.html#ga1b5afb66804a41c779f0fabb30089f67">triangularity</a>&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            &lt;&lt;<span class="stringliteral">&quot; alpha         = &quot;</span>&lt;&lt;<a class="code" href="group__geom.html#gab23ad90efd782bb2411080b17984c0e2">alpha</a>&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            &lt;&lt;<span class="stringliteral">&quot; rk4 epsilon   = &quot;</span>&lt;&lt;<a class="code" href="group__geom.html#ga6447257304ba1dec05d84d1f27efdc41">rk4eps</a>&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            &lt;&lt;<span class="stringliteral">&quot; psipmin       = &quot;</span>&lt;&lt;<a class="code" href="group__geom.html#ga89dcd3bf445d866d590d930d299379d8">psipmin</a>&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            &lt;&lt;<span class="stringliteral">&quot; psipmax       = &quot;</span>&lt;&lt;<a class="code" href="group__geom.html#gaf37a5f3f604ddf009de36d734f854f9a">psipmax</a>&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            &lt;&lt;<span class="stringliteral">&quot; psipmaxcut    = &quot;</span>&lt;&lt;<a class="code" href="group__geom.html#gacb8f51dbbad0b5dcab7c0d0469b1c175">psipmaxcut</a>&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            &lt;&lt;<span class="stringliteral">&quot; psipmaxlim    = &quot;</span>&lt;&lt;<a class="code" href="group__geom.html#ga0b3f04d5f78ead10d7c6e887dc147401">psipmaxlim</a>&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        os &lt;&lt; std::flush;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;};</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;} <span class="comment">//namespace solovev</span></div>
+<div class="ttc" id="group__geom_html_ga33f43196e4cf4e85bd9640ba62d9230a"><div class="ttname"><a href="group__geom.html#ga33f43196e4cf4e85bd9640ba62d9230a">solovev::GeomParameters::GeomParameters</a></div><div class="ttdeci">GeomParameters(const std::vector&lt; double &gt; &amp;v)</div><div class="ttdoc">constructor to make an object </div><div class="ttdef"><b>Definition:</b> geom_parameters.h:34</div></div>
+<div class="ttc" id="group__geom_html_gab23ad90efd782bb2411080b17984c0e2"><div class="ttname"><a href="group__geom.html#gab23ad90efd782bb2411080b17984c0e2">solovev::GeomParameters::alpha</a></div><div class="ttdeci">double alpha</div><div class="ttdoc">damping width </div><div class="ttdef"><b>Definition:</b> geom_parameters.h:16</div></div>
+<div class="ttc" id="group__geom_html_ga1b5afb66804a41c779f0fabb30089f67"><div class="ttname"><a href="group__geom.html#ga1b5afb66804a41c779f0fabb30089f67">solovev::GeomParameters::triangularity</a></div><div class="ttdeci">double triangularity</div><div class="ttdoc">triangularity of the magnetic surfaces </div><div class="ttdef"><b>Definition:</b> geom_parameters.h:16</div></div>
+<div class="ttc" id="group__geom_html_ga89dcd3bf445d866d590d930d299379d8"><div class="ttname"><a href="group__geom.html#ga89dcd3bf445d866d590d930d299379d8">solovev::GeomParameters::psipmin</a></div><div class="ttdeci">double psipmin</div><div class="ttdoc">for source </div><div class="ttdef"><b>Definition:</b> geom_parameters.h:16</div></div>
+<div class="ttc" id="group__geom_html_gac75127cc87f46a3a5b05ef2304a85fdd"><div class="ttname"><a href="group__geom.html#gac75127cc87f46a3a5b05ef2304a85fdd">solovev::GeomParameters::display</a></div><div class="ttdeci">void display(std::ostream &amp;os=std::cout) const </div><div class="ttdoc">Display parameters. </div><div class="ttdef"><b>Definition:</b> geom_parameters.h:54</div></div>
+<div class="ttc" id="group__geom_html_ga04042807c96e6c40e0ecda5fa494423b"><div class="ttname"><a href="group__geom.html#ga04042807c96e6c40e0ecda5fa494423b">solovev::GeomParameters::R_0</a></div><div class="ttdeci">double R_0</div><div class="ttdoc">central tokamak radius </div><div class="ttdef"><b>Definition:</b> geom_parameters.h:16</div></div>
+<div class="ttc" id="group__geom_html_gacb8f51dbbad0b5dcab7c0d0469b1c175"><div class="ttname"><a href="group__geom.html#gacb8f51dbbad0b5dcab7c0d0469b1c175">solovev::GeomParameters::psipmaxcut</a></div><div class="ttdeci">double psipmaxcut</div><div class="ttdoc">for cutting </div><div class="ttdef"><b>Definition:</b> geom_parameters.h:16</div></div>
+<div class="ttc" id="group__geom_html_ga0b3f04d5f78ead10d7c6e887dc147401"><div class="ttname"><a href="group__geom.html#ga0b3f04d5f78ead10d7c6e887dc147401">solovev::GeomParameters::psipmaxlim</a></div><div class="ttdeci">double psipmaxlim</div><div class="ttdoc">for limiter </div><div class="ttdef"><b>Definition:</b> geom_parameters.h:16</div></div>
+<div class="ttc" id="group__geom_html_ga947ccace40431083df7cf03cfd809983"><div class="ttname"><a href="group__geom.html#ga947ccace40431083df7cf03cfd809983">solovev::GeomParameters::c</a></div><div class="ttdeci">std::vector&lt; double &gt; c</div><div class="ttdoc">coefficients for the solovev equilibrium </div><div class="ttdef"><b>Definition:</b> geom_parameters.h:27</div></div>
+<div class="ttc" id="group__geom_html_gaf37a5f3f604ddf009de36d734f854f9a"><div class="ttname"><a href="group__geom.html#gaf37a5f3f604ddf009de36d734f854f9a">solovev::GeomParameters::psipmax</a></div><div class="ttdeci">double psipmax</div><div class="ttdoc">for profile </div><div class="ttdef"><b>Definition:</b> geom_parameters.h:16</div></div>
+<div class="ttc" id="group__geom_html_ga5a155924600d91db24102214e6f8198f"><div class="ttname"><a href="group__geom.html#ga5a155924600d91db24102214e6f8198f">solovev::GeomParameters::elongation</a></div><div class="ttdeci">double elongation</div><div class="ttdoc">elongation of the magnetic surfaces </div><div class="ttdef"><b>Definition:</b> geom_parameters.h:16</div></div>
+<div class="ttc" id="group__geom_html_ga937bb16d9918139c82537b0522d9d50c"><div class="ttname"><a href="group__geom.html#ga937bb16d9918139c82537b0522d9d50c">solovev::GeomParameters::a</a></div><div class="ttdeci">double a</div><div class="ttdoc">little tokamak radius </div><div class="ttdef"><b>Definition:</b> geom_parameters.h:16</div></div>
+<div class="ttc" id="group__geom_html_ga6447257304ba1dec05d84d1f27efdc41"><div class="ttname"><a href="group__geom.html#ga6447257304ba1dec05d84d1f27efdc41">solovev::GeomParameters::rk4eps</a></div><div class="ttdeci">double rk4eps</div><div class="ttdoc">accuracy for the </div><div class="ttdef"><b>Definition:</b> geom_parameters.h:16</div></div>
+<div class="ttc" id="group__geom_html_ga97e1ff33b7ef8b50e3a4a8878a61b0e5"><div class="ttname"><a href="group__geom.html#ga97e1ff33b7ef8b50e3a4a8878a61b0e5">solovev::GeomParameters::A</a></div><div class="ttdeci">double A</div><div class="ttdoc">A. </div><div class="ttdef"><b>Definition:</b> geom_parameters.h:16</div></div>
 <div class="ttc" id="structsolovev_1_1_geom_parameters_html"><div class="ttname"><a href="structsolovev_1_1_geom_parameters.html">solovev::GeomParameters</a></div><div class="ttdoc">Constructs and display geometric parameters. </div><div class="ttdef"><b>Definition:</b> geom_parameters.h:14</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -172,7 +191,7 @@ $(document).ready(function(){initNavTree('geom__parameters_8h_source.html','');}
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_8f48a2c0056d49d88bfa9448067ed2ee.html">solovev</a></li><li class="navelem"><a class="el" href="geom__parameters_8h.html">geom_parameters.h</a></li>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:40 for Solovev by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Solovev by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

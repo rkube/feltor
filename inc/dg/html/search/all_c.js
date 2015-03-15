@@ -8,6 +8,5 @@ var searchData=
   ['not_5fnormed',['not_normed',['../group__creation.html#gga9945b71a335bc97f78dc7425911c7287a07217e3dd9be28b4da85d46fef38f066',1,'dg']]],
   ['notanumber',['NotANumber',['../structdg_1_1_not_a_number.html',1,'dg']]],
   ['notanumber',['NotANumber',['../structdg_1_1_not_a_number.html#a7d030a378e263935212063aed1bfec1a',1,'dg::NotANumber']]],
-  ['nullstelle_2eh',['nullstelle.h',['../nullstelle_8h.html',1,'']]],
-  ['nullstellensuchroutinen',['Nullstellensuchroutinen',['../group___nullstellensuchroutinen.html',1,'']]]
+  ['nullstelle_2eh',['nullstelle.h',['../nullstelle_8h.html',1,'']]]
 ];

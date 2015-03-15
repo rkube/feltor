@@ -6,5 +6,6 @@ var searchData=
   ['gaussiany',['GaussianY',['../structdg_1_1_gaussian_y.html#a02d66ca7623f6132e0290fd33568af1f',1,'dg::GaussianY']]],
   ['gaussianz',['GaussianZ',['../structdg_1_1_gaussian_z.html#aa1915517625deebecb730e2b37a3e888',1,'dg::GaussianZ']]],
   ['gemv',['gemv',['../group__blas2.html#gadda8a3d0278c095d51becf208760d49b',1,'dg::blas2']]],
+  ['generalelliptic',['GeneralElliptic',['../structdg_1_1_general_elliptic.html#a951d4bf81105a15efac024fbcfb029d2',1,'dg::GeneralElliptic']]],
   ['get_5fmax',['get_max',['../classdg_1_1_c_g.html#a6c6ddea9c0e7b7f2149722ef25cc9dd8',1,'dg::CG::get_max()'],['../structdg_1_1_invert.html#a9bf8b8325e4b96dc859103b09a3112a7',1,'dg::Invert::get_max()']]]
 ];

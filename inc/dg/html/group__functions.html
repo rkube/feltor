@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -109,111 +115,174 @@ $(document).ready(function(){initNavTree('group__functions.html','');});
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_abs_max.html">dg::AbsMax&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functor for the absolute maximum.  <a href="structdg_1_1_abs_max.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functor for the absolute maximum </p>
+<p class="formulaDsp">
+\[ f(x,y) = \max(|x|,|y|)\]
+</p>
+<p>.  <a href="structdg_1_1_abs_max.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_abs_min.html">dg::AbsMin&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functor for the absolute maximum.  <a href="structdg_1_1_abs_min.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functor for the absolute maximum </p>
+<p class="formulaDsp">
+\[ f(x,y) = \min(|x|,|y|)\]
+</p>
+<p>.  <a href="structdg_1_1_abs_min.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_gaussian.html">dg::Gaussian</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functor returning a gaussian </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ f(x,y) = Ae^{-\left(\frac{(x-x_0)^2}{2\sigma_x^2} + \frac{(y-y_0)^2}{2\sigma_y^2}\right)} \]" src="form_29.png"/>
+\[ f(x,y) = Ae^{-\left(\frac{(x-x_0)^2}{2\sigma_x^2} + \frac{(y-y_0)^2}{2\sigma_y^2}\right)} \]
 </p>
 <p>.  <a href="structdg_1_1_gaussian.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_gaussian3d.html">dg::Gaussian3d</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The 3d gaussian </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ f(x,y) = Ae^{-\left(\frac{(x-x_0)^2}{2\sigma_x^2} + \frac{(y-y_0)^2}{2\sigma_y^2} + \frac{(z-z_0)^2}{2\sigma_z^2}\right)} \]" src="form_30.png"/>
+\[ f(x,y,z) = Ae^{-\left(\frac{(x-x_0)^2}{2\sigma_x^2} + \frac{(y-y_0)^2}{2\sigma_y^2} + \frac{(z-z_0)^2}{2\sigma_z^2}\right)} \]
 </p>
 <p>.  <a href="structdg_1_1_gaussian3d.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_gaussian_x.html">dg::GaussianX</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functor returning a gaussian in x-direction </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ f(x,y) = Ae^{-(\frac{(x-x_0)^2}{2\sigma_x^2}) } \]" src="form_31.png"/>
+\[ f(x,y) = Ae^{-\frac{(x-x_0)^2}{2\sigma_x^2} } \]
 </p>
 <p>.  <a href="structdg_1_1_gaussian_x.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_gaussian_y.html">dg::GaussianY</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functor returning a gaussian in y-direction </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ f(x,y) = Ae^{-\frac{(y-y_0)^2}{2\sigma_y^2}} \]" src="form_32.png"/>
+\[ f(x,y) = Ae^{-\frac{(y-y_0)^2}{2\sigma_y^2}} \]
 </p>
 <p>.  <a href="structdg_1_1_gaussian_y.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_gaussian_z.html">dg::GaussianZ</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functor returning a gaussian in z-direction </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ f(x,y) = Ae^{-\frac{(z-z_0)^2}{2\sigma_z^2}} \]" src="form_33.png"/>
+\[ f(x,y) = Ae^{-\frac{(z-z_0)^2}{2\sigma_z^2}} \]
 </p>
 <p>.  <a href="structdg_1_1_gaussian_z.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_sin_prof_x.html">dg::SinProfX</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functor for a sin prof in x-direction.  <a href="structdg_1_1_sin_prof_x.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functor for a sin prof in x-direction </p>
+<p class="formulaDsp">
+\[ f(x,y) = B + A(1-\sin(k_xx )) \]
+</p>
+<p>.  <a href="structdg_1_1_sin_prof_x.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_exp_prof_x.html">dg::ExpProfX</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functor for a sin prof in x-direction.  <a href="structdg_1_1_exp_prof_x.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functor for a exp prof in x-direction </p>
+<p class="formulaDsp">
+\[ f(x,y) = B + A\exp(-x/L_n) \]
+</p>
+<p>.  <a href="structdg_1_1_exp_prof_x.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_linear_x.html">dg::LinearX</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functor for a linear polynomial in x-direction.  <a href="structdg_1_1_linear_x.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functor for a linear polynomial in x-direction </p>
+<p class="formulaDsp">
+\[ f(x,y) = ax+b \]
+</p>
+<p>.  <a href="structdg_1_1_linear_x.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_linear_y.html">dg::LinearY</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functor for a linear polynomial in y-direction.  <a href="structdg_1_1_linear_y.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functor for a linear polynomial in y-direction </p>
+<p class="formulaDsp">
+\[ f(x,y) = ay+b \]
+</p>
+<p>.  <a href="structdg_1_1_linear_y.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_l_half.html">dg::LHalf</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functor for a left side step function using tanh </p>
+<p class="formulaDsp">
+\[ f(x,y) = 0.5(1-\tanh(x-x_b)) \]
+</p>
+<p>.  <a href="structdg_1_1_l_half.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_r_half.html">dg::RHalf</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functor for a right step function using tanh </p>
+<p class="formulaDsp">
+\[ f(x,y) = 0.5(1+\tanh(x-x_b)) \]
+</p>
+<p>.  <a href="structdg_1_1_r_half.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_lamb.html">dg::Lamb</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functor returning a <a class="el" href="structdg_1_1_lamb.html" title="Functor returning a Lamb dipole. ">Lamb</a> dipole.  <a href="structdg_1_1_lamb.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_vortex.html">dg::Vortex</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a 2d vortex function.  <a href="structdg_1_1_vortex.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_bath_r_z.html">dg::BathRZ</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes a random bath in the RZ plane.  <a href="structdg_1_1_bath_r_z.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_e_x_p.html">dg::EXP&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exponential.  <a href="structdg_1_1_e_x_p.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exponential </p>
+<p class="formulaDsp">
+\[ f(x) = \exp(x)\]
+</p>
+<p>.  <a href="structdg_1_1_e_x_p.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_l_n.html">dg::LN&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">natural logarithm  <a href="structdg_1_1_l_n.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">natural logarithm </p>
+<p class="formulaDsp">
+\[ f(x) = \ln(x)\]
+</p>
+  <a href="structdg_1_1_l_n.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_s_q_r_t.html">dg::SQRT&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Square root.  <a href="structdg_1_1_s_q_r_t.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Square root </p>
+<p class="formulaDsp">
+\[ f(x) = \sqrt{x}\]
+</p>
+<p>.  <a href="structdg_1_1_s_q_r_t.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_min_mod.html">dg::MinMod&lt; T &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minmod function.  <a href="structdg_1_1_min_mod.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_p_l_u_s.html">dg::PLUS&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a constant value.  <a href="structdg_1_1_p_l_u_s.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a constant value </p>
+<p class="formulaDsp">
+\[ f(x) = x + c\]
+</p>
+<p>.  <a href="structdg_1_1_p_l_u_s.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_m_o_d.html">dg::MOD&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns modulo  <a href="structdg_1_1_m_o_d.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns (positive) modulo </p>
+<p class="formulaDsp">
+\[ f(x) = x\mod m\]
+</p>
+  <a href="structdg_1_1_m_o_d.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_a_b_s.html">dg::ABS&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">absolute value  <a href="structdg_1_1_a_b_s.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">absolute value </p>
+<p class="formulaDsp">
+\[ f(x) = |x|\]
+</p>
+  <a href="structdg_1_1_a_b_s.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_c_o_n_s_t_a_n_t.html">dg::CONSTANT</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_f_l_o_o_r.html">dg::FLOOR</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a constant </p>
+<p class="formulaDsp">
+\[ f(x) = c\]
+</p>
+<p>.  <a href="structdg_1_1_c_o_n_s_t_a_n_t.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_histogram.html">dg::Histogram&lt; container &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns histogram  <a href="structdg_1_1_histogram.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute a histogram on a 1D grid.  <a href="structdg_1_1_histogram.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_histogram2_d.html">dg::Histogram2D&lt; container &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute a histogram on a 2D grid.  <a href="structdg_1_1_histogram2_d.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga31e93254b91f287daf4ca4756fb32385"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__functions.html#ga31e93254b91f287daf4ca4756fb32385">dg::bessj1</a> (double x)</td></tr>
-<tr class="memdesc:ga31e93254b91f287daf4ca4756fb32385"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Bessel function <img class="formulaInl" alt="$ J_1(x)$" src="form_36.png"/> for any real x.  <a href="#ga31e93254b91f287daf4ca4756fb32385">More...</a><br/></td></tr>
+<tr class="memdesc:ga31e93254b91f287daf4ca4756fb32385"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Bessel function \( J_1(x)\) for any real x.  <a href="#ga31e93254b91f287daf4ca4756fb32385">More...</a><br/></td></tr>
 <tr class="separator:ga31e93254b91f287daf4ca4756fb32385"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8f29ee46cf5603af9cabd93163cf98cc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__functions.html#ga8f29ee46cf5603af9cabd93163cf98cc">dg::bessi1</a> (double x)</td></tr>
-<tr class="memdesc:ga8f29ee46cf5603af9cabd93163cf98cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the modified Bessel function <img class="formulaInl" alt="$ I_1(x)$" src="form_37.png"/> for any real x.  <a href="#ga8f29ee46cf5603af9cabd93163cf98cc">More...</a><br/></td></tr>
+<tr class="memdesc:ga8f29ee46cf5603af9cabd93163cf98cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the modified Bessel function \( I_1(x)\) for any real x.  <a href="#ga8f29ee46cf5603af9cabd93163cf98cc">More...</a><br/></td></tr>
 <tr class="separator:ga8f29ee46cf5603af9cabd93163cf98cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga43e254f13fa144c646b2e509bcd5d1d1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__functions.html#ga43e254f13fa144c646b2e509bcd5d1d1">dg::bessk1</a> (double x)</td></tr>
-<tr class="memdesc:ga43e254f13fa144c646b2e509bcd5d1d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the modified Bessel function <img class="formulaInl" alt="$ K_1(x)$" src="form_38.png"/> for positive real x.  <a href="#ga43e254f13fa144c646b2e509bcd5d1d1">More...</a><br/></td></tr>
+<tr class="memdesc:ga43e254f13fa144c646b2e509bcd5d1d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the modified Bessel function \( K_1(x)\) for positive real x.  <a href="#ga43e254f13fa144c646b2e509bcd5d1d1">More...</a><br/></td></tr>
 <tr class="separator:ga43e254f13fa144c646b2e509bcd5d1d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -233,7 +302,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the modified Bessel function <img class="formulaInl" alt="$ I_1(x)$" src="form_37.png"/> for any real x. </p>
+<p>Returns the modified Bessel function \( I_1(x)\) for any real x. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td></td></tr>
@@ -258,7 +327,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the Bessel function <img class="formulaInl" alt="$ J_1(x)$" src="form_36.png"/> for any real x. </p>
+<p>Returns the Bessel function \( J_1(x)\) for any real x. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>x-value</td></tr>
@@ -283,7 +352,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the modified Bessel function <img class="formulaInl" alt="$ K_1(x)$" src="form_38.png"/> for positive real x. </p>
+<p>Returns the modified Bessel function \( K_1(x)\) for positive real x. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>x-value</td></tr>
@@ -299,7 +368,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:15 for Discontinuous Galerkin Library by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Discontinuous Galerkin Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -1,5 +1,5 @@
 var modules =
 [
     [ "The field line geometry", "group__geom.html", "group__geom" ],
-    [ "The solver", "group__solver.html", null ]
+    [ "Profiles based on the magnetic field geometry", "group__profiles.html", "group__profiles" ]
 ];

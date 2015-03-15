@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -144,7 +150,7 @@ Functions</h2></td></tr>
 <tr class="separator:ga451523cc2d3740676888ce0b14cb8509"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>This group contains Vector-Vector operations. </p>
+<p>This group contains Vector-Vector operations. Successive calls to blas routines are executed sequentially. A manual synchronization of threads or devices is never needed in an application using these functions. All functions returning a value block until the value is ready. </p>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="ga6ee5b940147ba6b71e1fe1fc538e9459"></a>
 <div class="memitem">
@@ -195,11 +201,9 @@ template&lt;class Vector &gt; </div>
 <p>Modified BLAS 1 routine axpy. </p>
 <p>This routine computes </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ y = \alpha x + \beta y \]" src="form_4.png"/>
+\[ y_i = \alpha x_i + \beta y_i \]
 </p>
-<p> Q: Isn't it better to implement daxpy and daypx? <br/>
-A: unlikely, because in all three cases all elements of x and y have to be loaded and daxpy is memory bound. (Is there no original daxpby routine because the name is too long??) </p>
-<dl class="params"><dt>Parameters</dt><dd>
+ <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">alpha</td><td>Scalar </td></tr>
     <tr><td class="paramname">x</td><td>Vector x may equal y </td></tr>
@@ -269,7 +273,7 @@ template&lt;class Vector &gt; </div>
 <p>Modified BLAS 1 routine axpy. </p>
 <p>This routine computes </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ z = \alpha x + \beta y \]" src="form_5.png"/>
+\[ z_i = \alpha x_i + \beta y_i \]
 </p>
  <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -325,7 +329,7 @@ template&lt;class Vector &gt; </div>
 <p>Euclidean dot product between two Vectors. </p>
 <p>This routine computes </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ x^T y = \sum_{i=0}^{N-1} x_i y_i \]" src="form_3.png"/>
+\[ x^T y = \sum_{i=0}^{N-1} x_i y_i \]
 </p>
  <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -384,7 +388,7 @@ template&lt;class Vector &gt; </div>
 <p>A 'new' BLAS 1 routine. </p>
 <p>Divides two vectors element by element: </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ y_i = x_{1i}/x_{2i}\]" src="form_9.png"/>
+\[ y_i = x_{1i}/x_{2i}\]
 </p>
  <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -441,7 +445,7 @@ template&lt;class Vector &gt; </div>
 <p>A 'new' BLAS 1 routine. </p>
 <p>Multiplies two vectors element by element: </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ y_i = x_{1i}x_{2i}\]" src="form_8.png"/>
+\[ y_i = x_{1i}x_{2i}\]
 </p>
  <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -492,7 +496,7 @@ template&lt;class Vector &gt; </div>
 <p>BLAS 1 routine scal. </p>
 <p>This routine computes </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ x \leftarrow \alpha x \]" src="form_7.png"/>
+\[ \alpha x_i \]
 </p>
  <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -547,13 +551,14 @@ template&lt;class Vector , class UnaryOp &gt; </div>
 <p>"new" BLAS 1 routine transform </p>
 <p>This routine computes </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ y_i = f(x_i) \]" src="form_6.png"/>
+\[ y_i = op(x_i) \]
 </p>
 <p> This is actually not a BLAS routine since f can be a nonlinear function. It is rather the first step towards a more general library conception. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x</td><td>Vector x may equal result </td></tr>
-    <tr><td class="paramname">op</td><td>Operator to use on every element </td></tr>
+    <tr><td class="paramname">x</td><td>Vector x may equal y </td></tr>
+    <tr><td class="paramname">y</td><td>Vector y contains result, may equal x </td></tr>
+    <tr><td class="paramname">op</td><td>unary Operator to use on every element </td></tr>
   </table>
   </dd>
 </dl>
@@ -566,7 +571,7 @@ template&lt;class Vector , class UnaryOp &gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:15 for Discontinuous Galerkin Library by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Discontinuous Galerkin Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

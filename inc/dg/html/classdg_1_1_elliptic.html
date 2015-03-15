@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -110,7 +116,7 @@ $(document).ready(function(){initNavTree('classdg_1_1_elliptic.html','');});
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classdg_1_1_elliptic-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">dg::Elliptic&lt; Matrix, Vector, Preconditioner &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__operators.html">Classes that act as matrices in blas2 routines</a></div></div>  </div>
+<div class="title">dg::Elliptic&lt; Matrix, Vector, Preconditioner &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__matrixoperators.html">Classes that act as matrices in blas2 routines</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -149,15 +155,15 @@ class dg::Elliptic&lt; Matrix, Vector, Preconditioner &gt;</h3>
 <p>Operator that acts as a 2d negative elliptic differential operator. </p>
 <p>The term discretized is </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ -\nabla \cdot ( \chi \nabla_\perp ) \]" src="form_24.png"/>
+\[ -\nabla \cdot ( \chi \nabla_\perp ) \]
 </p>
-<p> where <img class="formulaInl" alt="$ \nabla_\perp $" src="form_25.png"/> is the perpendicular gradient. In cartesian coordinates that means </p>
+<p> where \( \nabla_\perp \) is the perpendicular gradient. In cartesian coordinates that means </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ -\partial_x(\chi\partial_x) - \partial_y(\chi\partial_y)\]" src="form_26.png"/>
+\[ -\partial_x(\chi\partial_x) - \partial_y(\chi\partial_y)\]
 </p>
 <p> is discretized while in cylindrical coordinates </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ - \frac{1}{R}\partial_R( R\chi\partial_R) - \partial_Z(\chi\partial_Z)\]" src="form_27.png"/>
+\[ - \frac{1}{R}\partial_R( R\chi\partial_R) - \partial_Z(\chi\partial_Z)\]
 </p>
 <p> is discretized. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
@@ -168,14 +174,14 @@ class dg::Elliptic&lt; Matrix, Vector, Preconditioner &gt;</h3>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>The constructors initialize <img class="formulaInl" alt="$ \chi=1$" src="form_28.png"/> so that a negative laplacian operator results </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The constructors initialize \( \chi=1\) so that a negative laplacian operator results </dd></dl>
 <dl class="section attention"><dt>Attention</dt><dd>Pay attention to the negative sign </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a1d3ae63afd0ab6205e5c595ee55d49af"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Matrix, class Vector, class Preconditioner&gt; </div>
+template&lt;class Matrix , class Vector , class Preconditioner &gt; </div>
 <div class="memtemplate">
 template&lt;class Grid &gt; </div>
 <table class="mlabels">
@@ -235,7 +241,7 @@ template&lt;class Grid &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Matrix, class Vector, class Preconditioner&gt; </div>
+template&lt;class Matrix , class Vector , class Preconditioner &gt; </div>
 <div class="memtemplate">
 template&lt;class Grid &gt; </div>
 <table class="mlabels">
@@ -310,7 +316,7 @@ template&lt;class Grid &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Matrix, class Vector, class Preconditioner&gt; </div>
+template&lt;class Matrix , class Vector , class Preconditioner &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -339,7 +345,7 @@ template&lt;class Matrix, class Vector, class Preconditioner&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Matrix, class Vector, class Preconditioner&gt; </div>
+template&lt;class Matrix , class Vector , class Preconditioner &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -373,7 +379,7 @@ template&lt;class Matrix, class Vector, class Preconditioner&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Matrix, class Vector, class Preconditioner&gt; </div>
+template&lt;class Matrix , class Vector , class Preconditioner &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -418,7 +424,7 @@ template&lt;class Matrix, class Vector, class Preconditioner&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Matrix, class Vector, class Preconditioner&gt; </div>
+template&lt;class Matrix , class Vector , class Preconditioner &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -443,7 +449,7 @@ template&lt;class Matrix, class Vector, class Preconditioner&gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/matthias/feltor/inc/dg/<a class="el" href="elliptic_8h_source.html">elliptic.h</a></li>
+<li>/home/matthias/Projekte/feltor/inc/dg/<a class="el" href="elliptic_8h_source.html">elliptic.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -451,7 +457,7 @@ template&lt;class Matrix, class Vector, class Preconditioner&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacedg.html">dg</a></li><li class="navelem"><a class="el" href="classdg_1_1_elliptic.html">Elliptic</a></li>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:15 for Discontinuous Galerkin Library by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Discontinuous Galerkin Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -12,6 +12,5 @@ var searchData=
   ['not_5fnormed',['not_normed',['../../../../inc/dg/html/group__creation.html#gga9945b71a335bc97f78dc7425911c7287a07217e3dd9be28b4da85d46fef38f066',1,'dg::not_normed()'],['../../../../inc/dg/html/group__creation.html#gga9945b71a335bc97f78dc7425911c7287a07217e3dd9be28b4da85d46fef38f066',1,'not_normed()(Global Namespace)']]],
   ['notanumber',['NotANumber',['../../../../inc/dg/html/structdg_1_1_not_a_number.html#a7d030a378e263935212063aed1bfec1a',1,'dg::NotANumber']]],
   ['notanumber',['NotANumber',['../../../../inc/dg/html/structdg_1_1_not_a_number.html',1,'dg']]],
-  ['nullstelle_2eh',['nullstelle.h',['../../../../inc/dg/html/nullstelle_8h.html',1,'']]],
-  ['nullstellensuchroutinen',['Nullstellensuchroutinen',['../../../../inc/dg/html/group___nullstellensuchroutinen.html',1,'']]]
+  ['nullstelle_2eh',['nullstelle.h',['../../../../inc/dg/html/nullstelle_8h.html',1,'']]]
 ];

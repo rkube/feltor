@@ -5,6 +5,5 @@ var searchData=
   ['tanhsource',['TanhSource',['../../../../src/solovev/html/structsolovev_1_1_tanh_source.html',1,'solovev']]],
   ['testfunction',['TestFunction',['../../../../src/solovev/html/structsolovev_1_1_test_function.html',1,'solovev']]],
   ['timer',['Timer',['../../../../inc/toefl/html/classtoefl_1_1_timer.html',1,'toefl']]],
-  ['toefl',['Toefl',['../../../../inc/dg/html/structdg_1_1_toefl.html',1,'dg']]],
   ['turbulentbath',['TurbulentBath',['../../../../inc/toefl/html/classtoefl_1_1_turbulent_bath.html',1,'toefl']]]
 ];

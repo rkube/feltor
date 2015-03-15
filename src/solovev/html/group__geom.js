@@ -18,19 +18,15 @@ var group__geom =
     ] ],
     [ "Psip", "structsolovev_1_1_psip.html", [
       [ "Psip", "structsolovev_1_1_psip.html#aad4b94ff287a2320ce1a99c8d0ca7310", null ],
-      [ "diff_psi_neu", "structsolovev_1_1_psip.html#ae7d01a01994938e8d8ab4bb9edb3d030", null ],
-      [ "diffdiff_psi_neu", "structsolovev_1_1_psip.html#a805cabfd61205b577e4fa1ea174ba132", null ],
       [ "display", "structsolovev_1_1_psip.html#a20893a4d67455be10ae7eb9a4b571422", null ],
       [ "operator()", "structsolovev_1_1_psip.html#a6079b6a7c9ea5a5d6bbf4b65dd9d8dde", null ],
-      [ "operator()", "structsolovev_1_1_psip.html#a2385c203b4756a6152431027cfb4809a", null ],
-      [ "psi_neu", "structsolovev_1_1_psip.html#ad4be5a1e9985bb3d2e28ec89288309cb", null ]
+      [ "operator()", "structsolovev_1_1_psip.html#a2385c203b4756a6152431027cfb4809a", null ]
     ] ],
     [ "PsipR", "structsolovev_1_1_psip_r.html", [
       [ "PsipR", "structsolovev_1_1_psip_r.html#a9ed70b25c22662a70ea4859a1336962b", null ],
       [ "display", "structsolovev_1_1_psip_r.html#ae05ab59288ea92a85991611108ec558e", null ],
       [ "operator()", "structsolovev_1_1_psip_r.html#a021440c9ee5be27d62a9e3f6ac3892dd", null ],
-      [ "operator()", "structsolovev_1_1_psip_r.html#ac29ecf4e89f426a119b2f369f697b73c", null ],
-      [ "psipR_alt", "structsolovev_1_1_psip_r.html#a3e0c01279dcb1f26013cd8f50903ca2e", null ]
+      [ "operator()", "structsolovev_1_1_psip_r.html#ac29ecf4e89f426a119b2f369f697b73c", null ]
     ] ],
     [ "PsipRR", "structsolovev_1_1_psip_r_r.html", [
       [ "PsipRR", "structsolovev_1_1_psip_r_r.html#aa50ab546b89d4e3af9e7244e9ca742ff", null ],
@@ -135,26 +131,6 @@ var group__geom =
       [ "BHatP", "structsolovev_1_1_b_hat_p.html#acda6158b871fadf7392c2bc6e2a7f24f", null ],
       [ "operator()", "structsolovev_1_1_b_hat_p.html#a4f4d179c1f497c927ab094d8d28ff745", null ]
     ] ],
-    [ "DeltaFunction", "structsolovev_1_1_delta_function.html", [
-      [ "DeltaFunction", "structsolovev_1_1_delta_function.html#a32765fa673a4d23b7de86b8ab39107cb", null ],
-      [ "operator()", "structsolovev_1_1_delta_function.html#ad7e6536af721dd055513f62cf14a32ec", null ],
-      [ "operator()", "structsolovev_1_1_delta_function.html#aab8a7a4a766e85687a4d65a57152076c", null ],
-      [ "setepsilon", "structsolovev_1_1_delta_function.html#a30a4272dd0564926103e9b59dcdd9590", null ],
-      [ "setpsi", "structsolovev_1_1_delta_function.html#a35be4f0cd444c94bcb5f77b3e962bc64", null ]
-    ] ],
-    [ "FluxSurfaceAverage", "structsolovev_1_1_flux_surface_average.html", [
-      [ "FluxSurfaceAverage", "structsolovev_1_1_flux_surface_average.html#a2f79d67265e3dc31851a156d18c41f8d", null ],
-      [ "operator()", "structsolovev_1_1_flux_surface_average.html#a4f178d26db3f362b63469442cd9cb4c7", null ]
-    ] ],
-    [ "SafetyFactor", "structsolovev_1_1_safety_factor.html", [
-      [ "SafetyFactor", "structsolovev_1_1_safety_factor.html#acb29f8d43f9715abfbc392b22399188f", null ],
-      [ "operator()", "structsolovev_1_1_safety_factor.html#ad1f873bfa1e8b3bc0f4ce43912666603", null ]
-    ] ],
-    [ "Alpha", "structsolovev_1_1_alpha.html", [
-      [ "Alpha", "structsolovev_1_1_alpha.html#aec6bc06417ea5dc04ae954f561c4f92d", null ],
-      [ "operator()", "structsolovev_1_1_alpha.html#a8f9319119f46173ff7763092ccc646c6", null ],
-      [ "operator()", "structsolovev_1_1_alpha.html#adffaa862d4bc1965cb34c0b30e7e1a58", null ]
-    ] ],
     [ "Iris", "structsolovev_1_1_iris.html", [
       [ "Iris", "structsolovev_1_1_iris.html#ae30833f147e64e8ba87e2edb85ae03b7", null ],
       [ "operator()", "structsolovev_1_1_iris.html#aba82ac25c92cb639c2d9d8483254944e", null ],
@@ -204,5 +180,17 @@ var group__geom =
       [ "operator()", "structsolovev_1_1_deri_test_function.html#a052d52ebdcfae5fa18de6db4e7ce9393", null ]
     ] ],
     [ "display", "group__geom.html#gac75127cc87f46a3a5b05ef2304a85fdd", null ],
-    [ "GeomParameters", "group__geom.html#ga33f43196e4cf4e85bd9640ba62d9230a", null ]
+    [ "GeomParameters", "group__geom.html#ga33f43196e4cf4e85bd9640ba62d9230a", null ],
+    [ "A", "group__geom.html#ga97e1ff33b7ef8b50e3a4a8878a61b0e5", null ],
+    [ "a", "group__geom.html#ga937bb16d9918139c82537b0522d9d50c", null ],
+    [ "alpha", "group__geom.html#gab23ad90efd782bb2411080b17984c0e2", null ],
+    [ "c", "group__geom.html#ga947ccace40431083df7cf03cfd809983", null ],
+    [ "elongation", "group__geom.html#ga5a155924600d91db24102214e6f8198f", null ],
+    [ "psipmax", "group__geom.html#gaf37a5f3f604ddf009de36d734f854f9a", null ],
+    [ "psipmaxcut", "group__geom.html#gacb8f51dbbad0b5dcab7c0d0469b1c175", null ],
+    [ "psipmaxlim", "group__geom.html#ga0b3f04d5f78ead10d7c6e887dc147401", null ],
+    [ "psipmin", "group__geom.html#ga89dcd3bf445d866d590d930d299379d8", null ],
+    [ "R_0", "group__geom.html#ga04042807c96e6c40e0ecda5fa494423b", null ],
+    [ "rk4eps", "group__geom.html#ga6447257304ba1dec05d84d1f27efdc41", null ],
+    [ "triangularity", "group__geom.html#ga1b5afb66804a41c779f0fabb30089f67", null ]
 ];

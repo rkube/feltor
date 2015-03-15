@@ -7,12 +7,13 @@
 
 var indexSectionsWithContent =
 {
-  0: "abcdfgilopst",
+  0: "abcdefgiloprst",
   1: "abcdfgilpst",
   2: "s",
   3: "gi",
   4: "dfgops",
-  5: "t"
+  5: "aceprt",
+  6: "pt"
 };
 
 var indexSectionNames =
@@ -22,7 +23,8 @@ var indexSectionNames =
   2: "namespaces",
   3: "files",
   4: "functions",
-  5: "groups"
+  5: "variables",
+  6: "groups"
 };
 
 function convertToId(search)

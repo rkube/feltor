@@ -16,7 +16,6 @@ var searchData=
   ['fieldz',['FieldZ',['../../../../src/solovev/html/structsolovev_1_1_field_z.html',1,'solovev']]],
   ['file',['file',['../../../../inc/file/html/namespacefile.html',1,'']]],
   ['file_2eh',['file.h',['../../../../inc/file/html/file_8h.html',1,'']]],
-  ['floor',['FLOOR',['../../../../inc/dg/html/structdg_1_1_f_l_o_o_r.html',1,'dg']]],
   ['fluxsurfaceaverage',['FluxSurfaceAverage',['../../../../src/solovev/html/structsolovev_1_1_flux_surface_average.html#a2f79d67265e3dc31851a156d18c41f8d',1,'solovev::FluxSurfaceAverage']]],
   ['fluxsurfaceaverage',['FluxSurfaceAverage',['../../../../src/solovev/html/structsolovev_1_1_flux_surface_average.html',1,'solovev']]],
   ['forward',['forward',['../../../../inc/toefl/html/classtoefl_1_1_d_r_t___d_r_t.html#adcc86b0ed34bb93eca9cdc8278f3f9e1',1,'toefl::DRT_DRT::forward()'],['../../../../inc/dg/html/group__creation.html#ggabf9ea3df33484cbb5886e257c3899e48a573a4a72e7f55df92b88c254a13762f2',1,'dg::forward()'],['../../../../inc/dg/html/group__creation.html#ggabf9ea3df33484cbb5886e257c3899e48a573a4a72e7f55df92b88c254a13762f2',1,'forward()(Global Namespace)']]],

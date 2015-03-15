@@ -2,7 +2,7 @@
 <tagfile>
   <compound kind="file">
     <name>file.h</name>
-    <path>/home/matthias/feltor/inc/file/</path>
+    <path>/home/matthias/Projekte/feltor/inc/file/</path>
     <filename>file_8h</filename>
     <class kind="struct">file::T5trunc</class>
     <class kind="struct">file::Probe</class>
@@ -39,7 +39,7 @@
   </compound>
   <compound kind="file">
     <name>nc_utilities.h</name>
-    <path>/home/matthias/feltor/inc/file/</path>
+    <path>/home/matthias/Projekte/feltor/inc/file/</path>
     <filename>nc__utilities_8h</filename>
     <class kind="struct">file::NC_Error</class>
     <class kind="struct">file::NC_Error_Handle</class>
@@ -355,17 +355,17 @@
     </member>
   </compound>
   <compound kind="dir">
-    <name>/home/matthias/feltor/inc/file</name>
-    <path>/home/matthias/feltor/inc/file/</path>
+    <name>/home/matthias/Projekte/feltor/inc/file</name>
+    <path>/home/matthias/Projekte/feltor/inc/file/</path>
     <filename>dir_22ca5680ed1a693c7d7e7eeaec016d06.html</filename>
     <file>file.h</file>
     <file>nc_utilities.h</file>
     <file>read_input.h</file>
   </compound>
   <compound kind="dir">
-    <name>/home/matthias/feltor/inc</name>
-    <path>/home/matthias/feltor/inc/</path>
+    <name>/home/matthias/Projekte/feltor/inc</name>
+    <path>/home/matthias/Projekte/feltor/inc/</path>
     <filename>dir_bfccd401955b95cf8c75461437045ac0.html</filename>
-    <dir>/home/matthias/feltor/inc/file</dir>
+    <dir>/home/matthias/Projekte/feltor/inc/file</dir>
   </compound>
 </tagfile>

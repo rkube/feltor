@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Discontinuous Galerkin Library: /home/matthias/feltor/inc/dg/cg.h File Reference</title>
+<title>Discontinuous Galerkin Library: /home/matthias/Projekte/feltor/inc/dg/cg.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -119,7 +125,11 @@ $(document).ready(function(){initNavTree('cg_8h.html','');});
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdg_1_1_c_g.html">dg::CG&lt; Vector &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functor class for the preconditioned conjugate gradient method.  <a href="classdg_1_1_c_g.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functor class for the preconditioned conjugate gradient method to solve </p>
+<p class="formulaDsp">
+\[ Ax=b\]
+</p>
+<p>.  <a href="classdg_1_1_c_g.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_invert.html">dg::Invert&lt; container &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Smart conjugate gradient solver.  <a href="structdg_1_1_invert.html#details">More...</a><br/></td></tr>
@@ -135,7 +145,7 @@ Namespaces</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:ga61caca7351ed278357a3923adb6ab655"><td class="memTemplParams" colspan="2">template&lt;class Matrix , class Vector , class Preconditioner &gt; </td></tr>
 <tr class="memitem:ga61caca7351ed278357a3923adb6ab655"><td class="memTemplItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__algorithms.html#ga61caca7351ed278357a3923adb6ab655">dg::cg</a> (Matrix &amp;A, Vector &amp;x, const Vector &amp;b, const Preconditioner &amp;P, typename VectorTraits&lt; Vector &gt;::value_type eps, unsigned max_iter)</td></tr>
-<tr class="memdesc:ga61caca7351ed278357a3923adb6ab655"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function version of <a class="el" href="classdg_1_1_c_g.html" title="Functor class for the preconditioned conjugate gradient method. ">CG</a> class.  <a href="group__algorithms.html#ga61caca7351ed278357a3923adb6ab655">More...</a><br/></td></tr>
+<tr class="memdesc:ga61caca7351ed278357a3923adb6ab655"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function version of <a class="el" href="classdg_1_1_c_g.html" title="Functor class for the preconditioned conjugate gradient method to solve . ">CG</a> class.  <a href="group__algorithms.html#ga61caca7351ed278357a3923adb6ab655">More...</a><br/></td></tr>
 <tr class="separator:ga61caca7351ed278357a3923adb6ab655"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -146,7 +156,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="dir_cba352cc187f01702d3926d435723909.html">dg</a></li><li class="navelem"><a class="el" href="cg_8h.html">cg.h</a></li>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:15 for Discontinuous Galerkin Library by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Discontinuous Galerkin Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

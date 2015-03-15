@@ -6,5 +6,6 @@ var group___d_g =
     [ "Discrete derivatives", "group__creation.html", "group__creation" ],
     [ "Basic Linear Algebra Subprograms", "group__blas.html", "group__blas" ],
     [ "Numerical schemes", "group__algorithms.html", "group__algorithms" ],
-    [ "Utilities", "group__utilities.html", "group__utilities" ]
+    [ "Utilities", "group__utilities.html", "group__utilities" ],
+    [ "MPI backend funcionality", "group__mpi__structures.html", null ]
 ];

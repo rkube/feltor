@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Discontinuous Galerkin Library: /home/matthias/feltor/inc/dg/nullstelle.h Source File</title>
+<title>Discontinuous Galerkin Library: /home/matthias/Projekte/feltor/inc/dg/nullstelle.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -108,77 +114,78 @@ $(document).ready(function(){initNavTree('nullstelle_8h_source.html','');});
 </div><!--header-->
 <div class="contents">
 <a href="nullstelle_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef _NULLSTELLE_</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define _NULLSTELLE_</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;exception&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;math.h&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span>dg{</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structdg_1_1_ooops.html">   20</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structdg_1_1_ooops.html">Ooops</a> : <span class="keyword">public</span> std::exception</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structdg_1_1_ooops.html#a4fba660ab313026fb5dbb826385874dc">   28</a></span>&#160;    <a class="code" href="structdg_1_1_ooops.html#a4fba660ab313026fb5dbb826385874dc">Ooops</a>( <span class="keyword">const</span> <span class="keywordtype">char</span> * c): c_( c) {}</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structdg_1_1_ooops.html#a64c09cc1f58ed6407c98122dcb3dd567">   34</a></span>&#160;    <span class="keywordtype">char</span> <span class="keyword">const</span>* <a class="code" href="structdg_1_1_ooops.html#a64c09cc1f58ed6407c98122dcb3dd567">what</a>() <span class="keyword">const</span> throw(){ <span class="keywordflow">return</span> c_;}</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* c_;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;};</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef _NULLSTELLE_</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define _NULLSTELLE_</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;exception&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;math.h&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span>dg{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structdg_1_1_ooops.html">   18</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structdg_1_1_ooops.html">Ooops</a> : <span class="keyword">public</span> std::exception</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structdg_1_1_ooops.html#a4fba660ab313026fb5dbb826385874dc">   26</a></span>&#160;    <a class="code" href="structdg_1_1_ooops.html#a4fba660ab313026fb5dbb826385874dc">Ooops</a>( <span class="keyword">const</span> <span class="keywordtype">char</span> * c): c_( c) {}</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structdg_1_1_ooops.html#a64c09cc1f58ed6407c98122dcb3dd567">   32</a></span>&#160;    <span class="keywordtype">char</span> <span class="keyword">const</span>* <a class="code" href="structdg_1_1_ooops.html#a64c09cc1f58ed6407c98122dcb3dd567">what</a>() <span class="keyword">const</span> throw(){ <span class="keywordflow">return</span> c_;}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* c_;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
 <div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classdg_1_1_keine_n_s_t__1_d.html">   40</a></span>&#160;<span class="keyword">class </span><a class="code" href="classdg_1_1_keine_n_s_t__1_d.html">KeineNST_1D</a>: <span class="keyword">public</span> std::exception</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">double</span> x1, x2;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classdg_1_1_keine_n_s_t__1_d.html#a1cb65bbd2b61ad62a656f1e1fc569600">   52</a></span>&#160;    <a class="code" href="classdg_1_1_keine_n_s_t__1_d.html#a1cb65bbd2b61ad62a656f1e1fc569600">KeineNST_1D</a>(<span class="keywordtype">double</span> x_min, <span class="keywordtype">double</span> x_max): x1(x_min), x2(x_max){}</div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classdg_1_1_keine_n_s_t__1_d.html#ab9089e775ecb1a2a2d13aab1e5e47b20">   57</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classdg_1_1_keine_n_s_t__1_d.html#ab9089e775ecb1a2a2d13aab1e5e47b20">anzeigen</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      std::cerr &lt;&lt; <span class="stringliteral">&quot;Zwischen &quot;</span> &lt;&lt;x1 &lt;&lt; <span class="stringliteral">&quot; und &quot;</span>&lt;&lt;x2&lt;&lt;<span class="stringliteral">&quot; liegt keine NST!\n&quot;</span>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">char</span> <span class="keyword">const</span>* what() <span class="keyword">const</span> throw(){ <span class="keywordflow">return</span> <span class="stringliteral">&quot;Failed to find root!&quot;</span>;}</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;};</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> UnaryOp&gt;           </div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="group___nullstellensuchroutinen.html#gaa269808db678039605044e14fc849675">   83</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group___nullstellensuchroutinen.html#gaa269808db678039605044e14fc849675">bisection1d</a> (UnaryOp&amp; funktion, <span class="keywordtype">double</span>&amp; x_min, <span class="keywordtype">double</span>&amp; x_max, <span class="keyword">const</span> <span class="keywordtype">double</span> aufloesung) </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">double</span>  mitte;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">double</span> wert_oben, wert_mitte, wert_unten;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    wert_oben=funktion(x_max);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    wert_unten=funktion(x_min);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">if</span>(wert_oben*wert_unten&gt;=0) </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="classdg_1_1_keine_n_s_t__1_d.html">KeineNST_1D</a>(x_min, x_max);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">int</span> j_max = 50;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0; j&lt;j_max; j++)</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    {</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        wert_mitte = funktion( mitte=(x_min+x_max)/2.0 );</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">if</span>(wert_mitte==0)                               {x_min=x_max=mitte; <span class="keywordflow">return</span> j+3;}</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(wert_mitte*wert_oben&gt;0)         x_max = mitte;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">else</span>                                            x_min = mitte;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">if</span>((x_max-x_min)&lt;aufloesung)        <span class="keywordflow">return</span> j+3; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">throw</span> <a class="code" href="structdg_1_1_ooops.html">Ooops</a>(<span class="stringliteral">&quot;Zu viele Schritte bei Nullstellensuche! evtl. j_max aendern&quot;</span>);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}<span class="comment">//namespace dg</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#endif //_NULLSTELLE_  </span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor"></span>  </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  </div>
-<div class="ttc" id="classdg_1_1_keine_n_s_t__1_d_html_ab9089e775ecb1a2a2d13aab1e5e47b20"><div class="ttname"><a href="classdg_1_1_keine_n_s_t__1_d.html#ab9089e775ecb1a2a2d13aab1e5e47b20">dg::KeineNST_1D::anzeigen</a></div><div class="ttdeci">void anzeigen() const </div><div class="ttdoc">Anzeigemethodea auf std::cerr. </div><div class="ttdef"><b>Definition:</b> nullstelle.h:57</div></div>
-<div class="ttc" id="structdg_1_1_ooops_html_a64c09cc1f58ed6407c98122dcb3dd567"><div class="ttname"><a href="structdg_1_1_ooops.html#a64c09cc1f58ed6407c98122dcb3dd567">dg::Ooops::what</a></div><div class="ttdeci">char const * what() const </div><div class="ttdoc">What string. </div><div class="ttdef"><b>Definition:</b> nullstelle.h:34</div></div>
-<div class="ttc" id="classdg_1_1_keine_n_s_t__1_d_html_a1cb65bbd2b61ad62a656f1e1fc569600"><div class="ttname"><a href="classdg_1_1_keine_n_s_t__1_d.html#a1cb65bbd2b61ad62a656f1e1fc569600">dg::KeineNST_1D::KeineNST_1D</a></div><div class="ttdeci">KeineNST_1D(double x_min, double x_max)</div><div class="ttdoc">Konstruktor. </div><div class="ttdef"><b>Definition:</b> nullstelle.h:52</div></div>
-<div class="ttc" id="structdg_1_1_ooops_html"><div class="ttname"><a href="structdg_1_1_ooops.html">dg::Ooops</a></div><div class="ttdoc">Class you might want to throw in case of a non convergence. </div><div class="ttdef"><b>Definition:</b> nullstelle.h:20</div></div>
-<div class="ttc" id="structdg_1_1_ooops_html_a4fba660ab313026fb5dbb826385874dc"><div class="ttname"><a href="structdg_1_1_ooops.html#a4fba660ab313026fb5dbb826385874dc">dg::Ooops::Ooops</a></div><div class="ttdeci">Ooops(const char *c)</div><div class="ttdoc">Construct from error string. </div><div class="ttdef"><b>Definition:</b> nullstelle.h:28</div></div>
-<div class="ttc" id="classdg_1_1_keine_n_s_t__1_d_html"><div class="ttname"><a href="classdg_1_1_keine_n_s_t__1_d.html">dg::KeineNST_1D</a></div><div class="ttdoc">Fehlerklasse die Grenzen für 1D Nullstellensuche sichert. </div><div class="ttdef"><b>Definition:</b> nullstelle.h:40</div></div>
-<div class="ttc" id="group___nullstellensuchroutinen_html_gaa269808db678039605044e14fc849675"><div class="ttname"><a href="group___nullstellensuchroutinen.html#gaa269808db678039605044e14fc849675">dg::bisection1d</a></div><div class="ttdeci">int bisection1d(UnaryOp &amp;funktion, double &amp;x_min, double &amp;x_max, const double aufloesung)</div><div class="ttdoc">Bestimmung der Nullstelle einer 1-D Funktion bzw. Funktors in vorgegebenen Grenzen. </div><div class="ttdef"><b>Definition:</b> nullstelle.h:83</div></div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classdg_1_1_keine_n_s_t__1_d.html#a1cb65bbd2b61ad62a656f1e1fc569600">   50</a></span>&#160;    <a class="code" href="classdg_1_1_keine_n_s_t__1_d.html#a1cb65bbd2b61ad62a656f1e1fc569600">KeineNST_1D</a>(<span class="keywordtype">double</span> x_min, <span class="keywordtype">double</span> x_max): x1(x_min), x2(x_max){}</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classdg_1_1_keine_n_s_t__1_d.html#ab9089e775ecb1a2a2d13aab1e5e47b20">   55</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classdg_1_1_keine_n_s_t__1_d.html#ab9089e775ecb1a2a2d13aab1e5e47b20">anzeigen</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      std::cerr &lt;&lt; <span class="stringliteral">&quot;Between &quot;</span> &lt;&lt;x1 &lt;&lt; <span class="stringliteral">&quot; and &quot;</span>&lt;&lt;x2&lt;&lt;<span class="stringliteral">&quot; is no root!\n&quot;</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classdg_1_1_keine_n_s_t__1_d.html#a8a73e92fc1cc11af08cb2da266ccdcaf">   64</a></span>&#160;    <span class="keywordtype">char</span> <span class="keyword">const</span>* <a class="code" href="classdg_1_1_keine_n_s_t__1_d.html#a8a73e92fc1cc11af08cb2da266ccdcaf">what</a>() <span class="keyword">const</span> throw(){ <span class="keywordflow">return</span> <span class="stringliteral">&quot;Failed to find root!&quot;</span>;}</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;};</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> UnaryOp&gt;           </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="group__utilities.html#gaa269808db678039605044e14fc849675">   85</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__utilities.html#gaa269808db678039605044e14fc849675">bisection1d</a> (UnaryOp&amp; funktion, <span class="keywordtype">double</span>&amp; x_min, <span class="keywordtype">double</span>&amp; x_max, <span class="keyword">const</span> <span class="keywordtype">double</span> aufloesung) </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">double</span>  mitte;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">double</span> wert_oben, wert_mitte, wert_unten;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    wert_oben=funktion(x_max);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    wert_unten=funktion(x_min);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">if</span>(wert_oben*wert_unten&gt;=0) </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="classdg_1_1_keine_n_s_t__1_d.html">KeineNST_1D</a>(x_min, x_max);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">int</span> j_max = 50;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0; j&lt;j_max; j++)</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        wert_mitte = funktion( mitte=(x_min+x_max)/2.0 );</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">if</span>(wert_mitte==0)                               {x_min=x_max=mitte; <span class="keywordflow">return</span> j+3;}</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(wert_mitte*wert_oben&gt;0)         x_max = mitte;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">else</span>                                            x_min = mitte;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">if</span>((x_max-x_min)&lt;aufloesung)        <span class="keywordflow">return</span> j+3; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">throw</span> <a class="code" href="structdg_1_1_ooops.html">Ooops</a>(<span class="stringliteral">&quot;Zu viele Schritte bei Nullstellensuche! evtl. j_max aendern&quot;</span>);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}<span class="comment">//namespace dg</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#endif //_NULLSTELLE_  </span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor"></span>  </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  </div>
+<div class="ttc" id="classdg_1_1_keine_n_s_t__1_d_html_ab9089e775ecb1a2a2d13aab1e5e47b20"><div class="ttname"><a href="classdg_1_1_keine_n_s_t__1_d.html#ab9089e775ecb1a2a2d13aab1e5e47b20">dg::KeineNST_1D::anzeigen</a></div><div class="ttdeci">void anzeigen() const </div><div class="ttdoc">display on std::cerr </div><div class="ttdef"><b>Definition:</b> nullstelle.h:55</div></div>
+<div class="ttc" id="structdg_1_1_ooops_html_a64c09cc1f58ed6407c98122dcb3dd567"><div class="ttname"><a href="structdg_1_1_ooops.html#a64c09cc1f58ed6407c98122dcb3dd567">dg::Ooops::what</a></div><div class="ttdeci">char const * what() const </div><div class="ttdoc">What string. </div><div class="ttdef"><b>Definition:</b> nullstelle.h:32</div></div>
+<div class="ttc" id="classdg_1_1_keine_n_s_t__1_d_html_a1cb65bbd2b61ad62a656f1e1fc569600"><div class="ttname"><a href="classdg_1_1_keine_n_s_t__1_d.html#a1cb65bbd2b61ad62a656f1e1fc569600">dg::KeineNST_1D::KeineNST_1D</a></div><div class="ttdeci">KeineNST_1D(double x_min, double x_max)</div><div class="ttdoc">construct </div><div class="ttdef"><b>Definition:</b> nullstelle.h:50</div></div>
+<div class="ttc" id="structdg_1_1_ooops_html"><div class="ttname"><a href="structdg_1_1_ooops.html">dg::Ooops</a></div><div class="ttdoc">Class you might want to throw in case of a non convergence. </div><div class="ttdef"><b>Definition:</b> nullstelle.h:18</div></div>
+<div class="ttc" id="structdg_1_1_ooops_html_a4fba660ab313026fb5dbb826385874dc"><div class="ttname"><a href="structdg_1_1_ooops.html#a4fba660ab313026fb5dbb826385874dc">dg::Ooops::Ooops</a></div><div class="ttdeci">Ooops(const char *c)</div><div class="ttdoc">Construct from error string. </div><div class="ttdef"><b>Definition:</b> nullstelle.h:26</div></div>
+<div class="ttc" id="group__utilities_html_gaa269808db678039605044e14fc849675"><div class="ttname"><a href="group__utilities.html#gaa269808db678039605044e14fc849675">dg::bisection1d</a></div><div class="ttdeci">int bisection1d(UnaryOp &amp;funktion, double &amp;x_min, double &amp;x_max, const double aufloesung)</div><div class="ttdoc">Find a root of a 1d function in given boundaries. </div><div class="ttdef"><b>Definition:</b> nullstelle.h:85</div></div>
+<div class="ttc" id="classdg_1_1_keine_n_s_t__1_d_html_a8a73e92fc1cc11af08cb2da266ccdcaf"><div class="ttname"><a href="classdg_1_1_keine_n_s_t__1_d.html#a8a73e92fc1cc11af08cb2da266ccdcaf">dg::KeineNST_1D::what</a></div><div class="ttdeci">char const * what() const </div><div class="ttdoc">what string </div><div class="ttdef"><b>Definition:</b> nullstelle.h:64</div></div>
+<div class="ttc" id="classdg_1_1_keine_n_s_t__1_d_html"><div class="ttname"><a href="classdg_1_1_keine_n_s_t__1_d.html">dg::KeineNST_1D</a></div><div class="ttdoc">Exception class, that stores boundaries for 1D root finding. </div><div class="ttdef"><b>Definition:</b> nullstelle.h:40</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="dir_cba352cc187f01702d3926d435723909.html">dg</a></li><li class="navelem"><a class="el" href="nullstelle_8h.html">nullstelle.h</a></li>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:15 for Discontinuous Galerkin Library by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Discontinuous Galerkin Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

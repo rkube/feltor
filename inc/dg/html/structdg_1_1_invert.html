@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -147,16 +153,16 @@ struct dg::Invert&lt; container &gt;</h3>
 <p>Solve a symmetric linear inversion problem using a conjugate gradient method and the last two solutions.</p>
 <p>Solves the Equation </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \hat O \phi = W \cdot \rho \]" src="form_17.png"/>
+\[ \hat O \phi = W \cdot \rho \]
 </p>
-<p> for any operator <img class="formulaInl" alt="$\hat O$" src="form_18.png"/> that was made symmetric by appropriate weights <img class="formulaInl" alt="$W$" src="form_19.png"/> (s. comment below). It uses solutions from the last two calls to extrapolate a solution for the current call. </p>
+<p> for any operator \(\hat O\) that was made symmetric by appropriate weights \(W\) (s. comment below). It uses solutions from the last two calls to extrapolate a solution for the current call. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">container</td><td>The Vector class to be used </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>A note on weights and preconditioning. A normalized DG-discretized derivative or operator is normally not symmetric. The diagonal coefficient matrix that is used to make the operator symmetric is called weights W, i.e. <img class="formulaInl" alt="$ \hat O = W\cdot O$" src="form_20.png"/> is symmetric. Independent from this, a preconditioner should be used to solve the symmetric matrix equation. Most often the inverse of <img class="formulaInl" alt="$W$" src="form_19.png"/> is a good preconditioner. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>A note on weights and preconditioning. A normalized DG-discretized derivative or operator is normally not symmetric. The diagonal coefficient matrix that is used to make the operator symmetric is called weights W, i.e. \( \hat O = W\cdot O\) is symmetric. Independent from this, a preconditioner should be used to solve the symmetric matrix equation. Most often the inverse of \(W\) is a good preconditioner. </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a36911150e0779cce30ef7e7d002ef0ac"></a>
 <div class="memitem">
@@ -210,7 +216,7 @@ template&lt;class container &gt; </div>
     <tr><td class="paramname">copyable</td><td>Needed to construct the two previous solutions </td></tr>
     <tr><td class="paramname">max_iter</td><td>maximum iteration in conjugate gradient </td></tr>
     <tr><td class="paramname">eps</td><td>relative error in conjugate gradient </td></tr>
-    <tr><td class="paramname">nrmb_correction</td><td>Correction factor for norm of b (cf. <a class="el" href="classdg_1_1_c_g.html" title="Functor class for the preconditioned conjugate gradient method. ">CG</a>) </td></tr>
+    <tr><td class="paramname">nrmb_correction</td><td>Correction factor for norm of b (cf. <a class="el" href="classdg_1_1_c_g.html" title="Functor class for the preconditioned conjugate gradient method to solve . ">CG</a>) </td></tr>
   </table>
   </dd>
 </dl>
@@ -291,7 +297,7 @@ template&lt;class SymmetricOp &gt; </div>
 <p>Solve linear problem. </p>
 <p>Solves the Equation </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \hat O \phi = W\rho \]" src="form_23.png"/>
+\[ \hat O \phi = W\rho \]
 </p>
 <p> using a preconditioned conjugate gradient method. The initial guess comes from an extrapolation of the last solutions </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
@@ -369,7 +375,7 @@ template&lt;class SymmetricOp , class Weights , class Preconditioner &gt; </div>
 <p>Solve linear problem. </p>
 <p>Solves the Equation </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \hat O \phi = W\rho \]" src="form_23.png"/>
+\[ \hat O \phi = W\rho \]
 </p>
 <p> using a preconditioned conjugate gradient method. The initial guess comes from an extrapolation of the last solutions. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
@@ -429,7 +435,7 @@ template&lt;class container &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/matthias/feltor/inc/dg/<a class="el" href="cg_8h_source.html">cg.h</a></li>
+<li>/home/matthias/Projekte/feltor/inc/dg/<a class="el" href="cg_8h_source.html">cg.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -437,7 +443,7 @@ template&lt;class container &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacedg.html">dg</a></li><li class="navelem"><a class="el" href="structdg_1_1_invert.html">Invert</a></li>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:15 for Discontinuous Galerkin Library by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Discontinuous Galerkin Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

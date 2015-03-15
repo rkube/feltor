@@ -16,6 +16,8 @@ var searchData=
   ['gaussianz',['GaussianZ',['../../../../inc/dg/html/structdg_1_1_gaussian_z.html',1,'dg']]],
   ['gaussianz',['GaussianZ',['../../../../inc/dg/html/structdg_1_1_gaussian_z.html#aa1915517625deebecb730e2b37a3e888',1,'dg::GaussianZ']]],
   ['gemv',['gemv',['../../../../inc/dg/html/group__blas2.html#gadda8a3d0278c095d51becf208760d49b',1,'dg::blas2::gemv()'],['../../../../inc/dg/html/group__blas2.html#gadda8a3d0278c095d51becf208760d49b',1,'gemv()(Global Namespace)']]],
+  ['generalelliptic',['GeneralElliptic',['../../../../inc/dg/html/structdg_1_1_general_elliptic.html',1,'dg']]],
+  ['generalelliptic',['GeneralElliptic',['../../../../inc/dg/html/structdg_1_1_general_elliptic.html#a951d4bf81105a15efac024fbcfb029d2',1,'dg::GeneralElliptic']]],
   ['gentexture_5frgbf',['gentexture_RGBf',['../../../../inc/toefl/html/group__utilities.html#ga53a0f84e4f5464be844a2dcd08447f48',1,'toefl::gentexture_RGBf()'],['../../../../inc/toefl/html/group__utilities.html#ga53a0f84e4f5464be844a2dcd08447f48',1,'gentexture_RGBf()(Global Namespace)']]],
   ['gentexture_5frgbf_5ftemp',['gentexture_RGBf_temp',['../../../../inc/toefl/html/group__utilities.html#ga78ead2d548e26a1cd8d405aa2764e021',1,'toefl::gentexture_RGBf_temp()'],['../../../../inc/toefl/html/group__utilities.html#ga78ead2d548e26a1cd8d405aa2764e021',1,'gentexture_RGBf_temp()(Global Namespace)']]],
   ['geom_5fparameters_2eh',['geom_parameters.h',['../../../../src/solovev/html/geom__parameters_8h.html',1,'']]],
@@ -31,8 +33,8 @@ var searchData=
   ['getnumobjs',['getNumObjs',['../../../../inc/file/html/namespacefile.html#a22fc107d582ee690c3f886876fca1a10',1,'file']]],
   ['getptr',['getPtr',['../../../../inc/toefl/html/classtoefl_1_1_matrix.html#a1a2bcfc1183ab0d558f54c46531fb1a3',1,'toefl::GhostMatrix::getPtr()'],['../../../../inc/toefl/html/classtoefl_1_1_matrix.html#ae4b7b5be8a42549d0e2e9400f63b7022',1,'toefl::GhostMatrix::getPtr() const ']]],
   ['gettime',['getTime',['../../../../inc/file/html/namespacefile.html#a99568b0b94d81c28a33961595dbd2900',1,'file']]],
-  ['ghostmatrix',['GhostMatrix',['../../../../inc/toefl/html/classtoefl_1_1_ghost_matrix.html#a7b59b69c1e82768ce3cddaf1e2b91c7b',1,'toefl::GhostMatrix::GhostMatrix(const size_t rows, const size_t cols, const enum bc bc_rows=TL_PERIODIC, const enum bc bc_cols=TL_PERIODIC, const bool allocate=true)'],['../../../../inc/toefl/html/classtoefl_1_1_ghost_matrix.html#a34caf5b7929b74396ebde378c8110055',1,'toefl::GhostMatrix::GhostMatrix(const size_t rows, const size_t cols, const T &amp;value, const enum bc bc_rows=TL_PERIODIC, const enum bc bc_cols=TL_PERIODIC)']]],
   ['ghostmatrix',['GhostMatrix',['../../../../inc/toefl/html/classtoefl_1_1_ghost_matrix.html',1,'toefl']]],
+  ['ghostmatrix',['GhostMatrix',['../../../../inc/toefl/html/classtoefl_1_1_ghost_matrix.html#a7b59b69c1e82768ce3cddaf1e2b91c7b',1,'toefl::GhostMatrix::GhostMatrix(const size_t rows, const size_t cols, const enum bc bc_rows=TL_PERIODIC, const enum bc bc_cols=TL_PERIODIC, const bool allocate=true)'],['../../../../inc/toefl/html/classtoefl_1_1_ghost_matrix.html#a34caf5b7929b74396ebde378c8110055',1,'toefl::GhostMatrix::GhostMatrix(const size_t rows, const size_t cols, const T &amp;value, const enum bc bc_rows=TL_PERIODIC, const enum bc bc_cols=TL_PERIODIC)']]],
   ['gradlnb',['GradLnB',['../../../../src/solovev/html/structsolovev_1_1_grad_ln_b.html',1,'solovev']]],
   ['grid_20objects',['Grid objects',['../../../../inc/dg/html/group__grid.html',1,'']]]
 ];

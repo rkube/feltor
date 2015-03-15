@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -110,11 +116,11 @@ $(document).ready(function(){initNavTree('classdg_1_1_keine_n_s_t__1_d.html','')
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classdg_1_1_keine_n_s_t__1_d-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">dg::KeineNST_1D Class Reference</div>  </div>
+<div class="title">dg::KeineNST_1D Class Reference<div class="ingroups"><a class="el" href="group__utilities.html">Utilities</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Fehlerklasse die Grenzen für 1D Nullstellensuche sichert.  
+<p>Exception class, that stores boundaries for 1D root finding.  
  <a href="classdg_1_1_keine_n_s_t__1_d.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="nullstelle_8h_source.html">nullstelle.h</a>&gt;</code></p>
@@ -130,17 +136,17 @@ Inheritance diagram for dg::KeineNST_1D:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1cb65bbd2b61ad62a656f1e1fc569600"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdg_1_1_keine_n_s_t__1_d.html#a1cb65bbd2b61ad62a656f1e1fc569600">KeineNST_1D</a> (double x_min, double x_max)</td></tr>
-<tr class="memdesc:a1cb65bbd2b61ad62a656f1e1fc569600"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor.  <a href="#a1cb65bbd2b61ad62a656f1e1fc569600">More...</a><br/></td></tr>
+<tr class="memdesc:a1cb65bbd2b61ad62a656f1e1fc569600"><td class="mdescLeft">&#160;</td><td class="mdescRight">construct  <a href="#a1cb65bbd2b61ad62a656f1e1fc569600">More...</a><br/></td></tr>
 <tr class="separator:a1cb65bbd2b61ad62a656f1e1fc569600"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9089e775ecb1a2a2d13aab1e5e47b20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdg_1_1_keine_n_s_t__1_d.html#ab9089e775ecb1a2a2d13aab1e5e47b20">anzeigen</a> () const </td></tr>
-<tr class="memdesc:ab9089e775ecb1a2a2d13aab1e5e47b20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Anzeigemethodea auf std::cerr.  <a href="#ab9089e775ecb1a2a2d13aab1e5e47b20">More...</a><br/></td></tr>
+<tr class="memdesc:ab9089e775ecb1a2a2d13aab1e5e47b20"><td class="mdescLeft">&#160;</td><td class="mdescRight">display on std::cerr  <a href="#ab9089e775ecb1a2a2d13aab1e5e47b20">More...</a><br/></td></tr>
 <tr class="separator:ab9089e775ecb1a2a2d13aab1e5e47b20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a73e92fc1cc11af08cb2da266ccdcaf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a73e92fc1cc11af08cb2da266ccdcaf"></a>
-char const *&#160;</td><td class="memItemRight" valign="bottom"><b>what</b> () const   throw ()</td></tr>
+<tr class="memitem:a8a73e92fc1cc11af08cb2da266ccdcaf"><td class="memItemLeft" align="right" valign="top">char const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdg_1_1_keine_n_s_t__1_d.html#a8a73e92fc1cc11af08cb2da266ccdcaf">what</a> () const   throw ()</td></tr>
+<tr class="memdesc:a8a73e92fc1cc11af08cb2da266ccdcaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">what string  <a href="#a8a73e92fc1cc11af08cb2da266ccdcaf">More...</a><br/></td></tr>
 <tr class="separator:a8a73e92fc1cc11af08cb2da266ccdcaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Fehlerklasse die Grenzen für 1D Nullstellensuche sichert. </p>
+<div class="textblock"><p>Exception class, that stores boundaries for 1D root finding. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a1cb65bbd2b61ad62a656f1e1fc569600"></a>
 <div class="memitem">
@@ -174,13 +180,11 @@ char const *&#160;</td><td class="memItemRight" valign="bottom"><b>what</b> () c
 </table>
 </div><div class="memdoc">
 
-<p>Konstruktor. </p>
+<p>construct </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x_min</td><td>linke Grenze </td></tr>
-    <tr><td class="paramname">x_max</td><td>rechte Grenze </td></tr>
-    <tr><td class="paramname">file</td><td>Fehler </td></tr>
-    <tr><td class="paramname">line</td><td>Fehler </td></tr>
+    <tr><td class="paramname">x_min</td><td>left boundary </td></tr>
+    <tr><td class="paramname">x_max</td><td>right boundary </td></tr>
   </table>
   </dd>
 </dl>
@@ -209,13 +213,45 @@ char const *&#160;</td><td class="memItemRight" valign="bottom"><b>what</b> () c
 </table>
 </div><div class="memdoc">
 
-<p>Anzeigemethodea auf std::cerr. </p>
+<p>display on std::cerr </p>
 <p>meldet Fehler und gibt linke und rechte Grenze aus </p>
 
 </div>
 </div>
+<a class="anchor" id="a8a73e92fc1cc11af08cb2da266ccdcaf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char const* dg::KeineNST_1D::what </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2"></td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>what string </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/matthias/feltor/inc/dg/<a class="el" href="nullstelle_8h_source.html">nullstelle.h</a></li>
+<li>/home/matthias/Projekte/feltor/inc/dg/<a class="el" href="nullstelle_8h_source.html">nullstelle.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -223,7 +259,7 @@ char const *&#160;</td><td class="memItemRight" valign="bottom"><b>what</b> () c
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacedg.html">dg</a></li><li class="navelem"><a class="el" href="classdg_1_1_keine_n_s_t__1_d.html">KeineNST_1D</a></li>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:15 for Discontinuous Galerkin Library by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Discontinuous Galerkin Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

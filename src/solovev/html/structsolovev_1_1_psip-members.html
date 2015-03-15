@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -95,7 +101,7 @@ $(document).ready(function(){initNavTree('structsolovev_1_1_psip.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Groups</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Groups</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -112,19 +118,16 @@ $(document).ready(function(){initNavTree('structsolovev_1_1_psip.html','');});
 
 <p>This is the complete list of members for <a class="el" href="structsolovev_1_1_psip.html">solovev::Psip</a>, including all inherited members.</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>diff_psi_neu</b>(double R, double Z) (defined in <a class="el" href="structsolovev_1_1_psip.html">solovev::Psip</a>)</td><td class="entry"><a class="el" href="structsolovev_1_1_psip.html">solovev::Psip</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>diffdiff_psi_neu</b>(double R, double Z) (defined in <a class="el" href="structsolovev_1_1_psip.html">solovev::Psip</a>)</td><td class="entry"><a class="el" href="structsolovev_1_1_psip.html">solovev::Psip</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>display</b>() (defined in <a class="el" href="structsolovev_1_1_psip.html">solovev::Psip</a>)</td><td class="entry"><a class="el" href="structsolovev_1_1_psip.html">solovev::Psip</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structsolovev_1_1_psip.html#a20893a4d67455be10ae7eb9a4b571422">display</a>()</td><td class="entry"><a class="el" href="structsolovev_1_1_psip.html">solovev::Psip</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="structsolovev_1_1_psip.html#a6079b6a7c9ea5a5d6bbf4b65dd9d8dde">operator()</a>(double R, double Z)</td><td class="entry"><a class="el" href="structsolovev_1_1_psip.html">solovev::Psip</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>operator()</b>(double R, double Z, double phi) (defined in <a class="el" href="structsolovev_1_1_psip.html">solovev::Psip</a>)</td><td class="entry"><a class="el" href="structsolovev_1_1_psip.html">solovev::Psip</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>psi_neu</b>(double psi) (defined in <a class="el" href="structsolovev_1_1_psip.html">solovev::Psip</a>)</td><td class="entry"><a class="el" href="structsolovev_1_1_psip.html">solovev::Psip</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Psip</b>(GeomParameters gp) (defined in <a class="el" href="structsolovev_1_1_psip.html">solovev::Psip</a>)</td><td class="entry"><a class="el" href="structsolovev_1_1_psip.html">solovev::Psip</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structsolovev_1_1_psip.html#a2385c203b4756a6152431027cfb4809a">operator()</a>(double R, double Z, double phi)</td><td class="entry"><a class="el" href="structsolovev_1_1_psip.html">solovev::Psip</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="structsolovev_1_1_psip.html#aad4b94ff287a2320ce1a99c8d0ca7310">Psip</a>(GeomParameters gp)</td><td class="entry"><a class="el" href="structsolovev_1_1_psip.html">solovev::Psip</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:40 for Solovev by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Solovev by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

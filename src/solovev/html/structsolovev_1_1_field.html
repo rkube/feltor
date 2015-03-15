@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -95,7 +101,7 @@ $(document).ready(function(){initNavTree('structsolovev_1_1_field.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Groups</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Groups</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -126,21 +132,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac597f776e803b07f473bbbca93370eeb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac597f776e803b07f473bbbca93370eeb"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolovev_1_1_field.html#ac597f776e803b07f473bbbca93370eeb">operator()</a> (const std::vector&lt; dg::HVec &gt; &amp;y, std::vector&lt; dg::HVec &gt; &amp;yp)</td></tr>
 <tr class="memdesc:ac597f776e803b07f473bbbca93370eeb"><td class="mdescLeft">&#160;</td><td class="mdescRight"><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \frac{d \hat{R} }{ d \varphi} = \frac{\hat{R}}{\hat{I}} \frac{\partial\hat{\psi}_p}{\partial \hat{Z}}, \hspace {3 mm} \frac{d \hat{Z} }{ d \varphi} =- \frac{\hat{R}}{\hat{I}} \frac{\partial \hat{\psi}_p}{\partial \hat{R}} , \hspace {3 mm} \frac{d \hat{l} }{ d \varphi} =\frac{\hat{R}^2 \hat{B}}{\hat{I}} \]" src="form_36.png"/>
+\[ \begin{align} \frac{d \hat{R} }{ d \varphi} &amp;= \frac{\hat{R}}{\hat{I}} \frac{\partial\hat{\psi}_p}{\partial \hat{Z}}\\ \frac{d \hat{Z} }{ d \varphi} &amp;=- \frac{\hat{R}}{\hat{I}} \frac{\partial \hat{\psi}_p}{\partial \hat{R}}\\ \frac{d \hat{l} }{ d \varphi} &amp;=\frac{\hat{R}^2 \hat{B}}{\hat{I}} \end{align} \]
 </p>
  <br/></td></tr>
 <tr class="separator:ac597f776e803b07f473bbbca93370eeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e57961339228e02bb741c9817aa7f99"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e57961339228e02bb741c9817aa7f99"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolovev_1_1_field.html#a4e57961339228e02bb741c9817aa7f99">operator()</a> (const dg::HVec &amp;y, dg::HVec &amp;yp)</td></tr>
 <tr class="memdesc:a4e57961339228e02bb741c9817aa7f99"><td class="mdescLeft">&#160;</td><td class="mdescRight"><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \frac{d \hat{R} }{ d \varphi} = \frac{\hat{R}}{\hat{I}} \frac{\partial\hat{\psi}_p}{\partial \hat{Z}}, \hspace {3 mm} \frac{d \hat{Z} }{ d \varphi} =- \frac{\hat{R}}{\hat{I}} \frac{\partial \hat{\psi}_p}{\partial \hat{R}} , \hspace {3 mm} \frac{d \hat{l} }{ d \varphi} =\frac{\hat{R}^2 \hat{B}}{\hat{I}} \]" src="form_36.png"/>
+\[ \frac{d \hat{R} }{ d \varphi} = \frac{\hat{R}}{\hat{I}} \frac{\partial\hat{\psi}_p}{\partial \hat{Z}}, \hspace {3 mm} \frac{d \hat{Z} }{ d \varphi} =- \frac{\hat{R}}{\hat{I}} \frac{\partial \hat{\psi}_p}{\partial \hat{R}} , \hspace {3 mm} \frac{d \hat{l} }{ d \varphi} =\frac{\hat{R}^2 \hat{B}}{\hat{I}} \]
 </p>
  <br/></td></tr>
 <tr class="separator:a4e57961339228e02bb741c9817aa7f99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70180a0878cb37e8843427a2c3e7053a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70180a0878cb37e8843427a2c3e7053a"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolovev_1_1_field.html#a70180a0878cb37e8843427a2c3e7053a">operator()</a> (double R, double Z)</td></tr>
 <tr class="memdesc:a70180a0878cb37e8843427a2c3e7053a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \frac{1}{\hat{B}} = \frac{\hat{R}}{\hat{R}_0}\frac{1}{ \sqrt{ \hat{I}^2 + \left(\frac{\partial \hat{\psi}_p }{ \partial \hat{R}}\right)^2 + \left(\frac{\partial \hat{\psi}_p }{ \partial \hat{Z}}\right)^2}} \]" src="form_29.png"/>
+\[ \frac{1}{\hat{B}} = \frac{\hat{R}}{\hat{R}_0}\frac{1}{ \sqrt{ \hat{I}^2 + \left(\frac{\partial \hat{\psi}_p }{ \partial \hat{R}}\right)^2 + \left(\frac{\partial \hat{\psi}_p }{ \partial \hat{Z}}\right)^2}} \]
 </p>
  <br/></td></tr>
 <tr class="separator:a70180a0878cb37e8843427a2c3e7053a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -151,7 +157,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (dou
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Integrates the equations for a field line and 1/B. </p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/matthias/feltor/src/solovev/<a class="el" href="geometry_8h_source.html">geometry.h</a></li>
+<li>/home/matthias/Projekte/feltor/src/solovev/<a class="el" href="geometry_8h_source.html">geometry.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -159,7 +165,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (dou
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacesolovev.html">solovev</a></li><li class="navelem"><a class="el" href="structsolovev_1_1_field.html">Field</a></li>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:40 for Solovev by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Solovev by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

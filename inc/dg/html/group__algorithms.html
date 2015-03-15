@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -109,33 +115,45 @@ $(document).ready(function(){initNavTree('group__algorithms.html','');});
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdg_1_1_c_g.html">dg::CG&lt; Vector &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functor class for the preconditioned conjugate gradient method.  <a href="classdg_1_1_c_g.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functor class for the preconditioned conjugate gradient method to solve </p>
+<p class="formulaDsp">
+\[ Ax=b\]
+</p>
+<p>.  <a href="classdg_1_1_c_g.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_invert.html">dg::Invert&lt; container &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Smart conjugate gradient solver.  <a href="structdg_1_1_invert.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_a_b.html">dg::AB&lt; k, Vector &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct for Adams-Bashforth explicit multistep time-integration.  <a href="structdg_1_1_a_b.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct for Adams-Bashforth explicit multistep time-integration </p>
+<p class="formulaDsp">
+\[ u^{n+1} = u^n + \Delta t\sum_{j=0}^k b_j f\left(u^{n-j}\right) \]
+</p>
+<p>.  <a href="structdg_1_1_a_b.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_karniadakis.html">dg::Karniadakis&lt; Vector &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct for <a class="el" href="structdg_1_1_karniadakis.html" title="Struct for Karniadakis semi-implicit multistep time-integration  Uses blas1::axpby routines to integr...">Karniadakis</a> semi-implicit multistep time-integration </p>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct for <a class="el" href="structdg_1_1_karniadakis.html" title="Struct for Karniadakis semi-implicit multistep time-integration . ">Karniadakis</a> semi-implicit multistep time-integration </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ {\bar v}^n = \frac{1}{\gamma_0}\left(\sum_{q=0}^2 \alpha_q v^{n-q} + \Delta t\sum_{q=0}^2\beta_q N( v^{n-q})\right) \]" src="form_57.png"/>
+\[ \begin{align} {\bar v}^n &amp;= \frac{1}{\gamma_0}\left(\sum_{q=0}^2 \alpha_q v^{n-q} + \Delta t\sum_{q=0}^2\beta_q N( v^{n-q})\right) \\ \left( 1 - \frac{\Delta t}{\gamma_0} \hat L\right) v^{n+1} &amp;= {\bar v}^n \end{align} \]
 </p>
- <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \left( 1 - \frac{\Delta t}{\gamma_0} \hat L\right) v^{n+1} = {\bar v}^n \]" src="form_58.png"/>
-</p>
-Uses <a class="el" href="group__blas1.html#ga6ee5b940147ba6b71e1fe1fc538e9459" title="Modified BLAS 1 routine axpy. ">blas1::axpby</a> routines to integrate one step and only one right-hand-side evaluation per step. Uses a conjugate gradient method for the implicit operator.  <a href="structdg_1_1_karniadakis.html#details">More...</a><br/></td></tr>
+<p>.  <a href="structdg_1_1_karniadakis.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_s_i_r_k.html">dg::SIRK&lt; Vector &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Semi implicit Runge Kutta method after Yoh and Zhong (AIAA 42, 2004)  <a href="structdg_1_1_s_i_r_k.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_r_k.html">dg::RK&lt; k, Vector &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct for Runge-Kutta explicit time-integration.  <a href="structdg_1_1_r_k.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct for Runge-Kutta explicit time-integration </p>
+<p class="formulaDsp">
+\[ \begin{align} u^{n+1} = u^{n} + \Delta t\sum_{j=1}^s b_j k_j \\ k_j = f\left( u^n + \Delta t \sum_{l=1}^j a_{jl} k_l\right) \end{align} \]
+</p>
+<p>.  <a href="structdg_1_1_r_k.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga61caca7351ed278357a3923adb6ab655"><td class="memTemplParams" colspan="2">template&lt;class Matrix , class Vector , class Preconditioner &gt; </td></tr>
 <tr class="memitem:ga61caca7351ed278357a3923adb6ab655"><td class="memTemplItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__algorithms.html#ga61caca7351ed278357a3923adb6ab655">dg::cg</a> (Matrix &amp;A, Vector &amp;x, const Vector &amp;b, const Preconditioner &amp;P, typename VectorTraits&lt; Vector &gt;::value_type eps, unsigned max_iter)</td></tr>
-<tr class="memdesc:ga61caca7351ed278357a3923adb6ab655"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function version of <a class="el" href="classdg_1_1_c_g.html" title="Functor class for the preconditioned conjugate gradient method. ">CG</a> class.  <a href="#ga61caca7351ed278357a3923adb6ab655">More...</a><br/></td></tr>
+<tr class="memdesc:ga61caca7351ed278357a3923adb6ab655"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function version of <a class="el" href="classdg_1_1_c_g.html" title="Functor class for the preconditioned conjugate gradient method to solve . ">CG</a> class.  <a href="#ga61caca7351ed278357a3923adb6ab655">More...</a><br/></td></tr>
 <tr class="separator:ga61caca7351ed278357a3923adb6ab655"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga098434b3580fe8186441a1fd178214ef"><td class="memTemplParams" colspan="2">template&lt;class RHS , class Vector &gt; </td></tr>
 <tr class="memitem:ga098434b3580fe8186441a1fd178214ef"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__algorithms.html#ga098434b3580fe8186441a1fd178214ef">dg::integrateRK4</a> (RHS &amp;rhs, const Vector &amp;begin, Vector &amp;end, double T_max, double eps_abs)</td></tr>
@@ -195,7 +213,7 @@ template&lt;class Matrix , class Vector , class Preconditioner &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Function version of <a class="el" href="classdg_1_1_c_g.html" title="Functor class for the preconditioned conjugate gradient method. ">CG</a> class. </p>
+<p>Function version of <a class="el" href="classdg_1_1_c_g.html" title="Functor class for the preconditioned conjugate gradient method to solve . ">CG</a> class. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">Matrix</td><td>Matrix type </td></tr>
@@ -275,7 +293,7 @@ template&lt;class RHS , class Vector &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">rhs</td><td>The right-hand-side </td></tr>
-    <tr><td class="paramname">begin</td><td>initial condition </td></tr>
+    <tr><td class="paramname">begin</td><td>initial condition (size 3) </td></tr>
     <tr><td class="paramname">end</td><td>(write-only) contains solution on output </td></tr>
     <tr><td class="paramname">T_max</td><td>final time </td></tr>
     <tr><td class="paramname">eps_abs</td><td>desired absolute accuracy </td></tr>
@@ -290,7 +308,7 @@ template&lt;class RHS , class Vector &gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:15 for Discontinuous Galerkin Library by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Discontinuous Galerkin Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

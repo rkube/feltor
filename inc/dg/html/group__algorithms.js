@@ -26,6 +26,11 @@ var group__algorithms =
       [ "last", "structdg_1_1_karniadakis.html#abc9068a1ad218f7dcc9d0663555af55b", null ],
       [ "operator()", "structdg_1_1_karniadakis.html#a84f10f1572bc1319b97315a3d710ab0b", null ]
     ] ],
+    [ "SIRK", "structdg_1_1_s_i_r_k.html", [
+      [ "SIRK", "structdg_1_1_s_i_r_k.html#a49a92efeaf2cd379a821e0642d73db9b", null ],
+      [ "adaptive_step", "structdg_1_1_s_i_r_k.html#a01757c756e22e533e871286f91672a5a", null ],
+      [ "operator()", "structdg_1_1_s_i_r_k.html#a8a88353bfe5754bee28b02748dc63bb4", null ]
+    ] ],
     [ "RK", "structdg_1_1_r_k.html", [
       [ "RK", "structdg_1_1_r_k.html#a6c429247370a3e14d0b818dc9c486b6b", null ],
       [ "operator()", "structdg_1_1_r_k.html#a1e4a116d7fb767a76e725a6dfe4b98c1", null ]

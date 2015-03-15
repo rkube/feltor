@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -115,7 +121,11 @@ $(document).ready(function(){initNavTree('classdg_1_1_c_g.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>Functor class for the preconditioned conjugate gradient method.  
+<p>Functor class for the preconditioned conjugate gradient method to solve </p>
+<p class="formulaDsp">
+\[ Ax=b\]
+</p>
+<p>.  
  <a href="classdg_1_1_c_g.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="cg_8h_source.html">cg.h</a>&gt;</code></p>
@@ -148,7 +158,11 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><h3>template&lt;class Vector&gt;<br/>
 class dg::CG&lt; Vector &gt;</h3>
 
-<p>Functor class for the preconditioned conjugate gradient method. </p>
+<p>Functor class for the preconditioned conjugate gradient method to solve </p>
+<p class="formulaDsp">
+\[ Ax=b\]
+</p>
+<p>. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">Vector</td><td>The Vector class: needs to model Assignable</td></tr>
@@ -157,11 +171,11 @@ class dg::CG&lt; Vector &gt;</h3>
 </dl>
 <p>The following 3 pseudo - BLAS routines need to be callable </p>
 <ul>
-<li>double dot = blas1::dot( v1, v2); </li>
-<li>blas1::axpby( alpha, x, beta, y); </li>
-<li>blas2::symv( m, x, y); </li>
-<li>double dot = blas2::dot( P, v); </li>
-<li>blas2::symv( alpha, P, x, beta, y);</li>
+<li>value_type dot = <a class="el" href="group__blas1.html#gade540580ce83e615dcb8e2210689bb32" title="Euclidean dot product between two Vectors. ">dg::blas1::dot( const Vector&amp;, const Vector&amp;)</a>; </li>
+<li><a class="el" href="group__blas1.html#ga6ee5b940147ba6b71e1fe1fc538e9459" title="Modified BLAS 1 routine axpy. ">dg::blas1::axpby()</a>; with the Vector type </li>
+<li><a class="el" href="group__blas2.html#ga268c50e488c18db3dc5be1d1934eb7b2" title="Symmetric Matrix Vector product. ">dg::blas2::symv(Matrix&amp; m, Vector1&amp; x, Vector2&amp; y )</a>; with the Matrix type </li>
+<li>value_type dot = <a class="el" href="group__blas2.html#gaeb8a93cac85646f2173160afd2a79d53" title="General dot produt. ">dg::blas2::dot( )</a>; with the Preconditioner type </li>
+<li><a class="el" href="group__blas2.html#ga7f66ae102c9c093cdc0877a989fd82b3" title="Symmetric Matrix Vector product. ">dg::blas2::symv( )</a>; with the Preconditioner type</li>
 </ul>
 <dl class="section note"><dt>Note</dt><dd>Conjugate gradients might become unstable for positive semidefinite matrices arising e.g. in the discretization of the periodic laplacian </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -292,7 +306,7 @@ template&lt;class Matrix , class Preconditioner &gt; </div>
 </div><div class="memdoc">
 
 <p>Solve the system A*x = b using a preconditioned conjugate gradient method. </p>
-<p>The iteration stops if <img class="formulaInl" alt="$ ||Ax|| < \epsilon( ||b|| + C) $" src="form_21.png"/> where <img class="formulaInl" alt="$C$" src="form_22.png"/> is a correction factor to the absolute error </p>
+<p>The iteration stops if \( ||Ax|| &lt; \epsilon( ||b|| + C) \) where \(C\) is a correction factor to the absolute error </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">Matrix</td><td>The matrix class: no requirements except for the BLAS routines </td></tr>
@@ -351,7 +365,7 @@ template&lt;class Vector&gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/matthias/feltor/inc/dg/<a class="el" href="cg_8h_source.html">cg.h</a></li>
+<li>/home/matthias/Projekte/feltor/inc/dg/<a class="el" href="cg_8h_source.html">cg.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -359,7 +373,7 @@ template&lt;class Vector&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacedg.html">dg</a></li><li class="navelem"><a class="el" href="classdg_1_1_c_g.html">CG</a></li>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:15 for Discontinuous Galerkin Library by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Discontinuous Galerkin Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

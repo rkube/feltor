@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -114,14 +120,11 @@ $(document).ready(function(){initNavTree('structdg_1_1_karniadakis.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>Struct for <a class="el" href="structdg_1_1_karniadakis.html" title="Struct for Karniadakis semi-implicit multistep time-integration  Uses blas1::axpby routines to integr...">Karniadakis</a> semi-implicit multistep time-integration </p>
+<p>Struct for <a class="el" href="structdg_1_1_karniadakis.html" title="Struct for Karniadakis semi-implicit multistep time-integration . ">Karniadakis</a> semi-implicit multistep time-integration </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ {\bar v}^n = \frac{1}{\gamma_0}\left(\sum_{q=0}^2 \alpha_q v^{n-q} + \Delta t\sum_{q=0}^2\beta_q N( v^{n-q})\right) \]" src="form_57.png"/>
+\[ \begin{align} {\bar v}^n &amp;= \frac{1}{\gamma_0}\left(\sum_{q=0}^2 \alpha_q v^{n-q} + \Delta t\sum_{q=0}^2\beta_q N( v^{n-q})\right) \\ \left( 1 - \frac{\Delta t}{\gamma_0} \hat L\right) v^{n+1} &amp;= {\bar v}^n \end{align} \]
 </p>
- <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \left( 1 - \frac{\Delta t}{\gamma_0} \hat L\right) v^{n+1} = {\bar v}^n \]" src="form_58.png"/>
-</p>
-Uses <a class="el" href="group__blas1.html#ga6ee5b940147ba6b71e1fe1fc538e9459" title="Modified BLAS 1 routine axpy. ">blas1::axpby</a> routines to integrate one step and only one right-hand-side evaluation per step. Uses a conjugate gradient method for the implicit operator.  
+<p>.  
  <a href="structdg_1_1_karniadakis.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="multistep_8h_source.html">multistep.h</a>&gt;</code></p>
@@ -150,14 +153,12 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><h3>template&lt;class Vector&gt;<br/>
 struct dg::Karniadakis&lt; Vector &gt;</h3>
 
-<p>Struct for <a class="el" href="structdg_1_1_karniadakis.html" title="Struct for Karniadakis semi-implicit multistep time-integration  Uses blas1::axpby routines to integr...">Karniadakis</a> semi-implicit multistep time-integration </p>
+<p>Struct for <a class="el" href="structdg_1_1_karniadakis.html" title="Struct for Karniadakis semi-implicit multistep time-integration . ">Karniadakis</a> semi-implicit multistep time-integration </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ {\bar v}^n = \frac{1}{\gamma_0}\left(\sum_{q=0}^2 \alpha_q v^{n-q} + \Delta t\sum_{q=0}^2\beta_q N( v^{n-q})\right) \]" src="form_57.png"/>
+\[ \begin{align} {\bar v}^n &amp;= \frac{1}{\gamma_0}\left(\sum_{q=0}^2 \alpha_q v^{n-q} + \Delta t\sum_{q=0}^2\beta_q N( v^{n-q})\right) \\ \left( 1 - \frac{\Delta t}{\gamma_0} \hat L\right) v^{n+1} &amp;= {\bar v}^n \end{align} \]
 </p>
- <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \left( 1 - \frac{\Delta t}{\gamma_0} \hat L\right) v^{n+1} = {\bar v}^n \]" src="form_58.png"/>
-</p>
-<p>Uses <a class="el" href="group__blas1.html#ga6ee5b940147ba6b71e1fe1fc538e9459" title="Modified BLAS 1 routine axpy. ">blas1::axpby</a> routines to integrate one step and only one right-hand-side evaluation per step. Uses a conjugate gradient method for the implicit operator. </p>
+<p>. </p>
+<p>Uses <a class="el" href="group__blas1.html#ga6ee5b940147ba6b71e1fe1fc538e9459" title="Modified BLAS 1 routine axpy. ">blas1::axpby</a> routines to integrate one step and only one right-hand-side evaluation per step. Uses a conjugate gradient method for the implicit operator</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">Vector</td><td>The Argument type used in the Functor class </td></tr>
@@ -390,7 +391,7 @@ template&lt;class Functor , class LinearOp &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/matthias/feltor/inc/dg/<a class="el" href="multistep_8h_source.html">multistep.h</a></li>
+<li>/home/matthias/Projekte/feltor/inc/dg/<a class="el" href="multistep_8h_source.html">multistep.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -398,7 +399,7 @@ template&lt;class Functor , class LinearOp &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacedg.html">dg</a></li><li class="navelem"><a class="el" href="structdg_1_1_karniadakis.html">Karniadakis</a></li>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:15 for Discontinuous Galerkin Library by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Discontinuous Galerkin Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

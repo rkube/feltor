@@ -6,6 +6,7 @@ var namespacedg =
     [ "CG", "classdg_1_1_c_g.html", "classdg_1_1_c_g" ],
     [ "Invert", "structdg_1_1_invert.html", "structdg_1_1_invert" ],
     [ "Elliptic", "classdg_1_1_elliptic.html", "classdg_1_1_elliptic" ],
+    [ "GeneralElliptic", "structdg_1_1_general_elliptic.html", "structdg_1_1_general_elliptic" ],
     [ "Fail", "structdg_1_1_fail.html", "structdg_1_1_fail" ],
     [ "AbsMax", "structdg_1_1_abs_max.html", "structdg_1_1_abs_max" ],
     [ "AbsMin", "structdg_1_1_abs_min.html", "structdg_1_1_abs_min" ],
@@ -31,7 +32,6 @@ var namespacedg =
     [ "MOD", "structdg_1_1_m_o_d.html", "structdg_1_1_m_o_d" ],
     [ "ABS", "structdg_1_1_a_b_s.html", "structdg_1_1_a_b_s" ],
     [ "CONSTANT", "structdg_1_1_c_o_n_s_t_a_n_t.html", "structdg_1_1_c_o_n_s_t_a_n_t" ],
-    [ "FLOOR", "structdg_1_1_f_l_o_o_r.html", "structdg_1_1_f_l_o_o_r" ],
     [ "Histogram", "structdg_1_1_histogram.html", "structdg_1_1_histogram" ],
     [ "Histogram2D", "structdg_1_1_histogram2_d.html", "structdg_1_1_histogram2_d" ],
     [ "Helmholtz", "structdg_1_1_helmholtz.html", "structdg_1_1_helmholtz" ],
@@ -43,6 +43,5 @@ var namespacedg =
     [ "Poisson", "structdg_1_1_poisson.html", "structdg_1_1_poisson" ],
     [ "rk_coeff", "structdg_1_1rk__coeff.html", null ],
     [ "RK", "structdg_1_1_r_k.html", "structdg_1_1_r_k" ],
-    [ "NotANumber", "structdg_1_1_not_a_number.html", "structdg_1_1_not_a_number" ],
-    [ "Toefl", "structdg_1_1_toefl.html", "structdg_1_1_toefl" ]
+    [ "NotANumber", "structdg_1_1_not_a_number.html", "structdg_1_1_not_a_number" ]
 ];

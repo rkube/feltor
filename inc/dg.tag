@@ -2,7 +2,7 @@
 <tagfile>
   <compound kind="file">
     <name>algorithm.h</name>
-    <path>/home/matthias/feltor/inc/dg/</path>
+    <path>/home/matthias/Projekte/feltor/inc/dg/</path>
     <filename>algorithm_8h</filename>
     <includes id="blas_8h" name="blas.h" local="yes" imported="no">blas.h</includes>
     <includes id="arakawa_8h" name="arakawa.h" local="yes" imported="no">arakawa.h</includes>
@@ -17,22 +17,23 @@
   </compound>
   <compound kind="file">
     <name>arakawa.h</name>
-    <path>/home/matthias/feltor/inc/dg/</path>
+    <path>/home/matthias/Projekte/feltor/inc/dg/</path>
     <filename>arakawa_8h</filename>
     <includes id="blas_8h" name="blas.h" local="yes" imported="no">blas.h</includes>
+    <includes id="enums_8h" name="enums.h" local="yes" imported="no">enums.h</includes>
     <class kind="struct">dg::ArakawaX</class>
     <namespace>dg</namespace>
   </compound>
   <compound kind="file">
     <name>blas.h</name>
-    <path>/home/matthias/feltor/inc/dg/</path>
+    <path>/home/matthias/Projekte/feltor/inc/dg/</path>
     <filename>blas_8h</filename>
     <includes id="blas1_8h" name="blas1.h" local="yes" imported="no">blas1.h</includes>
     <includes id="blas2_8h" name="blas2.h" local="yes" imported="no">blas2.h</includes>
   </compound>
   <compound kind="file">
     <name>blas1.h</name>
-    <path>/home/matthias/feltor/inc/dg/</path>
+    <path>/home/matthias/Projekte/feltor/inc/dg/</path>
     <filename>blas1_8h</filename>
     <namespace>dg</namespace>
     <namespace>dg::blas1</namespace>
@@ -88,7 +89,7 @@
   </compound>
   <compound kind="file">
     <name>blas2.h</name>
-    <path>/home/matthias/feltor/inc/dg/</path>
+    <path>/home/matthias/Projekte/feltor/inc/dg/</path>
     <filename>blas2_8h</filename>
     <namespace>dg</namespace>
     <namespace>dg::blas2</namespace>
@@ -130,7 +131,7 @@
   </compound>
   <compound kind="file">
     <name>cg.h</name>
-    <path>/home/matthias/feltor/inc/dg/</path>
+    <path>/home/matthias/Projekte/feltor/inc/dg/</path>
     <filename>cg_8h</filename>
     <includes id="blas_8h" name="blas.h" local="yes" imported="no">blas.h</includes>
     <class kind="class">dg::CG</class>
@@ -146,221 +147,24 @@
   </compound>
   <compound kind="file">
     <name>dz.h</name>
-    <path>/home/matthias/feltor/inc/dg/</path>
+    <path>/home/matthias/Projekte/feltor/inc/dg/</path>
     <filename>dz_8h</filename>
   </compound>
   <compound kind="file">
     <name>elliptic.h</name>
-    <path>/home/matthias/feltor/inc/dg/</path>
+    <path>/home/matthias/Projekte/feltor/inc/dg/</path>
     <filename>elliptic_8h</filename>
     <includes id="blas_8h" name="blas.h" local="yes" imported="no">blas.h</includes>
+    <includes id="enums_8h" name="enums.h" local="yes" imported="no">enums.h</includes>
     <class kind="class">dg::Elliptic</class>
+    <class kind="struct">dg::GeneralElliptic</class>
     <namespace>dg</namespace>
   </compound>
   <compound kind="file">
-    <name>exceptions.h</name>
-    <path>/home/matthias/feltor/inc/dg/</path>
-    <filename>exceptions_8h</filename>
-    <class kind="struct">dg::Fail</class>
+    <name>enums.h</name>
+    <path>/home/matthias/Projekte/feltor/inc/dg/</path>
+    <filename>enums_8h</filename>
     <namespace>dg</namespace>
-  </compound>
-  <compound kind="file">
-    <name>functors.h</name>
-    <path>/home/matthias/feltor/inc/dg/</path>
-    <filename>functors_8h</filename>
-    <class kind="struct">dg::AbsMax</class>
-    <class kind="struct">dg::AbsMin</class>
-    <class kind="struct">dg::Gaussian</class>
-    <class kind="struct">dg::Gaussian3d</class>
-    <class kind="struct">dg::GaussianX</class>
-    <class kind="struct">dg::GaussianY</class>
-    <class kind="struct">dg::GaussianZ</class>
-    <class kind="struct">dg::SinProfX</class>
-    <class kind="struct">dg::ExpProfX</class>
-    <class kind="struct">dg::LinearX</class>
-    <class kind="struct">dg::LinearY</class>
-    <class kind="struct">dg::LHalf</class>
-    <class kind="struct">dg::RHalf</class>
-    <class kind="struct">dg::Lamb</class>
-    <class kind="struct">dg::Vortex</class>
-    <class kind="struct">dg::BathRZ</class>
-    <class kind="struct">dg::EXP</class>
-    <class kind="struct">dg::LN</class>
-    <class kind="struct">dg::SQRT</class>
-    <class kind="struct">dg::MinMod</class>
-    <class kind="struct">dg::PLUS</class>
-    <class kind="struct">dg::MOD</class>
-    <class kind="struct">dg::ABS</class>
-    <class kind="struct">dg::CONSTANT</class>
-    <class kind="struct">dg::FLOOR</class>
-    <class kind="struct">dg::Histogram</class>
-    <class kind="struct">dg::Histogram2D</class>
-    <namespace>dg</namespace>
-    <member kind="function">
-      <type>double</type>
-      <name>bessj1</name>
-      <anchorfile>group__functions.html</anchorfile>
-      <anchor>ga31e93254b91f287daf4ca4756fb32385</anchor>
-      <arglist>(double x)</arglist>
-    </member>
-    <member kind="function">
-      <type>double</type>
-      <name>bessi1</name>
-      <anchorfile>group__functions.html</anchorfile>
-      <anchor>ga8f29ee46cf5603af9cabd93163cf98cc</anchor>
-      <arglist>(double x)</arglist>
-    </member>
-    <member kind="function">
-      <type>double</type>
-      <name>bessk1</name>
-      <anchorfile>group__functions.html</anchorfile>
-      <anchor>ga43e254f13fa144c646b2e509bcd5d1d1</anchor>
-      <arglist>(double x)</arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>helmholtz.h</name>
-    <path>/home/matthias/feltor/inc/dg/</path>
-    <filename>helmholtz_8h</filename>
-    <includes id="blas_8h" name="blas.h" local="yes" imported="no">blas.h</includes>
-    <includes id="elliptic_8h" name="elliptic.h" local="yes" imported="no">elliptic.h</includes>
-    <class kind="struct">dg::Helmholtz</class>
-    <namespace>dg</namespace>
-  </compound>
-  <compound kind="file">
-    <name>multistep.h</name>
-    <path>/home/matthias/feltor/inc/dg/</path>
-    <filename>multistep_8h</filename>
-    <includes id="cg_8h" name="cg.h" local="yes" imported="no">cg.h</includes>
-    <class kind="struct">dg::AB</class>
-    <class kind="struct">dg::Karniadakis</class>
-    <class kind="struct">dg::SIRK</class>
-    <namespace>dg</namespace>
-  </compound>
-  <compound kind="file">
-    <name>nullstelle.h</name>
-    <path>/home/matthias/feltor/inc/dg/</path>
-    <filename>nullstelle_8h</filename>
-    <class kind="struct">dg::Ooops</class>
-    <class kind="class">dg::KeineNST_1D</class>
-    <namespace>dg</namespace>
-    <member kind="function">
-      <type>int</type>
-      <name>bisection1d</name>
-      <anchorfile>group___nullstellensuchroutinen.html</anchorfile>
-      <anchor>gaa269808db678039605044e14fc849675</anchor>
-      <arglist>(UnaryOp &amp;funktion, double &amp;x_min, double &amp;x_max, const double aufloesung)</arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>poisson.h</name>
-    <path>/home/matthias/feltor/inc/dg/</path>
-    <filename>poisson_8h</filename>
-    <includes id="blas_8h" name="blas.h" local="yes" imported="no">blas.h</includes>
-    <class kind="struct">dg::Poisson</class>
-    <namespace>dg</namespace>
-  </compound>
-  <compound kind="file">
-    <name>runge_kutta.h</name>
-    <path>/home/matthias/feltor/inc/dg/</path>
-    <filename>runge__kutta_8h</filename>
-    <includes id="exceptions_8h" name="exceptions.h" local="yes" imported="no">exceptions.h</includes>
-    <includes id="blas1_8h" name="blas1.h" local="yes" imported="no">blas1.h</includes>
-    <class kind="struct">dg::rk_coeff</class>
-    <class kind="struct">dg::RK</class>
-    <class kind="struct">dg::NotANumber</class>
-    <namespace>dg</namespace>
-    <member kind="function">
-      <type>void</type>
-      <name>integrateRK4</name>
-      <anchorfile>group__algorithms.html</anchorfile>
-      <anchor>ga098434b3580fe8186441a1fd178214ef</anchor>
-      <arglist>(RHS &amp;rhs, const Vector &amp;begin, Vector &amp;end, double T_max, double eps_abs)</arglist>
-    </member>
-  </compound>
-  <compound kind="group">
-    <name>DG</name>
-    <title>The Discontinuous Galerkin library</title>
-    <filename>group___d_g.html</filename>
-    <subgroup>grid</subgroup>
-    <subgroup>evaluation</subgroup>
-    <subgroup>functions</subgroup>
-    <subgroup>creation</subgroup>
-    <subgroup>blas</subgroup>
-    <subgroup>algorithms</subgroup>
-    <subgroup>utilities</subgroup>
-  </compound>
-  <compound kind="group">
-    <name>grid</name>
-    <title>Grid objects</title>
-    <filename>group__grid.html</filename>
-  </compound>
-  <compound kind="group">
-    <name>evaluation</name>
-    <title>Function discretization</title>
-    <filename>group__evaluation.html</filename>
-  </compound>
-  <compound kind="group">
-    <name>functions</name>
-    <title>Functions and Functors</title>
-    <filename>group__functions.html</filename>
-    <class kind="struct">dg::AbsMax</class>
-    <class kind="struct">dg::AbsMin</class>
-    <class kind="struct">dg::Gaussian</class>
-    <class kind="struct">dg::Gaussian3d</class>
-    <class kind="struct">dg::GaussianX</class>
-    <class kind="struct">dg::GaussianY</class>
-    <class kind="struct">dg::GaussianZ</class>
-    <class kind="struct">dg::SinProfX</class>
-    <class kind="struct">dg::ExpProfX</class>
-    <class kind="struct">dg::LinearX</class>
-    <class kind="struct">dg::LinearY</class>
-    <class kind="struct">dg::LHalf</class>
-    <class kind="struct">dg::RHalf</class>
-    <class kind="struct">dg::Lamb</class>
-    <class kind="struct">dg::Vortex</class>
-    <class kind="struct">dg::BathRZ</class>
-    <class kind="struct">dg::EXP</class>
-    <class kind="struct">dg::LN</class>
-    <class kind="struct">dg::SQRT</class>
-    <class kind="struct">dg::MinMod</class>
-    <class kind="struct">dg::PLUS</class>
-    <class kind="struct">dg::MOD</class>
-    <class kind="struct">dg::ABS</class>
-    <class kind="struct">dg::CONSTANT</class>
-    <class kind="struct">dg::FLOOR</class>
-    <class kind="struct">dg::Histogram</class>
-    <class kind="struct">dg::Histogram2D</class>
-    <member kind="function">
-      <type>double</type>
-      <name>bessj1</name>
-      <anchorfile>group__functions.html</anchorfile>
-      <anchor>ga31e93254b91f287daf4ca4756fb32385</anchor>
-      <arglist>(double x)</arglist>
-    </member>
-    <member kind="function">
-      <type>double</type>
-      <name>bessi1</name>
-      <anchorfile>group__functions.html</anchorfile>
-      <anchor>ga8f29ee46cf5603af9cabd93163cf98cc</anchor>
-      <arglist>(double x)</arglist>
-    </member>
-    <member kind="function">
-      <type>double</type>
-      <name>bessk1</name>
-      <anchorfile>group__functions.html</anchorfile>
-      <anchor>ga43e254f13fa144c646b2e509bcd5d1d1</anchor>
-      <arglist>(double x)</arglist>
-    </member>
-  </compound>
-  <compound kind="group">
-    <name>creation</name>
-    <title>Discrete derivatives</title>
-    <filename>group__creation.html</filename>
-    <subgroup>lowlevel</subgroup>
-    <subgroup>highlevel</subgroup>
-    <subgroup>arakawa</subgroup>
-    <subgroup>operators</subgroup>
     <member kind="enumeration">
       <type></type>
       <name>bc</name>
@@ -473,25 +277,322 @@
       <anchor>gga75789d2c36dff2caed4b3bb80191b346a6962eb4bbef38ebabc41458844991bfd</anchor>
       <arglist></arglist>
     </member>
+  </compound>
+  <compound kind="file">
+    <name>exceptions.h</name>
+    <path>/home/matthias/Projekte/feltor/inc/dg/</path>
+    <filename>exceptions_8h</filename>
+    <class kind="struct">dg::Fail</class>
+    <namespace>dg</namespace>
+  </compound>
+  <compound kind="file">
+    <name>functors.h</name>
+    <path>/home/matthias/Projekte/feltor/inc/dg/</path>
+    <filename>functors_8h</filename>
+    <includes id="blas1_8h" name="blas1.h" local="yes" imported="no">blas1.h</includes>
+    <class kind="struct">dg::AbsMax</class>
+    <class kind="struct">dg::AbsMin</class>
+    <class kind="struct">dg::Gaussian</class>
+    <class kind="struct">dg::Gaussian3d</class>
+    <class kind="struct">dg::GaussianX</class>
+    <class kind="struct">dg::GaussianY</class>
+    <class kind="struct">dg::GaussianZ</class>
+    <class kind="struct">dg::SinProfX</class>
+    <class kind="struct">dg::ExpProfX</class>
+    <class kind="struct">dg::LinearX</class>
+    <class kind="struct">dg::LinearY</class>
+    <class kind="struct">dg::LHalf</class>
+    <class kind="struct">dg::RHalf</class>
+    <class kind="struct">dg::Lamb</class>
+    <class kind="struct">dg::Vortex</class>
+    <class kind="struct">dg::BathRZ</class>
+    <class kind="struct">dg::EXP</class>
+    <class kind="struct">dg::LN</class>
+    <class kind="struct">dg::SQRT</class>
+    <class kind="struct">dg::MinMod</class>
+    <class kind="struct">dg::PLUS</class>
+    <class kind="struct">dg::MOD</class>
+    <class kind="struct">dg::ABS</class>
+    <class kind="struct">dg::CONSTANT</class>
+    <class kind="struct">dg::Histogram</class>
+    <class kind="struct">dg::Histogram2D</class>
+    <namespace>dg</namespace>
+    <member kind="function">
+      <type>double</type>
+      <name>bessj1</name>
+      <anchorfile>group__functions.html</anchorfile>
+      <anchor>ga31e93254b91f287daf4ca4756fb32385</anchor>
+      <arglist>(double x)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>bessi1</name>
+      <anchorfile>group__functions.html</anchorfile>
+      <anchor>ga8f29ee46cf5603af9cabd93163cf98cc</anchor>
+      <arglist>(double x)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>bessk1</name>
+      <anchorfile>group__functions.html</anchorfile>
+      <anchor>ga43e254f13fa144c646b2e509bcd5d1d1</anchor>
+      <arglist>(double x)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>helmholtz.h</name>
+    <path>/home/matthias/Projekte/feltor/inc/dg/</path>
+    <filename>helmholtz_8h</filename>
+    <includes id="blas_8h" name="blas.h" local="yes" imported="no">blas.h</includes>
+    <includes id="elliptic_8h" name="elliptic.h" local="yes" imported="no">elliptic.h</includes>
+    <class kind="struct">dg::Helmholtz</class>
+    <namespace>dg</namespace>
+  </compound>
+  <compound kind="file">
+    <name>multistep.h</name>
+    <path>/home/matthias/Projekte/feltor/inc/dg/</path>
+    <filename>multistep_8h</filename>
+    <includes id="cg_8h" name="cg.h" local="yes" imported="no">cg.h</includes>
+    <class kind="struct">dg::AB</class>
+    <class kind="struct">dg::Karniadakis</class>
+    <class kind="struct">dg::SIRK</class>
+    <namespace>dg</namespace>
+  </compound>
+  <compound kind="file">
+    <name>nullstelle.h</name>
+    <path>/home/matthias/Projekte/feltor/inc/dg/</path>
+    <filename>nullstelle_8h</filename>
+    <class kind="struct">dg::Ooops</class>
+    <class kind="class">dg::KeineNST_1D</class>
+    <namespace>dg</namespace>
+    <member kind="function">
+      <type>int</type>
+      <name>bisection1d</name>
+      <anchorfile>group__utilities.html</anchorfile>
+      <anchor>gaa269808db678039605044e14fc849675</anchor>
+      <arglist>(UnaryOp &amp;funktion, double &amp;x_min, double &amp;x_max, const double aufloesung)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>poisson.h</name>
+    <path>/home/matthias/Projekte/feltor/inc/dg/</path>
+    <filename>poisson_8h</filename>
+    <includes id="blas_8h" name="blas.h" local="yes" imported="no">blas.h</includes>
+    <includes id="enums_8h" name="enums.h" local="yes" imported="no">enums.h</includes>
+    <class kind="struct">dg::Poisson</class>
+    <namespace>dg</namespace>
+  </compound>
+  <compound kind="file">
+    <name>runge_kutta.h</name>
+    <path>/home/matthias/Projekte/feltor/inc/dg/</path>
+    <filename>runge__kutta_8h</filename>
+    <includes id="exceptions_8h" name="exceptions.h" local="yes" imported="no">exceptions.h</includes>
+    <includes id="blas1_8h" name="blas1.h" local="yes" imported="no">blas1.h</includes>
+    <class kind="struct">dg::rk_coeff</class>
+    <class kind="struct">dg::RK</class>
+    <class kind="struct">dg::NotANumber</class>
+    <namespace>dg</namespace>
+    <member kind="function">
+      <type>void</type>
+      <name>integrateRK4</name>
+      <anchorfile>group__algorithms.html</anchorfile>
+      <anchor>ga098434b3580fe8186441a1fd178214ef</anchor>
+      <arglist>(RHS &amp;rhs, const Vector &amp;begin, Vector &amp;end, double T_max, double eps_abs)</arglist>
+    </member>
+  </compound>
+  <compound kind="group">
+    <name>DG</name>
+    <title>The Discontinuous Galerkin library</title>
+    <filename>group___d_g.html</filename>
+    <subgroup>grid</subgroup>
+    <subgroup>evaluation</subgroup>
+    <subgroup>functions</subgroup>
+    <subgroup>creation</subgroup>
+    <subgroup>blas</subgroup>
+    <subgroup>algorithms</subgroup>
+    <subgroup>utilities</subgroup>
+    <subgroup>mpi_structures</subgroup>
+  </compound>
+  <compound kind="group">
+    <name>grid</name>
+    <title>Grid objects</title>
+    <filename>group__grid.html</filename>
+  </compound>
+  <compound kind="group">
+    <name>evaluation</name>
+    <title>Function discretization</title>
+    <filename>group__evaluation.html</filename>
+  </compound>
+  <compound kind="group">
+    <name>functions</name>
+    <title>Functions and Functors</title>
+    <filename>group__functions.html</filename>
+    <class kind="struct">dg::AbsMax</class>
+    <class kind="struct">dg::AbsMin</class>
+    <class kind="struct">dg::Gaussian</class>
+    <class kind="struct">dg::Gaussian3d</class>
+    <class kind="struct">dg::GaussianX</class>
+    <class kind="struct">dg::GaussianY</class>
+    <class kind="struct">dg::GaussianZ</class>
+    <class kind="struct">dg::SinProfX</class>
+    <class kind="struct">dg::ExpProfX</class>
+    <class kind="struct">dg::LinearX</class>
+    <class kind="struct">dg::LinearY</class>
+    <class kind="struct">dg::LHalf</class>
+    <class kind="struct">dg::RHalf</class>
+    <class kind="struct">dg::Lamb</class>
+    <class kind="struct">dg::Vortex</class>
+    <class kind="struct">dg::BathRZ</class>
+    <class kind="struct">dg::EXP</class>
+    <class kind="struct">dg::LN</class>
+    <class kind="struct">dg::SQRT</class>
+    <class kind="struct">dg::MinMod</class>
+    <class kind="struct">dg::PLUS</class>
+    <class kind="struct">dg::MOD</class>
+    <class kind="struct">dg::ABS</class>
+    <class kind="struct">dg::CONSTANT</class>
+    <class kind="struct">dg::Histogram</class>
+    <class kind="struct">dg::Histogram2D</class>
+    <member kind="function">
+      <type>double</type>
+      <name>bessj1</name>
+      <anchorfile>group__functions.html</anchorfile>
+      <anchor>ga31e93254b91f287daf4ca4756fb32385</anchor>
+      <arglist>(double x)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>bessi1</name>
+      <anchorfile>group__functions.html</anchorfile>
+      <anchor>ga8f29ee46cf5603af9cabd93163cf98cc</anchor>
+      <arglist>(double x)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>bessk1</name>
+      <anchorfile>group__functions.html</anchorfile>
+      <anchor>ga43e254f13fa144c646b2e509bcd5d1d1</anchor>
+      <arglist>(double x)</arglist>
+    </member>
+  </compound>
+  <compound kind="group">
+    <name>creation</name>
+    <title>Discrete derivatives</title>
+    <filename>group__creation.html</filename>
+    <subgroup>lowlevel</subgroup>
+    <subgroup>highlevel</subgroup>
+    <subgroup>arakawa</subgroup>
+    <subgroup>matrixoperators</subgroup>
     <member kind="enumeration">
       <type></type>
-      <name>space</name>
+      <name>bc</name>
       <anchorfile>group__creation.html</anchorfile>
-      <anchor>ga720a6f709941a075d5c8f60ef07c619f</anchor>
+      <anchor>ga59440bdf436f2874b49aa52b670ed364</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
-      <name>XSPACE</name>
+      <name>PER</name>
       <anchorfile>group__creation.html</anchorfile>
-      <anchor>gga720a6f709941a075d5c8f60ef07c619fa89a3bcd08995f33c0f8b5257bd04d4ce</anchor>
+      <anchor>gga59440bdf436f2874b49aa52b670ed364a948704f60491461974ce4fe6339778b3</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
-      <name>LSPACE</name>
+      <name>DIR</name>
       <anchorfile>group__creation.html</anchorfile>
-      <anchor>gga720a6f709941a075d5c8f60ef07c619fa2f6bfc0ea453ce2a9c3f274cddbf5fa1</anchor>
+      <anchor>gga59440bdf436f2874b49aa52b670ed364adece0b7644d85f490823799a3b97f7e6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>DIR_NEU</name>
+      <anchorfile>group__creation.html</anchorfile>
+      <anchor>gga59440bdf436f2874b49aa52b670ed364ae1ff2b85fda37868973c8059e3ca3a79</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>NEU_DIR</name>
+      <anchorfile>group__creation.html</anchorfile>
+      <anchor>gga59440bdf436f2874b49aa52b670ed364a5832830f6fb508b8932dbafad3d1b57c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>NEU</name>
+      <anchorfile>group__creation.html</anchorfile>
+      <anchor>gga59440bdf436f2874b49aa52b670ed364ad8a2f69a62e7fdafe1665ae7162e8e10</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>norm</name>
+      <anchorfile>group__creation.html</anchorfile>
+      <anchor>ga9945b71a335bc97f78dc7425911c7287</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>normed</name>
+      <anchorfile>group__creation.html</anchorfile>
+      <anchor>gga9945b71a335bc97f78dc7425911c7287a3f222a3e51d054ebe21228c62569e123</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>not_normed</name>
+      <anchorfile>group__creation.html</anchorfile>
+      <anchor>gga9945b71a335bc97f78dc7425911c7287a07217e3dd9be28b4da85d46fef38f066</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>direction</name>
+      <anchorfile>group__creation.html</anchorfile>
+      <anchor>gabf9ea3df33484cbb5886e257c3899e48</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>forward</name>
+      <anchorfile>group__creation.html</anchorfile>
+      <anchor>ggabf9ea3df33484cbb5886e257c3899e48a573a4a72e7f55df92b88c254a13762f2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>backward</name>
+      <anchorfile>group__creation.html</anchorfile>
+      <anchor>ggabf9ea3df33484cbb5886e257c3899e48a3e10d2598f5b58a930631b12774e05cb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>centered</name>
+      <anchorfile>group__creation.html</anchorfile>
+      <anchor>ggabf9ea3df33484cbb5886e257c3899e48a6281b4fc609cb723a615662b5adac9df</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>system</name>
+      <anchorfile>group__creation.html</anchorfile>
+      <anchor>ga75789d2c36dff2caed4b3bb80191b346</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>cartesian</name>
+      <anchorfile>group__creation.html</anchorfile>
+      <anchor>gga75789d2c36dff2caed4b3bb80191b346a49a654c38e355ec847e55f927511019d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>cylindrical</name>
+      <anchorfile>group__creation.html</anchorfile>
+      <anchor>gga75789d2c36dff2caed4b3bb80191b346a6962eb4bbef38ebabc41458844991bfd</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -510,80 +611,82 @@
     <title>Arakawas scheme</title>
     <filename>group__arakawa.html</filename>
     <class kind="struct">dg::ArakawaX</class>
+    <class kind="struct">dg::Poisson</class>
   </compound>
   <compound kind="group">
-    <name>operators</name>
+    <name>matrixoperators</name>
     <title>Classes that act as matrices in blas2 routines</title>
-    <filename>group__operators.html</filename>
+    <filename>group__matrixoperators.html</filename>
     <class kind="class">dg::Elliptic</class>
+    <class kind="struct">dg::GeneralElliptic</class>
     <class kind="struct">dg::Helmholtz</class>
     <member kind="function">
       <type></type>
       <name>Helmholtz</name>
-      <anchorfile>group__operators.html</anchorfile>
+      <anchorfile>group__matrixoperators.html</anchorfile>
       <anchor>ga76ec5eaa2cc3dd1ef9b0c90f8a85fd6c</anchor>
       <arglist>(const Grid &amp;g, double alpha=1., direction dir=dg::forward)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>Helmholtz</name>
-      <anchorfile>group__operators.html</anchorfile>
+      <anchorfile>group__matrixoperators.html</anchorfile>
       <anchor>ga5a2fc2f7c83288c951b5a938d8cacd85</anchor>
       <arglist>(const Grid &amp;g, bc bcx, bc bcy, double alpha=1., direction dir=dg::forward)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>symv</name>
-      <anchorfile>group__operators.html</anchorfile>
+      <anchorfile>group__matrixoperators.html</anchorfile>
       <anchor>ga3f5c52b98883ecc88056b3f82030f548</anchor>
       <arglist>(Vector &amp;x, Vector &amp;y)</arglist>
     </member>
     <member kind="function">
       <type>const Preconditioner &amp;</type>
       <name>weights</name>
-      <anchorfile>group__operators.html</anchorfile>
+      <anchorfile>group__matrixoperators.html</anchorfile>
       <anchor>gaa999c6af019581113bde43dd67cacc44</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>const Preconditioner &amp;</type>
       <name>precond</name>
-      <anchorfile>group__operators.html</anchorfile>
+      <anchorfile>group__matrixoperators.html</anchorfile>
       <anchor>ga42af8edcfc2def422a545c6fe950dbfc</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>double &amp;</type>
       <name>alpha</name>
-      <anchorfile>group__operators.html</anchorfile>
+      <anchorfile>group__matrixoperators.html</anchorfile>
       <anchor>ga7fceb7f2dbaf51df5941643f33f1f8a6</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>double</type>
       <name>alpha</name>
-      <anchorfile>group__operators.html</anchorfile>
+      <anchorfile>group__matrixoperators.html</anchorfile>
       <anchor>ga59320b5e0dd00f8e5a7c49c880912d60</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>set_chi</name>
-      <anchorfile>group__operators.html</anchorfile>
+      <anchorfile>group__matrixoperators.html</anchorfile>
       <anchor>gac95fce512bf66491a2235d589148a64a</anchor>
       <arglist>(const Vector &amp;chi)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>reset_chi</name>
-      <anchorfile>group__operators.html</anchorfile>
+      <anchorfile>group__matrixoperators.html</anchorfile>
       <anchor>gaf76f445d7887289a03f0e48ed42c2a3d</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>const Vector &amp;</type>
       <name>chi</name>
-      <anchorfile>group__operators.html</anchorfile>
+      <anchorfile>group__matrixoperators.html</anchorfile>
       <anchor>gaf8330683e97b34392b998695d33f13ba</anchor>
       <arglist>()</arglist>
     </member>
@@ -699,6 +802,7 @@
     <class kind="struct">dg::Invert</class>
     <class kind="struct">dg::AB</class>
     <class kind="struct">dg::Karniadakis</class>
+    <class kind="struct">dg::SIRK</class>
     <class kind="struct">dg::RK</class>
     <member kind="function">
       <type>unsigned</type>
@@ -720,10 +824,17 @@
     <title>Utilities</title>
     <filename>group__utilities.html</filename>
     <subgroup>scatter</subgroup>
-    <subgroup>operators</subgroup>
     <subgroup>polarization</subgroup>
     <class kind="struct">dg::Fail</class>
     <class kind="struct">dg::Ooops</class>
+    <class kind="class">dg::KeineNST_1D</class>
+    <member kind="function">
+      <type>int</type>
+      <name>bisection1d</name>
+      <anchorfile>group__utilities.html</anchorfile>
+      <anchor>gaa269808db678039605044e14fc849675</anchor>
+      <arglist>(UnaryOp &amp;funktion, double &amp;x_min, double &amp;x_max, const double aufloesung)</arglist>
+    </member>
   </compound>
   <compound kind="group">
     <name>scatter</name>
@@ -736,16 +847,9 @@
     <filename>group__polarization.html</filename>
   </compound>
   <compound kind="group">
-    <name>Nullstellensuchroutinen</name>
-    <title>Nullstellensuchroutinen</title>
-    <filename>group___nullstellensuchroutinen.html</filename>
-    <member kind="function">
-      <type>int</type>
-      <name>bisection1d</name>
-      <anchorfile>group___nullstellensuchroutinen.html</anchorfile>
-      <anchor>gaa269808db678039605044e14fc849675</anchor>
-      <arglist>(UnaryOp &amp;funktion, double &amp;x_min, double &amp;x_max, const double aufloesung)</arglist>
-    </member>
+    <name>mpi_structures</name>
+    <title>MPI backend funcionality</title>
+    <filename>group__mpi__structures.html</filename>
   </compound>
   <compound kind="namespace">
     <name>dg</name>
@@ -756,6 +860,7 @@
     <class kind="class">dg::CG</class>
     <class kind="struct">dg::Invert</class>
     <class kind="class">dg::Elliptic</class>
+    <class kind="struct">dg::GeneralElliptic</class>
     <class kind="struct">dg::Fail</class>
     <class kind="struct">dg::AbsMax</class>
     <class kind="struct">dg::AbsMin</class>
@@ -781,7 +886,6 @@
     <class kind="struct">dg::MOD</class>
     <class kind="struct">dg::ABS</class>
     <class kind="struct">dg::CONSTANT</class>
-    <class kind="struct">dg::FLOOR</class>
     <class kind="struct">dg::Histogram</class>
     <class kind="struct">dg::Histogram2D</class>
     <class kind="struct">dg::Helmholtz</class>
@@ -794,7 +898,6 @@
     <class kind="struct">dg::rk_coeff</class>
     <class kind="struct">dg::RK</class>
     <class kind="struct">dg::NotANumber</class>
-    <class kind="struct">dg::Toefl</class>
     <member kind="enumeration">
       <type></type>
       <name>bc</name>
@@ -907,27 +1010,6 @@
       <anchor>gga75789d2c36dff2caed4b3bb80191b346a6962eb4bbef38ebabc41458844991bfd</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>space</name>
-      <anchorfile>group__creation.html</anchorfile>
-      <anchor>ga720a6f709941a075d5c8f60ef07c619f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>XSPACE</name>
-      <anchorfile>group__creation.html</anchorfile>
-      <anchor>gga720a6f709941a075d5c8f60ef07c619fa89a3bcd08995f33c0f8b5257bd04d4ce</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>LSPACE</name>
-      <anchorfile>group__creation.html</anchorfile>
-      <anchor>gga720a6f709941a075d5c8f60ef07c619fa2f6bfc0ea453ce2a9c3f274cddbf5fa1</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function">
       <type>unsigned</type>
       <name>cg</name>
@@ -959,7 +1041,7 @@
     <member kind="function">
       <type>int</type>
       <name>bisection1d</name>
-      <anchorfile>group___nullstellensuchroutinen.html</anchorfile>
+      <anchorfile>group__utilities.html</anchorfile>
       <anchor>gaa269808db678039605044e14fc849675</anchor>
       <arglist>(UnaryOp &amp;funktion, double &amp;x_min, double &amp;x_max, const double aufloesung)</arglist>
     </member>
@@ -1109,9 +1191,9 @@
   <compound kind="class">
     <name>dg::Elliptic</name>
     <filename>classdg_1_1_elliptic.html</filename>
-    <templarg>Matrix</templarg>
-    <templarg>Vector</templarg>
-    <templarg>Preconditioner</templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
     <member kind="function">
       <type></type>
       <name>Elliptic</name>
@@ -1152,6 +1234,69 @@
       <name>symv</name>
       <anchorfile>classdg_1_1_elliptic.html</anchorfile>
       <anchor>aaa875850f691e28b53de7560367bc950</anchor>
+      <arglist>(Vector &amp;x, Vector &amp;y)</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>dg::GeneralElliptic</name>
+    <filename>structdg_1_1_general_elliptic.html</filename>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <member kind="function">
+      <type></type>
+      <name>GeneralElliptic</name>
+      <anchorfile>structdg_1_1_general_elliptic.html</anchorfile>
+      <anchor>a951d4bf81105a15efac024fbcfb029d2</anchor>
+      <arglist>(const Grid &amp;g, norm no=not_normed, direction dir=forward)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_x</name>
+      <anchorfile>structdg_1_1_general_elliptic.html</anchorfile>
+      <anchor>accb1bdb9a161cac01407144b9bad5467</anchor>
+      <arglist>(const Vector &amp;chi)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_y</name>
+      <anchorfile>structdg_1_1_general_elliptic.html</anchorfile>
+      <anchor>af120d0e5f7fd06e44c51fa70ba8567e3</anchor>
+      <arglist>(const Vector &amp;chi)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_z</name>
+      <anchorfile>structdg_1_1_general_elliptic.html</anchorfile>
+      <anchor>ab006a9fe9ea8f84d7903a91e04667851</anchor>
+      <arglist>(const Vector &amp;chi)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set</name>
+      <anchorfile>structdg_1_1_general_elliptic.html</anchorfile>
+      <anchor>ae178fdd7989f8c673d405cb8dd3918d0</anchor>
+      <arglist>(const std::vector&lt; Vector &gt; &amp;chi)</arglist>
+    </member>
+    <member kind="function">
+      <type>const Preconditioner &amp;</type>
+      <name>weights</name>
+      <anchorfile>structdg_1_1_general_elliptic.html</anchorfile>
+      <anchor>a5dfe8dd7fa1b47a6e4e581db2fbf12a9</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const Preconditioner &amp;</type>
+      <name>precond</name>
+      <anchorfile>structdg_1_1_general_elliptic.html</anchorfile>
+      <anchor>a4394a6de837ce9557cb76a6c8df4d457</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>symv</name>
+      <anchorfile>structdg_1_1_general_elliptic.html</anchorfile>
+      <anchor>afdfe8713b14d6c197b92672bc2e2186b</anchor>
       <arglist>(Vector &amp;x, Vector &amp;y)</arglist>
     </member>
   </compound>
@@ -1390,10 +1535,38 @@
   <compound kind="struct">
     <name>dg::LHalf</name>
     <filename>structdg_1_1_l_half.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>LHalf</name>
+      <anchorfile>structdg_1_1_l_half.html</anchorfile>
+      <anchor>a73a6c6de949ca50467a3cd8c9371bddf</anchor>
+      <arglist>(double xb)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>operator()</name>
+      <anchorfile>structdg_1_1_l_half.html</anchorfile>
+      <anchor>aaaf6fbf27136e0a443e42be3d41152e7</anchor>
+      <arglist>(double x, double y)</arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>dg::RHalf</name>
     <filename>structdg_1_1_r_half.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>RHalf</name>
+      <anchorfile>structdg_1_1_r_half.html</anchorfile>
+      <anchor>a683a4e23fef2cf4afe953006342c19f9</anchor>
+      <arglist>(double xb)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>operator()</name>
+      <anchorfile>structdg_1_1_r_half.html</anchorfile>
+      <anchor>a128cce7a2daa7e1078608845f526ac47</anchor>
+      <arglist>(double x, double y)</arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>dg::Lamb</name>
@@ -1436,6 +1609,20 @@
       <anchorfile>structdg_1_1_vortex.html</anchorfile>
       <anchor>a3cb30fdf2c8da900f2b6f3366dbaf237</anchor>
       <arglist>(double x0, double y0, unsigned state, double R, double u_dipole, double kz=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>operator()</name>
+      <anchorfile>structdg_1_1_vortex.html</anchorfile>
+      <anchor>a5ed882464931c6ff21123b39fb2aeedc</anchor>
+      <arglist>(double x, double y)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>operator()</name>
+      <anchorfile>structdg_1_1_vortex.html</anchorfile>
+      <anchor>ab9c5cf940de3ddc21b35d62614dda592</anchor>
+      <arglist>(double x, double y, double z)</arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -1541,6 +1728,20 @@
     <name>dg::MOD</name>
     <filename>structdg_1_1_m_o_d.html</filename>
     <templarg></templarg>
+    <member kind="function">
+      <type></type>
+      <name>MOD</name>
+      <anchorfile>structdg_1_1_m_o_d.html</anchorfile>
+      <anchor>a1661e093118805e4334b61089134bf6f</anchor>
+      <arglist>(T m)</arglist>
+    </member>
+    <member kind="function">
+      <type>T</type>
+      <name>operator()</name>
+      <anchorfile>structdg_1_1_m_o_d.html</anchorfile>
+      <anchor>aa66c4ae9784689450e8d94ec6bf90fe8</anchor>
+      <arglist>(const T &amp;x)</arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>dg::ABS</name>
@@ -1557,10 +1758,34 @@
   <compound kind="struct">
     <name>dg::CONSTANT</name>
     <filename>structdg_1_1_c_o_n_s_t_a_n_t.html</filename>
-  </compound>
-  <compound kind="struct">
-    <name>dg::FLOOR</name>
-    <filename>structdg_1_1_f_l_o_o_r.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>CONSTANT</name>
+      <anchorfile>structdg_1_1_c_o_n_s_t_a_n_t.html</anchorfile>
+      <anchor>ae8096ed918793f4de9c56cb7d39baa98</anchor>
+      <arglist>(double cte)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>operator()</name>
+      <anchorfile>structdg_1_1_c_o_n_s_t_a_n_t.html</anchorfile>
+      <anchor>ac7883c7de7daa091b4ebe20c8fdad508</anchor>
+      <arglist>(double x)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>operator()</name>
+      <anchorfile>structdg_1_1_c_o_n_s_t_a_n_t.html</anchorfile>
+      <anchor>ad08e5a0ee5593660f0b47b11a217e1ff</anchor>
+      <arglist>(double x, double y)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>operator()</name>
+      <anchorfile>structdg_1_1_c_o_n_s_t_a_n_t.html</anchorfile>
+      <anchor>ab0b682a0acc252ce3b7d7f934cdfee5a</anchor>
+      <arglist>(double x, double y, double z)</arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>dg::Histogram</name>
@@ -1572,6 +1797,20 @@
       <anchorfile>structdg_1_1_histogram.html</anchorfile>
       <anchor>ac5111e3519dc62ea32ff68e1de7eaebf</anchor>
       <arglist>(const dg::Grid1d&lt; double &gt; &amp;g1d, const std::vector&lt; double &gt; &amp;in)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>binwidth</name>
+      <anchorfile>structdg_1_1_histogram.html</anchorfile>
+      <anchor>a41da837ab831cd709ccb49390163b407</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>operator()</name>
+      <anchorfile>structdg_1_1_histogram.html</anchorfile>
+      <anchor>ae34a37fd52249593abbf0482b583d7c5</anchor>
+      <arglist>(double x)</arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -1585,6 +1824,13 @@
       <anchor>ad80ad774890b779e339151e6c79574e2</anchor>
       <arglist>(const dg::Grid2d&lt; double &gt; &amp;g2d, const std::vector&lt; double &gt; &amp;inx, const std::vector&lt; double &gt; &amp;iny)</arglist>
     </member>
+    <member kind="function">
+      <type>double</type>
+      <name>operator()</name>
+      <anchorfile>structdg_1_1_histogram2_d.html</anchorfile>
+      <anchor>ae442645862b8112c7cc34bd3c2bfc047</anchor>
+      <arglist>(double x, double y)</arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>dg::Helmholtz</name>
@@ -1595,70 +1841,70 @@
     <member kind="function">
       <type></type>
       <name>Helmholtz</name>
-      <anchorfile>group__operators.html</anchorfile>
+      <anchorfile>group__matrixoperators.html</anchorfile>
       <anchor>ga76ec5eaa2cc3dd1ef9b0c90f8a85fd6c</anchor>
       <arglist>(const Grid &amp;g, double alpha=1., direction dir=dg::forward)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>Helmholtz</name>
-      <anchorfile>group__operators.html</anchorfile>
+      <anchorfile>group__matrixoperators.html</anchorfile>
       <anchor>ga5a2fc2f7c83288c951b5a938d8cacd85</anchor>
       <arglist>(const Grid &amp;g, bc bcx, bc bcy, double alpha=1., direction dir=dg::forward)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>symv</name>
-      <anchorfile>group__operators.html</anchorfile>
+      <anchorfile>group__matrixoperators.html</anchorfile>
       <anchor>ga3f5c52b98883ecc88056b3f82030f548</anchor>
       <arglist>(Vector &amp;x, Vector &amp;y)</arglist>
     </member>
     <member kind="function">
       <type>const Preconditioner &amp;</type>
       <name>weights</name>
-      <anchorfile>group__operators.html</anchorfile>
+      <anchorfile>group__matrixoperators.html</anchorfile>
       <anchor>gaa999c6af019581113bde43dd67cacc44</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>const Preconditioner &amp;</type>
       <name>precond</name>
-      <anchorfile>group__operators.html</anchorfile>
+      <anchorfile>group__matrixoperators.html</anchorfile>
       <anchor>ga42af8edcfc2def422a545c6fe950dbfc</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>double &amp;</type>
       <name>alpha</name>
-      <anchorfile>group__operators.html</anchorfile>
+      <anchorfile>group__matrixoperators.html</anchorfile>
       <anchor>ga7fceb7f2dbaf51df5941643f33f1f8a6</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>double</type>
       <name>alpha</name>
-      <anchorfile>group__operators.html</anchorfile>
+      <anchorfile>group__matrixoperators.html</anchorfile>
       <anchor>ga59320b5e0dd00f8e5a7c49c880912d60</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>set_chi</name>
-      <anchorfile>group__operators.html</anchorfile>
+      <anchorfile>group__matrixoperators.html</anchorfile>
       <anchor>gac95fce512bf66491a2235d589148a64a</anchor>
       <arglist>(const Vector &amp;chi)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>reset_chi</name>
-      <anchorfile>group__operators.html</anchorfile>
+      <anchorfile>group__matrixoperators.html</anchorfile>
       <anchor>gaf76f445d7887289a03f0e48ed42c2a3d</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>const Vector &amp;</type>
       <name>chi</name>
-      <anchorfile>group__operators.html</anchorfile>
+      <anchorfile>group__matrixoperators.html</anchorfile>
       <anchor>gaf8330683e97b34392b998695d33f13ba</anchor>
       <arglist>()</arglist>
     </member>
@@ -1789,6 +2035,13 @@
       <name>anzeigen</name>
       <anchorfile>classdg_1_1_keine_n_s_t__1_d.html</anchorfile>
       <anchor>ab9089e775ecb1a2a2d13aab1e5e47b20</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>char const *</type>
+      <name>what</name>
+      <anchorfile>classdg_1_1_keine_n_s_t__1_d.html</anchorfile>
+      <anchor>a8a73e92fc1cc11af08cb2da266ccdcaf</anchor>
       <arglist>() const </arglist>
     </member>
   </compound>
@@ -1925,13 +2178,6 @@
       <arglist>() const </arglist>
     </member>
   </compound>
-  <compound kind="struct">
-    <name>dg::Toefl</name>
-    <filename>structdg_1_1_toefl.html</filename>
-    <templarg></templarg>
-    <templarg></templarg>
-    <templarg></templarg>
-  </compound>
   <compound kind="namespace">
     <name>dg::blas1</name>
     <filename>namespacedg_1_1blas1.html</filename>
@@ -2025,8 +2271,8 @@
     </member>
   </compound>
   <compound kind="dir">
-    <name>/home/matthias/feltor/inc/dg</name>
-    <path>/home/matthias/feltor/inc/dg/</path>
+    <name>/home/matthias/Projekte/feltor/inc/dg</name>
+    <path>/home/matthias/Projekte/feltor/inc/dg/</path>
     <filename>dir_cba352cc187f01702d3926d435723909.html</filename>
     <file>algorithm.h</file>
     <file>arakawa.h</file>
@@ -2045,13 +2291,14 @@
     <file>nullstelle.h</file>
     <file>poisson.h</file>
     <file>runge_kutta.h</file>
+    <file>test.cuh</file>
     <file>toefl.cuh</file>
   </compound>
   <compound kind="dir">
-    <name>/home/matthias/feltor/inc</name>
-    <path>/home/matthias/feltor/inc/</path>
+    <name>/home/matthias/Projekte/feltor/inc</name>
+    <path>/home/matthias/Projekte/feltor/inc/</path>
     <filename>dir_bfccd401955b95cf8c75461437045ac0.html</filename>
-    <dir>/home/matthias/feltor/inc/dg</dir>
+    <dir>/home/matthias/Projekte/feltor/inc/dg</dir>
   </compound>
   <compound kind="page">
     <name>index</name>

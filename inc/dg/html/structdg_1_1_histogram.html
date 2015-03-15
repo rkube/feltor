@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -114,7 +120,7 @@ $(document).ready(function(){initNavTree('structdg_1_1_histogram.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>returns histogram  
+<p>Compute a histogram on a 1D grid.  
  <a href="structdg_1_1_histogram.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="functors_8h_source.html">functors.h</a>&gt;</code></p>
@@ -122,20 +128,20 @@ $(document).ready(function(){initNavTree('structdg_1_1_histogram.html','');});
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ac5111e3519dc62ea32ff68e1de7eaebf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_histogram.html#ac5111e3519dc62ea32ff68e1de7eaebf">Histogram</a> (const dg::Grid1d&lt; double &gt; &amp;g1d, const std::vector&lt; double &gt; &amp;in)</td></tr>
-<tr class="memdesc:ac5111e3519dc62ea32ff68e1de7eaebf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from number of bins and input vector.  <a href="#ac5111e3519dc62ea32ff68e1de7eaebf">More...</a><br/></td></tr>
+<tr class="memdesc:ac5111e3519dc62ea32ff68e1de7eaebf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a histogram from number of bins and an input vector.  <a href="#ac5111e3519dc62ea32ff68e1de7eaebf">More...</a><br/></td></tr>
 <tr class="separator:ac5111e3519dc62ea32ff68e1de7eaebf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41da837ab831cd709ccb49390163b407"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a41da837ab831cd709ccb49390163b407"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>binwidth</b> ()</td></tr>
+<tr class="memitem:a41da837ab831cd709ccb49390163b407"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_histogram.html#a41da837ab831cd709ccb49390163b407">binwidth</a> ()</td></tr>
+<tr class="memdesc:a41da837ab831cd709ccb49390163b407"><td class="mdescLeft">&#160;</td><td class="mdescRight">get binwidth  <a href="#a41da837ab831cd709ccb49390163b407">More...</a><br/></td></tr>
 <tr class="separator:a41da837ab831cd709ccb49390163b407"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae34a37fd52249593abbf0482b583d7c5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae34a37fd52249593abbf0482b583d7c5"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (double x)</td></tr>
+<tr class="memitem:ae34a37fd52249593abbf0482b583d7c5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_histogram.html#ae34a37fd52249593abbf0482b583d7c5">operator()</a> (double x)</td></tr>
+<tr class="memdesc:ae34a37fd52249593abbf0482b583d7c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access computed histogram.  <a href="#ae34a37fd52249593abbf0482b583d7c5">More...</a><br/></td></tr>
 <tr class="separator:ae34a37fd52249593abbf0482b583d7c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class container = thrust::host_vector&lt;double&gt;&gt;<br/>
 struct dg::Histogram&lt; container &gt;</h3>
 
-<p>returns histogram </p>
+<p>Compute a histogram on a 1D grid. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">container</td><td></td></tr>
@@ -177,19 +183,83 @@ template&lt;class container  = thrust::host_vector&lt;double&gt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Construct from number of bins and input vector. </p>
+<p>Construct a histogram from number of bins and an input vector. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">g1d</td><td>grid of output vector </td></tr>
-    <tr><td class="paramname">in</td><td>input vector </td></tr>
+    <tr><td class="paramname">g1d</td><td>grid on which to compute the histogram ( grid.h() is the binwidth) </td></tr>
+    <tr><td class="paramname">in</td><td>input vector (if grid.x0() &lt; in[i] &lt;grid.x1() it falls in a bin) </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a41da837ab831cd709ccb49390163b407"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class container  = thrust::host_vector&lt;double&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="structdg_1_1_histogram.html">dg::Histogram</a>&lt; container &gt;::binwidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>get binwidth </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae34a37fd52249593abbf0482b583d7c5"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class container  = thrust::host_vector&lt;double&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="structdg_1_1_histogram.html">dg::Histogram</a>&lt; container &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access computed histogram. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/matthias/feltor/inc/dg/<a class="el" href="functors_8h_source.html">functors.h</a></li>
+<li>/home/matthias/Projekte/feltor/inc/dg/<a class="el" href="functors_8h_source.html">functors.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -197,7 +267,7 @@ template&lt;class container  = thrust::host_vector&lt;double&gt;&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacedg.html">dg</a></li><li class="navelem"><a class="el" href="structdg_1_1_histogram.html">Histogram</a></li>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:15 for Discontinuous Galerkin Library by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Discontinuous Galerkin Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

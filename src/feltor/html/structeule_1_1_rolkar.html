@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -109,24 +115,23 @@ $(document).ready(function(){initNavTree('structeule_1_1_rolkar.html','');});
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="structeule_1_1_rolkar-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">eule::Rolkar&lt; Matrix, container, Preconditioner &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group__solver.html">The solver</a></div></div>  </div>
+<div class="title">eule::Rolkar&lt; Matrix, container, Preconditioner &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group__solver.html">Solver</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Diffusive terms for <a class="el" href="structeule_1_1_feltor.html">Feltor</a> solver.  
+<p>Implicit (perpendicular diffusive) terms for <a class="el" href="structeule_1_1_feltor.html" title="compute explicit terms ">Feltor</a> solver.  
  <a href="structeule_1_1_rolkar.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1bf6d234df0f3889790dae24ec209b7a"><td class="memTemplParams" colspan="2"><a class="anchor" id="a1bf6d234df0f3889790dae24ec209b7a"></a>
-template&lt;class Grid3d &gt; </td></tr>
-<tr class="memitem:a1bf6d234df0f3889790dae24ec209b7a"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Rolkar</b> (const Grid3d &amp;g, <a class="el" href="structeule_1_1_parameters.html">eule::Parameters</a> p, <a class="elRef" doxygen="/home/matthias/feltor/doc/src/solovev.tag:../../../src/solovev/html/" href="../../../src/solovev/html/structsolovev_1_1_geom_parameters.html">solovev::GeomParameters</a> gp)</td></tr>
+<tr class="memitem:a1bf6d234df0f3889790dae24ec209b7a"><td class="memTemplParams" colspan="2">template&lt;class Grid3d &gt; </td></tr>
+<tr class="memitem:a1bf6d234df0f3889790dae24ec209b7a"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structeule_1_1_rolkar.html#a1bf6d234df0f3889790dae24ec209b7a">Rolkar</a> (const Grid3d &amp;g, <a class="el" href="structeule_1_1_parameters.html">eule::Parameters</a> p, <a class="elRef" doxygen="/home/matthias/Projekte/feltor/doc/src/solovev.tag:../../../src/solovev/html/" href="../../../src/solovev/html/structsolovev_1_1_geom_parameters.html">solovev::GeomParameters</a> gp)</td></tr>
 <tr class="separator:a1bf6d234df0f3889790dae24ec209b7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a669083c029fb988d1983700f2cde724f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a669083c029fb988d1983700f2cde724f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (std::vector&lt; container &gt; &amp;x, std::vector&lt; container &gt; &amp;y)</td></tr>
+<tr class="memitem:a669083c029fb988d1983700f2cde724f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeule_1_1_rolkar.html#a669083c029fb988d1983700f2cde724f">operator()</a> (std::vector&lt; container &gt; &amp;x, std::vector&lt; container &gt; &amp;y)</td></tr>
+<tr class="memdesc:a669083c029fb988d1983700f2cde724f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return implicit terms.  <a href="#a669083c029fb988d1983700f2cde724f">More...</a><br/></td></tr>
 <tr class="separator:a669083c029fb988d1983700f2cde724f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aace6eadd6e9a64324c7627f7cbe48181"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aace6eadd6e9a64324c7627f7cbe48181"></a>
-<a class="elRef" doxygen="/home/matthias/feltor/doc/inc/dg.tag:../../../inc/dg/html/" href="../../../inc/dg/html/classdg_1_1_elliptic.html">dg::Elliptic</a>&lt; Matrix, <br class="typebreak"/>
+<a class="elRef" doxygen="/home/matthias/Projekte/feltor/doc/inc/dg.tag:../../../inc/dg/html/" href="../../../inc/dg/html/classdg_1_1_elliptic.html">dg::Elliptic</a>&lt; Matrix, <br class="typebreak"/>
 container, Preconditioner &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>laplacianM</b> ()</td></tr>
 <tr class="separator:aace6eadd6e9a64324c7627f7cbe48181"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a54abc4ebf066afe5d514bea7a4aab5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a54abc4ebf066afe5d514bea7a4aab5"></a>
@@ -143,7 +148,7 @@ const container &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>damp
 <div class="textblock"><h3>template&lt;class Matrix, class container, class Preconditioner&gt;<br/>
 struct eule::Rolkar&lt; Matrix, container, Preconditioner &gt;</h3>
 
-<p>Diffusive terms for <a class="el" href="structeule_1_1_feltor.html">Feltor</a> solver. </p>
+<p>Implicit (perpendicular diffusive) terms for <a class="el" href="structeule_1_1_feltor.html" title="compute explicit terms ">Feltor</a> solver. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">Matrix</td><td>The Matrix class </td></tr>
@@ -152,8 +157,113 @@ struct eule::Rolkar&lt; Matrix, container, Preconditioner &gt;</h3>
   </table>
   </dd>
 </dl>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/matthias/feltor/src/feltor/<a class="el" href="feltor_8cuh.html">feltor.cuh</a></li>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a1bf6d234df0f3889790dae24ec209b7a"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Matrix , class container , class Preconditioner &gt; </div>
+<div class="memtemplate">
+template&lt;class Grid3d &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structeule_1_1_rolkar.html">eule::Rolkar</a>&lt; Matrix, container, Preconditioner &gt;::<a class="el" href="structeule_1_1_rolkar.html">Rolkar</a> </td>
+          <td>(</td>
+          <td class="paramtype">const Grid3d &amp;&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structeule_1_1_parameters.html">eule::Parameters</a>&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="elRef" doxygen="/home/matthias/Projekte/feltor/doc/src/solovev.tag:../../../src/solovev/html/" href="../../../src/solovev/html/structsolovev_1_1_geom_parameters.html">solovev::GeomParameters</a>&#160;</td>
+          <td class="paramname"><em>gp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Grid3d</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td></td></tr>
+    <tr><td class="paramname">p</td><td></td></tr>
+    <tr><td class="paramname">gp</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a669083c029fb988d1983700f2cde724f"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Matrix , class container , class Preconditioner &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structeule_1_1_rolkar.html">eule::Rolkar</a>&lt; Matrix, container, Preconditioner &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; container &gt; &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; container &gt; &amp;&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return implicit terms. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>input vector </td></tr>
+    <tr><td class="paramname">y</td><td>output vector </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>/home/matthias/Projekte/feltor/src/feltor/<a class="el" href="feltor_8cuh.html">feltor.cuh</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -161,7 +271,7 @@ struct eule::Rolkar&lt; Matrix, container, Preconditioner &gt;</h3>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeule.html">eule</a></li><li class="navelem"><a class="el" href="structeule_1_1_rolkar.html">Rolkar</a></li>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:57 for FELTOR by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for FELTOR by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -100,7 +106,8 @@ $(document).ready(function(){initNavTree('group__utilities.html','');});
 <div class="header">
   <div class="summary">
 <a href="#groups">Modules</a> &#124;
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Utilities<div class="ingroups"><a class="el" href="group___d_g.html">The Discontinuous Galerkin library</a></div></div>  </div>
 </div><!--header-->
@@ -109,8 +116,6 @@ $(document).ready(function(){initNavTree('group__utilities.html','');});
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
 Modules</h2></td></tr>
 <tr class="memitem:group__scatter"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__scatter.html">Utility functions for reorder operations on DG-formatted vectors</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:group__operators"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__operators.html">Classes that act as matrices in blas2 routines</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group__polarization"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__polarization.html">Utility functions for C-style bindings of polarization solver</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -123,15 +128,94 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_ooops.html">dg::Ooops</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class you might want to throw in case of a non convergence.  <a href="structdg_1_1_ooops.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdg_1_1_keine_n_s_t__1_d.html">dg::KeineNST_1D</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exception class, that stores boundaries for 1D root finding.  <a href="classdg_1_1_keine_n_s_t__1_d.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:gaa269808db678039605044e14fc849675"><td class="memTemplParams" colspan="2">template&lt;typename UnaryOp &gt; </td></tr>
+<tr class="memitem:gaa269808db678039605044e14fc849675"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__utilities.html#gaa269808db678039605044e14fc849675">dg::bisection1d</a> (UnaryOp &amp;funktion, double &amp;x_min, double &amp;x_max, const double aufloesung)</td></tr>
+<tr class="memdesc:gaa269808db678039605044e14fc849675"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find a root of a 1d function in given boundaries.  <a href="#gaa269808db678039605044e14fc849675">More...</a><br/></td></tr>
+<tr class="separator:gaa269808db678039605044e14fc849675"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Utilities that might come in handy at some place or the other. </p>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="gaa269808db678039605044e14fc849675"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename UnaryOp &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int dg::bisection1d </td>
+          <td>(</td>
+          <td class="paramtype">UnaryOp &amp;&#160;</td>
+          <td class="paramname"><em>funktion</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>x_min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>x_max</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>aufloesung</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Find a root of a 1d function in given boundaries. </p>
+<p>It is assumed that a sign change occurs at the root. Function jumps closer to the root by checking the sign. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">UnaryOp</td><td>unary function operator </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">funktion</td><td>Function or Functor </td></tr>
+    <tr><td class="paramname">x_min</td><td>left boundary, contains new left boundary on execution </td></tr>
+    <tr><td class="paramname">x_max</td><td>right boundary, contains new right boundary on execution </td></tr>
+    <tr><td class="paramname">aufloesung</td><td>accuracy of the root finding </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>number of used steps to reach the desired accuracy </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classdg_1_1_keine_n_s_t__1_d.html" title="Exception class, that stores boundaries for 1D root finding. ">KeineNST_1D</a></td><td>if no root lies between the given boundaries </td></tr>
+    <tr><td class="paramname">Oooops</td><td>if after 50 steps the accuracy wasn't reached</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line">nullstelle_1D(funk, x_min, x_max, aufloesung); </div>
+</div><!-- fragment --> <dl class="section note"><dt>Note</dt><dd>If the root is found exactly the x_min = x_max </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:15 for Discontinuous Galerkin Library by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Discontinuous Galerkin Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

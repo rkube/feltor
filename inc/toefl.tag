@@ -2,7 +2,7 @@
 <tagfile>
   <compound kind="file">
     <name>arakawa.h</name>
-    <path>/home/matthias/feltor/inc/toefl/</path>
+    <path>/home/matthias/Projekte/feltor/inc/toefl/</path>
     <filename>arakawa_8h</filename>
     <includes id="quadmat_8h" name="quadmat.h" local="yes" imported="no">quadmat.h</includes>
     <class kind="class">toefl::Arakawa</class>
@@ -24,7 +24,7 @@
   </compound>
   <compound kind="file">
     <name>fft.h</name>
-    <path>/home/matthias/feltor/inc/toefl/</path>
+    <path>/home/matthias/Projekte/feltor/inc/toefl/</path>
     <filename>fft_8h</filename>
     <includes id="message_8h" name="message.h" local="yes" imported="no">message.h</includes>
     <namespace>toefl</namespace>
@@ -87,7 +87,7 @@
   </compound>
   <compound kind="file">
     <name>init.h</name>
-    <path>/home/matthias/feltor/inc/toefl/</path>
+    <path>/home/matthias/Projekte/feltor/inc/toefl/</path>
     <filename>init_8h</filename>
     <class kind="class">toefl::TurbulentBath</class>
     <namespace>toefl</namespace>
@@ -108,7 +108,7 @@
   </compound>
   <compound kind="file">
     <name>message.h</name>
-    <path>/home/matthias/feltor/inc/toefl/</path>
+    <path>/home/matthias/Projekte/feltor/inc/toefl/</path>
     <filename>message_8h</filename>
     <class kind="class">toefl::Message</class>
     <namespace>toefl</namespace>
@@ -122,7 +122,7 @@
   </compound>
   <compound kind="file">
     <name>quadmat.h</name>
-    <path>/home/matthias/feltor/inc/toefl/</path>
+    <path>/home/matthias/Projekte/feltor/inc/toefl/</path>
     <filename>quadmat_8h</filename>
     <class kind="class">toefl::QuadMat</class>
     <namespace>toefl</namespace>
@@ -157,7 +157,7 @@
   </compound>
   <compound kind="file">
     <name>texture.h</name>
-    <path>/home/matthias/feltor/inc/toefl/</path>
+    <path>/home/matthias/Projekte/feltor/inc/toefl/</path>
     <filename>texture_8h</filename>
     <class kind="struct">toefl::colormap_f</class>
     <class kind="struct">toefl::colormap_ext</class>
@@ -207,7 +207,7 @@
   </compound>
   <compound kind="file">
     <name>toefl.h</name>
-    <path>/home/matthias/feltor/inc/toefl/</path>
+    <path>/home/matthias/Projekte/feltor/inc/toefl/</path>
     <filename>toefl_8h</filename>
     <includes id="message_8h" name="message.h" local="yes" imported="no">message.h</includes>
     <includes id="quadmat_8h" name="quadmat.h" local="yes" imported="no">quadmat.h</includes>
@@ -1469,6 +1469,13 @@
       <anchor>ab4f617feadfe5c87e31f940656063bf8</anchor>
       <arglist>(size_t rows, size_t cols, T value=(T) 0)</arglist>
     </member>
+    <member kind="function" static="yes">
+      <type>static std::array&lt; Matrix&lt; T, P &gt;, n &gt;</type>
+      <name>construct</name>
+      <anchorfile>structtoefl_1_1_matrix_array.html</anchorfile>
+      <anchor>a8c6f77b6489fd1acd048d2ed0d0c2156</anchor>
+      <arglist>(size_t rows, size_t cols, double value=0.0)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>toefl::Message</name>
@@ -1626,14 +1633,14 @@
     </member>
   </compound>
   <compound kind="dir">
-    <name>/home/matthias/feltor/inc</name>
-    <path>/home/matthias/feltor/inc/</path>
+    <name>/home/matthias/Projekte/feltor/inc</name>
+    <path>/home/matthias/Projekte/feltor/inc/</path>
     <filename>dir_bfccd401955b95cf8c75461437045ac0.html</filename>
-    <dir>/home/matthias/feltor/inc/toefl</dir>
+    <dir>/home/matthias/Projekte/feltor/inc/toefl</dir>
   </compound>
   <compound kind="dir">
-    <name>/home/matthias/feltor/inc/toefl</name>
-    <path>/home/matthias/feltor/inc/toefl/</path>
+    <name>/home/matthias/Projekte/feltor/inc/toefl</name>
+    <path>/home/matthias/Projekte/feltor/inc/toefl/</path>
     <filename>dir_bab826ae084583e2fc8f2a1d4f46d11d.html</filename>
     <file>arakawa.h</file>
     <file>dft_dft.h</file>
@@ -1648,6 +1655,7 @@
     <file>karniadakis2.h</file>
     <file>matrix.h</file>
     <file>matrix_array.h</file>
+    <file>matrix_array_.h</file>
     <file>message.h</file>
     <file>padding.h</file>
     <file>quadmat.h</file>

@@ -1,11 +1,9 @@
 var searchData=
 [
-  ['gaussiandamping',['GaussianDamping',['../structsolovev_1_1_gaussian_damping.html',1,'solovev']]],
-  ['gaussianprofdamping',['GaussianProfDamping',['../structsolovev_1_1_gaussian_prof_damping.html',1,'solovev']]],
-  ['gaussianprofxdamping',['GaussianProfXDamping',['../structsolovev_1_1_gaussian_prof_x_damping.html',1,'solovev']]],
-  ['geom_5fparameters_2eh',['geom_parameters.h',['../geom__parameters_8h.html',1,'']]],
-  ['geometry_2eh',['geometry.h',['../geometry_8h.html',1,'']]],
-  ['geomparameters',['GeomParameters',['../structsolovev_1_1_geom_parameters.html',1,'solovev']]],
-  ['geomparameters',['GeomParameters',['../group__geom.html#ga33f43196e4cf4e85bd9640ba62d9230a',1,'solovev::GeomParameters']]],
-  ['gradlnb',['GradLnB',['../structsolovev_1_1_grad_ln_b.html',1,'solovev']]]
+  ['field',['Field',['../structsolovev_1_1_field.html',1,'solovev']]],
+  ['fieldp',['FieldP',['../structsolovev_1_1_field_p.html',1,'solovev']]],
+  ['fieldr',['FieldR',['../structsolovev_1_1_field_r.html',1,'solovev']]],
+  ['fieldz',['FieldZ',['../structsolovev_1_1_field_z.html',1,'solovev']]],
+  ['fluxsurfaceaverage',['FluxSurfaceAverage',['../structsolovev_1_1_flux_surface_average.html',1,'solovev']]],
+  ['fluxsurfaceaverage',['FluxSurfaceAverage',['../structsolovev_1_1_flux_surface_average.html#a2f79d67265e3dc31851a156d18c41f8d',1,'solovev::FluxSurfaceAverage']]]
 ];

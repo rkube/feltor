@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -113,6 +119,11 @@ $(document).ready(function(){initNavTree('structdg_1_1_not_a_number.html','');})
 <div class="title">dg::NotANumber Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Thrown by the integrateRK4 function if the rhs is badly conditioned.  
+ <a href="structdg_1_1_not_a_number.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="runge__kutta_8h_source.html">runge_kutta.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for dg::NotANumber:</div>
 <div class="dyncontent">
@@ -132,7 +143,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ae267515bfe4129ea36ea4ebb561c3cf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">What string.  <a href="#ae267515bfe4129ea36ea4ebb561c3cf3">More...</a><br/></td></tr>
 <tr class="separator:ae267515bfe4129ea36ea4ebb561c3cf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Thrown by the integrateRK4 function if the rhs is badly conditioned. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="ae267515bfe4129ea36ea4ebb561c3cf3"></a>
 <div class="memitem">
 <div class="memproto">
@@ -166,7 +179,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/matthias/feltor/inc/dg/<a class="el" href="runge__kutta_8h_source.html">runge_kutta.h</a></li>
+<li>/home/matthias/Projekte/feltor/inc/dg/<a class="el" href="runge__kutta_8h_source.html">runge_kutta.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -174,7 +187,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacedg.html">dg</a></li><li class="navelem"><a class="el" href="structdg_1_1_not_a_number.html">NotANumber</a></li>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:15 for Discontinuous Galerkin Library by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Discontinuous Galerkin Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['xspace',['XSPACE',['../../../../inc/dg/html/group__creation.html#gga720a6f709941a075d5c8f60ef07c619fa89a3bcd08995f33c0f8b5257bd04d4ce',1,'dg::XSPACE()'],['../../../../inc/dg/html/group__creation.html#gga720a6f709941a075d5c8f60ef07c619fa89a3bcd08995f33c0f8b5257bd04d4ce',1,'XSPACE()(Global Namespace)']]]
+  ['zero',['zero',['../../../../inc/toefl/html/classtoefl_1_1_matrix.html#a5f1050ba85376409c09b96a7d5b3ceba',1,'toefl::GhostMatrix::zero()'],['../../../../inc/toefl/html/classtoefl_1_1_quad_mat.html#ae0fe7e6f7ede59663619d27f4cfbe82a',1,'toefl::QuadMat::zero()'],['../../../../inc/toefl/html/group__containers.html#ga1c8a53ed2642944edfd3f9da59a6f016',1,'toefl::Zero()'],['../../../../inc/toefl/html/group__containers.html#ga1c8a53ed2642944edfd3f9da59a6f016',1,'Zero()(Global Namespace)']]]
 ];

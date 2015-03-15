@@ -1,9 +1,7 @@
 var structeule_1_1_feltor =
 [
-    [ "value_type", "structeule_1_1_feltor.html#a055efab2c5f0a31fcfde36bf893b97e8", null ],
     [ "Feltor", "structeule_1_1_feltor.html#ad4474f82ff673be0436e65c34c6286e4", null ],
     [ "Feltor", "group__solver.html#ga142ab922591a358688b872be6754be3f", null ],
-    [ "add_parallel_dynamics", "group__solver.html#gad3fa24b8b93ecae899aad8e761606c21", null ],
     [ "dz", "structeule_1_1_feltor.html#a0f1386ec4c70db065cb476ee4d9a0fd3", null ],
     [ "energies", "group__solver.html#gaf00d7a08665311d6e7e6443caa82960c", null ],
     [ "energy", "structeule_1_1_feltor.html#ac8c543ee3b252b629f09e95c1499108b", null ],
@@ -13,6 +11,5 @@ var structeule_1_1_feltor =
     [ "mass", "structeule_1_1_feltor.html#ac4ee9b473036651dd4857dbc793aab4e", null ],
     [ "mass_diffusion", "structeule_1_1_feltor.html#ad645aa954739c6a8051eee4f3e594e4c", null ],
     [ "operator()", "group__solver.html#ga2b62ef477eb6a999ac9f5809916abab3", null ],
-    [ "potential", "structeule_1_1_feltor.html#a830fcd8eb8b066f00a43c980928e930a", null ],
-    [ "probe_vector", "structeule_1_1_feltor.html#af93c7e5138156ddbff8454c2572cb479", null ]
+    [ "potential", "structeule_1_1_feltor.html#a830fcd8eb8b066f00a43c980928e930a", null ]
 ];

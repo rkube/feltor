@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -113,18 +119,111 @@ $(document).ready(function(){initNavTree('structdg_1_1_r_half.html','');});
 <div class="title">dg::RHalf Struct Reference<div class="ingroups"><a class="el" href="group__functions.html">Functions and Functors</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Functor for a right step function using tanh </p>
+<p class="formulaDsp">
+\[ f(x,y) = 0.5(1+\tanh(x-x_b)) \]
+</p>
+<p>.  
+ <a href="structdg_1_1_r_half.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="functors_8h_source.html">functors.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a683a4e23fef2cf4afe953006342c19f9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a683a4e23fef2cf4afe953006342c19f9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>RHalf</b> (double xb)</td></tr>
+<tr class="memitem:a683a4e23fef2cf4afe953006342c19f9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_r_half.html#a683a4e23fef2cf4afe953006342c19f9">RHalf</a> (double xb)</td></tr>
+<tr class="memdesc:a683a4e23fef2cf4afe953006342c19f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with boundary value.  <a href="#a683a4e23fef2cf4afe953006342c19f9">More...</a><br/></td></tr>
 <tr class="separator:a683a4e23fef2cf4afe953006342c19f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a128cce7a2daa7e1078608845f526ac47"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a128cce7a2daa7e1078608845f526ac47"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (double x, double y)</td></tr>
+<tr class="memitem:a128cce7a2daa7e1078608845f526ac47"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_r_half.html#a128cce7a2daa7e1078608845f526ac47">operator()</a> (double x, double y)</td></tr>
+<tr class="memdesc:a128cce7a2daa7e1078608845f526ac47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return left side step function.  <a href="#a128cce7a2daa7e1078608845f526ac47">More...</a><br/></td></tr>
 <tr class="separator:a128cce7a2daa7e1078608845f526ac47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Functor for a right step function using tanh </p>
+<p class="formulaDsp">
+\[ f(x,y) = 0.5(1+\tanh(x-x_b)) \]
+</p>
+<p>. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a683a4e23fef2cf4afe953006342c19f9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dg::RHalf::RHalf </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>xb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct with boundary value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xb</td><td>boundary value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a128cce7a2daa7e1078608845f526ac47"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double dg::RHalf::operator() </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return left side step function. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>x - coordianate </td></tr>
+    <tr><td class="paramname">y</td><td>y - coordianate</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>result </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/matthias/feltor/inc/dg/<a class="el" href="functors_8h_source.html">functors.h</a></li>
+<li>/home/matthias/Projekte/feltor/inc/dg/<a class="el" href="functors_8h_source.html">functors.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -132,7 +231,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (dou
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacedg.html">dg</a></li><li class="navelem"><a class="el" href="structdg_1_1_r_half.html">RHalf</a></li>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:15 for Discontinuous Galerkin Library by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Discontinuous Galerkin Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

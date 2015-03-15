@@ -2,14 +2,14 @@
 <tagfile>
   <compound kind="file">
     <name>geom_parameters.h</name>
-    <path>/home/matthias/feltor/src/solovev/</path>
+    <path>/home/matthias/Projekte/feltor/src/solovev/</path>
     <filename>geom__parameters_8h</filename>
     <class kind="struct">solovev::GeomParameters</class>
     <namespace>solovev</namespace>
   </compound>
   <compound kind="file">
     <name>geometry.h</name>
-    <path>/home/matthias/feltor/src/solovev/</path>
+    <path>/home/matthias/Projekte/feltor/src/solovev/</path>
     <filename>geometry_8h</filename>
     <includes id="geom__parameters_8h" name="geom_parameters.h" local="yes" imported="no">geom_parameters.h</includes>
     <class kind="struct">solovev::Psip</class>
@@ -41,7 +41,7 @@
   </compound>
   <compound kind="file">
     <name>init.h</name>
-    <path>/home/matthias/feltor/src/solovev/</path>
+    <path>/home/matthias/Projekte/feltor/src/solovev/</path>
     <filename>init_8h</filename>
     <includes id="geometry_8h" name="geometry.h" local="yes" imported="no">geometry.h</includes>
     <class kind="struct">solovev::Iris</class>
@@ -82,10 +82,6 @@
     <class kind="struct">solovev::BHatR</class>
     <class kind="struct">solovev::BHatZ</class>
     <class kind="struct">solovev::BHatP</class>
-    <class kind="struct">solovev::DeltaFunction</class>
-    <class kind="struct">solovev::FluxSurfaceAverage</class>
-    <class kind="struct">solovev::SafetyFactor</class>
-    <class kind="struct">solovev::Alpha</class>
     <class kind="struct">solovev::Iris</class>
     <class kind="struct">solovev::Pupil</class>
     <class kind="struct">solovev::PsiPupil</class>
@@ -110,11 +106,99 @@
       <anchor>gac75127cc87f46a3a5b05ef2304a85fdd</anchor>
       <arglist>(std::ostream &amp;os=std::cout) const </arglist>
     </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>A</name>
+      <anchorfile>group__geom.html</anchorfile>
+      <anchor>ga97e1ff33b7ef8b50e3a4a8878a61b0e5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>R_0</name>
+      <anchorfile>group__geom.html</anchorfile>
+      <anchor>ga04042807c96e6c40e0ecda5fa494423b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>a</name>
+      <anchorfile>group__geom.html</anchorfile>
+      <anchor>ga937bb16d9918139c82537b0522d9d50c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>elongation</name>
+      <anchorfile>group__geom.html</anchorfile>
+      <anchor>ga5a155924600d91db24102214e6f8198f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>triangularity</name>
+      <anchorfile>group__geom.html</anchorfile>
+      <anchor>ga1b5afb66804a41c779f0fabb30089f67</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>alpha</name>
+      <anchorfile>group__geom.html</anchorfile>
+      <anchor>gab23ad90efd782bb2411080b17984c0e2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>rk4eps</name>
+      <anchorfile>group__geom.html</anchorfile>
+      <anchor>ga6447257304ba1dec05d84d1f27efdc41</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>psipmin</name>
+      <anchorfile>group__geom.html</anchorfile>
+      <anchor>ga89dcd3bf445d866d590d930d299379d8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>psipmax</name>
+      <anchorfile>group__geom.html</anchorfile>
+      <anchor>gaf37a5f3f604ddf009de36d734f854f9a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>psipmaxcut</name>
+      <anchorfile>group__geom.html</anchorfile>
+      <anchor>gacb8f51dbbad0b5dcab7c0d0469b1c175</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>psipmaxlim</name>
+      <anchorfile>group__geom.html</anchorfile>
+      <anchor>ga0b3f04d5f78ead10d7c6e887dc147401</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; double &gt;</type>
+      <name>c</name>
+      <anchorfile>group__geom.html</anchorfile>
+      <anchor>ga947ccace40431083df7cf03cfd809983</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="group">
-    <name>solver</name>
-    <title>The solver</title>
-    <filename>group__solver.html</filename>
+    <name>profiles</name>
+    <title>Profiles based on the magnetic field geometry</title>
+    <filename>group__profiles.html</filename>
+    <class kind="struct">solovev::DeltaFunction</class>
+    <class kind="struct">solovev::FluxSurfaceAverage</class>
+    <class kind="struct">solovev::SafetyFactor</class>
+    <class kind="struct">solovev::Alpha</class>
   </compound>
   <compound kind="namespace">
     <name>solovev</name>
@@ -173,10 +257,101 @@
       <anchor>gac75127cc87f46a3a5b05ef2304a85fdd</anchor>
       <arglist>(std::ostream &amp;os=std::cout) const </arglist>
     </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>A</name>
+      <anchorfile>group__geom.html</anchorfile>
+      <anchor>ga97e1ff33b7ef8b50e3a4a8878a61b0e5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>R_0</name>
+      <anchorfile>group__geom.html</anchorfile>
+      <anchor>ga04042807c96e6c40e0ecda5fa494423b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>a</name>
+      <anchorfile>group__geom.html</anchorfile>
+      <anchor>ga937bb16d9918139c82537b0522d9d50c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>elongation</name>
+      <anchorfile>group__geom.html</anchorfile>
+      <anchor>ga5a155924600d91db24102214e6f8198f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>triangularity</name>
+      <anchorfile>group__geom.html</anchorfile>
+      <anchor>ga1b5afb66804a41c779f0fabb30089f67</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>alpha</name>
+      <anchorfile>group__geom.html</anchorfile>
+      <anchor>gab23ad90efd782bb2411080b17984c0e2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>rk4eps</name>
+      <anchorfile>group__geom.html</anchorfile>
+      <anchor>ga6447257304ba1dec05d84d1f27efdc41</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>psipmin</name>
+      <anchorfile>group__geom.html</anchorfile>
+      <anchor>ga89dcd3bf445d866d590d930d299379d8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>psipmax</name>
+      <anchorfile>group__geom.html</anchorfile>
+      <anchor>gaf37a5f3f604ddf009de36d734f854f9a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>psipmaxcut</name>
+      <anchorfile>group__geom.html</anchorfile>
+      <anchor>gacb8f51dbbad0b5dcab7c0d0469b1c175</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>psipmaxlim</name>
+      <anchorfile>group__geom.html</anchorfile>
+      <anchor>ga0b3f04d5f78ead10d7c6e887dc147401</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; double &gt;</type>
+      <name>c</name>
+      <anchorfile>group__geom.html</anchorfile>
+      <anchor>ga947ccace40431083df7cf03cfd809983</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>solovev::Psip</name>
     <filename>structsolovev_1_1_psip.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Psip</name>
+      <anchorfile>structsolovev_1_1_psip.html</anchorfile>
+      <anchor>aad4b94ff287a2320ce1a99c8d0ca7310</anchor>
+      <arglist>(GeomParameters gp)</arglist>
+    </member>
     <member kind="function">
       <type>double</type>
       <name>operator()</name>
@@ -184,16 +359,51 @@
       <anchor>a6079b6a7c9ea5a5d6bbf4b65dd9d8dde</anchor>
       <arglist>(double R, double Z)</arglist>
     </member>
+    <member kind="function">
+      <type>double</type>
+      <name>operator()</name>
+      <anchorfile>structsolovev_1_1_psip.html</anchorfile>
+      <anchor>a2385c203b4756a6152431027cfb4809a</anchor>
+      <arglist>(double R, double Z, double phi)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>display</name>
+      <anchorfile>structsolovev_1_1_psip.html</anchorfile>
+      <anchor>a20893a4d67455be10ae7eb9a4b571422</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>solovev::PsipR</name>
     <filename>structsolovev_1_1_psip_r.html</filename>
     <member kind="function">
-      <type>double</type>
-      <name>psipR_alt</name>
+      <type></type>
+      <name>PsipR</name>
       <anchorfile>structsolovev_1_1_psip_r.html</anchorfile>
-      <anchor>a3e0c01279dcb1f26013cd8f50903ca2e</anchor>
+      <anchor>a9ed70b25c22662a70ea4859a1336962b</anchor>
+      <arglist>(GeomParameters gp)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>operator()</name>
+      <anchorfile>structsolovev_1_1_psip_r.html</anchorfile>
+      <anchor>a021440c9ee5be27d62a9e3f6ac3892dd</anchor>
       <arglist>(double R, double Z)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>operator()</name>
+      <anchorfile>structsolovev_1_1_psip_r.html</anchorfile>
+      <anchor>ac29ecf4e89f426a119b2f369f697b73c</anchor>
+      <arglist>(double R, double Z, double phi)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>display</name>
+      <anchorfile>structsolovev_1_1_psip_r.html</anchorfile>
+      <anchor>ae05ab59288ea92a85991611108ec558e</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -464,8 +674,8 @@
     <filename>structsolovev_1_1_deri_test_function.html</filename>
   </compound>
   <compound kind="dir">
-    <name>/home/matthias/feltor/src/solovev</name>
-    <path>/home/matthias/feltor/src/solovev/</path>
+    <name>/home/matthias/Projekte/feltor/src/solovev</name>
+    <path>/home/matthias/Projekte/feltor/src/solovev/</path>
     <filename>dir_8f48a2c0056d49d88bfa9448067ed2ee.html</filename>
     <file>geom_parameters.h</file>
     <file>geometry.h</file>
@@ -473,10 +683,10 @@
     <file>solovev_doc.h</file>
   </compound>
   <compound kind="dir">
-    <name>/home/matthias/feltor/src</name>
-    <path>/home/matthias/feltor/src/</path>
+    <name>/home/matthias/Projekte/feltor/src</name>
+    <path>/home/matthias/Projekte/feltor/src/</path>
     <filename>dir_68267d1309a1af8e8297ef4c3efbcdba.html</filename>
-    <dir>/home/matthias/feltor/src/solovev</dir>
+    <dir>/home/matthias/Projekte/feltor/src/solovev</dir>
   </compound>
   <compound kind="page">
     <name>index</name>

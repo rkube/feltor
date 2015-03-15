@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Discontinuous Galerkin Library: /home/matthias/feltor/inc/dg/arakawa.h Source File</title>
+<title>Discontinuous Galerkin Library: /home/matthias/Projekte/feltor/inc/dg/arakawa.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -111,7 +117,7 @@ $(document).ready(function(){initNavTree('arakawa_8h_source.html','');});
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define _DG_ARAKAWA_CUH</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="blas_8h.html">blas.h</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;enums.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="enums_8h.html">enums.h</a>&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;backend/evaluation.cuh&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;backend/derivatives.cuh&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifdef MPI_VERSION</span></div>
@@ -235,19 +241,20 @@ $(document).ready(function(){initNavTree('arakawa_8h_source.html','');});
 <div class="ttc" id="structdg_1_1_arakawa_x_html"><div class="ttname"><a href="structdg_1_1_arakawa_x.html">dg::ArakawaX</a></div><div class="ttdoc">X-space generalized version of Arakawa&#39;s scheme. </div><div class="ttdef"><b>Definition:</b> arakawa.h:28</div></div>
 <div class="ttc" id="structdg_1_1_arakawa_x_html_a07c34c8983fad0d4345313ca9b61873b"><div class="ttname"><a href="structdg_1_1_arakawa_x.html#a07c34c8983fad0d4345313ca9b61873b">dg::ArakawaX::dy</a></div><div class="ttdeci">const Matrix &amp; dy()</div><div class="ttdoc">Return internally used 2d - y - derivative in ell format in XSPACE. </div><div class="ttdef"><b>Definition:</b> arakawa.h:74</div></div>
 <div class="ttc" id="group__blas2_html_ga7f66ae102c9c093cdc0877a989fd82b3"><div class="ttname"><a href="group__blas2.html#ga7f66ae102c9c093cdc0877a989fd82b3">dg::blas2::symv</a></div><div class="ttdeci">void symv(typename MatrixTraits&lt; Precon &gt;::value_type alpha, const Precon &amp;P, const Vector &amp;x, typename MatrixTraits&lt; Precon &gt;::value_type beta, Vector &amp;y)</div><div class="ttdoc">Symmetric Matrix Vector product. </div><div class="ttdef"><b>Definition:</b> blas2.h:83</div></div>
+<div class="ttc" id="enums_8h_html"><div class="ttname"><a href="enums_8h.html">enums.h</a></div></div>
 <div class="ttc" id="structdg_1_1_arakawa_x_html_a1ac5172551370a5283513d65f353b653"><div class="ttname"><a href="structdg_1_1_arakawa_x.html#a1ac5172551370a5283513d65f353b653">dg::ArakawaX::dx</a></div><div class="ttdeci">const Matrix &amp; dx()</div><div class="ttdoc">Return internally used 2d - x - derivative. </div><div class="ttdef"><b>Definition:</b> arakawa.h:67</div></div>
-<div class="ttc" id="group__creation_html_ga59440bdf436f2874b49aa52b670ed364"><div class="ttname"><a href="group__creation.html#ga59440bdf436f2874b49aa52b670ed364">dg::bc</a></div><div class="ttdeci">bc</div><div class="ttdoc">Switch between boundary conditions. </div><div class="ttdef"><b>Definition:</b> enums.h:10</div></div>
+<div class="ttc" id="group__creation_html_ga59440bdf436f2874b49aa52b670ed364"><div class="ttname"><a href="group__creation.html#ga59440bdf436f2874b49aa52b670ed364">dg::bc</a></div><div class="ttdeci">bc</div><div class="ttdoc">Switch between boundary conditions. </div><div class="ttdef"><b>Definition:</b> enums.h:15</div></div>
 <div class="ttc" id="structdg_1_1_arakawa_x_html_a4bca8c8355aa0d33f5913edf77fe96db"><div class="ttname"><a href="structdg_1_1_arakawa_x.html#a4bca8c8355aa0d33f5913edf77fe96db">dg::ArakawaX::bracketS</a></div><div class="ttdeci">void bracketS(container &amp;lhs, container &amp;rhs, container &amp;result)</div><div class="ttdoc">Compute the &quot;symmetric bracket&quot;. </div><div class="ttdef"><b>Definition:</b> arakawa.h:103</div></div>
 <div class="ttc" id="structdg_1_1_arakawa_x_html_ac33d39046b6c27ffaad030e18b3910e2"><div class="ttname"><a href="structdg_1_1_arakawa_x.html#ac33d39046b6c27ffaad030e18b3910e2">dg::ArakawaX::ArakawaX</a></div><div class="ttdeci">ArakawaX(const Grid &amp;g)</div><div class="ttdoc">Create Arakawa on a grid. </div><div class="ttdef"><b>Definition:</b> arakawa.h:131</div></div>
 <div class="ttc" id="group__blas1_html_ga2939c008737a653c8ea3aa972cac136b"><div class="ttname"><a href="group__blas1.html#ga2939c008737a653c8ea3aa972cac136b">dg::blas1::pointwiseDot</a></div><div class="ttdeci">void pointwiseDot(const Vector &amp;x1, const Vector &amp;x2, Vector &amp;y)</div><div class="ttdoc">A &#39;new&#39; BLAS 1 routine. </div><div class="ttdef"><b>Definition:</b> blas1.h:132</div></div>
-<div class="ttc" id="group__blas1_html_ga6ee5b940147ba6b71e1fe1fc538e9459"><div class="ttname"><a href="group__blas1.html#ga6ee5b940147ba6b71e1fe1fc538e9459">dg::blas1::axpby</a></div><div class="ttdeci">void axpby(typename VectorTraits&lt; Vector &gt;::value_type alpha, const Vector &amp;x, typename VectorTraits&lt; Vector &gt;::value_type beta, Vector &amp;y)</div><div class="ttdoc">Modified BLAS 1 routine axpy. </div><div class="ttdef"><b>Definition:</b> blas1.h:69</div></div>
+<div class="ttc" id="group__blas1_html_ga6ee5b940147ba6b71e1fe1fc538e9459"><div class="ttname"><a href="group__blas1.html#ga6ee5b940147ba6b71e1fe1fc538e9459">dg::blas1::axpby</a></div><div class="ttdeci">void axpby(typename VectorTraits&lt; Vector &gt;::value_type alpha, const Vector &amp;x, typename VectorTraits&lt; Vector &gt;::value_type beta, Vector &amp;y)</div><div class="ttdoc">Modified BLAS 1 routine axpy. </div><div class="ttdef"><b>Definition:</b> blas1.h:68</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="dir_cba352cc187f01702d3926d435723909.html">dg</a></li><li class="navelem"><a class="el" href="arakawa_8h.html">arakawa.h</a></li>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:14 for Discontinuous Galerkin Library by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Discontinuous Galerkin Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -114,7 +120,11 @@ $(document).ready(function(){initNavTree('structdg_1_1_sin_prof_x.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>Functor for a sin prof in x-direction.  
+<p>Functor for a sin prof in x-direction </p>
+<p class="formulaDsp">
+\[ f(x,y) = B + A(1-\sin(k_xx )) \]
+</p>
+<p>.  
  <a href="structdg_1_1_sin_prof_x.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="functors_8h_source.html">functors.h</a>&gt;</code></p>
@@ -125,15 +135,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a1d8a1a06b4c66cf68b532ddaa47e3e4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with two coefficients.  <a href="#a1d8a1a06b4c66cf68b532ddaa47e3e4e">More...</a><br/></td></tr>
 <tr class="separator:a1d8a1a06b4c66cf68b532ddaa47e3e4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25ac8f8bc25258d40bb322c7a210d752"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_sin_prof_x.html#a25ac8f8bc25258d40bb322c7a210d752">operator()</a> (double x, double y)</td></tr>
-<tr class="memdesc:a25ac8f8bc25258d40bb322c7a210d752"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return linear polynomial in x.  <a href="#a25ac8f8bc25258d40bb322c7a210d752">More...</a><br/></td></tr>
+<tr class="memdesc:a25ac8f8bc25258d40bb322c7a210d752"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return profile.  <a href="#a25ac8f8bc25258d40bb322c7a210d752">More...</a><br/></td></tr>
 <tr class="separator:a25ac8f8bc25258d40bb322c7a210d752"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Functor for a sin prof in x-direction. </p>
+<div class="textblock"><p>Functor for a sin prof in x-direction </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ f(x,y) = a*x+b \]" src="form_34.png"/>
+\[ f(x,y) = B + A(1-\sin(k_xx )) \]
 </p>
- </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<p>. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a1d8a1a06b4c66cf68b532ddaa47e3e4e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -217,7 +228,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Return linear polynomial in x. </p>
+<p>Return profile. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>x - coordinate </td></tr>
@@ -225,12 +236,12 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>result </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>\( f(x,y)\) </dd></dl>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/matthias/feltor/inc/dg/<a class="el" href="functors_8h_source.html">functors.h</a></li>
+<li>/home/matthias/Projekte/feltor/inc/dg/<a class="el" href="functors_8h_source.html">functors.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -238,7 +249,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacedg.html">dg</a></li><li class="navelem"><a class="el" href="structdg_1_1_sin_prof_x.html">SinProfX</a></li>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:15 for Discontinuous Galerkin Library by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Discontinuous Galerkin Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

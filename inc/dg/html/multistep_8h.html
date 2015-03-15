@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Discontinuous Galerkin Library: /home/matthias/feltor/inc/dg/multistep.h File Reference</title>
+<title>Discontinuous Galerkin Library: /home/matthias/Projekte/feltor/inc/dg/multistep.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -117,17 +123,18 @@ $(document).ready(function(){initNavTree('multistep_8h.html','');});
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_a_b.html">dg::AB&lt; k, Vector &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct for Adams-Bashforth explicit multistep time-integration.  <a href="structdg_1_1_a_b.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct for Adams-Bashforth explicit multistep time-integration </p>
+<p class="formulaDsp">
+\[ u^{n+1} = u^n + \Delta t\sum_{j=0}^k b_j f\left(u^{n-j}\right) \]
+</p>
+<p>.  <a href="structdg_1_1_a_b.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_karniadakis.html">dg::Karniadakis&lt; Vector &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct for <a class="el" href="structdg_1_1_karniadakis.html" title="Struct for Karniadakis semi-implicit multistep time-integration  Uses blas1::axpby routines to integr...">Karniadakis</a> semi-implicit multistep time-integration </p>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct for <a class="el" href="structdg_1_1_karniadakis.html" title="Struct for Karniadakis semi-implicit multistep time-integration . ">Karniadakis</a> semi-implicit multistep time-integration </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ {\bar v}^n = \frac{1}{\gamma_0}\left(\sum_{q=0}^2 \alpha_q v^{n-q} + \Delta t\sum_{q=0}^2\beta_q N( v^{n-q})\right) \]" src="form_57.png"/>
+\[ \begin{align} {\bar v}^n &amp;= \frac{1}{\gamma_0}\left(\sum_{q=0}^2 \alpha_q v^{n-q} + \Delta t\sum_{q=0}^2\beta_q N( v^{n-q})\right) \\ \left( 1 - \frac{\Delta t}{\gamma_0} \hat L\right) v^{n+1} &amp;= {\bar v}^n \end{align} \]
 </p>
- <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \left( 1 - \frac{\Delta t}{\gamma_0} \hat L\right) v^{n+1} = {\bar v}^n \]" src="form_58.png"/>
-</p>
-Uses <a class="el" href="group__blas1.html#ga6ee5b940147ba6b71e1fe1fc538e9459" title="Modified BLAS 1 routine axpy. ">blas1::axpby</a> routines to integrate one step and only one right-hand-side evaluation per step. Uses a conjugate gradient method for the implicit operator.  <a href="structdg_1_1_karniadakis.html#details">More...</a><br/></td></tr>
+<p>.  <a href="structdg_1_1_karniadakis.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdg_1_1_s_i_r_k.html">dg::SIRK&lt; Vector &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Semi implicit Runge Kutta method after Yoh and Zhong (AIAA 42, 2004)  <a href="structdg_1_1_s_i_r_k.html#details">More...</a><br/></td></tr>
@@ -147,7 +154,7 @@ Namespaces</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="dir_cba352cc187f01702d3926d435723909.html">dg</a></li><li class="navelem"><a class="el" href="multistep_8h.html">multistep.h</a></li>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:15 for Discontinuous Galerkin Library by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Discontinuous Galerkin Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

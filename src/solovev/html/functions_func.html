@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -79,6 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="functions.html"><span>All</span></a></li>
       <li class="current"><a href="functions_func.html"><span>Functions</span></a></li>
+      <li><a href="functions_vars.html"><span>Variables</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -101,7 +108,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Groups</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Groups</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -114,6 +121,8 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 &#160;<ul>
 <li>display()
 : <a class="el" href="group__geom.html#gac75127cc87f46a3a5b05ef2304a85fdd">solovev::GeomParameters</a>
+, <a class="el" href="structsolovev_1_1_psip.html#a20893a4d67455be10ae7eb9a4b571422">solovev::Psip</a>
+, <a class="el" href="structsolovev_1_1_psip_r.html#ae05ab59288ea92a85991611108ec558e">solovev::PsipR</a>
 </li>
 <li>FluxSurfaceAverage()
 : <a class="el" href="structsolovev_1_1_flux_surface_average.html#a2f79d67265e3dc31851a156d18c41f8d">solovev::FluxSurfaceAverage&lt; container &gt;</a>
@@ -126,20 +135,24 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 , <a class="el" href="structsolovev_1_1_b_z.html#af0affe6814923f166fcfb86ee81d169b">solovev::BZ</a>
 , <a class="el" href="structsolovev_1_1_curvature_r.html#a47ced9a9b5b11240c310f75842b99c1a">solovev::CurvatureR</a>
 , <a class="el" href="structsolovev_1_1_curvature_z.html#af3b12dd9d9b4f2ff689fe732075ec5f9">solovev::CurvatureZ</a>
-, <a class="el" href="structsolovev_1_1_field.html#a70180a0878cb37e8843427a2c3e7053a">solovev::Field</a>
+, <a class="el" href="structsolovev_1_1_field.html#ac597f776e803b07f473bbbca93370eeb">solovev::Field</a>
 , <a class="el" href="structsolovev_1_1_flux_surface_average.html#a4f178d26db3f362b63469442cd9cb4c7">solovev::FluxSurfaceAverage&lt; container &gt;</a>
 , <a class="el" href="structsolovev_1_1_grad_ln_b.html#a8233010d792cc270d54367e81d369a53">solovev::GradLnB</a>
 , <a class="el" href="structsolovev_1_1_inv_b.html#a6a4886f03129ef2d86201ef93cf770cc">solovev::InvB</a>
 , <a class="el" href="structsolovev_1_1_ipol.html#ac7f62f21fe31980c090c758ddb3546be">solovev::Ipol</a>
 , <a class="el" href="structsolovev_1_1_ln_b.html#abb3f660d8d54b1e8137a817b103929fa">solovev::LnB</a>
-, <a class="el" href="structsolovev_1_1_psip.html#a6079b6a7c9ea5a5d6bbf4b65dd9d8dde">solovev::Psip</a>
+, <a class="el" href="structsolovev_1_1_psip.html#a2385c203b4756a6152431027cfb4809a">solovev::Psip</a>
+, <a class="el" href="structsolovev_1_1_psip_r.html#a021440c9ee5be27d62a9e3f6ac3892dd">solovev::PsipR</a>
 , <a class="el" href="structsolovev_1_1_psip_r_r.html#ade58b2aebe56979d740b1e8e1645b779">solovev::PsipRR</a>
 , <a class="el" href="structsolovev_1_1_psip_r_z.html#a93021f5c1d733da732156ccd0437b4ee">solovev::PsipRZ</a>
 , <a class="el" href="structsolovev_1_1_psip_z_z.html#aee49e53656604a30914dc82426d26c47">solovev::PsipZZ</a>
 , <a class="el" href="structsolovev_1_1_safety_factor.html#ad1f873bfa1e8b3bc0f4ce43912666603">solovev::SafetyFactor&lt; container &gt;</a>
 </li>
-<li>psipR_alt()
-: <a class="el" href="structsolovev_1_1_psip_r.html#a3e0c01279dcb1f26013cd8f50903ca2e">solovev::PsipR</a>
+<li>Psip()
+: <a class="el" href="structsolovev_1_1_psip.html#aad4b94ff287a2320ce1a99c8d0ca7310">solovev::Psip</a>
+</li>
+<li>PsipR()
+: <a class="el" href="structsolovev_1_1_psip_r.html#a9ed70b25c22662a70ea4859a1336962b">solovev::PsipR</a>
 </li>
 <li>psipZ_alt()
 : <a class="el" href="structsolovev_1_1_psip_z.html#aff69e7f70ddf400c832f63c7a19b7186">solovev::PsipZ</a>
@@ -153,7 +166,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:56 for Solovev by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Solovev by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -31,7 +31,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "algorithm_8h.html",
-"structdg_1_1_helmholtz.html"
+"structdg_1_1_histogram2_d.html#ae442645862b8112c7cc34bd3c2bfc047"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

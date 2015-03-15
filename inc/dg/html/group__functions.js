@@ -87,20 +87,17 @@ var group__functions =
       [ "operator()", "structdg_1_1_p_l_u_s.html#adce602b7c450f6b06c9954283e828dee", null ]
     ] ],
     [ "MOD", "structdg_1_1_m_o_d.html", [
-      [ "MOD", "structdg_1_1_m_o_d.html#a29f7750fe7ed410e0663b0418152981a", null ],
+      [ "MOD", "structdg_1_1_m_o_d.html#a1661e093118805e4334b61089134bf6f", null ],
       [ "operator()", "structdg_1_1_m_o_d.html#aa66c4ae9784689450e8d94ec6bf90fe8", null ]
     ] ],
     [ "ABS", "structdg_1_1_a_b_s.html", [
       [ "operator()", "structdg_1_1_a_b_s.html#ae877fcbbc5d06b6ca15c21bbeb74040c", null ]
     ] ],
     [ "CONSTANT", "structdg_1_1_c_o_n_s_t_a_n_t.html", [
-      [ "CONSTANT", "structdg_1_1_c_o_n_s_t_a_n_t.html#a7b271c4293379cd7473da5fd801aa328", null ],
+      [ "CONSTANT", "structdg_1_1_c_o_n_s_t_a_n_t.html#ae8096ed918793f4de9c56cb7d39baa98", null ],
       [ "operator()", "structdg_1_1_c_o_n_s_t_a_n_t.html#ac7883c7de7daa091b4ebe20c8fdad508", null ],
       [ "operator()", "structdg_1_1_c_o_n_s_t_a_n_t.html#ad08e5a0ee5593660f0b47b11a217e1ff", null ],
       [ "operator()", "structdg_1_1_c_o_n_s_t_a_n_t.html#ab0b682a0acc252ce3b7d7f934cdfee5a", null ]
-    ] ],
-    [ "FLOOR", "structdg_1_1_f_l_o_o_r.html", [
-      [ "operator()", "structdg_1_1_f_l_o_o_r.html#ae3d1fc4f495f9ebd0d27e250a5542d03", null ]
     ] ],
     [ "Histogram", "structdg_1_1_histogram.html", [
       [ "Histogram", "structdg_1_1_histogram.html#ac5111e3519dc62ea32ff68e1de7eaebf", null ],

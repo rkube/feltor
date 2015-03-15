@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -97,6 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="#index_i"><span>i</span></a></li>
       <li><a href="#index_k"><span>k</span></a></li>
       <li><a href="#index_l"><span>l</span></a></li>
+      <li><a href="#index_m"><span>m</span></a></li>
       <li><a href="#index_n"><span>n</span></a></li>
       <li><a href="#index_o"><span>o</span></a></li>
       <li><a href="#index_p"><span>p</span></a></li>
@@ -146,14 +153,14 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="structdg_1_1_s_i_r_k.html#a01757c756e22e533e871286f91672a5a">dg::SIRK&lt; Vector &gt;</a>
 </li>
 <li>alpha()
-: <a class="el" href="group__operators.html#ga59320b5e0dd00f8e5a7c49c880912d60">dg::Helmholtz&lt; Matrix, Vector, Preconditioner &gt;</a>
+: <a class="el" href="group__matrixoperators.html#ga7fceb7f2dbaf51df5941643f33f1f8a6">dg::Helmholtz&lt; Matrix, Vector, Preconditioner &gt;</a>
 , <a class="el" href="structdg_1_1rk__coeff.html#a23c2aa1eeb057a2cccd29d586d787afa">dg::rk_coeff&lt; k &gt;</a>
 </li>
 <li>anzeigen()
 : <a class="el" href="classdg_1_1_keine_n_s_t__1_d.html#ab9089e775ecb1a2a2d13aab1e5e47b20">dg::KeineNST_1D</a>
 </li>
 <li>ArakawaX()
-: <a class="el" href="structdg_1_1_arakawa_x.html#ac00da03bc63b7d9ea863fc9af928f66d">dg::ArakawaX&lt; Matrix, container &gt;</a>
+: <a class="el" href="structdg_1_1_arakawa_x.html#ac33d39046b6c27ffaad030e18b3910e2">dg::ArakawaX&lt; Matrix, container &gt;</a>
 </li>
 </ul>
 
@@ -164,6 +171,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>beta
 : <a class="el" href="structdg_1_1rk__coeff.html#ab4f695515e6baecffd138cbe457f7fa0">dg::rk_coeff&lt; k &gt;</a>
+</li>
+<li>binwidth()
+: <a class="el" href="structdg_1_1_histogram.html#a41da837ab831cd709ccb49390163b407">dg::Histogram&lt; container &gt;</a>
 </li>
 <li>bracketS()
 : <a class="el" href="structdg_1_1_arakawa_x.html#a4bca8c8355aa0d33f5913edf77fe96db">dg::ArakawaX&lt; Matrix, container &gt;</a>
@@ -177,7 +187,10 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="classdg_1_1_c_g.html#a2c8ea3ee27e6a0081f2694a69d5ef78b">dg::CG&lt; Vector &gt;</a>
 </li>
 <li>chi()
-: <a class="el" href="group__operators.html#gaf8330683e97b34392b998695d33f13ba">dg::Helmholtz&lt; Matrix, Vector, Preconditioner &gt;</a>
+: <a class="el" href="group__matrixoperators.html#gaf8330683e97b34392b998695d33f13ba">dg::Helmholtz&lt; Matrix, Vector, Preconditioner &gt;</a>
+</li>
+<li>CONSTANT()
+: <a class="el" href="structdg_1_1_c_o_n_s_t_a_n_t.html#ae8096ed918793f4de9c56cb7d39baa98">dg::CONSTANT</a>
 </li>
 </ul>
 
@@ -249,6 +262,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>GaussianZ()
 : <a class="el" href="structdg_1_1_gaussian_z.html#aa1915517625deebecb730e2b37a3e888">dg::GaussianZ</a>
 </li>
+<li>GeneralElliptic()
+: <a class="el" href="structdg_1_1_general_elliptic.html#a951d4bf81105a15efac024fbcfb029d2">dg::GeneralElliptic&lt; Matrix, Vector, Preconditioner &gt;</a>
+</li>
 <li>get_max()
 : <a class="el" href="classdg_1_1_c_g.html#a6c6ddea9c0e7b7f2149722ef25cc9dd8">dg::CG&lt; Vector &gt;</a>
 , <a class="el" href="structdg_1_1_invert.html#a9bf8b8325e4b96dc859103b09a3112a7">dg::Invert&lt; container &gt;</a>
@@ -261,7 +277,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="structdg_1_1_karniadakis.html#adfce7b22810fa973c4baa31525278770">dg::Karniadakis&lt; Vector &gt;</a>
 </li>
 <li>Helmholtz()
-: <a class="el" href="group__operators.html#ga76ec5eaa2cc3dd1ef9b0c90f8a85fd6c">dg::Helmholtz&lt; Matrix, Vector, Preconditioner &gt;</a>
+: <a class="el" href="group__matrixoperators.html#ga76ec5eaa2cc3dd1ef9b0c90f8a85fd6c">dg::Helmholtz&lt; Matrix, Vector, Preconditioner &gt;</a>
 </li>
 <li>Histogram()
 : <a class="el" href="structdg_1_1_histogram.html#ac5111e3519dc62ea32ff68e1de7eaebf">dg::Histogram&lt; container &gt;</a>
@@ -300,11 +316,21 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>last()
 : <a class="el" href="structdg_1_1_karniadakis.html#abc9068a1ad218f7dcc9d0663555af55b">dg::Karniadakis&lt; Vector &gt;</a>
 </li>
+<li>LHalf()
+: <a class="el" href="structdg_1_1_l_half.html#a73a6c6de949ca50467a3cd8c9371bddf">dg::LHalf</a>
+</li>
 <li>LinearX()
 : <a class="el" href="structdg_1_1_linear_x.html#a2721b98ac435a39e4864b42657e7c07c">dg::LinearX</a>
 </li>
 <li>LinearY()
 : <a class="el" href="structdg_1_1_linear_y.html#a141df376a562eb957ae6c05ce76c78d8">dg::LinearY</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
+<li>MOD()
+: <a class="el" href="structdg_1_1_m_o_d.html#a1661e093118805e4334b61089134bf6f">dg::MOD&lt; T &gt;</a>
 </li>
 </ul>
 
@@ -326,28 +352,35 @@ $(document).ready(function(){initNavTree('functions.html','');});
 , <a class="el" href="structdg_1_1_abs_max.html#aa714656703ea5cb3d7714faabe9d7629">dg::AbsMax&lt; T &gt;</a>
 , <a class="el" href="structdg_1_1_abs_min.html#a916191cf7cf149afc3bdb36c9fd24435">dg::AbsMin&lt; T &gt;</a>
 , <a class="el" href="structdg_1_1_arakawa_x.html#aff193379f05d069f0ab355a77d655054">dg::ArakawaX&lt; Matrix, container &gt;</a>
-, <a class="el" href="structdg_1_1_bath_r_z.html#af2ccb27b317a8e3b4a76f3db9bcb8a7b">dg::BathRZ</a>
+, <a class="el" href="structdg_1_1_bath_r_z.html#a48cdc5fb70d63a515f4c1d0d19c095e9">dg::BathRZ</a>
 , <a class="el" href="classdg_1_1_c_g.html#a8dc452436c95a758207bc35cec53909f">dg::CG&lt; Vector &gt;</a>
+, <a class="el" href="structdg_1_1_c_o_n_s_t_a_n_t.html#ac7883c7de7daa091b4ebe20c8fdad508">dg::CONSTANT</a>
 , <a class="el" href="structdg_1_1_e_x_p.html#a5a8ae6a0f36fa060e7fe97a632c2f978">dg::EXP&lt; T &gt;</a>
 , <a class="el" href="structdg_1_1_exp_prof_x.html#a219e9af5a1e50c076b401fded938e731">dg::ExpProfX</a>
 , <a class="el" href="structdg_1_1_gaussian3d.html#a043038f3e18a1d88f149ae63bc2c2f4c">dg::Gaussian3d</a>
 , <a class="el" href="structdg_1_1_gaussian.html#a1fb4fe2bf3ba2ca34bc583d1ae458442">dg::Gaussian</a>
 , <a class="el" href="structdg_1_1_gaussian_x.html#a427dfa07582fd4df296d6d881818d6f8">dg::GaussianX</a>
 , <a class="el" href="structdg_1_1_gaussian_y.html#a621c68858e91c3acc2f4d51b76071d9d">dg::GaussianY</a>
-, <a class="el" href="structdg_1_1_gaussian_z.html#af22c467eda3bf17e49b09ff8b720a581">dg::GaussianZ</a>
+, <a class="el" href="structdg_1_1_gaussian_z.html#a5b7a771e993ddef418aead8300f3aa21">dg::GaussianZ</a>
+, <a class="el" href="structdg_1_1_histogram2_d.html#ae442645862b8112c7cc34bd3c2bfc047">dg::Histogram2D&lt; container &gt;</a>
+, <a class="el" href="structdg_1_1_histogram.html#ae34a37fd52249593abbf0482b583d7c5">dg::Histogram&lt; container &gt;</a>
 , <a class="el" href="structdg_1_1_invert.html#aba7447f25ad0b970efe0df955c1da484">dg::Invert&lt; container &gt;</a>
 , <a class="el" href="structdg_1_1_karniadakis.html#a84f10f1572bc1319b97315a3d710ab0b">dg::Karniadakis&lt; Vector &gt;</a>
 , <a class="el" href="structdg_1_1_lamb.html#a32e2eea9f78ae4e647eaadd7a1adc267">dg::Lamb</a>
+, <a class="el" href="structdg_1_1_l_half.html#aaaf6fbf27136e0a443e42be3d41152e7">dg::LHalf</a>
 , <a class="el" href="structdg_1_1_linear_x.html#afb11c904cbdcde60dba138fc133629a6">dg::LinearX</a>
 , <a class="el" href="structdg_1_1_linear_y.html#af249cdd8fb6ae1b7dd8fabfc0e854827">dg::LinearY</a>
 , <a class="el" href="structdg_1_1_l_n.html#aaa9d64f99df571d4f164eefada35797b">dg::LN&lt; T &gt;</a>
 , <a class="el" href="structdg_1_1_min_mod.html#a88d5901b10cea0b447e7758de1807b20">dg::MinMod&lt; T &gt;</a>
+, <a class="el" href="structdg_1_1_m_o_d.html#aa66c4ae9784689450e8d94ec6bf90fe8">dg::MOD&lt; T &gt;</a>
 , <a class="el" href="structdg_1_1_p_l_u_s.html#adce602b7c450f6b06c9954283e828dee">dg::PLUS&lt; T &gt;</a>
 , <a class="el" href="structdg_1_1_poisson.html#a436cea4bbf782e872e31db7fd922ff3d">dg::Poisson&lt; Matrix, container &gt;</a>
+, <a class="el" href="structdg_1_1_r_half.html#a128cce7a2daa7e1078608845f526ac47">dg::RHalf</a>
 , <a class="el" href="structdg_1_1_r_k.html#a1e4a116d7fb767a76e725a6dfe4b98c1">dg::RK&lt; k, Vector &gt;</a>
 , <a class="el" href="structdg_1_1_sin_prof_x.html#a25ac8f8bc25258d40bb322c7a210d752">dg::SinProfX</a>
 , <a class="el" href="structdg_1_1_s_i_r_k.html#a8a88353bfe5754bee28b02748dc63bb4">dg::SIRK&lt; Vector &gt;</a>
 , <a class="el" href="structdg_1_1_s_q_r_t.html#a262a9118b42b69858043cb66b97aa7d2">dg::SQRT&lt; T &gt;</a>
+, <a class="el" href="structdg_1_1_vortex.html#ab9c5cf940de3ddc21b35d62614dda592">dg::Vortex</a>
 </li>
 </ul>
 
@@ -361,14 +394,18 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>precond()
 : <a class="el" href="classdg_1_1_elliptic.html#aeec5ccc24b417b0af51f153dee76238d">dg::Elliptic&lt; Matrix, Vector, Preconditioner &gt;</a>
-, <a class="el" href="group__operators.html#ga42af8edcfc2def422a545c6fe950dbfc">dg::Helmholtz&lt; Matrix, Vector, Preconditioner &gt;</a>
+, <a class="el" href="structdg_1_1_general_elliptic.html#a4394a6de837ce9557cb76a6c8df4d457">dg::GeneralElliptic&lt; Matrix, Vector, Preconditioner &gt;</a>
+, <a class="el" href="group__matrixoperators.html#ga42af8edcfc2def422a545c6fe950dbfc">dg::Helmholtz&lt; Matrix, Vector, Preconditioner &gt;</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_r"></a>- r -</h3><ul>
 <li>reset_chi()
-: <a class="el" href="group__operators.html#gaf76f445d7887289a03f0e48ed42c2a3d">dg::Helmholtz&lt; Matrix, Vector, Preconditioner &gt;</a>
+: <a class="el" href="group__matrixoperators.html#gaf76f445d7887289a03f0e48ed42c2a3d">dg::Helmholtz&lt; Matrix, Vector, Preconditioner &gt;</a>
+</li>
+<li>RHalf()
+: <a class="el" href="structdg_1_1_r_half.html#a683a4e23fef2cf4afe953006342c19f9">dg::RHalf</a>
 </li>
 <li>RK()
 : <a class="el" href="structdg_1_1_r_k.html#a6c429247370a3e14d0b818dc9c486b6b">dg::RK&lt; k, Vector &gt;</a>
@@ -377,13 +414,25 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 
 <h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
+<li>set()
+: <a class="el" href="structdg_1_1_general_elliptic.html#ae178fdd7989f8c673d405cb8dd3918d0">dg::GeneralElliptic&lt; Matrix, Vector, Preconditioner &gt;</a>
+</li>
 <li>set_chi()
 : <a class="el" href="classdg_1_1_elliptic.html#abfd10f349d672d814cd9f564f48b7b83">dg::Elliptic&lt; Matrix, Vector, Preconditioner &gt;</a>
-, <a class="el" href="group__operators.html#gac95fce512bf66491a2235d589148a64a">dg::Helmholtz&lt; Matrix, Vector, Preconditioner &gt;</a>
+, <a class="el" href="group__matrixoperators.html#gac95fce512bf66491a2235d589148a64a">dg::Helmholtz&lt; Matrix, Vector, Preconditioner &gt;</a>
 </li>
 <li>set_max()
 : <a class="el" href="classdg_1_1_c_g.html#a5b59194ed8198858e1eb969059559a4e">dg::CG&lt; Vector &gt;</a>
 , <a class="el" href="structdg_1_1_invert.html#ab1c32f7fdd5c123eab428283df6cf83c">dg::Invert&lt; container &gt;</a>
+</li>
+<li>set_x()
+: <a class="el" href="structdg_1_1_general_elliptic.html#accb1bdb9a161cac01407144b9bad5467">dg::GeneralElliptic&lt; Matrix, Vector, Preconditioner &gt;</a>
+</li>
+<li>set_y()
+: <a class="el" href="structdg_1_1_general_elliptic.html#af120d0e5f7fd06e44c51fa70ba8567e3">dg::GeneralElliptic&lt; Matrix, Vector, Preconditioner &gt;</a>
+</li>
+<li>set_z()
+: <a class="el" href="structdg_1_1_general_elliptic.html#ab006a9fe9ea8f84d7903a91e04667851">dg::GeneralElliptic&lt; Matrix, Vector, Preconditioner &gt;</a>
 </li>
 <li>SinProfX()
 : <a class="el" href="structdg_1_1_sin_prof_x.html#a1d8a1a06b4c66cf68b532ddaa47e3e4e">dg::SinProfX</a>
@@ -393,7 +442,8 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>symv()
 : <a class="el" href="classdg_1_1_elliptic.html#aaa875850f691e28b53de7560367bc950">dg::Elliptic&lt; Matrix, Vector, Preconditioner &gt;</a>
-, <a class="el" href="group__operators.html#ga3f5c52b98883ecc88056b3f82030f548">dg::Helmholtz&lt; Matrix, Vector, Preconditioner &gt;</a>
+, <a class="el" href="structdg_1_1_general_elliptic.html#afdfe8713b14d6c197b92672bc2e2186b">dg::GeneralElliptic&lt; Matrix, Vector, Preconditioner &gt;</a>
+, <a class="el" href="group__matrixoperators.html#ga3f5c52b98883ecc88056b3f82030f548">dg::Helmholtz&lt; Matrix, Vector, Preconditioner &gt;</a>
 </li>
 </ul>
 
@@ -417,10 +467,12 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <h3><a class="anchor" id="index_w"></a>- w -</h3><ul>
 <li>weights()
 : <a class="el" href="classdg_1_1_elliptic.html#a93d09db13361df006183edf7e1f8584e">dg::Elliptic&lt; Matrix, Vector, Preconditioner &gt;</a>
-, <a class="el" href="group__operators.html#gaa999c6af019581113bde43dd67cacc44">dg::Helmholtz&lt; Matrix, Vector, Preconditioner &gt;</a>
+, <a class="el" href="structdg_1_1_general_elliptic.html#a5dfe8dd7fa1b47a6e4e581db2fbf12a9">dg::GeneralElliptic&lt; Matrix, Vector, Preconditioner &gt;</a>
+, <a class="el" href="group__matrixoperators.html#gaa999c6af019581113bde43dd67cacc44">dg::Helmholtz&lt; Matrix, Vector, Preconditioner &gt;</a>
 </li>
 <li>what()
 : <a class="el" href="structdg_1_1_fail.html#ad3d7c1cd0eb04c8526c2c00cf9de6a77">dg::Fail</a>
+, <a class="el" href="classdg_1_1_keine_n_s_t__1_d.html#a8a73e92fc1cc11af08cb2da266ccdcaf">dg::KeineNST_1D</a>
 , <a class="el" href="structdg_1_1_not_a_number.html#ae267515bfe4129ea36ea4ebb561c3cf3">dg::NotANumber</a>
 , <a class="el" href="structdg_1_1_ooops.html#a64c09cc1f58ed6407c98122dcb3dd567">dg::Ooops</a>
 </li>
@@ -430,7 +482,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:35 for Discontinuous Galerkin Library by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Discontinuous Galerkin Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

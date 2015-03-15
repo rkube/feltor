@@ -7,7 +7,7 @@ var searchData=
   ['colormap_5fext',['colormap_ext',['../structtoefl_1_1colormap__ext.html',1,'toefl']]],
   ['colormap_5ff',['colormap_f',['../structtoefl_1_1colormap__f.html',1,'toefl']]],
   ['cols',['cols',['../classtoefl_1_1_matrix.html#acaaf1b7e09ef4b7524d6b36829f6e699',1,'toefl::Matrix']]],
-  ['construct',['construct',['../structtoefl_1_1_matrix_array.html#ab4f617feadfe5c87e31f940656063bf8',1,'toefl::MatrixArray']]],
+  ['construct',['construct',['../structtoefl_1_1_matrix_array.html#ab4f617feadfe5c87e31f940656063bf8',1,'toefl::MatrixArray::construct(size_t rows, size_t cols, T value=(T) 0)'],['../structtoefl_1_1_matrix_array.html#a8c6f77b6489fd1acd048d2ed0d0c2156',1,'toefl::MatrixArray::construct(size_t rows, size_t cols, double value=0.0)']]],
   ['containers',['Containers',['../group__containers.html',1,'']]],
   ['copy',['copy',['../classtoefl_1_1_matrix.html#a9de80b0a0ce91964416b39c51ac46b67',1,'toefl::Matrix']]]
 ];

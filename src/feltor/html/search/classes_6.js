@@ -8,6 +8,7 @@ var searchData=
   ['gaussianx',['GaussianX',['../../../../inc/dg/html/structdg_1_1_gaussian_x.html',1,'dg']]],
   ['gaussiany',['GaussianY',['../../../../inc/dg/html/structdg_1_1_gaussian_y.html',1,'dg']]],
   ['gaussianz',['GaussianZ',['../../../../inc/dg/html/structdg_1_1_gaussian_z.html',1,'dg']]],
+  ['generalelliptic',['GeneralElliptic',['../../../../inc/dg/html/structdg_1_1_general_elliptic.html',1,'dg']]],
   ['geomparameters',['GeomParameters',['../../../../src/solovev/html/structsolovev_1_1_geom_parameters.html',1,'solovev']]],
   ['ghostmatrix',['GhostMatrix',['../../../../inc/toefl/html/classtoefl_1_1_ghost_matrix.html',1,'toefl']]],
   ['gradlnb',['GradLnB',['../../../../src/solovev/html/structsolovev_1_1_grad_ln_b.html',1,'solovev']]]

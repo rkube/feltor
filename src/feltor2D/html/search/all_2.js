@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['c',['c',['../../../../src/solovev/html/group__geom.html#ga947ccace40431083df7cf03cfd809983',1,'solovev::GeomParameters::c()'],['../../../../src/solovev/html/group__geom.html#ga947ccace40431083df7cf03cfd809983',1,'c()(Global Namespace)']]],
   ['c2r',['c2r',['../../../../inc/toefl/html/classtoefl_1_1_d_f_t___d_f_t.html#a34f50d4c5b2e36c802c56e3296ce729c',1,'toefl::DFT_DFT::c2r()'],['../../../../inc/toefl/html/classtoefl_1_1_d_f_t___d_r_t.html#a3e4e26116f0f3dcf9cf22e08cd3703f0',1,'toefl::DFT_DRT::c2r()']]],
   ['c_5ft2r',['c_T2r',['../../../../inc/toefl/html/classtoefl_1_1_d_r_t___d_f_t.html#a8c88b3d404cddf933d34349acda315bd',1,'toefl::DRT_DFT']]],
   ['cartesian',['cartesian',['../../../../inc/dg/html/group__creation.html#gga75789d2c36dff2caed4b3bb80191b346a49a654c38e355ec847e55f927511019d',1,'dg::cartesian()'],['../../../../inc/dg/html/group__creation.html#gga75789d2c36dff2caed4b3bb80191b346a49a654c38e355ec847e55f927511019d',1,'cartesian()(Global Namespace)']]],
@@ -7,19 +8,20 @@ var searchData=
   ['cg',['CG',['../../../../inc/dg/html/classdg_1_1_c_g.html',1,'dg']]],
   ['cg',['CG',['../../../../inc/dg/html/classdg_1_1_c_g.html#a2c8ea3ee27e6a0081f2694a69d5ef78b',1,'dg::CG::CG()'],['../../../../inc/dg/html/group__algorithms.html#ga61caca7351ed278357a3923adb6ab655',1,'dg::cg()'],['../../../../inc/dg/html/group__algorithms.html#ga61caca7351ed278357a3923adb6ab655',1,'cg()(Global Namespace)']]],
   ['cg_2eh',['cg.h',['../../../../inc/dg/html/cg_8h.html',1,'']]],
-  ['chi',['chi',['../../../../inc/dg/html/group__operators.html#gaf8330683e97b34392b998695d33f13ba',1,'dg::Helmholtz::chi()'],['../../../../inc/dg/html/group__operators.html#gaf8330683e97b34392b998695d33f13ba',1,'chi()(Global Namespace)']]],
+  ['chi',['chi',['../../../../inc/dg/html/group__matrixoperators.html#gaf8330683e97b34392b998695d33f13ba',1,'dg::Helmholtz::chi()'],['../../../../inc/dg/html/group__matrixoperators.html#gaf8330683e97b34392b998695d33f13ba',1,'chi()(Global Namespace)']]],
   ['coefficients',['Coefficients',['../../../../inc/toefl/html/structtoefl_1_1_coefficients.html',1,'toefl']]],
   ['colormap_5fext',['colormap_ext',['../../../../inc/toefl/html/group__utilities.html#ga5cbd63c6da2379bd643dc946f43784ed',1,'toefl::colormap_ext()'],['../../../../inc/toefl/html/group__utilities.html#ga5cbd63c6da2379bd643dc946f43784ed',1,'colormap_ext()(Global Namespace)']]],
   ['colormap_5fext',['colormap_ext',['../../../../inc/toefl/html/structtoefl_1_1colormap__ext.html',1,'toefl']]],
   ['colormap_5ff',['colormap_f',['../../../../inc/toefl/html/structtoefl_1_1colormap__f.html',1,'toefl']]],
   ['cols',['cols',['../../../../inc/toefl/html/classtoefl_1_1_matrix.html#acaaf1b7e09ef4b7524d6b36829f6e699',1,'toefl::GhostMatrix']]],
+  ['constant',['CONSTANT',['../../../../inc/dg/html/structdg_1_1_c_o_n_s_t_a_n_t.html#ae8096ed918793f4de9c56cb7d39baa98',1,'dg::CONSTANT']]],
   ['constant',['CONSTANT',['../../../../inc/dg/html/structdg_1_1_c_o_n_s_t_a_n_t.html',1,'dg']]],
-  ['construct',['construct',['../../../../inc/toefl/html/structtoefl_1_1_matrix_array.html#ab4f617feadfe5c87e31f940656063bf8',1,'toefl::MatrixArray']]],
+  ['construct',['construct',['../../../../inc/toefl/html/structtoefl_1_1_matrix_array.html#ab4f617feadfe5c87e31f940656063bf8',1,'toefl::MatrixArray::construct(size_t rows, size_t cols, T value=(T) 0)'],['../../../../inc/toefl/html/structtoefl_1_1_matrix_array.html#a8c6f77b6489fd1acd048d2ed0d0c2156',1,'toefl::MatrixArray::construct(size_t rows, size_t cols, double value=0.0)']]],
   ['containers',['Containers',['../../../../inc/toefl/html/group__containers.html',1,'']]],
   ['copy',['copy',['../../../../inc/toefl/html/classtoefl_1_1_matrix.html#a9de80b0a0ce91964416b39c51ac46b67',1,'toefl::GhostMatrix']]],
   ['createset',['createSet',['../../../../inc/file/html/structfile_1_1_probe.html#a6b07693c5b4961d754fe01c80b37f704',1,'file::Probe']]],
   ['curvaturer',['CurvatureR',['../../../../src/solovev/html/structsolovev_1_1_curvature_r.html',1,'solovev']]],
   ['curvaturez',['CurvatureZ',['../../../../src/solovev/html/structsolovev_1_1_curvature_z.html',1,'solovev']]],
   ['cylindrical',['cylindrical',['../../../../inc/dg/html/group__creation.html#gga75789d2c36dff2caed4b3bb80191b346a6962eb4bbef38ebabc41458844991bfd',1,'dg::cylindrical()'],['../../../../inc/dg/html/group__creation.html#gga75789d2c36dff2caed4b3bb80191b346a6962eb4bbef38ebabc41458844991bfd',1,'cylindrical()(Global Namespace)']]],
-  ['classes_20that_20act_20as_20matrices_20in_20blas2_20routines',['Classes that act as matrices in blas2 routines',['../../../../inc/dg/html/group__operators.html',1,'']]]
+  ['classes_20that_20act_20as_20matrices_20in_20blas2_20routines',['Classes that act as matrices in blas2 routines',['../../../../inc/dg/html/group__matrixoperators.html',1,'']]]
 ];

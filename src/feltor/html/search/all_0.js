@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['a',['A',['../../../../src/solovev/html/group__geom.html#ga97e1ff33b7ef8b50e3a4a8878a61b0e5',1,'solovev::GeomParameters::A()'],['../../../../src/solovev/html/group__geom.html#ga937bb16d9918139c82537b0522d9d50c',1,'solovev::GeomParameters::a()'],['../../../../src/solovev/html/group__geom.html#ga937bb16d9918139c82537b0522d9d50c',1,'a()(Global Namespace)'],['../../../../src/solovev/html/group__geom.html#ga97e1ff33b7ef8b50e3a4a8878a61b0e5',1,'A()(Global Namespace)']]],
   ['ab',['AB',['../../../../inc/dg/html/structdg_1_1_a_b.html',1,'dg']]],
   ['ab',['AB',['../../../../inc/dg/html/structdg_1_1_a_b.html#a7334cb5aa3f4b596ecb54148264f2569',1,'dg::AB']]],
   ['abs',['ABS',['../../../../inc/dg/html/structdg_1_1_a_b_s.html',1,'dg']]],
@@ -10,8 +11,8 @@ var searchData=
   ['allocate',['allocate',['../../../../inc/toefl/html/classtoefl_1_1_matrix.html#a171550ab096ef57acfbd755c7bfe930f',1,'toefl::GhostMatrix']]],
   ['allocationerror',['AllocationError',['../../../../inc/toefl/html/classtoefl_1_1_allocation_error.html',1,'toefl']]],
   ['allocationerror',['AllocationError',['../../../../inc/toefl/html/classtoefl_1_1_allocation_error.html#a424affcd290790c0aa982d03d5a5918e',1,'toefl::AllocationError']]],
+  ['alpha',['alpha',['../../../../inc/dg/html/structdg_1_1rk__coeff.html#a23c2aa1eeb057a2cccd29d586d787afa',1,'dg::rk_coeff::alpha()'],['../../../../inc/toefl/html/structtoefl_1_1_coefficients.html#a1940fc3c8053eea3440f22819040ace5',1,'toefl::Coefficients::alpha()'],['../../../../src/solovev/html/group__geom.html#gab23ad90efd782bb2411080b17984c0e2',1,'solovev::GeomParameters::alpha()'],['../../../../inc/dg/html/group__matrixoperators.html#ga7fceb7f2dbaf51df5941643f33f1f8a6',1,'dg::Helmholtz::alpha()'],['../../../../inc/dg/html/group__matrixoperators.html#ga59320b5e0dd00f8e5a7c49c880912d60',1,'dg::Helmholtz::alpha() const '],['../../../../src/solovev/html/group__geom.html#gab23ad90efd782bb2411080b17984c0e2',1,'alpha()(Global Namespace)'],['../../../../inc/dg/html/group__matrixoperators.html#ga7fceb7f2dbaf51df5941643f33f1f8a6',1,'alpha()(Global Namespace)']]],
   ['alpha',['Alpha',['../../../../src/solovev/html/structsolovev_1_1_alpha.html',1,'solovev']]],
-  ['alpha',['alpha',['../../../../inc/dg/html/structdg_1_1rk__coeff.html#a23c2aa1eeb057a2cccd29d586d787afa',1,'dg::rk_coeff::alpha()'],['../../../../inc/toefl/html/structtoefl_1_1_coefficients.html#a1940fc3c8053eea3440f22819040ace5',1,'toefl::Coefficients::alpha()'],['../../../../inc/dg/html/group__operators.html#ga7fceb7f2dbaf51df5941643f33f1f8a6',1,'dg::Helmholtz::alpha()'],['../../../../inc/dg/html/group__operators.html#ga59320b5e0dd00f8e5a7c49c880912d60',1,'dg::Helmholtz::alpha() const '],['../../../../inc/dg/html/group__operators.html#ga7fceb7f2dbaf51df5941643f33f1f8a6',1,'alpha()(Global Namespace)']]],
   ['anzeigen',['anzeigen',['../../../../inc/dg/html/classdg_1_1_keine_n_s_t__1_d.html#ab9089e775ecb1a2a2d13aab1e5e47b20',1,'dg::KeineNST_1D']]],
   ['append',['append',['../../../../inc/file/html/structfile_1_1_t5trunc.html#a04bc063ba2a831126bbfd8bfdc190d13',1,'file::T5trunc']]],
   ['arakawa',['Arakawa',['../../../../inc/toefl/html/classtoefl_1_1_arakawa.html#ac7d18718d661f4c8b9edf50dbc1075e2',1,'toefl::Arakawa::Arakawa()'],['../../../../inc/dg/html/group__arakawa.html',1,'(Global Namespace)']]],

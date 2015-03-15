@@ -2,7 +2,6 @@ var searchData=
 [
   ['the_20discontinuous_20galerkin_20library',['The Discontinuous Galerkin library',['../../../../inc/dg/html/group___d_g.html',1,'']]],
   ['the_20field_20line_20geometry',['The field line geometry',['../../../../src/solovev/html/group__geom.html',1,'']]],
-  ['the_20solver',['The solver',['../group__solver.html',1,'']]],
   ['t5rdonly',['T5rdonly',['../../../../inc/file/html/structfile_1_1_t5rdonly.html#ae1bbe4c82736646316cc3778755700e7',1,'file::T5rdonly']]],
   ['t5rdonly',['T5rdonly',['../../../../inc/file/html/structfile_1_1_t5rdonly.html',1,'file']]],
   ['t5trunc',['T5trunc',['../../../../inc/file/html/structfile_1_1_t5trunc.html',1,'file']]],
@@ -27,9 +26,9 @@ var searchData=
   ['tl_5fvoid',['TL_VOID',['../../../../inc/toefl/html/group__containers.html#ggad5f39f322bf8f232863d5b5eda04749ba83385206f613ebea4231dd24f821a126',1,'toefl::TL_VOID()'],['../../../../inc/toefl/html/group__containers.html#ggad5f39f322bf8f232863d5b5eda04749ba83385206f613ebea4231dd24f821a126',1,'TL_VOID()(Global Namespace)']]],
   ['toc',['toc',['../../../../inc/toefl/html/classtoefl_1_1_timer.html#a0bec631747d31e3ce359bed22e4efa5b',1,'toefl::Timer']]],
   ['toefl',['toefl',['../../../../inc/toefl/html/namespacetoefl.html',1,'toefl'],['../../../../inc/toefl/html/group___t_o_e_f_l.html',1,'(Global Namespace)']]],
-  ['toefl',['Toefl',['../../../../inc/dg/html/structdg_1_1_toefl.html',1,'dg']]],
   ['toefl_2eh',['toefl.h',['../../../../inc/toefl/html/toefl_8h.html',1,'']]],
   ['transform',['transform',['../../../../inc/dg/html/group__blas1.html#gace34b2c8e27a5173cb25db0542089c2c',1,'dg::blas1::transform()'],['../../../../inc/dg/html/group__blas1.html#gace34b2c8e27a5173cb25db0542089c2c',1,'transform()(Global Namespace)']]],
+  ['triangularity',['triangularity',['../../../../src/solovev/html/group__geom.html#ga1b5afb66804a41c779f0fabb30089f67',1,'solovev::GeomParameters::triangularity()'],['../../../../src/solovev/html/group__geom.html#ga1b5afb66804a41c779f0fabb30089f67',1,'triangularity()(Global Namespace)']]],
   ['turbulentbath',['TurbulentBath',['../../../../inc/toefl/html/classtoefl_1_1_turbulent_bath.html#adcea53556317d5d7361a025f7e0c58c6',1,'toefl::TurbulentBath']]],
   ['turbulentbath',['TurbulentBath',['../../../../inc/toefl/html/classtoefl_1_1_turbulent_bath.html',1,'toefl']]]
 ];

@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -114,7 +120,7 @@ $(document).ready(function(){initNavTree('structdg_1_1rk__coeff.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>coefficients for explicit <a class="el" href="structdg_1_1_r_k.html" title="Struct for Runge-Kutta explicit time-integration. ">RK</a> methods  
+<p>coefficients for explicit <a class="el" href="structdg_1_1_r_k.html" title="Struct for Runge-Kutta explicit time-integration . ">RK</a> methods  
  <a href="structdg_1_1rk__coeff.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="runge__kutta_8h_source.html">runge_kutta.h</a>&gt;</code></p>
@@ -134,20 +140,12 @@ static const double&#160;</td><td class="memItemRight" valign="bottom"><a class=
 <div class="textblock"><h3>template&lt;size_t k&gt;<br/>
 struct dg::rk_coeff&lt; k &gt;</h3>
 
-<p>coefficients for explicit <a class="el" href="structdg_1_1_r_k.html" title="Struct for Runge-Kutta explicit time-integration. ">RK</a> methods </p>
+<p>coefficients for explicit <a class="el" href="structdg_1_1_r_k.html" title="Struct for Runge-Kutta explicit time-integration . ">RK</a> methods </p>
 <p>To derive these coefficients from the butcher tableau consider </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ y = Bhk = (B-D)hk + Dhk = (B-D)B^{-1}y + Dhk = ( 1- DB^{-1})y + Dhk = \alpha y + \beta h k\]" src="form_60.png"/>
+\[ y = Bhk = (B-D)hk + Dhk = (B-D)B^{-1}y + Dhk = ( 1- DB^{-1})y + Dhk = \alpha y + \beta h k\]
 </p>
-<p> where </p>
-<p class="formulaDsp">
-<img class="formulaDsp" alt="\[ B\]" src="form_61.png"/>
-</p>
-<p> is the butcher tableau of order k+1 and </p>
-<p class="formulaDsp">
-<img class="formulaDsp" alt="\[ D\]" src="form_62.png"/>
-</p>
-<p> its diagonal part. </p>
+<p> where \( B\) is the butcher tableau of order k+1 and \( D\) its diagonal part. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">k</td><td>Order of the method. Currently 2,3 and 4 are available </td></tr>
@@ -155,7 +153,7 @@ struct dg::rk_coeff&lt; k &gt;</h3>
   </dd>
 </dl>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/matthias/feltor/inc/dg/<a class="el" href="runge__kutta_8h_source.html">runge_kutta.h</a></li>
+<li>/home/matthias/Projekte/feltor/inc/dg/<a class="el" href="runge__kutta_8h_source.html">runge_kutta.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -163,7 +161,7 @@ struct dg::rk_coeff&lt; k &gt;</h3>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacedg.html">dg</a></li><li class="navelem"><a class="el" href="structdg_1_1rk__coeff.html">rk_coeff</a></li>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:15 for Discontinuous Galerkin Library by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Discontinuous Galerkin Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

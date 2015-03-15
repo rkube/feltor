@@ -10,7 +10,6 @@ var hierarchy =
     [ "dg::CG< container >", "classdg_1_1_c_g.html", null ],
     [ "dg::CONSTANT", "structdg_1_1_c_o_n_s_t_a_n_t.html", null ],
     [ "dg::Elliptic< Matrix, Vector, Preconditioner >", "classdg_1_1_elliptic.html", null ],
-    [ "dg::Elliptic< Matrix, container, Preconditioner >", "classdg_1_1_elliptic.html", null ],
     [ "exception", null, [
       [ "dg::Fail", "structdg_1_1_fail.html", null ],
       [ "dg::KeineNST_1D", "classdg_1_1_keine_n_s_t__1_d.html", null ],
@@ -19,12 +18,12 @@ var hierarchy =
     ] ],
     [ "dg::EXP< T >", "structdg_1_1_e_x_p.html", null ],
     [ "dg::ExpProfX", "structdg_1_1_exp_prof_x.html", null ],
-    [ "dg::FLOOR", "structdg_1_1_f_l_o_o_r.html", null ],
     [ "dg::Gaussian", "structdg_1_1_gaussian.html", null ],
     [ "dg::Gaussian3d", "structdg_1_1_gaussian3d.html", null ],
     [ "dg::GaussianX", "structdg_1_1_gaussian_x.html", null ],
     [ "dg::GaussianY", "structdg_1_1_gaussian_y.html", null ],
     [ "dg::GaussianZ", "structdg_1_1_gaussian_z.html", null ],
+    [ "dg::GeneralElliptic< Matrix, Vector, Preconditioner >", "structdg_1_1_general_elliptic.html", null ],
     [ "dg::Helmholtz< Matrix, Vector, Preconditioner >", "structdg_1_1_helmholtz.html", null ],
     [ "dg::Histogram< container >", "structdg_1_1_histogram.html", null ],
     [ "dg::Histogram2D< container >", "structdg_1_1_histogram2_d.html", null ],
@@ -45,6 +44,5 @@ var hierarchy =
     [ "dg::SinProfX", "structdg_1_1_sin_prof_x.html", null ],
     [ "dg::SIRK< Vector >", "structdg_1_1_s_i_r_k.html", null ],
     [ "dg::SQRT< T >", "structdg_1_1_s_q_r_t.html", null ],
-    [ "dg::Toefl< Matrix, container, Preconditioner >", "structdg_1_1_toefl.html", null ],
     [ "dg::Vortex", "structdg_1_1_vortex.html", null ]
 ];

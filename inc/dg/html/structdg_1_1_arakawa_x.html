@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -288,7 +294,7 @@ template&lt;class Matrix , class container &gt; </div>
 <p>Compute the "symmetric bracket". </p>
 <p>Computes </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ [f,g] := \partial_x f\partial_x g + \partial_y f\partial_y g \]" src="form_2.png"/>
+\[ [f,g] := \partial_x f\partial_x g + \partial_y f\partial_y g \]
 </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -394,7 +400,7 @@ template&lt;class Matrix , class container &gt; </div>
 <p>Compute poisson's bracket. </p>
 <p>Computes </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ [f,g] := \partial_x f\partial_x g - \partial_y f\partial_y g \]" src="form_0.png"/>
+\[ [f,g] := \partial_x f\partial_x g - \partial_y f\partial_y g \]
 </p>
  <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -444,7 +450,7 @@ template&lt;class Matrix , class container &gt; </div>
 <p>Compute the total variation integrand in 2D. </p>
 <p>Computes </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ (\nabla\phi)^2 \]" src="form_1.png"/>
+\[ (\nabla\phi)^2 \]
 </p>
  <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -458,7 +464,7 @@ template&lt;class Matrix , class container &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/matthias/feltor/inc/dg/<a class="el" href="arakawa_8h_source.html">arakawa.h</a></li>
+<li>/home/matthias/Projekte/feltor/inc/dg/<a class="el" href="arakawa_8h_source.html">arakawa.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -466,7 +472,7 @@ template&lt;class Matrix , class container &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacedg.html">dg</a></li><li class="navelem"><a class="el" href="structdg_1_1_arakawa_x.html">ArakawaX</a></li>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:15 for Discontinuous Galerkin Library by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Discontinuous Galerkin Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

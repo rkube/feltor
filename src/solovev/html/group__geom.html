@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -88,7 +94,7 @@ $(document).ready(function(){initNavTree('group__geom.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Groups</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Groups</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -114,85 +120,85 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolovev_1_1_psip.html">solovev::Psip</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \hat{\psi}_p \]" src="form_0.png"/>
+\[ \hat{\psi}_p \]
 </p>
   <a href="structsolovev_1_1_psip.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolovev_1_1_psip_r.html">solovev::PsipR</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \frac{\partial \hat{\psi}_p }{ \partial \hat{R}} \]" src="form_1.png"/>
+\[ \frac{\partial \hat{\psi}_p }{ \partial \hat{R}} \]
 </p>
   <a href="structsolovev_1_1_psip_r.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolovev_1_1_psip_r_r.html">solovev::PsipRR</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \frac{\partial^2 \hat{\psi}_p }{ \partial \hat{R}^2}\]" src="form_2.png"/>
+\[ \frac{\partial^2 \hat{\psi}_p }{ \partial \hat{R}^2}\]
 </p>
   <a href="structsolovev_1_1_psip_r_r.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolovev_1_1_psip_z.html">solovev::PsipZ</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><p class="formulaDsp">
-<img class="formulaDsp" alt="\[\frac{\partial \hat{\psi}_p }{ \partial \hat{Z}}\]" src="form_3.png"/>
+\[\frac{\partial \hat{\psi}_p }{ \partial \hat{Z}}\]
 </p>
   <a href="structsolovev_1_1_psip_z.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolovev_1_1_psip_z_z.html">solovev::PsipZZ</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \frac{\partial^2 \hat{\psi}_p }{ \partial \hat{Z}^2}\]" src="form_4.png"/>
+\[ \frac{\partial^2 \hat{\psi}_p }{ \partial \hat{Z}^2}\]
 </p>
   <a href="structsolovev_1_1_psip_z_z.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolovev_1_1_psip_r_z.html">solovev::PsipRZ</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><p class="formulaDsp">
-<img class="formulaDsp" alt="\[\frac{\partial^2 \hat{\psi}_p }{ \partial \hat{R} \partial\hat{Z}}\]" src="form_5.png"/>
+\[\frac{\partial^2 \hat{\psi}_p }{ \partial \hat{R} \partial\hat{Z}}\]
 </p>
   <a href="structsolovev_1_1_psip_r_z.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolovev_1_1_ipol.html">solovev::Ipol</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><p class="formulaDsp">
-<img class="formulaDsp" alt="\[\hat{I}\]" src="form_6.png"/>
+\[\hat{I}\]
 </p>
   <a href="structsolovev_1_1_ipol.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolovev_1_1_inv_b.html">solovev::InvB</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \frac{1}{\hat{B}} \]" src="form_7.png"/>
+\[ \frac{1}{\hat{B}} \]
 </p>
   <a href="structsolovev_1_1_inv_b.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolovev_1_1_ln_b.html">solovev::LnB</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \ln{( \hat{B})} \]" src="form_8.png"/>
+\[ \ln{( \hat{B})} \]
 </p>
   <a href="structsolovev_1_1_ln_b.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolovev_1_1_b_r.html">solovev::BR</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \frac{\partial \hat{B} }{ \partial \hat{R}} \]" src="form_9.png"/>
+\[ \frac{\partial \hat{B} }{ \partial \hat{R}} \]
 </p>
   <a href="structsolovev_1_1_b_r.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolovev_1_1_b_z.html">solovev::BZ</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \frac{\partial \hat{B} }{ \partial \hat{Z}} \]" src="form_10.png"/>
+\[ \frac{\partial \hat{B} }{ \partial \hat{Z}} \]
 </p>
   <a href="structsolovev_1_1_b_z.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolovev_1_1_curvature_r.html">solovev::CurvatureR</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \mathcal{\hat{K}}^{\hat{R}} \]" src="form_11.png"/>
+\[ \mathcal{\hat{K}}^{\hat{R}} \]
 </p>
   <a href="structsolovev_1_1_curvature_r.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolovev_1_1_curvature_z.html">solovev::CurvatureZ</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \mathcal{\hat{K}}^{\hat{Z}} \]" src="form_12.png"/>
+\[ \mathcal{\hat{K}}^{\hat{Z}} \]
 </p>
   <a href="structsolovev_1_1_curvature_z.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolovev_1_1_grad_ln_b.html">solovev::GradLnB</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \hat{\nabla}_\parallel \ln{(\hat{B})} \]" src="form_13.png"/>
+\[ \hat{\nabla}_\parallel \ln{(\hat{B})} \]
 </p>
   <a href="structsolovev_1_1_grad_ln_b.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -200,34 +206,22 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrates the equations for a field line and 1/B.  <a href="structsolovev_1_1_field.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolovev_1_1_field_p.html">solovev::FieldP</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Phi component of magnetic field <img class="formulaInl" alt="$ B_\Phi$" src="form_14.png"/>.  <a href="structsolovev_1_1_field_p.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Phi component of magnetic field \( B_\Phi\).  <a href="structsolovev_1_1_field_p.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolovev_1_1_field_r.html">solovev::FieldR</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">R component of magnetic field <img class="formulaInl" alt="$ B_R$" src="form_15.png"/>.  <a href="structsolovev_1_1_field_r.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">R component of magnetic field \( B_R\).  <a href="structsolovev_1_1_field_r.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolovev_1_1_field_z.html">solovev::FieldZ</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Z component of magnetic field <img class="formulaInl" alt="$ B_Z$" src="form_16.png"/>.  <a href="structsolovev_1_1_field_z.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Z component of magnetic field \( B_Z\).  <a href="structsolovev_1_1_field_z.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolovev_1_1_b_hat_r.html">solovev::BHatR</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">R component of magnetic field <img class="formulaInl" alt="$ b_R$" src="form_17.png"/>.  <a href="structsolovev_1_1_b_hat_r.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">R component of magnetic field \( b_R\).  <a href="structsolovev_1_1_b_hat_r.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolovev_1_1_b_hat_z.html">solovev::BHatZ</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Z component of magnetic field <img class="formulaInl" alt="$ b_Z$" src="form_18.png"/>.  <a href="structsolovev_1_1_b_hat_z.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Z component of magnetic field \( b_Z\).  <a href="structsolovev_1_1_b_hat_z.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolovev_1_1_b_hat_p.html">solovev::BHatP</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Phi component of magnetic field <img class="formulaInl" alt="$ b_\Phi$" src="form_19.png"/>.  <a href="structsolovev_1_1_b_hat_p.html#details">More...</a><br/></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolovev_1_1_delta_function.html">solovev::DeltaFunction</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delta function for poloidal flux <img class="formulaInl" alt="$ B_Z$" src="form_16.png"/>.  <a href="structsolovev_1_1_delta_function.html#details">More...</a><br/></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolovev_1_1_flux_surface_average.html">solovev::FluxSurfaceAverage&lt; container &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flux surface average over quantity.  <a href="structsolovev_1_1_flux_surface_average.html#details">More...</a><br/></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolovev_1_1_safety_factor.html">solovev::SafetyFactor&lt; container &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for the evaluation of the safety factor q.  <a href="structsolovev_1_1_safety_factor.html#details">More...</a><br/></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolovev_1_1_alpha.html">solovev::Alpha</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global safety factor.  <a href="structsolovev_1_1_alpha.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Phi component of magnetic field \( b_\Phi\).  <a href="structsolovev_1_1_b_hat_p.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolovev_1_1_iris.html">solovev::Iris</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns zero outside psipmax and inside psipmin, otherwise 1.  <a href="structsolovev_1_1_iris.html#details">More...</a><br/></td></tr>
@@ -259,7 +253,7 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsolovev_1_1_deri_test_function.html">solovev::DeriTestFunction</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">analyitcal solution of the parallel derivative of the testfunction </p>
 <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ \nabla_\parallel f = \psi_p(R,Z) b^\varphi \cos{(\varphi)}\]" src="form_51.png"/>
+\[ \nabla_\parallel f = \psi_p(R,Z) b^\varphi \cos{(\varphi)}\]
 </p>
   <a href="structsolovev_1_1_deri_test_function.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -267,7 +261,7 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga33f43196e4cf4e85bd9640ba62d9230a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geom.html#ga33f43196e4cf4e85bd9640ba62d9230a">solovev::GeomParameters::GeomParameters</a> (const std::vector&lt; double &gt; &amp;v)</td></tr>
-<tr class="memdesc:ga33f43196e4cf4e85bd9640ba62d9230a"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor to make a const object  <a href="#ga33f43196e4cf4e85bd9640ba62d9230a">More...</a><br/></td></tr>
+<tr class="memdesc:ga33f43196e4cf4e85bd9640ba62d9230a"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor to make an object  <a href="#ga33f43196e4cf4e85bd9640ba62d9230a">More...</a><br/></td></tr>
 <tr class="separator:ga33f43196e4cf4e85bd9640ba62d9230a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac75127cc87f46a3a5b05ef2304a85fdd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geom.html#gac75127cc87f46a3a5b05ef2304a85fdd">solovev::GeomParameters::display</a> (std::ostream &amp;os=std::cout) const </td></tr>
 <tr class="memdesc:gac75127cc87f46a3a5b05ef2304a85fdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display parameters.  <a href="#gac75127cc87f46a3a5b05ef2304a85fdd">More...</a><br/></td></tr>
@@ -276,44 +270,56 @@ Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:ga97e1ff33b7ef8b50e3a4a8878a61b0e5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga97e1ff33b7ef8b50e3a4a8878a61b0e5"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>solovev::GeomParameters::A</b></td></tr>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geom.html#ga97e1ff33b7ef8b50e3a4a8878a61b0e5">solovev::GeomParameters::A</a></td></tr>
+<tr class="memdesc:ga97e1ff33b7ef8b50e3a4a8878a61b0e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">A. <br/></td></tr>
 <tr class="separator:ga97e1ff33b7ef8b50e3a4a8878a61b0e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga04042807c96e6c40e0ecda5fa494423b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga04042807c96e6c40e0ecda5fa494423b"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>solovev::GeomParameters::R_0</b></td></tr>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geom.html#ga04042807c96e6c40e0ecda5fa494423b">solovev::GeomParameters::R_0</a></td></tr>
+<tr class="memdesc:ga04042807c96e6c40e0ecda5fa494423b"><td class="mdescLeft">&#160;</td><td class="mdescRight">central tokamak radius <br/></td></tr>
 <tr class="separator:ga04042807c96e6c40e0ecda5fa494423b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga937bb16d9918139c82537b0522d9d50c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga937bb16d9918139c82537b0522d9d50c"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>solovev::GeomParameters::a</b></td></tr>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geom.html#ga937bb16d9918139c82537b0522d9d50c">solovev::GeomParameters::a</a></td></tr>
+<tr class="memdesc:ga937bb16d9918139c82537b0522d9d50c"><td class="mdescLeft">&#160;</td><td class="mdescRight">little tokamak radius <br/></td></tr>
 <tr class="separator:ga937bb16d9918139c82537b0522d9d50c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5a155924600d91db24102214e6f8198f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga5a155924600d91db24102214e6f8198f"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>solovev::GeomParameters::elongation</b></td></tr>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geom.html#ga5a155924600d91db24102214e6f8198f">solovev::GeomParameters::elongation</a></td></tr>
+<tr class="memdesc:ga5a155924600d91db24102214e6f8198f"><td class="mdescLeft">&#160;</td><td class="mdescRight">elongation of the magnetic surfaces <br/></td></tr>
 <tr class="separator:ga5a155924600d91db24102214e6f8198f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1b5afb66804a41c779f0fabb30089f67"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga1b5afb66804a41c779f0fabb30089f67"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>solovev::GeomParameters::triangularity</b></td></tr>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geom.html#ga1b5afb66804a41c779f0fabb30089f67">solovev::GeomParameters::triangularity</a></td></tr>
+<tr class="memdesc:ga1b5afb66804a41c779f0fabb30089f67"><td class="mdescLeft">&#160;</td><td class="mdescRight">triangularity of the magnetic surfaces <br/></td></tr>
 <tr class="separator:ga1b5afb66804a41c779f0fabb30089f67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab23ad90efd782bb2411080b17984c0e2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gab23ad90efd782bb2411080b17984c0e2"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>solovev::GeomParameters::alpha</b></td></tr>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geom.html#gab23ad90efd782bb2411080b17984c0e2">solovev::GeomParameters::alpha</a></td></tr>
+<tr class="memdesc:gab23ad90efd782bb2411080b17984c0e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">damping width <br/></td></tr>
 <tr class="separator:gab23ad90efd782bb2411080b17984c0e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6447257304ba1dec05d84d1f27efdc41"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga6447257304ba1dec05d84d1f27efdc41"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>solovev::GeomParameters::rk4eps</b></td></tr>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geom.html#ga6447257304ba1dec05d84d1f27efdc41">solovev::GeomParameters::rk4eps</a></td></tr>
+<tr class="memdesc:ga6447257304ba1dec05d84d1f27efdc41"><td class="mdescLeft">&#160;</td><td class="mdescRight">accuracy for the <br/></td></tr>
 <tr class="separator:ga6447257304ba1dec05d84d1f27efdc41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga89dcd3bf445d866d590d930d299379d8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga89dcd3bf445d866d590d930d299379d8"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>solovev::GeomParameters::psipmin</b></td></tr>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geom.html#ga89dcd3bf445d866d590d930d299379d8">solovev::GeomParameters::psipmin</a></td></tr>
+<tr class="memdesc:ga89dcd3bf445d866d590d930d299379d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">for source <br/></td></tr>
 <tr class="separator:ga89dcd3bf445d866d590d930d299379d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf37a5f3f604ddf009de36d734f854f9a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaf37a5f3f604ddf009de36d734f854f9a"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>solovev::GeomParameters::psipmax</b></td></tr>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geom.html#gaf37a5f3f604ddf009de36d734f854f9a">solovev::GeomParameters::psipmax</a></td></tr>
+<tr class="memdesc:gaf37a5f3f604ddf009de36d734f854f9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">for profile <br/></td></tr>
 <tr class="separator:gaf37a5f3f604ddf009de36d734f854f9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gacb8f51dbbad0b5dcab7c0d0469b1c175"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gacb8f51dbbad0b5dcab7c0d0469b1c175"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>solovev::GeomParameters::psipmaxcut</b></td></tr>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geom.html#gacb8f51dbbad0b5dcab7c0d0469b1c175">solovev::GeomParameters::psipmaxcut</a></td></tr>
+<tr class="memdesc:gacb8f51dbbad0b5dcab7c0d0469b1c175"><td class="mdescLeft">&#160;</td><td class="mdescRight">for cutting <br/></td></tr>
 <tr class="separator:gacb8f51dbbad0b5dcab7c0d0469b1c175"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0b3f04d5f78ead10d7c6e887dc147401"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga0b3f04d5f78ead10d7c6e887dc147401"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>solovev::GeomParameters::psipmaxlim</b></td></tr>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geom.html#ga0b3f04d5f78ead10d7c6e887dc147401">solovev::GeomParameters::psipmaxlim</a></td></tr>
+<tr class="memdesc:ga0b3f04d5f78ead10d7c6e887dc147401"><td class="mdescLeft">&#160;</td><td class="mdescRight">for limiter <br/></td></tr>
 <tr class="separator:ga0b3f04d5f78ead10d7c6e887dc147401"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga947ccace40431083df7cf03cfd809983"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga947ccace40431083df7cf03cfd809983"></a>
-std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>solovev::GeomParameters::c</b></td></tr>
+std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geom.html#ga947ccace40431083df7cf03cfd809983">solovev::GeomParameters::c</a></td></tr>
+<tr class="memdesc:ga947ccace40431083df7cf03cfd809983"><td class="mdescLeft">&#160;</td><td class="mdescRight">coefficients for the solovev equilibrium <br/></td></tr>
 <tr class="separator:ga947ccace40431083df7cf03cfd809983"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Objects that are used to define and integrate the magnetic field lines </p>
+<p>Objects that are used to define and integrate the magnetic field lines. All objects can be used in the evaluation() function. </p>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="gac75127cc87f46a3a5b05ef2304a85fdd"></a>
 <div class="memitem">
@@ -369,7 +375,8 @@ std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><
 </table>
 </div><div class="memdoc">
 
-<p>constructor to make a const object </p>
+<p>constructor to make an object </p>
+<p>maps parameters from input file to parameters </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">v</td><td>Vector from read_input function </td></tr>
@@ -384,7 +391,7 @@ std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:40 for Solovev by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Solovev by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -20,6 +20,12 @@
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="/usr/share/javascript/mathjax/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -114,7 +120,11 @@ $(document).ready(function(){initNavTree('structdg_1_1_abs_max.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>Functor for the absolute maximum.  
+<p>Functor for the absolute maximum </p>
+<p class="formulaDsp">
+\[ f(x,y) = \max(|x|,|y|)\]
+</p>
+<p>.  
  <a href="structdg_1_1_abs_max.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="functors_8h_source.html">functors.h</a>&gt;</code></p>
@@ -129,7 +139,11 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><h3>template&lt;class T&gt;<br/>
 struct dg::AbsMax&lt; T &gt;</h3>
 
-<p>Functor for the absolute maximum. </p>
+<p>Functor for the absolute maximum </p>
+<p class="formulaDsp">
+\[ f(x,y) = \max(|x|,|y|)\]
+</p>
+<p>. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>value-type </td></tr>
@@ -184,7 +198,7 @@ template&lt;class T &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/matthias/feltor/inc/dg/<a class="el" href="functors_8h_source.html">functors.h</a></li>
+<li>/home/matthias/Projekte/feltor/inc/dg/<a class="el" href="functors_8h_source.html">functors.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -192,7 +206,7 @@ template&lt;class T &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacedg.html">dg</a></li><li class="navelem"><a class="el" href="structdg_1_1_abs_max.html">AbsMax</a></li>
-    <li class="footer">Generated on Wed Feb 18 2015 23:45:15 for Discontinuous Galerkin Library by
+    <li class="footer">Generated on Sun Mar 15 2015 21:43:14 for Discontinuous Galerkin Library by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
