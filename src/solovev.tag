@@ -2,14 +2,14 @@
 <tagfile>
   <compound kind="file">
     <name>geom_parameters.h</name>
-    <path>/home/matthias/Projekte/feltor/src/solovev/</path>
+    <path>/home/matthias/feltor/src/solovev/</path>
     <filename>geom__parameters_8h</filename>
     <class kind="struct">solovev::GeomParameters</class>
     <namespace>solovev</namespace>
   </compound>
   <compound kind="file">
     <name>geometry.h</name>
-    <path>/home/matthias/Projekte/feltor/src/solovev/</path>
+    <path>/home/matthias/feltor/src/solovev/</path>
     <filename>geometry_8h</filename>
     <includes id="geom__parameters_8h" name="geom_parameters.h" local="yes" imported="no">geom_parameters.h</includes>
     <class kind="struct">solovev::Psip</class>
@@ -41,7 +41,7 @@
   </compound>
   <compound kind="file">
     <name>init.h</name>
-    <path>/home/matthias/Projekte/feltor/src/solovev/</path>
+    <path>/home/matthias/feltor/src/solovev/</path>
     <filename>init_8h</filename>
     <includes id="geometry_8h" name="geometry.h" local="yes" imported="no">geometry.h</includes>
     <class kind="struct">solovev::Iris</class>
@@ -674,8 +674,8 @@
     <filename>structsolovev_1_1_deri_test_function.html</filename>
   </compound>
   <compound kind="dir">
-    <name>/home/matthias/Projekte/feltor/src/solovev</name>
-    <path>/home/matthias/Projekte/feltor/src/solovev/</path>
+    <name>/home/matthias/feltor/src/solovev</name>
+    <path>/home/matthias/feltor/src/solovev/</path>
     <filename>dir_8f48a2c0056d49d88bfa9448067ed2ee.html</filename>
     <file>geom_parameters.h</file>
     <file>geometry.h</file>
@@ -683,10 +683,10 @@
     <file>solovev_doc.h</file>
   </compound>
   <compound kind="dir">
-    <name>/home/matthias/Projekte/feltor/src</name>
-    <path>/home/matthias/Projekte/feltor/src/</path>
+    <name>/home/matthias/feltor/src</name>
+    <path>/home/matthias/feltor/src/</path>
     <filename>dir_68267d1309a1af8e8297ef4c3efbcdba.html</filename>
-    <dir>/home/matthias/Projekte/feltor/src/solovev</dir>
+    <dir>/home/matthias/feltor/src/solovev</dir>
   </compound>
   <compound kind="page">
     <name>index</name>

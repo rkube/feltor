@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['triangularity',['triangularity',['../../../../src/solovev/html/group__geom.html#ga1b5afb66804a41c779f0fabb30089f67',1,'solovev::GeomParameters::triangularity()'],['../../../../src/solovev/html/group__geom.html#ga1b5afb66804a41c779f0fabb30089f67',1,'triangularity()(Global Namespace)']]]
+  ['k_5fpsi',['k_psi',['../structeule_1_1_parameters.html#a4b5ba376f09d79e36d265240e67d2e1a',1,'eule::Parameters']]]
 ];

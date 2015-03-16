@@ -1,11 +1,11 @@
 #!/bin/bash
 #this file automatically loops over inc and src directories and runs doxygen
 # on the Doxyfiles and outputs documentation in the current directory
-# It generates tag files so that src documentation can link to inc documentations
+# It generates tag files so that src documentation can link to inc documentations and uses the html_header feature of doxygen to create the top menu bar
 
-#pay attention on name collisions in docus through tag files
+#pay attention on name collisions in documentations through tag files
 include="inc/dg inc/file inc/toefl src/solovev"
-src="src/feltor src/feltor2D"
+src="src/feltor src/feltor2D src/innto"
 all="$include $src"
 tagfiles=""
 
@@ -23,6 +23,7 @@ done;
 for i in $include;
 do (cat ../$i/Doxyfile; \
 	echo "INPUT = ../$i/"; \
+	echo "HTML_HEADER = ./header.html"; \
 	echo "MATHJAX_RELPATH = http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"; \
     echo "OUTPUT_DIRECTORY = ./$i/")  \
     | doxygen - ;
@@ -33,6 +34,7 @@ for i in $src;
 do (cat ../$i/Doxyfile; \
 	echo "INPUT = ../$i/"; \
 	echo "OUTPUT_DIRECTORY = ./$i/"; \
+	echo "HTML_HEADER = ./header.html"; \
     echo "EXTERNAL_GROUPS=NO" ;\
     echo "EXTERNAL_PAGES=NO" ;\
 	echo "MATHJAX_RELPATH = http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"; \

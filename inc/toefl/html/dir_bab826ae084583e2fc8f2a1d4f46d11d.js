@@ -13,7 +13,6 @@ var dir_bab826ae084583e2fc8f2a1d4f46d11d =
     [ "karniadakis2.h", "karniadakis2_8h_source.html", null ],
     [ "matrix.h", "matrix_8h_source.html", null ],
     [ "matrix_array.h", "matrix__array_8h_source.html", null ],
-    [ "matrix_array_.h", "matrix__array___8h_source.html", null ],
     [ "message.h", "message_8h.html", "message_8h" ],
     [ "padding.h", "padding_8h_source.html", null ],
     [ "quadmat.h", "quadmat_8h.html", "quadmat_8h" ],

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['damping',['damping',['../structeule_1_1_rolkar.html#abc8ae8dfa3f36f34f2e060982265f910',1,'eule::Rolkar']]],
   ['define_5fdimension',['define_dimension',['../../../../inc/file/html/namespacefile.html#a846a2bb3ad75738bad0fe50c891b0bd7',1,'file::define_dimension(int ncid, const char *name, int *dimID, const double *points, int size)'],['../../../../inc/file/html/namespacefile.html#afd9f1ad6f13f19c99869def05583fb09',1,'file::define_dimension(int ncid, const char *name, int *dimID, const dg::Grid1d&lt; double &gt; &amp;g)']]],
   ['define_5fdimensions',['define_dimensions',['../../../../inc/file/html/namespacefile.html#a452009c263aa1fb8b8c6cfab310fff84',1,'file::define_dimensions(int ncid, int *dimsIDs, int *tvarID, const dg::Grid1d&lt; double &gt; &amp;g)'],['../../../../inc/file/html/namespacefile.html#a775499582ff288f9675263e69736fbcd',1,'file::define_dimensions(int ncid, int *dimsIDs, const dg::Grid2d&lt; double &gt; &amp;g)'],['../../../../inc/file/html/namespacefile.html#a437d502f8dbb9343ab38c568446ae3aa',1,'file::define_dimensions(int ncid, int *dimsIDs, int *tvarID, const dg::Grid2d&lt; double &gt; &amp;g)'],['../../../../inc/file/html/namespacefile.html#ac45d16d851bfa0df93305e5e1a836e46',1,'file::define_dimensions(int ncid, int *dimsIDs, const dg::Grid3d&lt; double &gt; &amp;g)'],['../../../../inc/file/html/namespacefile.html#ae1535f34423979479a0e0c43e377287e',1,'file::define_dimensions(int ncid, int *dimsIDs, int *tvarID, const dg::Grid3d&lt; double &gt; &amp;g)']]],
   ['define_5ftime',['define_time',['../../../../inc/file/html/namespacefile.html#a6359fc68f28994afced36013b94fdc07',1,'file']]],
@@ -15,5 +16,6 @@ var searchData=
   ['dxrhs',['dxrhs',['../../../../inc/dg/html/structdg_1_1_poisson.html#a92cfd99de07a6b82956e7ee7d0c685b5',1,'dg::Poisson']]],
   ['dy',['dy',['../../../../inc/dg/html/structdg_1_1_arakawa_x.html#a07c34c8983fad0d4345313ca9b61873b',1,'dg::ArakawaX']]],
   ['dylhs',['dylhs',['../../../../inc/dg/html/structdg_1_1_poisson.html#a58b4e644b217e1fac0c1d6411ca02312',1,'dg::Poisson']]],
-  ['dyrhs',['dyrhs',['../../../../inc/dg/html/structdg_1_1_poisson.html#af712507150681dd8a78eb91676be705b',1,'dg::Poisson']]]
+  ['dyrhs',['dyrhs',['../../../../inc/dg/html/structdg_1_1_poisson.html#af712507150681dd8a78eb91676be705b',1,'dg::Poisson']]],
+  ['dz',['dz',['../structeule_1_1_feltor.html#a0f1386ec4c70db065cb476ee4d9a0fd3',1,'eule::Feltor']]]
 ];

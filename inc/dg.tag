@@ -2,7 +2,7 @@
 <tagfile>
   <compound kind="file">
     <name>algorithm.h</name>
-    <path>/home/matthias/Projekte/feltor/inc/dg/</path>
+    <path>/home/matthias/feltor/inc/dg/</path>
     <filename>algorithm_8h</filename>
     <includes id="blas_8h" name="blas.h" local="yes" imported="no">blas.h</includes>
     <includes id="arakawa_8h" name="arakawa.h" local="yes" imported="no">arakawa.h</includes>
@@ -17,7 +17,7 @@
   </compound>
   <compound kind="file">
     <name>arakawa.h</name>
-    <path>/home/matthias/Projekte/feltor/inc/dg/</path>
+    <path>/home/matthias/feltor/inc/dg/</path>
     <filename>arakawa_8h</filename>
     <includes id="blas_8h" name="blas.h" local="yes" imported="no">blas.h</includes>
     <includes id="enums_8h" name="enums.h" local="yes" imported="no">enums.h</includes>
@@ -26,14 +26,14 @@
   </compound>
   <compound kind="file">
     <name>blas.h</name>
-    <path>/home/matthias/Projekte/feltor/inc/dg/</path>
+    <path>/home/matthias/feltor/inc/dg/</path>
     <filename>blas_8h</filename>
     <includes id="blas1_8h" name="blas1.h" local="yes" imported="no">blas1.h</includes>
     <includes id="blas2_8h" name="blas2.h" local="yes" imported="no">blas2.h</includes>
   </compound>
   <compound kind="file">
     <name>blas1.h</name>
-    <path>/home/matthias/Projekte/feltor/inc/dg/</path>
+    <path>/home/matthias/feltor/inc/dg/</path>
     <filename>blas1_8h</filename>
     <namespace>dg</namespace>
     <namespace>dg::blas1</namespace>
@@ -89,7 +89,7 @@
   </compound>
   <compound kind="file">
     <name>blas2.h</name>
-    <path>/home/matthias/Projekte/feltor/inc/dg/</path>
+    <path>/home/matthias/feltor/inc/dg/</path>
     <filename>blas2_8h</filename>
     <namespace>dg</namespace>
     <namespace>dg::blas2</namespace>
@@ -131,7 +131,7 @@
   </compound>
   <compound kind="file">
     <name>cg.h</name>
-    <path>/home/matthias/Projekte/feltor/inc/dg/</path>
+    <path>/home/matthias/feltor/inc/dg/</path>
     <filename>cg_8h</filename>
     <includes id="blas_8h" name="blas.h" local="yes" imported="no">blas.h</includes>
     <class kind="class">dg::CG</class>
@@ -147,12 +147,12 @@
   </compound>
   <compound kind="file">
     <name>dz.h</name>
-    <path>/home/matthias/Projekte/feltor/inc/dg/</path>
+    <path>/home/matthias/feltor/inc/dg/</path>
     <filename>dz_8h</filename>
   </compound>
   <compound kind="file">
     <name>elliptic.h</name>
-    <path>/home/matthias/Projekte/feltor/inc/dg/</path>
+    <path>/home/matthias/feltor/inc/dg/</path>
     <filename>elliptic_8h</filename>
     <includes id="blas_8h" name="blas.h" local="yes" imported="no">blas.h</includes>
     <includes id="enums_8h" name="enums.h" local="yes" imported="no">enums.h</includes>
@@ -162,7 +162,7 @@
   </compound>
   <compound kind="file">
     <name>enums.h</name>
-    <path>/home/matthias/Projekte/feltor/inc/dg/</path>
+    <path>/home/matthias/feltor/inc/dg/</path>
     <filename>enums_8h</filename>
     <namespace>dg</namespace>
     <member kind="enumeration">
@@ -280,14 +280,14 @@
   </compound>
   <compound kind="file">
     <name>exceptions.h</name>
-    <path>/home/matthias/Projekte/feltor/inc/dg/</path>
+    <path>/home/matthias/feltor/inc/dg/</path>
     <filename>exceptions_8h</filename>
     <class kind="struct">dg::Fail</class>
     <namespace>dg</namespace>
   </compound>
   <compound kind="file">
     <name>functors.h</name>
-    <path>/home/matthias/Projekte/feltor/inc/dg/</path>
+    <path>/home/matthias/feltor/inc/dg/</path>
     <filename>functors_8h</filename>
     <includes id="blas1_8h" name="blas1.h" local="yes" imported="no">blas1.h</includes>
     <class kind="struct">dg::AbsMax</class>
@@ -341,7 +341,7 @@
   </compound>
   <compound kind="file">
     <name>helmholtz.h</name>
-    <path>/home/matthias/Projekte/feltor/inc/dg/</path>
+    <path>/home/matthias/feltor/inc/dg/</path>
     <filename>helmholtz_8h</filename>
     <includes id="blas_8h" name="blas.h" local="yes" imported="no">blas.h</includes>
     <includes id="elliptic_8h" name="elliptic.h" local="yes" imported="no">elliptic.h</includes>
@@ -350,7 +350,7 @@
   </compound>
   <compound kind="file">
     <name>multistep.h</name>
-    <path>/home/matthias/Projekte/feltor/inc/dg/</path>
+    <path>/home/matthias/feltor/inc/dg/</path>
     <filename>multistep_8h</filename>
     <includes id="cg_8h" name="cg.h" local="yes" imported="no">cg.h</includes>
     <class kind="struct">dg::AB</class>
@@ -360,7 +360,7 @@
   </compound>
   <compound kind="file">
     <name>nullstelle.h</name>
-    <path>/home/matthias/Projekte/feltor/inc/dg/</path>
+    <path>/home/matthias/feltor/inc/dg/</path>
     <filename>nullstelle_8h</filename>
     <class kind="struct">dg::Ooops</class>
     <class kind="class">dg::KeineNST_1D</class>
@@ -375,7 +375,7 @@
   </compound>
   <compound kind="file">
     <name>poisson.h</name>
-    <path>/home/matthias/Projekte/feltor/inc/dg/</path>
+    <path>/home/matthias/feltor/inc/dg/</path>
     <filename>poisson_8h</filename>
     <includes id="blas_8h" name="blas.h" local="yes" imported="no">blas.h</includes>
     <includes id="enums_8h" name="enums.h" local="yes" imported="no">enums.h</includes>
@@ -384,7 +384,7 @@
   </compound>
   <compound kind="file">
     <name>runge_kutta.h</name>
-    <path>/home/matthias/Projekte/feltor/inc/dg/</path>
+    <path>/home/matthias/feltor/inc/dg/</path>
     <filename>runge__kutta_8h</filename>
     <includes id="exceptions_8h" name="exceptions.h" local="yes" imported="no">exceptions.h</includes>
     <includes id="blas1_8h" name="blas1.h" local="yes" imported="no">blas1.h</includes>
@@ -2271,8 +2271,8 @@
     </member>
   </compound>
   <compound kind="dir">
-    <name>/home/matthias/Projekte/feltor/inc/dg</name>
-    <path>/home/matthias/Projekte/feltor/inc/dg/</path>
+    <name>/home/matthias/feltor/inc/dg</name>
+    <path>/home/matthias/feltor/inc/dg/</path>
     <filename>dir_cba352cc187f01702d3926d435723909.html</filename>
     <file>algorithm.h</file>
     <file>arakawa.h</file>
@@ -2291,14 +2291,13 @@
     <file>nullstelle.h</file>
     <file>poisson.h</file>
     <file>runge_kutta.h</file>
-    <file>test.cuh</file>
     <file>toefl.cuh</file>
   </compound>
   <compound kind="dir">
-    <name>/home/matthias/Projekte/feltor/inc</name>
-    <path>/home/matthias/Projekte/feltor/inc/</path>
+    <name>/home/matthias/feltor/inc</name>
+    <path>/home/matthias/feltor/inc/</path>
     <filename>dir_bfccd401955b95cf8c75461437045ac0.html</filename>
-    <dir>/home/matthias/Projekte/feltor/inc/dg</dir>
+    <dir>/home/matthias/feltor/inc/dg</dir>
   </compound>
   <compound kind="page">
     <name>index</name>

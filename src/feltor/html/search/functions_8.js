@@ -5,6 +5,7 @@ var searchData=
   ['init_5fgaussian',['init_gaussian',['../../../../inc/toefl/html/group__utilities.html#ga0e730c6f07f61a20ea40d7866a5cdb90',1,'toefl::init_gaussian()'],['../../../../inc/toefl/html/group__utilities.html#ga0e730c6f07f61a20ea40d7866a5cdb90',1,'init_gaussian()(Global Namespace)']]],
   ['init_5fgaussian_5fcolumn',['init_gaussian_column',['../../../../inc/toefl/html/group__utilities.html#gaf74f93e3a788741c663d72dc38fa4dd7',1,'toefl::init_gaussian_column()'],['../../../../inc/toefl/html/group__utilities.html#gaf74f93e3a788741c663d72dc38fa4dd7',1,'init_gaussian_column()(Global Namespace)']]],
   ['initghostcells',['initGhostCells',['../../../../inc/toefl/html/classtoefl_1_1_ghost_matrix.html#ac5c1d98d3b765fd94fca0f881338bf1d',1,'toefl::GhostMatrix']]],
+  ['initializene',['initializene',['../structeule_1_1_feltor.html#ad599e67babe0601cf7efa5a3a1e18c53',1,'eule::Feltor']]],
   ['integraterk4',['integrateRK4',['../../../../inc/dg/html/group__algorithms.html#ga098434b3580fe8186441a1fd178214ef',1,'dg::integrateRK4()'],['../../../../inc/dg/html/group__algorithms.html#ga098434b3580fe8186441a1fd178214ef',1,'integrateRK4()(Global Namespace)']]],
   ['interior',['interior',['../../../../inc/toefl/html/namespacetoefl.html#a530639057348ca226388f927dbe62b24',1,'toefl']]],
   ['inverse_5fkind',['inverse_kind',['../../../../inc/toefl/html/group__fftw.html#ga953727532d54b2a5e828427b1560971b',1,'toefl::inverse_kind()'],['../../../../inc/toefl/html/group__fftw.html#ga953727532d54b2a5e828427b1560971b',1,'inverse_kind()(Global Namespace)']]],

@@ -4,6 +4,7 @@ var searchData=
   ['fail',['Fail',['../../../../inc/dg/html/structdg_1_1_fail.html',1,'dg']]],
   ['fail',['Fail',['../../../../inc/dg/html/structdg_1_1_fail.html#acbccb1ec26460accff6fe8ae47fb9cef',1,'dg::Fail']]],
   ['feltor',['Feltor',['../structeule_1_1_feltor.html',1,'eule']]],
+  ['feltor',['Feltor',['../structeule_1_1_feltor.html#ad4474f82ff673be0436e65c34c6286e4',1,'eule::Feltor']]],
   ['feltor_2ecuh',['feltor.cuh',['../feltor_8cuh.html',1,'']]],
   ['fft_2eh',['fft.h',['../../../../inc/toefl/html/fft_8h.html',1,'']]],
   ['fftw_20wrappers',['FFTW wrappers',['../../../../inc/toefl/html/group__fftw.html',1,'']]],
