@@ -10,6 +10,18 @@
   <link rel="stylesheet" href="stylesheets/pygment_trac.css">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script type="text/javascript" src="javascripts/script.js"></script>
+  <script src="http://github.com/javascripts/other/MathJax/MathJax.js"
+type="text/javascript">
+    if (window.location.protocol == "https:") {
+          MathJax.OutputJax.fontDir = "https://github.com/assets/MathJax/fonts"
+    } else {
+        MathJax.OutputJax.fontDir = "http://github.com/assets/MathJax/fonts"
+                                    }
+    MathJax.Hub.Config({
+          extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+        jax: ["input/TeX", "output/HTML-CSS"]
+    })
+  </script>
 
   <title>Feltor</title>
   <meta name="description" content="Numerical methods for SOL blob and turbulence simulations">
